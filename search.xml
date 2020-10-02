@@ -28,51 +28,6 @@
       </categories>
   </entry>
   <entry>
-    <title>关于入门博客的一些事</title>
-    <url>/2020/09/24/%E5%85%B3%E4%BA%8E%E5%85%A5%E9%97%A8%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>这算是我的第二个博客了，第一部署在Github上，都是基于hexo来搭建的，不过部署在在Github上有这样的问题：  </p>
-<ol>
-<li>上传到GitHub上很慢，毕竟是国外的服务器。  </li>
-<li>有时候Github会抽风，很多时候国内没法访问，必须得上梯子才能上去，还是很不方便的。  </li>
-</ol>
-<p>所以在用魔改butterfly主题后，直接给我hexo整崩了（主要还是太菜，看不懂大佬写的东西），在此非常感谢那些<strong>无名英雄</strong>，我们只是走在了别人走好的路上。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
-<hr>
-<p>这次选择的是比较简洁的yilia主题，开发者已经不再提供更新了，后续有基于yilia的plus版本以及各种进阶，在csdn直接就可以搜到。</p>
-<hr>
-<p>话有些多，有些没逻辑。但是写博客的初心呢，有以下的一些原因：</p>
-<ul>
-<li>写东西是一个回顾的过程，在解决一个问题以后，以后很有可能继续碰见，当你头皮发麻时，想到你以前完美的记录这个过程，这个问题自然会迎刃而解。</li>
-<li>好的博客可以给你找工作加分，一个hr如何去辨识出哪些人是善于思考，善于总结的人，我想博客就是一个很好的媒介，也是了解你具有哪些技术的手段。</li>
-<li>博客可以锻炼文笔，虽然我文字功底很烂，但是初衷是希望可以通俗易懂，希望我写的东西可以帮你解决了一个甚至一些问题。</li>
-</ul>
-<p>在这两天看了这么多博客以后，有好有差，当然博主可能只是记录而已，他能看懂就行，但我希望自己以后写的东西可以仔细一些。</p>
-<hr>
-<p>更新：<br>yilia是什么（laji），butterfly是真的香，干掉重来。</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>感想</tag>
-        <tag>心得</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的Office激活码</title>
-    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="13d82e84fde0a37d889d0ced1c44b0eae99ca3975b70835e627ca20330073d83">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f753cd626c901b484f30ea433050601b0972c77810c9a8272da031fb62138a37451</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>-office</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>markdown语法</title>
     <url>/2020/09/24/markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h1><pre><code># 一级标题
@@ -178,6 +133,35 @@
       </tags>
   </entry>
   <entry>
+    <title>关于入门博客的一些事</title>
+    <url>/2020/09/24/%E5%85%B3%E4%BA%8E%E5%85%A5%E9%97%A8%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<p>这算是我的第二个博客了，第一部署在Github上，都是基于hexo来搭建的，不过部署在在Github上有这样的问题：  </p>
+<ol>
+<li>上传到GitHub上很慢，毕竟是国外的服务器。  </li>
+<li>有时候Github会抽风，很多时候国内没法访问，必须得上梯子才能上去，还是很不方便的。  </li>
+</ol>
+<p>所以在用魔改butterfly主题后，直接给我hexo整崩了（主要还是太菜，看不懂大佬写的东西），在此非常感谢那些<strong>无名英雄</strong>，我们只是走在了别人走好的路上。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
+<hr>
+<p>这次选择的是比较简洁的yilia主题，开发者已经不再提供更新了，后续有基于yilia的plus版本以及各种进阶，在csdn直接就可以搜到。</p>
+<hr>
+<p>话有些多，有些没逻辑。但是写博客的初心呢，有以下的一些原因：</p>
+<ul>
+<li>写东西是一个回顾的过程，在解决一个问题以后，以后很有可能继续碰见，当你头皮发麻时，想到你以前完美的记录这个过程，这个问题自然会迎刃而解。</li>
+<li>好的博客可以给你找工作加分，一个hr如何去辨识出哪些人是善于思考，善于总结的人，我想博客就是一个很好的媒介，也是了解你具有哪些技术的手段。</li>
+<li>博客可以锻炼文笔，虽然我文字功底很烂，但是初衷是希望可以通俗易懂，希望我写的东西可以帮你解决了一个甚至一些问题。</li>
+</ul>
+<p>在这两天看了这么多博客以后，有好有差，当然博主可能只是记录而已，他能看懂就行，但我希望自己以后写的东西可以仔细一些。</p>
+<hr>
+<p>更新：<br>yilia是什么（laji），butterfly是真的香，干掉重来。</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>感想</tag>
+        <tag>心得</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>新电脑上部署hexo</title>
     <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
     <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
@@ -209,6 +193,22 @@ hexo d
       </categories>
       <tags>
         <tag>-hexo迁移</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的Office激活码</title>
+    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="13d82e84fde0a37d889d0ced1c44b0eae99ca3975b70835e627ca20330073d83">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f753cd626c901b484f30ea433050601b0972c77810c9a8272da031fb62138a37451</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>-office</tag>
       </tags>
   </entry>
   <entry>
