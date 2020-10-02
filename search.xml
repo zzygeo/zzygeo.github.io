@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>hexo d 出现错误的用户名和密码的解决办法</title>
+    <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
+<h2 id="点进去就可以更改用户名和密码了"><a href="#点进去就可以更改用户名和密码了" class="headerlink" title="点进去就可以更改用户名和密码了"></a>点进去就可以更改用户名和密码了</h2>]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown语法</title>
     <url>/2020/09/24/markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h1><pre><code># 一级标题
@@ -106,19 +131,28 @@
       </tags>
   </entry>
   <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
-<hr>
+    <title>新电脑上部署hexo</title>
+    <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
+    <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
+<h1 id="2-拷贝源文件"><a href="#2-拷贝源文件" class="headerlink" title="2. 拷贝源文件"></a>2. 拷贝源文件</h1><p>将初始电脑上个人博客文件夹下这几个文件夹拷到当前新电脑的准备设置的博客路径下。</p>
+<pre><code>_config.yml
+package.json
+scaffolds/
+source/
+themes/
+</code></pre><h1 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h1><p>在 cmd 下输入下面指令安装 hexo:<br>    npm install -g hexo</p>
+<h1 id="4-在新博客路径下，安装三方依赖库"><a href="#4-在新博客路径下，安装三方依赖库" class="headerlink" title="4. 在新博客路径下，安装三方依赖库"></a>4. 在新博客路径下，安装三方依赖库</h1><pre><code>npm install
+npm install hexo-deployer-git --save //文章部署到 git 的模块
+</code></pre><p><strong>千万别hxeo init</strong>，不然你就拉在裤子里了！！！</p>
+<h1 id="5-GITHUB-gitee-添加-SSH-KEYS"><a href="#5-GITHUB-gitee-添加-SSH-KEYS" class="headerlink" title="5. GITHUB/gitee 添加 SSH KEYS"></a>5. GITHUB/gitee 添加 SSH KEYS</h1><p>在GitHub/gitee的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>首先在本地创建 SSH Keys:<br>    $ ssh-keygen -t rsa -C “xxxx@qq.com“<br>后面的邮箱即为 github 注册邮箱，也是你登录 Github 的邮箱，之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：<br>    ssh -T git@github.com<br>gitee我还没尝试过，想必改一下后缀就行了。<br>会弹出确认命令，输入yes,会弹出你的名字等等，会出现：<br>    Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.<br>然后：<br>    hexo g<br>    hexo s</p>
+<pre><code>hexo d
+</code></pre><hr>
 ]]></content>
       <categories>
-        <category>Youbute</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>-Youtube</tag>
+        <tag>-hexo迁移</tag>
       </tags>
   </entry>
   <entry>
@@ -167,20 +201,6 @@
       </tags>
   </entry>
   <entry>
-    <title>梯子</title>
-    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
-    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
-<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
-<hr>
-]]></content>
-      <categories>
-        <category>VPN</category>
-      </categories>
-      <tags>
-        <tag>-梯子</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浏览器以及插件</title>
     <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
@@ -215,6 +235,20 @@
       </categories>
       <tags>
         <tag>-浏览器推荐 -浏览器插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>梯子</title>
+    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
+    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
+<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
+<hr>
+]]></content>
+      <categories>
+        <category>VPN</category>
+      </categories>
+      <tags>
+        <tag>-梯子</tag>
       </tags>
   </entry>
   <entry>
