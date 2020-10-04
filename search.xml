@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PCL-1-11-Visual-Studio-2019-配置</title>
     <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<font color= ff size=4 face="">
@@ -97,17 +113,6 @@ int main()
       <tags>
         <tag>-pcl -visual studio</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>hexo d 出现错误的用户名和密码的解决办法</title>
-    <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
-<p>点进去就可以更改用户名和密码了</p>
-<hr>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -215,36 +220,15 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+    <title>hexo d 出现错误的用户名和密码的解决办法</title>
+    <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
+<p>点进去就可以更改用户名和密码了</p>
 <hr>
 ]]></content>
       <categories>
-        <category>Youbute</category>
+        <category>hexo</category>
       </categories>
-      <tags>
-        <tag>-Youtube</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>我的Office激活码</title>
-    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>-office</tag>
-      </tags>
   </entry>
   <entry>
     <title>关于入门博客的一些事</title>
@@ -273,6 +257,74 @@ int main()
       <tags>
         <tag>感想</tag>
         <tag>心得</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>资源</title>
+    <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
+    <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
+<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iLB7Jh5tscb">链接</a></p>
+<h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
+<h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
+<p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
+<p><a href="http://www.ai-start.com/dl2017/">吴恩达深度学习笔记</a></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浏览器以及插件</title>
+    <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
+<p><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
+<ol>
+<li>更改搜索引擎，默认的是google的，这里需要我们改成百度的，不然你每次就只能先翻墙才能搜索。在设置里找到搜素引擎，默认设置为百度。<br><img src="/blog_img/浏览器以及插件/19.png" alt=""></li>
+<li>在翻墙以后，浏览器将会打开代理模式，如下图：<br><img src="/blog_img/浏览器以及插件/20.png" alt=""><br><img src="/blog_img/浏览器以及插件/21.png" alt=""><br>但是在你不翻墙的时候，他也是这样设置，这就会导致你使用浏览器的时候，搜东西出现连接不上服务器的问题。这时候你需要设置成这样：<br><img src="/blog_img/浏览器以及插件/22.png" alt=""></li>
+</ol>
+<h1 id="2-google浏览器的一些好用插件"><a href="#2-google浏览器的一些好用插件" class="headerlink" title="2.google浏览器的一些好用插件"></a>2.google浏览器的一些好用插件</h1><p><strong>注意：在你下载插件的时候，必须先翻墙，不然你无法打开拓展程序商店</strong><br>不多BB直接整活<br>先找到插件搜索地方，如下图：<br><img src="/blog_img/浏览器以及插件/1.png" alt=""><br><img src="/blog_img/浏览器以及插件/2.png" alt=""></p>
+<h2 id="1-Adblock-Plus"><a href="#1-Adblock-Plus" class="headerlink" title="1.Adblock Plus"></a>1.Adblock Plus</h2><p><img src="/blog_img/浏览器以及插件/3.png" alt=""></p>
+<p>有效去除浏览器广告</p>
+<h2 id="2-Awesome-Screenshot"><a href="#2-Awesome-Screenshot" class="headerlink" title="2.Awesome Screenshot"></a>2.Awesome Screenshot</h2><p><img src="/blog_img/浏览器以及插件/4.png" alt=""></p>
+<p>可以录频，包括桌面的，浏览器页面的等等，需要先注册账号，录频后的视频会放在你的账户里，可以自行下载。</p>
+<h2 id="3-Free-Download-manager"><a href="#3-Free-Download-manager" class="headerlink" title="3.Free Download manager"></a>3.Free Download manager</h2><p>这是一款强大的下载器，速度快而且方便，速度比迅雷更快，更关键的是在你翻墙以后，迅雷的扩展程序有些国外的资源他是不支持下载的，但是这个可以。<br>下载器官网如下：<br><img src="/blog_img/浏览器以及插件/16.png" alt=""></p>
+<p>在安装完成后，打开<strong>设置</strong>选项，可以关联扩展，如图：<br><img src="/blog_img/浏览器以及插件/17.png" alt=""></p>
+<p>当然你也可以直接到应用商店下载：<br><img src="/blog_img/浏览器以及插件/5.png" alt=""></p>
+<p><strong>建议先下载下载器再去下载google扩展程序，这样就可以自动关联了，正好我想下一个腾讯视频，效果如图：</strong><br><img src="/blog_img/浏览器以及插件/18.png" alt=""><br>每次下载你可以自行选择下载地址，很方便管理你的应用。</p>
+<h2 id="4-Google翻译"><a href="#4-Google翻译" class="headerlink" title="4.Google翻译"></a>4.Google翻译</h2><p><img src="/blog_img/浏览器以及插件/6.png" alt=""><br>不多介绍了</p>
+<h2 id="5-Imagus"><a href="#5-Imagus" class="headerlink" title="5.Imagus"></a>5.Imagus</h2><p><img src="/blog_img/浏览器以及插件/7.png" alt=""></p>
+<p>imagus主要就是在你鼠标停留在图片上时，自动放大图片，比如在你购物时：<br><img src="/blog_img/浏览器以及插件/23.png" alt=""></p>
+<h2 id="6-Infinity-新标签页"><a href="#6-Infinity-新标签页" class="headerlink" title="6.Infinity 新标签页"></a>6.Infinity 新标签页</h2><p><img src="/blog_img/浏览器以及插件/8.png" alt=""></p>
+<p>它可以更换你的浏览器壁纸，可以添加常用网站，看起来很简洁很舒服。效果如下：<br><img src="/blog_img/浏览器以及插件/9.png" alt=""></p>
+<h2 id="7-one-Tab"><a href="#7-one-Tab" class="headerlink" title="7.one Tab"></a>7.one Tab</h2><p><img src="/blog_img/浏览器以及插件/10.png" alt=""></p>
+<p>当你在打开数十个网页时，图片变小看不清网页信息，如何切换到你想要的页面的，one tab就可以实现，效果如下：<br><img src="/blog_img/浏览器以及插件/24.png" alt=""></p>
+<h2 id="8-tampermonkey"><a href="#8-tampermonkey" class="headerlink" title="8.tampermonkey"></a>8.tampermonkey</h2><p><img src="/blog_img/浏览器以及插件/11.png" alt=""><br>油猴是一个强大的工具，其中内置了很多的功能，甚至油猴有插件可以直接拦截百度网盘，将百度网盘的资源以free download 下载。（想到百度网盘原来几K让冲超级会员的嘴脸就想骂他，虽然在上半年提供可以勾选通道，但是也只有100-200k，属实垃圾）。<br>这次我就以一个YOUTUBE视频下载插件为例介绍一下。</p>
+<p>打开油猴页面，搜素插件如图，安装插件：<br><img src="/blog_img/浏览器以及插件/13.png" alt=""><br>之后在我打开一个YOUTUBE视频，可以看到出现了下载链接：<br><img src="/blog_img/浏览器以及插件/15.png" alt=""></p>
+<h2 id="9-关灯看视频"><a href="#9-关灯看视频" class="headerlink" title="9.关灯看视频"></a>9.关灯看视频</h2><p>在你晚上看B站，看YOUTUBE视频时，可以选择，效果如图：<br><img src="/blog_img/浏览器以及插件/14.png" alt=""></p>
+<hr>
+]]></content>
+      <categories>
+        <category>浏览器</category>
+      </categories>
+      <tags>
+        <tag>-浏览器推荐 -浏览器插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的Office激活码</title>
+    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>-office</tag>
       </tags>
   </entry>
   <entry>
@@ -322,43 +374,6 @@ hexo d
       </categories>
       <tags>
         <tag>-梯子</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浏览器以及插件</title>
-    <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
-<p><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
-<ol>
-<li>更改搜索引擎，默认的是google的，这里需要我们改成百度的，不然你每次就只能先翻墙才能搜索。在设置里找到搜素引擎，默认设置为百度。<br><img src="/blog_img/浏览器以及插件/19.png" alt=""></li>
-<li>在翻墙以后，浏览器将会打开代理模式，如下图：<br><img src="/blog_img/浏览器以及插件/20.png" alt=""><br><img src="/blog_img/浏览器以及插件/21.png" alt=""><br>但是在你不翻墙的时候，他也是这样设置，这就会导致你使用浏览器的时候，搜东西出现连接不上服务器的问题。这时候你需要设置成这样：<br><img src="/blog_img/浏览器以及插件/22.png" alt=""></li>
-</ol>
-<h1 id="2-google浏览器的一些好用插件"><a href="#2-google浏览器的一些好用插件" class="headerlink" title="2.google浏览器的一些好用插件"></a>2.google浏览器的一些好用插件</h1><p><strong>注意：在你下载插件的时候，必须先翻墙，不然你无法打开拓展程序商店</strong><br>不多BB直接整活<br>先找到插件搜索地方，如下图：<br><img src="/blog_img/浏览器以及插件/1.png" alt=""><br><img src="/blog_img/浏览器以及插件/2.png" alt=""></p>
-<h2 id="1-Adblock-Plus"><a href="#1-Adblock-Plus" class="headerlink" title="1.Adblock Plus"></a>1.Adblock Plus</h2><p><img src="/blog_img/浏览器以及插件/3.png" alt=""></p>
-<p>有效去除浏览器广告</p>
-<h2 id="2-Awesome-Screenshot"><a href="#2-Awesome-Screenshot" class="headerlink" title="2.Awesome Screenshot"></a>2.Awesome Screenshot</h2><p><img src="/blog_img/浏览器以及插件/4.png" alt=""></p>
-<p>可以录频，包括桌面的，浏览器页面的等等，需要先注册账号，录频后的视频会放在你的账户里，可以自行下载。</p>
-<h2 id="3-Free-Download-manager"><a href="#3-Free-Download-manager" class="headerlink" title="3.Free Download manager"></a>3.Free Download manager</h2><p>这是一款强大的下载器，速度快而且方便，速度比迅雷更快，更关键的是在你翻墙以后，迅雷的扩展程序有些国外的资源他是不支持下载的，但是这个可以。<br>下载器官网如下：<br><img src="/blog_img/浏览器以及插件/16.png" alt=""></p>
-<p>在安装完成后，打开<strong>设置</strong>选项，可以关联扩展，如图：<br><img src="/blog_img/浏览器以及插件/17.png" alt=""></p>
-<p>当然你也可以直接到应用商店下载：<br><img src="/blog_img/浏览器以及插件/5.png" alt=""></p>
-<p><strong>建议先下载下载器再去下载google扩展程序，这样就可以自动关联了，正好我想下一个腾讯视频，效果如图：</strong><br><img src="/blog_img/浏览器以及插件/18.png" alt=""><br>每次下载你可以自行选择下载地址，很方便管理你的应用。</p>
-<h2 id="4-Google翻译"><a href="#4-Google翻译" class="headerlink" title="4.Google翻译"></a>4.Google翻译</h2><p><img src="/blog_img/浏览器以及插件/6.png" alt=""><br>不多介绍了</p>
-<h2 id="5-Imagus"><a href="#5-Imagus" class="headerlink" title="5.Imagus"></a>5.Imagus</h2><p><img src="/blog_img/浏览器以及插件/7.png" alt=""></p>
-<p>imagus主要就是在你鼠标停留在图片上时，自动放大图片，比如在你购物时：<br><img src="/blog_img/浏览器以及插件/23.png" alt=""></p>
-<h2 id="6-Infinity-新标签页"><a href="#6-Infinity-新标签页" class="headerlink" title="6.Infinity 新标签页"></a>6.Infinity 新标签页</h2><p><img src="/blog_img/浏览器以及插件/8.png" alt=""></p>
-<p>它可以更换你的浏览器壁纸，可以添加常用网站，看起来很简洁很舒服。效果如下：<br><img src="/blog_img/浏览器以及插件/9.png" alt=""></p>
-<h2 id="7-one-Tab"><a href="#7-one-Tab" class="headerlink" title="7.one Tab"></a>7.one Tab</h2><p><img src="/blog_img/浏览器以及插件/10.png" alt=""></p>
-<p>当你在打开数十个网页时，图片变小看不清网页信息，如何切换到你想要的页面的，one tab就可以实现，效果如下：<br><img src="/blog_img/浏览器以及插件/24.png" alt=""></p>
-<h2 id="8-tampermonkey"><a href="#8-tampermonkey" class="headerlink" title="8.tampermonkey"></a>8.tampermonkey</h2><p><img src="/blog_img/浏览器以及插件/11.png" alt=""><br>油猴是一个强大的工具，其中内置了很多的功能，甚至油猴有插件可以直接拦截百度网盘，将百度网盘的资源以free download 下载。（想到百度网盘原来几K让冲超级会员的嘴脸就想骂他，虽然在上半年提供可以勾选通道，但是也只有100-200k，属实垃圾）。<br>这次我就以一个YOUTUBE视频下载插件为例介绍一下。</p>
-<p>打开油猴页面，搜素插件如图，安装插件：<br><img src="/blog_img/浏览器以及插件/13.png" alt=""><br>之后在我打开一个YOUTUBE视频，可以看到出现了下载链接：<br><img src="/blog_img/浏览器以及插件/15.png" alt=""></p>
-<h2 id="9-关灯看视频"><a href="#9-关灯看视频" class="headerlink" title="9.关灯看视频"></a>9.关灯看视频</h2><p>在你晚上看B站，看YOUTUBE视频时，可以选择，效果如图：<br><img src="/blog_img/浏览器以及插件/14.png" alt=""></p>
-<hr>
-]]></content>
-      <categories>
-        <category>浏览器</category>
-      </categories>
-      <tags>
-        <tag>-浏览器推荐 -浏览器插件</tag>
       </tags>
   </entry>
   <entry>
