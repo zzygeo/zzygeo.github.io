@@ -115,6 +115,27 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
+    <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
+<p>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
+<p>首先我是从这篇<a href="https://blog.csdn.net/weixin_37166398/article/details/101422239?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">博客</a>里查到了我的ip，然后ping了查到的ip，然后在system32\drives\etc\hosts里添加了   </p>
+<pre><code>IP gitee.com
+</code></pre><p>然而这并没有继续运行成功。<br>然后我有尝试<br>1.管理员身份运行cmd<br>2.输入 </p>
+<pre><code>netsh winsock reset
+</code></pre><p>3.重启</p>
+<p>还有尝试命令行输入  </p>
+<pre><code>git config --global --unset http.proxy 
+git config --global --unset https.proxy
+</code></pre><p>最后发现还是不行，结果我把第一步添加的IP gitee.com删了居然好了。</p>
+<p>所以我觉得问题在以下原因，第一个是我没有在打开代理下hexo d,平时确实是没有注意这个问题，但关闭代理下好像有时候也成功过，但这个问题确实出在了代理的问题上。<br>另外就是我的代理导致了无法上传上去，上述的两个操作我也不知道哪个解决了这个问题，毕竟我先添加了IP，然后再试了这两种清楚的。如果下次再出现这个问题，有了结果再继续补充。</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>markdown语法</title>
     <url>/2020/09/24/markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h1><pre><code># 一级标题
@@ -231,35 +252,6 @@ int main()
       </categories>
   </entry>
   <entry>
-    <title>关于入门博客的一些事</title>
-    <url>/2020/09/24/%E5%85%B3%E4%BA%8E%E5%85%A5%E9%97%A8%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>这算是我的第二个博客了，第一部署在Github上，都是基于hexo来搭建的，不过部署在在Github上有这样的问题：  </p>
-<ol>
-<li>上传到GitHub上很慢，毕竟是国外的服务器。  </li>
-<li>有时候Github会抽风，很多时候国内没法访问，必须得上梯子才能上去，还是很不方便的。  </li>
-</ol>
-<p>所以在用魔改butterfly主题后，直接给我hexo整崩了（主要还是太菜，看不懂大佬写的东西），在此非常感谢那些<strong>无名英雄</strong>，我们只是走在了别人走好的路上。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
-<hr>
-<p>这次选择的是比较简洁的yilia主题，开发者已经不再提供更新了，后续有基于yilia的plus版本以及各种进阶，在csdn直接就可以搜到。</p>
-<hr>
-<p>话有些多，有些没逻辑。但是写博客的初心呢，有以下的一些原因：</p>
-<ul>
-<li>写东西是一个回顾的过程，在解决一个问题以后，以后很有可能继续碰见，当你头皮发麻时，想到你以前完美的记录这个过程，这个问题自然会迎刃而解。</li>
-<li>好的博客可以给你找工作加分，一个hr如何去辨识出哪些人是善于思考，善于总结的人，我想博客就是一个很好的媒介，也是了解你具有哪些技术的手段。</li>
-<li>博客可以锻炼文笔，虽然我文字功底很烂，但是初衷是希望可以通俗易懂，希望我写的东西可以帮你解决了一个甚至一些问题。</li>
-</ul>
-<p>在这两天看了这么多博客以后，有好有差，当然博主可能只是记录而已，他能看懂就行，但我希望自己以后写的东西可以仔细一些。</p>
-<hr>
-<p>更新：<br>yilia是什么（laji），butterfly是真的香，干掉重来。</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>感想</tag>
-        <tag>心得</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>我的Office激活码</title>
     <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -276,38 +268,17 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>新电脑上部署hexo</title>
-    <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
-    <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
-<h1 id="2-拷贝源文件"><a href="#2-拷贝源文件" class="headerlink" title="2. 拷贝源文件"></a>2. 拷贝源文件</h1><p>将初始电脑上个人博客文件夹下这几个文件夹拷到当前新电脑的准备设置的博客路径下。</p>
-<pre><code>_config.yml
-package.json
-scaffolds/
-source/
-themes/
-</code></pre><h1 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h1><p>在 cmd 下输入下面指令安装 hexo:</p>
-<pre><code>npm install -g hexo
-</code></pre><h1 id="4-在新博客路径下，安装三方依赖库"><a href="#4-在新博客路径下，安装三方依赖库" class="headerlink" title="4. 在新博客路径下，安装三方依赖库"></a>4. 在新博客路径下，安装三方依赖库</h1><pre><code>npm install
-npm install hexo-deployer-git --save //文章部署到 git 的模块
-npm install 主题需要的插件
-</code></pre><p><strong>千万别hxeo init</strong>，不然你就拉在裤子里了！！！</p>
-<h1 id="5-GITHUB-gitee-添加-SSH-KEYS"><a href="#5-GITHUB-gitee-添加-SSH-KEYS" class="headerlink" title="5. GITHUB/gitee 添加 SSH KEYS"></a>5. GITHUB/gitee 添加 SSH KEYS</h1><p>在GitHub/gitee的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>首先在本地创建 SSH Keys:</p>
-<pre><code>$ ssh-keygen -t rsa -C “xxxx@qq.com“
-</code></pre><p>后面的邮箱即为 github 注册邮箱，也是你登录 Github 的邮箱，之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：</p>
-<pre><code>ssh -T git@github.com
-</code></pre><p>gitee我还没尝试过，想必改一下后缀就行了。<br>会弹出确认命令，输入yes,会弹出你的名字等等，会出现：</p>
-<pre><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-</code></pre><p>然后：</p>
-<pre><code>hexo g
-hexo s
-hexo d
-</code></pre><hr>
+    <title>梯子</title>
+    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
+    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
+<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
+<hr>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>VPN</category>
       </categories>
       <tags>
-        <tag>-hexo迁移</tag>
+        <tag>-梯子</tag>
       </tags>
   </entry>
   <entry>
@@ -349,17 +320,32 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>梯子</title>
-    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
-    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
-<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
+    <title>关于入门博客的一些事</title>
+    <url>/2020/09/24/%E5%85%B3%E4%BA%8E%E5%85%A5%E9%97%A8%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
+    <content><![CDATA[<p>这算是我的第二个博客了，第一部署在Github上，都是基于hexo来搭建的，不过部署在在Github上有这样的问题：  </p>
+<ol>
+<li>上传到GitHub上很慢，毕竟是国外的服务器。  </li>
+<li>有时候Github会抽风，很多时候国内没法访问，必须得上梯子才能上去，还是很不方便的。  </li>
+</ol>
+<p>所以在用魔改butterfly主题后，直接给我hexo整崩了（主要还是太菜，看不懂大佬写的东西），在此非常感谢那些<strong>无名英雄</strong>，我们只是走在了别人走好的路上。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
+<hr>
+<p>这次选择的是比较简洁的yilia主题，开发者已经不再提供更新了，后续有基于yilia的plus版本以及各种进阶，在csdn直接就可以搜到。</p>
+<hr>
+<p>话有些多，有些没逻辑。但是写博客的初心呢，有以下的一些原因：</p>
+<ul>
+<li>写东西是一个回顾的过程，在解决一个问题以后，以后很有可能继续碰见，当你头皮发麻时，想到你以前完美的记录这个过程，这个问题自然会迎刃而解。</li>
+<li>好的博客可以给你找工作加分，一个hr如何去辨识出哪些人是善于思考，善于总结的人，我想博客就是一个很好的媒介，也是了解你具有哪些技术的手段。</li>
+<li>博客可以锻炼文笔，虽然我文字功底很烂，但是初衷是希望可以通俗易懂，希望我写的东西可以帮你解决了一个甚至一些问题。</li>
+</ul>
+<p>在这两天看了这么多博客以后，有好有差，当然博主可能只是记录而已，他能看懂就行，但我希望自己以后写的东西可以仔细一些。</p>
+<hr>
+<p>更新：<br>yilia是什么（laji），butterfly是真的香，干掉重来。</p>
 <hr>
 ]]></content>
-      <categories>
-        <category>VPN</category>
-      </categories>
       <tags>
-        <tag>-梯子</tag>
+        <tag>感想</tag>
+        <tag>心得</tag>
       </tags>
   </entry>
   <entry>
@@ -379,6 +365,27 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>深度学习篇</title>
+    <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
+    <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
+<h1 id="1-深度学习简介"><a href="#1-深度学习简介" class="headerlink" title="1.深度学习简介"></a>1.深度学习简介</h1><p>与其枯坐在房间里思考怎么设计一个识别猫的程序，不如利用人类肉眼在图像中识别猫的能力。我们可以收集一些已知包含猫与不包含猫的真实图像，然后我们的目标就转化成如何从这些图像入手得到一个可以推断出图像中是否有猫的函数。<br>通俗来说，机器学习是一门讨论各式各样的适用于不同问题的函数形式，以及如何使用数据来有效地获取函数参数具体值的学科。深度学习是指机器学习中的一类函数，它们的形式通常为多层神经网络。近年来，仰仗着大数据集和强大的硬件，深度学习已逐渐成为处理图像、文本语料和声音信号等复杂高维度数据的主要方法，算力以及数据集的增长使得机器学习死灰复燃。</p>
+<h2 id="1-1机器学习与深度学习的关系"><a href="#1-1机器学习与深度学习的关系" class="headerlink" title="1.1机器学习与深度学习的关系"></a>1.1机器学习与深度学习的关系</h2><p>机器学习研究如何使计算机系统利用经验改善性能。它是人工智能领域的分支，也是实现人工智能的一种手段。在机器学习的众多研究方向中，表征学习关注如何自动找出表示数据的合适方式，以便更好地将输入变换为正确的输出。<br>深度学习是具有多级表示的表征学习方法。在每一级（从原始数据开始），深度学习通过简单的函数将该级的表示变换为更高级的表示。因此，深度学习模型也可以看作是由许多简单函数复合而成的函数。当这些复合的函数足够多时，深度学习模型就可以表达非常复杂的变换。深度学习可以逐级表示越来越抽象的概念或模式。以图像为例，它的输入是一堆原始像素值。深度学习模型中，图像可以逐级表示为特定位置和角度的边缘、由边缘组合得出的花纹、由多种花纹进一步汇合得到的特定部位的模式等。最终，模型能够较容易根据更高级的表示完成给定的任务，如识别图像中的物体。值得一提的是，作为表征学习的一种，深度学习将自动找出每一级表示数据的合适方式。<br>因此，深度学习的一个外在特点是端到端的训练。也就是说，并不是将单独调试的部分拼凑起来组成一个系统，而是将整个系统组建好之后一起训练。比如说，计算机视觉科学家之前曾一度将特征抽取与机器学习模型的构建分开处理，像是Canny边缘探测和SIFT特征提取 曾占据统治性地位达10年以上，但这也就是人类能找到的最好方法了。当深度学习进入这个领域后，这些特征提取方法就被性能更强的自动优化的逐级过滤器替代了。<br>除端到端的训练以外，我们也正在经历从含参数统计模型转向完全无参数的模型。当数据非常稀缺时，我们需要通过简化对现实的假设来得到实用的模型。当数据充足时，我们就可以用能更好地拟合现实的无参数模型来替代这些含参数模型。这也使我们可以得到更精确的模型，尽管需要牺牲一些可解释性。</p>
+<h2 id="1-2深度学习的资源"><a href="#1-2深度学习的资源" class="headerlink" title="1.2深度学习的资源"></a>1.2深度学习的资源</h2><p>吴恩达的课确实很好，但我更喜欢这种直接上手边看边做的方法，现在跟着花书挺好的，社区也很强大，在这里贴上链接，原书版以及pytorch版的链接。  </p>
+<p><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">pytorch</a><br><a href="https://zh.d2l.ai/index.html">原版</a></p>
+<h1 id="2-必要软件"><a href="#2-必要软件" class="headerlink" title="2.必要软件"></a>2.必要软件</h1><p>原书中说明已经很清楚了，因此在这里我只会放一些我使用中所碰见的问题。首先是anaconda的一些知识以及jupyter book的知识，链接如下：</p>
+<p><a href="https://www.zhihu.com/question/58033789/answer/254673663">anaconda</a><br><a href="https://www.zhihu.com/question/46309360/answer/254638807">jupyter_book</a></p>
+<p>在我根据书中的内容安装miniconda以及jupyter book时，在第四步激活了,找不到命令,论坛里也找了找确实也有这个问题，有回答说不是在安装的文件下安装的anaconda。而我自己是直接在安装目录下 Git bash here的，没法用。我寻思是不是没管理员权限，直接搜索栏 cmd，以管理员身份运行。</p>
+<pre><code>cd C:\d2l-zh #安装镜像的文件夹
+conda activate gluon
+jupyter notebook
+</code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>资源</title>
     <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
     <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
@@ -394,24 +401,38 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
-    <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
-<p>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
-<p>首先我是从这篇<a href="https://blog.csdn.net/weixin_37166398/article/details/101422239?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">博客</a>里查到了我的ip，然后ping了查到的ip，然后在system32\drives\etc\hosts里添加了   </p>
-<pre><code>IP gitee.com
-</code></pre><p>然而这并没有继续运行成功。<br>然后我有尝试<br>1.管理员身份运行cmd<br>2.输入 </p>
-<pre><code>netsh winsock reset
-</code></pre><p>3.重启</p>
-<p>还有尝试命令行输入  </p>
-<pre><code>git config --global --unset http.proxy 
-git config --global --unset https.proxy
-</code></pre><p>最后发现还是不行，结果我把第一步添加的IP gitee.com删了居然好了。</p>
-<p>所以我觉得问题在以下原因，第一个是我没有在打开代理下hexo d,平时确实是没有注意这个问题，但关闭代理下好像有时候也成功过，但这个问题确实出在了代理的问题上。<br>另外就是我的代理导致了无法上传上去，上述的两个操作我也不知道哪个解决了这个问题，毕竟我先添加了IP，然后再试了这两种清楚的。如果下次再出现这个问题，有了结果再继续补充。</p>
-<hr>
+    <title>新电脑上部署hexo</title>
+    <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
+    <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
+<h1 id="2-拷贝源文件"><a href="#2-拷贝源文件" class="headerlink" title="2. 拷贝源文件"></a>2. 拷贝源文件</h1><p>将初始电脑上个人博客文件夹下这几个文件夹拷到当前新电脑的准备设置的博客路径下。</p>
+<pre><code>_config.yml
+package.json
+scaffolds/
+source/
+themes/
+</code></pre><h1 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h1><p>在 cmd 下输入下面指令安装 hexo:</p>
+<pre><code>npm install -g hexo
+</code></pre><h1 id="4-在新博客路径下，安装三方依赖库"><a href="#4-在新博客路径下，安装三方依赖库" class="headerlink" title="4. 在新博客路径下，安装三方依赖库"></a>4. 在新博客路径下，安装三方依赖库</h1><pre><code>npm install
+npm install hexo-deployer-git --save //文章部署到 git 的模块
+npm install 主题需要的插件
+</code></pre><p><strong>千万别hxeo init</strong>，不然你就拉在裤子里了！！！</p>
+<h1 id="5-GITHUB-gitee-添加-SSH-KEYS"><a href="#5-GITHUB-gitee-添加-SSH-KEYS" class="headerlink" title="5. GITHUB/gitee 添加 SSH KEYS"></a>5. GITHUB/gitee 添加 SSH KEYS</h1><p>在GitHub/gitee的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>首先在本地创建 SSH Keys:</p>
+<pre><code>$ ssh-keygen -t rsa -C “xxxx@qq.com“
+</code></pre><p>后面的邮箱即为 github 注册邮箱，也是你登录 Github 的邮箱，之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p>gitee我还没尝试过，想必改一下后缀就行了。<br>会弹出确认命令，输入yes,会弹出你的名字等等，会出现：</p>
+<pre><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>然后：</p>
+<pre><code>hexo g
+hexo s
+hexo d
+</code></pre><hr>
 ]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
       <tags>
-        <tag>-hexo</tag>
+        <tag>-hexo迁移</tag>
       </tags>
   </entry>
   <entry>
