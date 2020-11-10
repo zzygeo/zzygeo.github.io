@@ -381,6 +381,9 @@ jupyter notebook
 </code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
 <hr>
 ]]></content>
+      <categories>
+        <category>-DL</category>
+      </categories>
       <tags>
         <tag>-deep learning</tag>
       </tags>
