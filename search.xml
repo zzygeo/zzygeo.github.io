@@ -379,7 +379,7 @@ git config --global --unset https.proxy
 conda activate gluon
 jupyter notebook
 </code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
-<h2 id="3-编译器"><a href="#3-编译器" class="headerlink" title="3.编译器"></a>3.编译器</h2><p>11.13补充，anaconda确实强，管理python包不在话下，另外在配置编译器环境的时候确实方便不少，vscode确实强，又能搭起来又能耍起来，有点耍博客的感觉，c/c艹，python现在都用vscode去编译去了，主要就是环境搭建的问题，类似的博客确实多，在这里放比较好的链接好了。<br><a href="https://www.jb51.net/article/171027.htm">vscode配置c/c++环境</a><br><a href="https://www.zhihu.com/question/322530705/answer/860418884">vscode配置python环境</a><br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">在vscode中配置anaconda运行环境</a></p>
+<h1 id="3-编译器"><a href="#3-编译器" class="headerlink" title="3.编译器"></a>3.编译器</h1><p>11.13补充，anaconda确实强，管理python包不在话下，另外在配置编译器环境的时候确实方便不少，vscode确实强，又能搭起来又能耍起来，有点耍博客的感觉，c/c艹，python现在都用vscode去编译去了，主要就是环境搭建的问题，类似的博客确实多，在这里放比较好的链接好了。当然vscode不是必须，但确实很有可玩性。<br><a href="https://www.jb51.net/article/171027.htm">vscode配置c/c++环境</a><br><a href="https://www.zhihu.com/question/322530705/answer/860418884">vscode配置python环境</a><br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">在vscode中配置anaconda运行环境</a></p>
 <hr>
 ]]></content>
       <categories>
