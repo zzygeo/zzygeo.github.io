@@ -129,6 +129,7 @@ int main()
 git config --global --unset https.proxy
 </code></pre><p>最后发现还是不行，结果我把第一步添加的IP gitee.com删了居然好了。</p>
 <p>所以我觉得问题在以下原因，第一个是我没有在打开代理下hexo d,平时确实是没有注意这个问题，但关闭代理下好像有时候也成功过，但这个问题确实出在了代理的问题上。<br>另外就是我的代理导致了无法上传上去，上述的两个操作我也不知道哪个解决了这个问题，毕竟我先添加了IP，然后再试了这两种清楚的。如果下次再出现这个问题，有了结果再继续补充。</p>
+<p>2020/11/17<br>他妈个头的，翻墙今天又部署不上去了，前面的用了也不好使，又试了一下这个更改DNS的方法成功了，<a href="https://blog.csdn.net/weixin_42476786/article/details/82691934?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf">链接</a>在这</p>
 <hr>
 ]]></content>
       <tags>
