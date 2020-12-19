@@ -465,4 +465,67 @@ hexo d
         <tag>-编译器</tag>
       </tags>
   </entry>
+  <entry>
+    <title>C++</title>
+    <url>/2020/12/19/CPP/</url>
+    <content><![CDATA[<p>写一些觉得能用上的C++代码：</p>
+<p>将文本的数字读成数组：  </p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;fstream&gt;
+using namespace std;
+int main()
+&#123;
+    const int txtRow = 201;
+    const int txtColumn = 8;
+    float txtData[txtRow][txtColumn];
+    ifstream infile;
+    infile.open(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;);
+    for (int i = 0; i &lt; txtRow; i++)
+    &#123;
+        for (int j = 0; j &lt; txtColumn; j++)
+        &#123;
+            infile &gt;&gt; txtData[i][j];
+        &#125;
+    &#125;
+    infile.close();
+
+return 0;
+&#125;    
+</code></pre><p>将文本的数字读成矩阵，需要第三方库Eigen。  </p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;Eigen/Dense&gt;
+#include&lt;fstream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+using namespace Eigen;
+
+MatrixXd ReadData(istream&amp; data, int a, int b)
+&#123;
+    MatrixXd m_matrix(a, b);
+    for (int i = 0; i &lt; a; i++)
+    &#123;
+        for (int j = 0; j &lt; b; j++)
+        &#123;
+            data &gt;&gt; m_matrix(i,j);
+        &#125;
+    &#125;
+    return m_matrix;
+&#125;
+
+int main()
+&#123;
+    const int row = 201;
+    const int column = 8;
+    ifstream infile(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;, ios::in);
+    if (!infile)
+    &#123;
+        return 0;
+    &#125;
+    MatrixXd m_matrix = ReadData(infile, row, column);
+
+return 0;
+&#125;
+</code></pre><hr>
+]]></content>
+  </entry>
 </search>
