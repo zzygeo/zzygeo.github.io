@@ -528,4 +528,42 @@ return 0;
 </code></pre><hr>
 ]]></content>
   </entry>
+  <entry>
+    <title>pcl+vs+cmake编译</title>
+    <url>/2020/12/27/pcl-vs-cmake%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。</p>
+<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
+<p>3.安装Visual studio 2019编译器</p>
+<p>4.cmake<br><img src="/blog_img/PCL配置/17.png" alt="示意图"><br><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
+<p>其实源码包用不上，懒得改了，最复杂的方式就是源代码加第三方库进行配置，等我配置好了也会再一篇关于源码方式的配置。</p>
+<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a><br><a href="https://cmake.org/download/">cmake下载地址</a></p>
+<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
+<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
+<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
+<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
+<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
+<p>cmake 安装请选择添加到系统路径，没选的话也可以自己手动添加，添加的方式为cmake目录下bin文件  比如C:\APP\Cmake\bin这样的形式。</p>
+<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
+<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
+<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
+<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<h1 id="6-cmake编译"><a href="#6-cmake编译" class="headerlink" title="6.cmake编译"></a>6.cmake编译</h1><p>以管理员身份运行cmake-gui<br>在你想要的文件下创建一个名为example的文件夹，然后在此目录下创建一个source和cmake_bin文件，比如我的：</p>
+<p><img src="/blog_img/PCL配置/18.png" alt=""></p>
+<p>在source里面创建一个cpp文件和CMakeLists.txt文件。<br>CmakeLists.txt里写入以下内容：</p>
+<p>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)<br>project(test)<br>find_package(PCL 1.4 REQUIRED)<br>include_directories(${PCL_INCLUDE_DIRS})<br>link_directories(${PCL_LIBRARY_DIRS})<br>add_definitions(${PCL_DEFINITIONS})<br>add_executable (test test.cpp)<br>target_link_libraries (test ${PCL_LIBRARIES})</p>
+<p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
+<p>测试代码请网上去找，我用的是上一篇文件里的（里面有个D盘文件的读取可能会报错，但只要能出彩色的那个图就算配置成功了）。</p>
+<p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""><br><img src="/blog_img/PCL配置/21.png" alt=""><br>再点击一次configure<br><img src="/blog_img/PCL配置/22.png" alt=""><br>点击Generate,出现Generating done.<br><img src="/blog_img/PCL配置/23.png" alt=""></p>
+<p>找到cmake_bin底下的test_sln 打开。<br><img src="/blog_img/PCL配置/24.png" alt=""><br>将test设置为启动项，并调试。<br><img src="/blog_img/PCL配置/25.png" alt=""><br><img src="/blog_img/PCL配置/26.png" alt=""></p>
+<hr>
+]]></content>
+      <categories>
+        <category>pcl</category>
+      </categories>
+      <tags>
+        <tag>-pcl -visual studio</tag>
+      </tags>
+  </entry>
 </search>
