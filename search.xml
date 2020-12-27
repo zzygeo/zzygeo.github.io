@@ -555,8 +555,13 @@ return 0;
 <p>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)<br>project(test)<br>find_package(PCL 1.4 REQUIRED)<br>include_directories(${PCL_INCLUDE_DIRS})<br>link_directories(${PCL_LIBRARY_DIRS})<br>add_definitions(${PCL_DEFINITIONS})<br>add_executable (test test.cpp)<br>target_link_libraries (test ${PCL_LIBRARIES})</p>
 <p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
 <p>测试代码请网上去找，我用的是上一篇文件里的（里面有个D盘文件的读取可能会报错，但只要能出彩色的那个图就算配置成功了）。</p>
-<p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""><br><img src="/blog_img/PCL配置/21.png" alt=""><br>再点击一次configure<br><img src="/blog_img/PCL配置/22.png" alt=""><br>点击Generate,出现Generating done.<br><img src="/blog_img/PCL配置/23.png" alt=""></p>
-<p>找到cmake_bin底下的test_sln 打开。<br><img src="/blog_img/PCL配置/24.png" alt=""><br>将test设置为启动项，并调试。<br><img src="/blog_img/PCL配置/25.png" alt=""><br><img src="/blog_img/PCL配置/26.png" alt=""></p>
+<p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""></p>
+<p><img src="/blog_img/PCL配置/21.jpg" alt=""></p>
+<p>再点击一次configure<br><img src="/blog_img/PCL配置/22.jpg" alt=""></p>
+<p>点击Generate,出现Generating done.<br><img src="/blog_img/PCL配置/23.png" alt=""></p>
+<p>找到cmake_bin底下的test_sln 打开。<br><img src="/blog_img/PCL配置/24.jpg" alt=""></p>
+<p>将test设置为启动项，并调试。<br><img src="/blog_img/PCL配置/25.png" alt=""></p>
+<p><img src="/blog_img/PCL配置/26.jpg" alt=""></p>
 <hr>
 ]]></content>
       <categories>
