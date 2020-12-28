@@ -525,7 +525,47 @@ int main()
 
 return 0;
 &#125;
-</code></pre><hr>
+</code></pre><p>冒泡排序：</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;vector&gt;
+using namespace std;
+
+void display(vector&lt;int&gt; vec)
+&#123;
+    for (int i = 0; i &lt; vec.size(); ++i)
+        cout &lt;&lt; vec[i] &lt;&lt; &#39; &#39;;
+    cout &lt;&lt; endl;
+&#125;
+
+void swap(int&amp; val1, int&amp; val2)
+&#123;
+    int temp = val1;
+    val1 = val2;
+    val2 = temp;
+&#125;
+
+void bubble_sort(vector&lt;int&gt;&amp; vec)
+&#123;
+    for (int ix = 0; ix &lt; vec.size(); ++ix)
+        for (int jx = ix + 1; jx &lt; vec.size(); ++jx)
+            if (vec[ix] &gt; vec[jx])
+                swap(vec[ix], vec[jx]);
+&#125;
+
+int main()
+&#123;
+    int al[8] = &#123; 2,56,4,5,13,7,1,24 &#125;;
+    vector&lt;int&gt; vec(al, al + 8);
+    cout &lt;&lt; &quot;before sort:  &quot;;
+    display(vec);
+    bubble_sort(vec);
+    cout &lt;&lt; &quot;after sort: &quot;;
+    display(vec);
+
+    return 0;
+&#125;
+</code></pre><p>关键在于swap 和 bubble_sort时，不仅要传值，也要传址，不然只是其值被复制了一份，成为了参数的局部性定义，当运行结束也就从“程序堆栈”里释放掉了，并没有关联起来。</p>
+<hr>
 ]]></content>
   </entry>
   <entry>
