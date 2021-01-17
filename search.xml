@@ -1,6 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>C++</title>
+    <url>/2020/12/19/CPP/</url>
+    <content><![CDATA[<p>写一些觉得能用上的C++代码：</p>
+<p>将文本的数字读成数组：  </p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;fstream&gt;
+using namespace std;
+int main()
+&#123;
+    const int txtRow = 201;
+    const int txtColumn = 8;
+    float txtData[txtRow][txtColumn];
+    ifstream infile;
+    infile.open(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;);
+    for (int i = 0; i &lt; txtRow; i++)
+    &#123;
+        for (int j = 0; j &lt; txtColumn; j++)
+        &#123;
+            infile &gt;&gt; txtData[i][j];
+        &#125;
+    &#125;
+    infile.close();
+
+return 0;
+&#125;    
+</code></pre><p>将文本的数字读成矩阵，需要第三方库Eigen。  </p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;Eigen/Dense&gt;
+#include&lt;fstream&gt;
+#include&lt;cmath&gt;
+using namespace std;
+using namespace Eigen;
+
+MatrixXd ReadData(istream&amp; data, int a, int b)
+&#123;
+    MatrixXd m_matrix(a, b);
+    for (int i = 0; i &lt; a; i++)
+    &#123;
+        for (int j = 0; j &lt; b; j++)
+        &#123;
+            data &gt;&gt; m_matrix(i,j);
+        &#125;
+    &#125;
+    return m_matrix;
+&#125;
+
+int main()
+&#123;
+    const int row = 201;
+    const int column = 8;
+    ifstream infile(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;, ios::in);
+    if (!infile)
+    &#123;
+        return 0;
+    &#125;
+    MatrixXd m_matrix = ReadData(infile, row, column);
+
+return 0;
+&#125;
+</code></pre><p>冒泡排序：</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;vector&gt;
+using namespace std;
+
+void display(vector&lt;int&gt; vec)
+&#123;
+    for (int i = 0; i &lt; vec.size(); ++i)
+        cout &lt;&lt; vec[i] &lt;&lt; &#39; &#39;;
+    cout &lt;&lt; endl;
+&#125;
+
+void swap(int&amp; val1, int&amp; val2)
+&#123;
+    int temp = val1;
+    val1 = val2;
+    val2 = temp;
+&#125;
+
+void bubble_sort(vector&lt;int&gt;&amp; vec)
+&#123;
+    for (int ix = 0; ix &lt; vec.size(); ++ix)
+        for (int jx = ix + 1; jx &lt; vec.size(); ++jx)
+            if (vec[ix] &gt; vec[jx])
+                swap(vec[ix], vec[jx]);
+&#125;
+
+int main()
+&#123;
+    int al[8] = &#123; 2,56,4,5,13,7,1,24 &#125;;
+    vector&lt;int&gt; vec(al, al + 8);
+    cout &lt;&lt; &quot;before sort:  &quot;;
+    display(vec);
+    bubble_sort(vec);
+    cout &lt;&lt; &quot;after sort: &quot;;
+    display(vec);
+
+    return 0;
+&#125;
+</code></pre><p>关键在于swap 和 bubble_sort时，不仅要传值，也要传址，不然只是其值被复制了一份，成为了参数的局部性定义，当运行结束也就从“程序堆栈”里释放掉了，并没有关联起来。</p>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>PCL-1-11-Visual-Studio-2019-配置</title>
     <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<font color= ff size=4 face="">
@@ -99,22 +202,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Youbute</category>
-      </categories>
-      <tags>
-        <tag>-Youtube</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
     <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
@@ -135,6 +222,33 @@ git config --global --unset https.proxy
       <tags>
         <tag>-hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo d 出现错误的用户名和密码的解决办法</title>
+    <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
+<p>点进去就可以更改用户名和密码了</p>
+<hr>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -242,82 +356,46 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
-    <title>hexo d 出现错误的用户名和密码的解决办法</title>
-    <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
-<p>点进去就可以更改用户名和密码了</p>
+    <title>pcl+vs+cmake编译</title>
+    <url>/2020/12/27/pcl-vs-cmake%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。</p>
+<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
+<p>3.安装Visual studio 2019编译器</p>
+<p>4.cmake<br><img src="/blog_img/PCL配置/17.png" alt="示意图"><br><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
+<p>其实源码包用不上，懒得改了，最复杂的方式就是源代码加第三方库进行配置，等我配置好了也会再一篇关于源码方式的配置。</p>
+<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a><br><a href="https://cmake.org/download/">cmake下载地址</a></p>
+<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
+<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
+<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
+<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
+<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
+<p>cmake 安装请选择添加到系统路径，没选的话也可以自己手动添加，添加的方式为cmake目录下bin文件  比如C:\APP\Cmake\bin这样的形式。</p>
+<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
+<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
+<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
+<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<h1 id="6-cmake编译"><a href="#6-cmake编译" class="headerlink" title="6.cmake编译"></a>6.cmake编译</h1><p>以管理员身份运行cmake-gui<br>在你想要的文件下创建一个名为example的文件夹，然后在此目录下创建一个source和cmake_bin文件，比如我的：</p>
+<p><img src="/blog_img/PCL配置/18.png" alt=""></p>
+<p>在source里面创建一个cpp文件和CMakeLists.txt文件。<br>CmakeLists.txt里写入以下内容：</p>
+<p>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)<br>project(test)<br>find_package(PCL 1.4 REQUIRED)<br>include_directories(${PCL_INCLUDE_DIRS})<br>link_directories(${PCL_LIBRARY_DIRS})<br>add_definitions(${PCL_DEFINITIONS})<br>add_executable (test test.cpp)<br>target_link_libraries (test ${PCL_LIBRARIES})</p>
+<p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
+<p>测试代码请网上去找，我用的是上一篇文件里的（里面有个D盘文件的读取可能会报错，但只要能出彩色的那个图就算配置成功了）。</p>
+<p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""></p>
+<p>点击Configure，选x64<br><img src="/blog_img/PCL配置/21.jpg" alt=""></p>
+<p>再点击一次configure<br><img src="/blog_img/PCL配置/22.jpg" alt=""></p>
+<p>点击Generate,出现Generating done.<br><img src="/blog_img/PCL配置/23.png" alt=""></p>
+<p>找到cmake_bin底下的test_sln 打开。<br><img src="/blog_img/PCL配置/24.jpg" alt=""></p>
+<p>将test设置为启动项，并调试。<br><img src="/blog_img/PCL配置/25.png" alt=""></p>
+<p><img src="/blog_img/PCL配置/26.jpg" alt=""></p>
 <hr>
 ]]></content>
       <categories>
-        <category>hexo</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>我的Office激活码</title>
-    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>-office</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>梯子</title>
-    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
-    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
-<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
-<hr>
-]]></content>
-      <categories>
-        <category>VPN</category>
+        <category>pcl</category>
       </categories>
       <tags>
-        <tag>-梯子</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>浏览器以及插件</title>
-    <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
-<p><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
-<ol>
-<li>更改搜索引擎，默认的是google的，这里需要我们改成百度的，不然你每次就只能先翻墙才能搜索。在设置里找到搜素引擎，默认设置为百度。<br><img src="/blog_img/浏览器以及插件/19.png" alt=""></li>
-<li>在翻墙以后，浏览器将会打开代理模式，如下图：<br><img src="/blog_img/浏览器以及插件/20.png" alt=""><br><img src="/blog_img/浏览器以及插件/21.png" alt=""><br>但是在你不翻墙的时候，他也是这样设置，这就会导致你使用浏览器的时候，搜东西出现连接不上服务器的问题。这时候你需要设置成这样：<br><img src="/blog_img/浏览器以及插件/22.png" alt=""></li>
-</ol>
-<h1 id="2-google浏览器的一些好用插件"><a href="#2-google浏览器的一些好用插件" class="headerlink" title="2.google浏览器的一些好用插件"></a>2.google浏览器的一些好用插件</h1><p><strong>注意：在你下载插件的时候，必须先翻墙，不然你无法打开拓展程序商店</strong><br>不多BB直接整活<br>先找到插件搜索地方，如下图：<br><img src="/blog_img/浏览器以及插件/1.png" alt=""><br><img src="/blog_img/浏览器以及插件/2.png" alt=""></p>
-<h2 id="1-Adblock-Plus"><a href="#1-Adblock-Plus" class="headerlink" title="1.Adblock Plus"></a>1.Adblock Plus</h2><p><img src="/blog_img/浏览器以及插件/3.png" alt=""></p>
-<p>有效去除浏览器广告</p>
-<h2 id="2-Awesome-Screenshot"><a href="#2-Awesome-Screenshot" class="headerlink" title="2.Awesome Screenshot"></a>2.Awesome Screenshot</h2><p><img src="/blog_img/浏览器以及插件/4.png" alt=""></p>
-<p>可以录频，包括桌面的，浏览器页面的等等，需要先注册账号，录频后的视频会放在你的账户里，可以自行下载。</p>
-<h2 id="3-Free-Download-manager"><a href="#3-Free-Download-manager" class="headerlink" title="3.Free Download manager"></a>3.Free Download manager</h2><p>这是一款强大的下载器，速度快而且方便，速度比迅雷更快，更关键的是在你翻墙以后，迅雷的扩展程序有些国外的资源他是不支持下载的，但是这个可以。<br>下载器官网如下：<br><img src="/blog_img/浏览器以及插件/16.png" alt=""></p>
-<p>在安装完成后，打开<strong>设置</strong>选项，可以关联扩展，如图：<br><img src="/blog_img/浏览器以及插件/17.png" alt=""></p>
-<p>当然你也可以直接到应用商店下载：<br><img src="/blog_img/浏览器以及插件/5.png" alt=""></p>
-<p><strong>建议先下载下载器再去下载google扩展程序，这样就可以自动关联了，正好我想下一个腾讯视频，效果如图：</strong><br><img src="/blog_img/浏览器以及插件/18.png" alt=""><br>每次下载你可以自行选择下载地址，很方便管理你的应用。</p>
-<h2 id="4-Google翻译"><a href="#4-Google翻译" class="headerlink" title="4.Google翻译"></a>4.Google翻译</h2><p><img src="/blog_img/浏览器以及插件/6.png" alt=""><br>不多介绍了</p>
-<h2 id="5-Imagus"><a href="#5-Imagus" class="headerlink" title="5.Imagus"></a>5.Imagus</h2><p><img src="/blog_img/浏览器以及插件/7.png" alt=""></p>
-<p>imagus主要就是在你鼠标停留在图片上时，自动放大图片，比如在你购物时：<br><img src="/blog_img/浏览器以及插件/23.png" alt=""></p>
-<h2 id="6-Infinity-新标签页"><a href="#6-Infinity-新标签页" class="headerlink" title="6.Infinity 新标签页"></a>6.Infinity 新标签页</h2><p><img src="/blog_img/浏览器以及插件/8.png" alt=""></p>
-<p>它可以更换你的浏览器壁纸，可以添加常用网站，看起来很简洁很舒服。效果如下：<br><img src="/blog_img/浏览器以及插件/9.png" alt=""></p>
-<h2 id="7-one-Tab"><a href="#7-one-Tab" class="headerlink" title="7.one Tab"></a>7.one Tab</h2><p><img src="/blog_img/浏览器以及插件/10.png" alt=""></p>
-<p>当你在打开数十个网页时，图片变小看不清网页信息，如何切换到你想要的页面的，one tab就可以实现，效果如下：<br><img src="/blog_img/浏览器以及插件/24.png" alt=""></p>
-<h2 id="8-tampermonkey"><a href="#8-tampermonkey" class="headerlink" title="8.tampermonkey"></a>8.tampermonkey</h2><p><img src="/blog_img/浏览器以及插件/11.png" alt=""><br>油猴是一个强大的工具，其中内置了很多的功能，甚至油猴有插件可以直接拦截百度网盘，将百度网盘的资源以free download 下载。（想到百度网盘原来几K让冲超级会员的嘴脸就想骂他，虽然在上半年提供可以勾选通道，但是也只有100-200k，属实垃圾）。<br>这次我就以一个YOUTUBE视频下载插件为例介绍一下。</p>
-<p>打开油猴页面，搜素插件如图，安装插件：<br><img src="/blog_img/浏览器以及插件/13.png" alt=""><br>之后在我打开一个YOUTUBE视频，可以看到出现了下载链接：<br><img src="/blog_img/浏览器以及插件/15.png" alt=""></p>
-<h2 id="9-关灯看视频"><a href="#9-关灯看视频" class="headerlink" title="9.关灯看视频"></a>9.关灯看视频</h2><p>在你晚上看B站，看YOUTUBE视频时，可以选择，效果如图：<br><img src="/blog_img/浏览器以及插件/14.png" alt=""></p>
-<h2 id="10-fatkun图片下载"><a href="#10-fatkun图片下载" class="headerlink" title="10.fatkun图片下载"></a>10.fatkun图片下载</h2><p>可以一键下载多张图片<br><img src="/blog_img/浏览器以及插件/25.png" alt=""><br><img src="/blog_img/浏览器以及插件/26.png" alt=""></p>
-<hr>
-]]></content>
-      <categories>
-        <category>浏览器</category>
-      </categories>
-      <tags>
-        <tag>-浏览器推荐 -浏览器插件</tag>
+        <tag>-pcl -visual studio</tag>
       </tags>
   </entry>
   <entry>
@@ -350,58 +428,19 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
-    <title>训练初稿</title>
-    <url>/2020/09/24/%E8%AE%AD%E7%BB%83%E5%88%9D%E7%A8%BF/</url>
+    <title>我的Office激活码</title>
+    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
   <div class="hbe-input-container">
   <input type="password" id="hbePass" placeholder="" />
     <label for="hbePass">Enter password to read.</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="2a363f3acf81e59971a449e4c6111615a5251a2beed83f1274c56edcb91d33e0">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f19045e42c065d4265108128caa952ba8087e8513bb11f23a571c8764522173c9f24556ad590f65a2e07a71fb0dcf73c89da3c3c8a2bcf69e4eda830d205962acdaafb241201709a02f0f9479b109fddc73bc39614f2616f7f0be66a61ac77cc8b7a64068660f2cbbed00d757de4aadb0a0a66b8f22e6614dea4529ef823e5b9e63598e959dc058ecf1852a07b12317dcc250ecc65a0476dca1571004572ad9b8513e12c871743ff7636c242d74cb43d512afe20d001027ebbef6c25e3519789ad4cd2dcc966d107bc41b1cc7ba8e4bec62d12c0b0744118d7a82c8d0726b9786e2cfb926932e5c1ca4914a49f339fb8d8729e95e483f750306025241b2bce65512a0efa1ae87e8046a6650a34a335165f733fce65e95ff1c4172d4859931a29e8a5d5b52ef8bbe6e95588cac3f835d4f9de3b53f5ce1cf49b55bf6e00dbf732a1f2b7afaf4619484b6da36d06b9f2e6ef9610189edac7e264b347ce8426c8ff9eeb6af73a910cf83d10e16a3d7e77d944fcf9a2881b14a44dc886dcd66f5a0380d18b9c12823b7ae2ecce68f3f8f21626b52642dd3ea95f7b4407494c3040eca1dc335de425c444e4f1aa91ff55ba6ad871d59af686b1492d09e491aa8d2dbeb9c1d4cd8ff2b2559ab1fcfbe4c09b357f7267a0572847adf4a250e75c5db5d3dffd3a47cc052000e29c915d5dd3190fe69e6c8653c64f8a357b8775f1b816ce945f79dae3219cb72e6fda07b724c5cda4ea94d49c83778d780d639892c56befc78c753880747b72c98c5c7df17b832eb6549efaa9606bee6cb13e54f9de57e922f89616ea723ce8fd46f0a42cd0756614da32e4151b7470635cb5ebd1ab5c0fc3afcc057016f649675f2aaeb900b346a058b16e26b0f9be04b735c915a26ba23e20bc7b662c1dea18f003bb892ff49a73683f04e570f09281dcd6c813d17d4002da6abeb584bcc055e6969993b1aaae0122a2d35e81d6a0467d09f9ef7776f55641f533d796e21429648b7a1557c91cdf3605cbbd0c007c4b1a5a3c8068eb0e8abc6bec229dd6e46306ce2b0cc05a8c85bef213427dcaf52e573f39e950c0569eee89d6ed41c7bbb8879d6b000be1e5300cc30350f8f167be46337c2e7d4e06c9ed61166a985de2eda1e27e017c4666ae28e45d0dd020e708d970e496aeb0b3f034eb827e8a29c8e85b09647c0bff37f0b8a2e02146e8c0abf005b2c27daa3cbb9b23d8c30e03088300948887a283b0271f9c0ac54653f6ea3484ab1dd4fa85340417cb9740dbef532875f0b748820cebcf33046291deeef5b222ccedb2f4b96aad45afbb3b7149e13b5f1ae3dde97b9ec52c2d61f3097a01ffa59bcc4b9773864500396af1e6ac7aaf45071eb48b5744ee6f44784e7f0479e9dac843e049e69ff4afde08282dd8ccf4fad65fe6584b7ad8744e632ee65d87c6c0df99513449f1e440e7946fd909a09ab252d1c936b4eefc75a110d5357cf6edb01131712f9411c0e38b1f63bcd1da50ac1394c439509d6b0f828b0b716170df0d240fc948a4d675842ca7d155bc1fb7634aff9aaa5e08044829ef08958e6587ea45571c41f8a96809a28c619cedd73048a20969594d660a00317c1a0e613af884543e7f8323aad384408f6352e9c82493d9ac71dd316a3402d2a281e25e44bf92c3f1e0b5894b746a65d55f29f0c5381fffe9d1330ffe495ed2a1adf187d8626dffd3ce23a4fadea0e450093f1c628fea057bbd2ff7919b32ad35b166ff7dd8c9363c09023e583daad3b229f565b8a48b75c503a667db37891d532f5ec079d0179d928001e0817422776badbe8095bfa36e61c764fd965eeb92078d6491552a36695a831702ba2c034b8918f162c1c73b23107b2a0318bbca389aed60e3db5990ba390340c482d193eb2c4544fdf285c602250a79ff636aeb5925d558e3b4ebb3abdd245472a00c0c312b897c7e0bbcaf41125b7e68ca7059ff0c6fe3c675c808abf82564f93295072157e7d883f3d6f88f60934fcf76b8449d4e4cb8116aaaf9095a60cc9ea4ce6aa670d84492e031dd6346439b87d9210c1be33f1ea1a62ffde66822e40795c0ed6109d04f28051b2f5e34dcb027a66a82fcb2296fbea18bb2c319d1534b7c26313bec611d92758cf2d7a8e0775383e93bdde237580a52273032298b09e48bf6045c5bac1c9eaaba421118a725b16796973af7145a940a9a375ea6a96c8aafc89896ea178e49957909bab673c65e71af72fe21d62577aca7f94d962139be5399b9202c81cd9515ab84f8035278ca90ec15bf24fe69df68f899ea532f7ba752cf369a235a5cb988323c9798548bf61d091411474036edb1f11752584108666aed218a51029a6934f6d2ab5ad69edfa13dfecff263ef2bea284f0c90d5c38eb96afab804e9c1635ebf0b5608a1bee47538590e640405226caed788870728a8c4c48fa8fc0fa30f8cfe33ce8e016e3f008e0721f95dfe6719a40c2b804ce2b67e923c910d5006e66bab348c2657e768134cbd1ba374688aeb5a1185ecaf24e89bc6f2dd4362d6c0a2b60b52669798ebec069a29fe99f6aa5d502bb65b3121acd4a64de91849d3844f6b3212c4ff7f1fa1c2dccc4007bb7c55bb5e4d684686f7b2e057d09718786d7818e63b95368b1aa734b984b50ac3c2c9053c2796c17b6a4df4603d42b49e84fbc3cbdb7ecec539164227911fcaaabd1401d95c6c42ab2fc449781cbd7bf947ab5f78249507f8393412b217ae0452aab458568843ece889d3887</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
-        <tag>资源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>深度学习篇</title>
-    <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
-    <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
-<h1 id="1-深度学习简介"><a href="#1-深度学习简介" class="headerlink" title="1.深度学习简介"></a>1.深度学习简介</h1><p>与其枯坐在房间里思考怎么设计一个识别猫的程序，不如利用人类肉眼在图像中识别猫的能力。我们可以收集一些已知包含猫与不包含猫的真实图像，然后我们的目标就转化成如何从这些图像入手得到一个可以推断出图像中是否有猫的函数。<br>通俗来说，机器学习是一门讨论各式各样的适用于不同问题的函数形式，以及如何使用数据来有效地获取函数参数具体值的学科。深度学习是指机器学习中的一类函数，它们的形式通常为多层神经网络。近年来，仰仗着大数据集和强大的硬件，深度学习已逐渐成为处理图像、文本语料和声音信号等复杂高维度数据的主要方法，算力以及数据集的增长使得机器学习死灰复燃。</p>
-<h2 id="1-1机器学习与深度学习的关系"><a href="#1-1机器学习与深度学习的关系" class="headerlink" title="1.1机器学习与深度学习的关系"></a>1.1机器学习与深度学习的关系</h2><p>机器学习研究如何使计算机系统利用经验改善性能。它是人工智能领域的分支，也是实现人工智能的一种手段。在机器学习的众多研究方向中，表征学习关注如何自动找出表示数据的合适方式，以便更好地将输入变换为正确的输出。<br>深度学习是具有多级表示的表征学习方法。在每一级（从原始数据开始），深度学习通过简单的函数将该级的表示变换为更高级的表示。因此，深度学习模型也可以看作是由许多简单函数复合而成的函数。当这些复合的函数足够多时，深度学习模型就可以表达非常复杂的变换。深度学习可以逐级表示越来越抽象的概念或模式。以图像为例，它的输入是一堆原始像素值。深度学习模型中，图像可以逐级表示为特定位置和角度的边缘、由边缘组合得出的花纹、由多种花纹进一步汇合得到的特定部位的模式等。最终，模型能够较容易根据更高级的表示完成给定的任务，如识别图像中的物体。值得一提的是，作为表征学习的一种，深度学习将自动找出每一级表示数据的合适方式。<br>因此，深度学习的一个外在特点是端到端的训练。也就是说，并不是将单独调试的部分拼凑起来组成一个系统，而是将整个系统组建好之后一起训练。比如说，计算机视觉科学家之前曾一度将特征抽取与机器学习模型的构建分开处理，像是Canny边缘探测和SIFT特征提取 曾占据统治性地位达10年以上，但这也就是人类能找到的最好方法了。当深度学习进入这个领域后，这些特征提取方法就被性能更强的自动优化的逐级过滤器替代了。<br>除端到端的训练以外，我们也正在经历从含参数统计模型转向完全无参数的模型。当数据非常稀缺时，我们需要通过简化对现实的假设来得到实用的模型。当数据充足时，我们就可以用能更好地拟合现实的无参数模型来替代这些含参数模型。这也使我们可以得到更精确的模型，尽管需要牺牲一些可解释性。</p>
-<h2 id="1-2深度学习的资源"><a href="#1-2深度学习的资源" class="headerlink" title="1.2深度学习的资源"></a>1.2深度学习的资源</h2><p>吴恩达的课确实很好，但我更喜欢这种直接上手边看边做的方法，现在跟着花书挺好的，社区也很强大，在这里贴上链接，原书版以及pytorch版的链接。  </p>
-<p><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">pytorch</a><br><a href="https://zh.d2l.ai/index.html">原版</a></p>
-<h1 id="2-必要软件"><a href="#2-必要软件" class="headerlink" title="2.必要软件"></a>2.必要软件</h1><p>原书中说明已经很清楚了，因此在这里我只会放一些我使用中所碰见的问题。首先是anaconda的一些知识以及jupyter book的知识，链接如下：</p>
-<p><a href="https://www.zhihu.com/question/58033789/answer/254673663">anaconda</a><br><a href="https://www.zhihu.com/question/46309360/answer/254638807">jupyter_book</a></p>
-<p>在我根据书中的内容安装miniconda以及jupyter book时，在第四步激活了,找不到命令,论坛里也找了找确实也有这个问题，有回答说不是在安装的文件下安装的anaconda。而我自己是直接在安装目录下 Git bash here的，没法用。我寻思是不是没管理员权限，直接搜索栏 cmd，以管理员身份运行。</p>
-<pre><code>cd C:\d2l-zh #安装镜像的文件夹
-conda activate gluon
-jupyter notebook
-</code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>DL</category>
-      </categories>
-      <tags>
-        <tag>-deep learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>资源</title>
-    <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
-    <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
-<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
-<h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
-<h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
-<p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
-<p><a href="http://www.ai-start.com/dl2017/">吴恩达深度学习笔记</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-资源</tag>
+        <tag>-office</tag>
       </tags>
   </entry>
   <entry>
@@ -456,6 +495,82 @@ hexo d
       </categories>
   </entry>
   <entry>
+    <title>梯子</title>
+    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
+    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
+<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
+<hr>
+]]></content>
+      <categories>
+        <category>VPN</category>
+      </categories>
+      <tags>
+        <tag>-梯子</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浏览器以及插件</title>
+    <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
+<p><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
+<ol>
+<li>更改搜索引擎，默认的是google的，这里需要我们改成百度的，不然你每次就只能先翻墙才能搜索。在设置里找到搜素引擎，默认设置为百度。<br><img src="/blog_img/浏览器以及插件/19.png" alt=""></li>
+<li>在翻墙以后，浏览器将会打开代理模式，如下图：<br><img src="/blog_img/浏览器以及插件/20.png" alt=""><br><img src="/blog_img/浏览器以及插件/21.png" alt=""><br>但是在你不翻墙的时候，他也是这样设置，这就会导致你使用浏览器的时候，搜东西出现连接不上服务器的问题。这时候你需要设置成这样：<br><img src="/blog_img/浏览器以及插件/22.png" alt=""></li>
+</ol>
+<h1 id="2-google浏览器的一些好用插件"><a href="#2-google浏览器的一些好用插件" class="headerlink" title="2.google浏览器的一些好用插件"></a>2.google浏览器的一些好用插件</h1><p><strong>注意：在你下载插件的时候，必须先翻墙，不然你无法打开拓展程序商店</strong><br>不多BB直接整活<br>先找到插件搜索地方，如下图：<br><img src="/blog_img/浏览器以及插件/1.png" alt=""><br><img src="/blog_img/浏览器以及插件/2.png" alt=""></p>
+<h2 id="1-Adblock-Plus"><a href="#1-Adblock-Plus" class="headerlink" title="1.Adblock Plus"></a>1.Adblock Plus</h2><p><img src="/blog_img/浏览器以及插件/3.png" alt=""></p>
+<p>有效去除浏览器广告</p>
+<h2 id="2-Awesome-Screenshot"><a href="#2-Awesome-Screenshot" class="headerlink" title="2.Awesome Screenshot"></a>2.Awesome Screenshot</h2><p><img src="/blog_img/浏览器以及插件/4.png" alt=""></p>
+<p>可以录频，包括桌面的，浏览器页面的等等，需要先注册账号，录频后的视频会放在你的账户里，可以自行下载。</p>
+<h2 id="3-Free-Download-manager"><a href="#3-Free-Download-manager" class="headerlink" title="3.Free Download manager"></a>3.Free Download manager</h2><p>这是一款强大的下载器，速度快而且方便，速度比迅雷更快，更关键的是在你翻墙以后，迅雷的扩展程序有些国外的资源他是不支持下载的，但是这个可以。<br>下载器官网如下：<br><img src="/blog_img/浏览器以及插件/16.png" alt=""></p>
+<p>在安装完成后，打开<strong>设置</strong>选项，可以关联扩展，如图：<br><img src="/blog_img/浏览器以及插件/17.png" alt=""></p>
+<p>当然你也可以直接到应用商店下载：<br><img src="/blog_img/浏览器以及插件/5.png" alt=""></p>
+<p><strong>建议先下载下载器再去下载google扩展程序，这样就可以自动关联了，正好我想下一个腾讯视频，效果如图：</strong><br><img src="/blog_img/浏览器以及插件/18.png" alt=""><br>每次下载你可以自行选择下载地址，很方便管理你的应用。</p>
+<h2 id="4-Google翻译"><a href="#4-Google翻译" class="headerlink" title="4.Google翻译"></a>4.Google翻译</h2><p><img src="/blog_img/浏览器以及插件/6.png" alt=""><br>不多介绍了</p>
+<h2 id="5-Imagus"><a href="#5-Imagus" class="headerlink" title="5.Imagus"></a>5.Imagus</h2><p><img src="/blog_img/浏览器以及插件/7.png" alt=""></p>
+<p>imagus主要就是在你鼠标停留在图片上时，自动放大图片，比如在你购物时：<br><img src="/blog_img/浏览器以及插件/23.png" alt=""></p>
+<h2 id="6-Infinity-新标签页"><a href="#6-Infinity-新标签页" class="headerlink" title="6.Infinity 新标签页"></a>6.Infinity 新标签页</h2><p><img src="/blog_img/浏览器以及插件/8.png" alt=""></p>
+<p>它可以更换你的浏览器壁纸，可以添加常用网站，看起来很简洁很舒服。效果如下：<br><img src="/blog_img/浏览器以及插件/9.png" alt=""></p>
+<h2 id="7-one-Tab"><a href="#7-one-Tab" class="headerlink" title="7.one Tab"></a>7.one Tab</h2><p><img src="/blog_img/浏览器以及插件/10.png" alt=""></p>
+<p>当你在打开数十个网页时，图片变小看不清网页信息，如何切换到你想要的页面的，one tab就可以实现，效果如下：<br><img src="/blog_img/浏览器以及插件/24.png" alt=""></p>
+<h2 id="8-tampermonkey"><a href="#8-tampermonkey" class="headerlink" title="8.tampermonkey"></a>8.tampermonkey</h2><p><img src="/blog_img/浏览器以及插件/11.png" alt=""><br>油猴是一个强大的工具，其中内置了很多的功能，甚至油猴有插件可以直接拦截百度网盘，将百度网盘的资源以free download 下载。（想到百度网盘原来几K让冲超级会员的嘴脸就想骂他，虽然在上半年提供可以勾选通道，但是也只有100-200k，属实垃圾）。<br>这次我就以一个YOUTUBE视频下载插件为例介绍一下。</p>
+<p>打开油猴页面，搜素插件如图，安装插件：<br><img src="/blog_img/浏览器以及插件/13.png" alt=""><br>之后在我打开一个YOUTUBE视频，可以看到出现了下载链接：<br><img src="/blog_img/浏览器以及插件/15.png" alt=""></p>
+<h2 id="9-关灯看视频"><a href="#9-关灯看视频" class="headerlink" title="9.关灯看视频"></a>9.关灯看视频</h2><p>在你晚上看B站，看YOUTUBE视频时，可以选择，效果如图：<br><img src="/blog_img/浏览器以及插件/14.png" alt=""></p>
+<h2 id="10-fatkun图片下载"><a href="#10-fatkun图片下载" class="headerlink" title="10.fatkun图片下载"></a>10.fatkun图片下载</h2><p>可以一键下载多张图片<br><img src="/blog_img/浏览器以及插件/25.png" alt=""><br><img src="/blog_img/浏览器以及插件/26.png" alt=""></p>
+<hr>
+]]></content>
+      <categories>
+        <category>浏览器</category>
+      </categories>
+      <tags>
+        <tag>-浏览器推荐 -浏览器插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习篇</title>
+    <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
+    <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
+<h1 id="1-深度学习简介"><a href="#1-深度学习简介" class="headerlink" title="1.深度学习简介"></a>1.深度学习简介</h1><p>与其枯坐在房间里思考怎么设计一个识别猫的程序，不如利用人类肉眼在图像中识别猫的能力。我们可以收集一些已知包含猫与不包含猫的真实图像，然后我们的目标就转化成如何从这些图像入手得到一个可以推断出图像中是否有猫的函数。<br>通俗来说，机器学习是一门讨论各式各样的适用于不同问题的函数形式，以及如何使用数据来有效地获取函数参数具体值的学科。深度学习是指机器学习中的一类函数，它们的形式通常为多层神经网络。近年来，仰仗着大数据集和强大的硬件，深度学习已逐渐成为处理图像、文本语料和声音信号等复杂高维度数据的主要方法，算力以及数据集的增长使得机器学习死灰复燃。</p>
+<h2 id="1-1机器学习与深度学习的关系"><a href="#1-1机器学习与深度学习的关系" class="headerlink" title="1.1机器学习与深度学习的关系"></a>1.1机器学习与深度学习的关系</h2><p>机器学习研究如何使计算机系统利用经验改善性能。它是人工智能领域的分支，也是实现人工智能的一种手段。在机器学习的众多研究方向中，表征学习关注如何自动找出表示数据的合适方式，以便更好地将输入变换为正确的输出。<br>深度学习是具有多级表示的表征学习方法。在每一级（从原始数据开始），深度学习通过简单的函数将该级的表示变换为更高级的表示。因此，深度学习模型也可以看作是由许多简单函数复合而成的函数。当这些复合的函数足够多时，深度学习模型就可以表达非常复杂的变换。深度学习可以逐级表示越来越抽象的概念或模式。以图像为例，它的输入是一堆原始像素值。深度学习模型中，图像可以逐级表示为特定位置和角度的边缘、由边缘组合得出的花纹、由多种花纹进一步汇合得到的特定部位的模式等。最终，模型能够较容易根据更高级的表示完成给定的任务，如识别图像中的物体。值得一提的是，作为表征学习的一种，深度学习将自动找出每一级表示数据的合适方式。<br>因此，深度学习的一个外在特点是端到端的训练。也就是说，并不是将单独调试的部分拼凑起来组成一个系统，而是将整个系统组建好之后一起训练。比如说，计算机视觉科学家之前曾一度将特征抽取与机器学习模型的构建分开处理，像是Canny边缘探测和SIFT特征提取 曾占据统治性地位达10年以上，但这也就是人类能找到的最好方法了。当深度学习进入这个领域后，这些特征提取方法就被性能更强的自动优化的逐级过滤器替代了。<br>除端到端的训练以外，我们也正在经历从含参数统计模型转向完全无参数的模型。当数据非常稀缺时，我们需要通过简化对现实的假设来得到实用的模型。当数据充足时，我们就可以用能更好地拟合现实的无参数模型来替代这些含参数模型。这也使我们可以得到更精确的模型，尽管需要牺牲一些可解释性。</p>
+<h2 id="1-2深度学习的资源"><a href="#1-2深度学习的资源" class="headerlink" title="1.2深度学习的资源"></a>1.2深度学习的资源</h2><p>吴恩达的课确实很好，但我更喜欢这种直接上手边看边做的方法，现在跟着花书挺好的，社区也很强大，在这里贴上链接，原书版以及pytorch版的链接。  </p>
+<p><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">pytorch</a><br><a href="https://zh.d2l.ai/index.html">原版</a></p>
+<h1 id="2-必要软件"><a href="#2-必要软件" class="headerlink" title="2.必要软件"></a>2.必要软件</h1><p>原书中说明已经很清楚了，因此在这里我只会放一些我使用中所碰见的问题。首先是anaconda的一些知识以及jupyter book的知识，链接如下：</p>
+<p><a href="https://www.zhihu.com/question/58033789/answer/254673663">anaconda</a><br><a href="https://www.zhihu.com/question/46309360/answer/254638807">jupyter_book</a></p>
+<p>在我根据书中的内容安装miniconda以及jupyter book时，在第四步激活了,找不到命令,论坛里也找了找确实也有这个问题，有回答说不是在安装的文件下安装的anaconda。而我自己是直接在安装目录下 Git bash here的，没法用。我寻思是不是没管理员权限，直接搜索栏 cmd，以管理员身份运行。</p>
+<pre><code>cd C:\d2l-zh #安装镜像的文件夹
+conda activate gluon
+jupyter notebook
+</code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>DL</category>
+      </categories>
+      <tags>
+        <tag>-deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>编译器</title>
     <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
     <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
@@ -466,149 +581,34 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>C++</title>
-    <url>/2020/12/19/CPP/</url>
-    <content><![CDATA[<p>写一些觉得能用上的C++代码：</p>
-<p>将文本的数字读成数组：  </p>
-<pre><code>#include&lt;iostream&gt;
-#include&lt;fstream&gt;
-using namespace std;
-int main()
-&#123;
-    const int txtRow = 201;
-    const int txtColumn = 8;
-    float txtData[txtRow][txtColumn];
-    ifstream infile;
-    infile.open(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;);
-    for (int i = 0; i &lt; txtRow; i++)
-    &#123;
-        for (int j = 0; j &lt; txtColumn; j++)
-        &#123;
-            infile &gt;&gt; txtData[i][j];
-        &#125;
-    &#125;
-    infile.close();
-
-return 0;
-&#125;    
-</code></pre><p>将文本的数字读成矩阵，需要第三方库Eigen。  </p>
-<pre><code>#include&lt;iostream&gt;
-#include&lt;Eigen/Dense&gt;
-#include&lt;fstream&gt;
-#include&lt;cmath&gt;
-using namespace std;
-using namespace Eigen;
-
-MatrixXd ReadData(istream&amp; data, int a, int b)
-&#123;
-    MatrixXd m_matrix(a, b);
-    for (int i = 0; i &lt; a; i++)
-    &#123;
-        for (int j = 0; j &lt; b; j++)
-        &#123;
-            data &gt;&gt; m_matrix(i,j);
-        &#125;
-    &#125;
-    return m_matrix;
-&#125;
-
-int main()
-&#123;
-    const int row = 201;
-    const int column = 8;
-    ifstream infile(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;, ios::in);
-    if (!infile)
-    &#123;
-        return 0;
-    &#125;
-    MatrixXd m_matrix = ReadData(infile, row, column);
-
-return 0;
-&#125;
-</code></pre><p>冒泡排序：</p>
-<pre><code>#include&lt;iostream&gt;
-#include&lt;vector&gt;
-using namespace std;
-
-void display(vector&lt;int&gt; vec)
-&#123;
-    for (int i = 0; i &lt; vec.size(); ++i)
-        cout &lt;&lt; vec[i] &lt;&lt; &#39; &#39;;
-    cout &lt;&lt; endl;
-&#125;
-
-void swap(int&amp; val1, int&amp; val2)
-&#123;
-    int temp = val1;
-    val1 = val2;
-    val2 = temp;
-&#125;
-
-void bubble_sort(vector&lt;int&gt;&amp; vec)
-&#123;
-    for (int ix = 0; ix &lt; vec.size(); ++ix)
-        for (int jx = ix + 1; jx &lt; vec.size(); ++jx)
-            if (vec[ix] &gt; vec[jx])
-                swap(vec[ix], vec[jx]);
-&#125;
-
-int main()
-&#123;
-    int al[8] = &#123; 2,56,4,5,13,7,1,24 &#125;;
-    vector&lt;int&gt; vec(al, al + 8);
-    cout &lt;&lt; &quot;before sort:  &quot;;
-    display(vec);
-    bubble_sort(vec);
-    cout &lt;&lt; &quot;after sort: &quot;;
-    display(vec);
-
-    return 0;
-&#125;
-</code></pre><p>关键在于swap 和 bubble_sort时，不仅要传值，也要传址，不然只是其值被复制了一份，成为了参数的局部性定义，当运行结束也就从“程序堆栈”里释放掉了，并没有关联起来。</p>
-<hr>
-]]></content>
+    <title>训练初稿</title>
+    <url>/2020/09/24/%E8%AE%AD%E7%BB%83%E5%88%9D%E7%A8%BF/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="2a363f3acf81e59971a449e4c6111615a5251a2beed83f1274c56edcb91d33e0">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f19045e42c065d4265108128caa952ba8087e8513bb11f23a571c8764522173c9f24556ad590f65a2e07a71fb0dcf73c89da3c3c8a2bcf69e4eda830d205962acdaafb241201709a02f0f9479b109fddc73bc39614f2616f7f0be66a61ac77cc8b7a64068660f2cbbed00d757de4aadb0a0a66b8f22e6614dea4529ef823e5b9e63598e959dc058ecf1852a07b12317dcc250ecc65a0476dca1571004572ad9b8513e12c871743ff7636c242d74cb43d512afe20d001027ebbef6c25e3519789ad4cd2dcc966d107bc41b1cc7ba8e4bec62d12c0b0744118d7a82c8d0726b9786e2cfb926932e5c1ca4914a49f339fb8d8729e95e483f750306025241b2bce65512a0efa1ae87e8046a6650a34a335165f733fce65e95ff1c4172d4859931a29e8a5d5b52ef8bbe6e95588cac3f835d4f9de3b53f5ce1cf49b55bf6e00dbf732a1f2b7afaf4619484b6da36d06b9f2e6ef9610189edac7e264b347ce8426c8ff9eeb6af73a910cf83d10e16a3d7e77d944fcf9a2881b14a44dc886dcd66f5a0380d18b9c12823b7ae2ecce68f3f8f21626b52642dd3ea95f7b4407494c3040eca1dc335de425c444e4f1aa91ff55ba6ad871d59af686b1492d09e491aa8d2dbeb9c1d4cd8ff2b2559ab1fcfbe4c09b357f7267a0572847adf4a250e75c5db5d3dffd3a47cc052000e29c915d5dd3190fe69e6c8653c64f8a357b8775f1b816ce945f79dae3219cb72e6fda07b724c5cda4ea94d49c83778d780d639892c56befc78c753880747b72c98c5c7df17b832eb6549efaa9606bee6cb13e54f9de57e922f89616ea723ce8fd46f0a42cd0756614da32e4151b7470635cb5ebd1ab5c0fc3afcc057016f649675f2aaeb900b346a058b16e26b0f9be04b735c915a26ba23e20bc7b662c1dea18f003bb892ff49a73683f04e570f09281dcd6c813d17d4002da6abeb584bcc055e6969993b1aaae0122a2d35e81d6a0467d09f9ef7776f55641f533d796e21429648b7a1557c91cdf3605cbbd0c007c4b1a5a3c8068eb0e8abc6bec229dd6e46306ce2b0cc05a8c85bef213427dcaf52e573f39e950c0569eee89d6ed41c7bbb8879d6b000be1e5300cc30350f8f167be46337c2e7d4e06c9ed61166a985de2eda1e27e017c4666ae28e45d0dd020e708d970e496aeb0b3f034eb827e8a29c8e85b09647c0bff37f0b8a2e02146e8c0abf005b2c27daa3cbb9b23d8c30e03088300948887a283b0271f9c0ac54653f6ea3484ab1dd4fa85340417cb9740dbef532875f0b748820cebcf33046291deeef5b222ccedb2f4b96aad45afbb3b7149e13b5f1ae3dde97b9ec52c2d61f3097a01ffa59bcc4b9773864500396af1e6ac7aaf45071eb48b5744ee6f44784e7f0479e9dac843e049e69ff4afde08282dd8ccf4fad65fe6584b7ad8744e632ee65d87c6c0df99513449f1e440e7946fd909a09ab252d1c936b4eefc75a110d5357cf6edb01131712f9411c0e38b1f63bcd1da50ac1394c439509d6b0f828b0b716170df0d240fc948a4d675842ca7d155bc1fb7634aff9aaa5e08044829ef08958e6587ea45571c41f8a96809a28c619cedd73048a20969594d660a00317c1a0e613af884543e7f8323aad384408f6352e9c82493d9ac71dd316a3402d2a281e25e44bf92c3f1e0b5894b746a65d55f29f0c5381fffe9d1330ffe495ed2a1adf187d8626dffd3ce23a4fadea0e450093f1c628fea057bbd2ff7919b32ad35b166ff7dd8c9363c09023e583daad3b229f565b8a48b75c503a667db37891d532f5ec079d0179d928001e0817422776badbe8095bfa36e61c764fd965eeb92078d6491552a36695a831702ba2c034b8918f162c1c73b23107b2a0318bbca389aed60e3db5990ba390340c482d193eb2c4544fdf285c602250a79ff636aeb5925d558e3b4ebb3abdd245472a00c0c312b897c7e0bbcaf41125b7e68ca7059ff0c6fe3c675c808abf82564f93295072157e7d883f3d6f88f60934fcf76b8449d4e4cb8116aaaf9095a60cc9ea4ce6aa670d84492e031dd6346439b87d9210c1be33f1ea1a62ffde66822e40795c0ed6109d04f28051b2f5e34dcb027a66a82fcb2296fbea18bb2c319d1534b7c26313bec611d92758cf2d7a8e0775383e93bdde237580a52273032298b09e48bf6045c5bac1c9eaaba421118a725b16796973af7145a940a9a375ea6a96c8aafc89896ea178e49957909bab673c65e71af72fe21d62577aca7f94d962139be5399b9202c81cd9515ab84f8035278ca90ec15bf24fe69df68f899ea532f7ba752cf369a235a5cb988323c9798548bf61d091411474036edb1f11752584108666aed218a51029a6934f6d2ab5ad69edfa13dfecff263ef2bea284f0c90d5c38eb96afab804e9c1635ebf0b5608a1bee47538590e640405226caed788870728a8c4c48fa8fc0fa30f8cfe33ce8e016e3f008e0721f95dfe6719a40c2b804ce2b67e923c910d5006e66bab348c2657e768134cbd1ba374688aeb5a1185ecaf24e89bc6f2dd4362d6c0a2b60b52669798ebec069a29fe99f6aa5d502bb65b3121acd4a64de91849d3844f6b3212c4ff7f1fa1c2dccc4007bb7c55bb5e4d684686f7b2e057d09718786d7818e63b95368b1aa734b984b50ac3c2c9053c2796c17b6a4df4603d42b49e84fbc3cbdb7ecec539164227911fcaaabd1401d95c6c42ab2fc449781cbd7bf947ab5f78249507f8393412b217ae0452aab458568843ece889d3887</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>资源</tag>
+      </tags>
   </entry>
   <entry>
-    <title>pcl+vs+cmake编译</title>
-    <url>/2020/12/27/pcl-vs-cmake%E7%BC%96%E8%AF%91/</url>
-    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。</p>
-<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
-<p>3.安装Visual studio 2019编译器</p>
-<p>4.cmake<br><img src="/blog_img/PCL配置/17.png" alt="示意图"><br><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
-<p>其实源码包用不上，懒得改了，最复杂的方式就是源代码加第三方库进行配置，等我配置好了也会再一篇关于源码方式的配置。</p>
-<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a><br><a href="https://cmake.org/download/">cmake下载地址</a></p>
-<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
-<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
-<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
-<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
-<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
-<p>cmake 安装请选择添加到系统路径，没选的话也可以自己手动添加，添加的方式为cmake目录下bin文件  比如C:\APP\Cmake\bin这样的形式。</p>
-<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
-<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
-<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
-<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
-<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
-<h1 id="6-cmake编译"><a href="#6-cmake编译" class="headerlink" title="6.cmake编译"></a>6.cmake编译</h1><p>以管理员身份运行cmake-gui<br>在你想要的文件下创建一个名为example的文件夹，然后在此目录下创建一个source和cmake_bin文件，比如我的：</p>
-<p><img src="/blog_img/PCL配置/18.png" alt=""></p>
-<p>在source里面创建一个cpp文件和CMakeLists.txt文件。<br>CmakeLists.txt里写入以下内容：</p>
-<p>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)<br>project(test)<br>find_package(PCL 1.4 REQUIRED)<br>include_directories(${PCL_INCLUDE_DIRS})<br>link_directories(${PCL_LIBRARY_DIRS})<br>add_definitions(${PCL_DEFINITIONS})<br>add_executable (test test.cpp)<br>target_link_libraries (test ${PCL_LIBRARIES})</p>
-<p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
-<p>测试代码请网上去找，我用的是上一篇文件里的（里面有个D盘文件的读取可能会报错，但只要能出彩色的那个图就算配置成功了）。</p>
-<p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""></p>
-<p>点击Configure，选x64<br><img src="/blog_img/PCL配置/21.jpg" alt=""></p>
-<p>再点击一次configure<br><img src="/blog_img/PCL配置/22.jpg" alt=""></p>
-<p>点击Generate,出现Generating done.<br><img src="/blog_img/PCL配置/23.png" alt=""></p>
-<p>找到cmake_bin底下的test_sln 打开。<br><img src="/blog_img/PCL配置/24.jpg" alt=""></p>
-<p>将test设置为启动项，并调试。<br><img src="/blog_img/PCL配置/25.png" alt=""></p>
-<p><img src="/blog_img/PCL配置/26.jpg" alt=""></p>
+    <title>资源</title>
+    <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
+    <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
+<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
+<h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
+<h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
+<p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
+<p><a href="http://www.ai-start.com/dl2017/">吴恩达深度学习笔记</a></p>
 <hr>
 ]]></content>
-      <categories>
-        <category>pcl</category>
-      </categories>
       <tags>
-        <tag>-pcl -visual studio</tag>
+        <tag>-资源</tag>
       </tags>
   </entry>
 </search>
