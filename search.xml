@@ -460,10 +460,10 @@ npm install hexo-deployer-git --save //文章部署到 git 的模块
 npm install 主题需要的插件
 </code></pre><p><strong>千万别hxeo init</strong>，不然你就拉在裤子里了！！！</p>
 <h1 id="5-GITHUB-gitee-添加-SSH-KEYS"><a href="#5-GITHUB-gitee-添加-SSH-KEYS" class="headerlink" title="5. GITHUB/gitee 添加 SSH KEYS"></a>5. GITHUB/gitee 添加 SSH KEYS</h1><p>在GitHub/gitee的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>首先在本地创建 SSH Keys:</p>
-<pre><code>$ ssh-keygen -t rsa -C “xxxx@qq.com“
-</code></pre><p>后面的邮箱即为 github 注册邮箱，也是你登录 Github 的邮箱，之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：</p>
-<pre><code>ssh -T git@github.com
-</code></pre><p>gitee我还没尝试过，想必改一下后缀就行了。<br>会弹出确认命令，输入yes,会弹出你的名字等等，会出现：</p>
+<pre><code>ssh-keygen -t rsa -C “xxxx@xxxx.com“
+</code></pre><p>后面的邮箱即为 github/gitee注册邮箱，也是你登录Github的邮箱（其实无关紧要，只是为了辨识生成的用户名），之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：</p>
+<pre><code>ssh -T git@gitee.com 
+</code></pre><p>会弹出确认命令，输入yes,会弹出你的名字等等，会出现：</p>
 <pre><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
 </code></pre><p>然后：</p>
 <pre><code>hexo g
