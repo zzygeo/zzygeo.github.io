@@ -202,6 +202,32 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>github设置自己的域名</title>
+    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p>
+<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
+<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在存博客文件的根目录下创一个叫CNAME的文件，里面写入你自己的域名，如图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
+<p>到此就设置完成了！</p>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
     <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
@@ -224,30 +250,15 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
-    <title>github设置自己的域名</title>
-    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p>
-<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
-<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在存博客文件的根目录下创一个叫CNAME的文件，里面写入你自己的域名，如图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
-<p>到此就设置完成了！</p>
-<hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+    <title>hexo d 出现错误的用户名和密码的解决办法</title>
+    <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
+    <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
+<p>点进去就可以更改用户名和密码了</p>
 <hr>
 ]]></content>
       <categories>
-        <category>Youbute</category>
+        <category>hexo</category>
       </categories>
-      <tags>
-        <tag>-Youtube</tag>
-      </tags>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -353,17 +364,6 @@ git config --global --unset https.proxy
       <tags>
         <tag>markdown</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>hexo d 出现错误的用户名和密码的解决办法</title>
-    <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
-    <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
-<p>点进去就可以更改用户名和密码了</p>
-<hr>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
   </entry>
   <entry>
     <title>pcl+vs+cmake编译</title>
@@ -519,30 +519,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>深度学习篇</title>
-    <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
-    <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
-<h1 id="1-深度学习简介"><a href="#1-深度学习简介" class="headerlink" title="1.深度学习简介"></a>1.深度学习简介</h1><p>与其枯坐在房间里思考怎么设计一个识别猫的程序，不如利用人类肉眼在图像中识别猫的能力。我们可以收集一些已知包含猫与不包含猫的真实图像，然后我们的目标就转化成如何从这些图像入手得到一个可以推断出图像中是否有猫的函数。<br>通俗来说，机器学习是一门讨论各式各样的适用于不同问题的函数形式，以及如何使用数据来有效地获取函数参数具体值的学科。深度学习是指机器学习中的一类函数，它们的形式通常为多层神经网络。近年来，仰仗着大数据集和强大的硬件，深度学习已逐渐成为处理图像、文本语料和声音信号等复杂高维度数据的主要方法，算力以及数据集的增长使得机器学习死灰复燃。</p>
-<h2 id="1-1机器学习与深度学习的关系"><a href="#1-1机器学习与深度学习的关系" class="headerlink" title="1.1机器学习与深度学习的关系"></a>1.1机器学习与深度学习的关系</h2><p>机器学习研究如何使计算机系统利用经验改善性能。它是人工智能领域的分支，也是实现人工智能的一种手段。在机器学习的众多研究方向中，表征学习关注如何自动找出表示数据的合适方式，以便更好地将输入变换为正确的输出。<br>深度学习是具有多级表示的表征学习方法。在每一级（从原始数据开始），深度学习通过简单的函数将该级的表示变换为更高级的表示。因此，深度学习模型也可以看作是由许多简单函数复合而成的函数。当这些复合的函数足够多时，深度学习模型就可以表达非常复杂的变换。深度学习可以逐级表示越来越抽象的概念或模式。以图像为例，它的输入是一堆原始像素值。深度学习模型中，图像可以逐级表示为特定位置和角度的边缘、由边缘组合得出的花纹、由多种花纹进一步汇合得到的特定部位的模式等。最终，模型能够较容易根据更高级的表示完成给定的任务，如识别图像中的物体。值得一提的是，作为表征学习的一种，深度学习将自动找出每一级表示数据的合适方式。<br>因此，深度学习的一个外在特点是端到端的训练。也就是说，并不是将单独调试的部分拼凑起来组成一个系统，而是将整个系统组建好之后一起训练。比如说，计算机视觉科学家之前曾一度将特征抽取与机器学习模型的构建分开处理，像是Canny边缘探测和SIFT特征提取 曾占据统治性地位达10年以上，但这也就是人类能找到的最好方法了。当深度学习进入这个领域后，这些特征提取方法就被性能更强的自动优化的逐级过滤器替代了。<br>除端到端的训练以外，我们也正在经历从含参数统计模型转向完全无参数的模型。当数据非常稀缺时，我们需要通过简化对现实的假设来得到实用的模型。当数据充足时，我们就可以用能更好地拟合现实的无参数模型来替代这些含参数模型。这也使我们可以得到更精确的模型，尽管需要牺牲一些可解释性。</p>
-<h2 id="1-2深度学习的资源"><a href="#1-2深度学习的资源" class="headerlink" title="1.2深度学习的资源"></a>1.2深度学习的资源</h2><p>吴恩达的课确实很好，但我更喜欢这种直接上手边看边做的方法，现在跟着花书挺好的，社区也很强大，在这里贴上链接，原书版以及pytorch版的链接。  </p>
-<p><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">pytorch</a><br><a href="https://zh.d2l.ai/index.html">原版</a></p>
-<h1 id="2-必要软件"><a href="#2-必要软件" class="headerlink" title="2.必要软件"></a>2.必要软件</h1><p>原书中说明已经很清楚了，因此在这里我只会放一些我使用中所碰见的问题。首先是anaconda的一些知识以及jupyter book的知识，链接如下：</p>
-<p><a href="https://www.zhihu.com/question/58033789/answer/254673663">anaconda</a><br><a href="https://www.zhihu.com/question/46309360/answer/254638807">jupyter_book</a></p>
-<p>在我根据书中的内容安装miniconda以及jupyter book时，在第四步激活了,找不到命令,论坛里也找了找确实也有这个问题，有回答说不是在安装的文件下安装的anaconda。而我自己是直接在安装目录下 Git bash here的，没法用。我寻思是不是没管理员权限，直接搜索栏 cmd，以管理员身份运行。</p>
-<pre><code>cd C:\d2l-zh #安装镜像的文件夹
-conda activate gluon
-jupyter notebook
-</code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
-<hr>
-]]></content>
-      <categories>
-        <category>DL</category>
-      </categories>
-      <tags>
-        <tag>-deep learning</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>浏览器以及插件</title>
     <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
@@ -578,6 +554,30 @@ jupyter notebook
       </categories>
       <tags>
         <tag>-浏览器推荐 -浏览器插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>深度学习篇</title>
+    <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
+    <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
+<h1 id="1-深度学习简介"><a href="#1-深度学习简介" class="headerlink" title="1.深度学习简介"></a>1.深度学习简介</h1><p>与其枯坐在房间里思考怎么设计一个识别猫的程序，不如利用人类肉眼在图像中识别猫的能力。我们可以收集一些已知包含猫与不包含猫的真实图像，然后我们的目标就转化成如何从这些图像入手得到一个可以推断出图像中是否有猫的函数。<br>通俗来说，机器学习是一门讨论各式各样的适用于不同问题的函数形式，以及如何使用数据来有效地获取函数参数具体值的学科。深度学习是指机器学习中的一类函数，它们的形式通常为多层神经网络。近年来，仰仗着大数据集和强大的硬件，深度学习已逐渐成为处理图像、文本语料和声音信号等复杂高维度数据的主要方法，算力以及数据集的增长使得机器学习死灰复燃。</p>
+<h2 id="1-1机器学习与深度学习的关系"><a href="#1-1机器学习与深度学习的关系" class="headerlink" title="1.1机器学习与深度学习的关系"></a>1.1机器学习与深度学习的关系</h2><p>机器学习研究如何使计算机系统利用经验改善性能。它是人工智能领域的分支，也是实现人工智能的一种手段。在机器学习的众多研究方向中，表征学习关注如何自动找出表示数据的合适方式，以便更好地将输入变换为正确的输出。<br>深度学习是具有多级表示的表征学习方法。在每一级（从原始数据开始），深度学习通过简单的函数将该级的表示变换为更高级的表示。因此，深度学习模型也可以看作是由许多简单函数复合而成的函数。当这些复合的函数足够多时，深度学习模型就可以表达非常复杂的变换。深度学习可以逐级表示越来越抽象的概念或模式。以图像为例，它的输入是一堆原始像素值。深度学习模型中，图像可以逐级表示为特定位置和角度的边缘、由边缘组合得出的花纹、由多种花纹进一步汇合得到的特定部位的模式等。最终，模型能够较容易根据更高级的表示完成给定的任务，如识别图像中的物体。值得一提的是，作为表征学习的一种，深度学习将自动找出每一级表示数据的合适方式。<br>因此，深度学习的一个外在特点是端到端的训练。也就是说，并不是将单独调试的部分拼凑起来组成一个系统，而是将整个系统组建好之后一起训练。比如说，计算机视觉科学家之前曾一度将特征抽取与机器学习模型的构建分开处理，像是Canny边缘探测和SIFT特征提取 曾占据统治性地位达10年以上，但这也就是人类能找到的最好方法了。当深度学习进入这个领域后，这些特征提取方法就被性能更强的自动优化的逐级过滤器替代了。<br>除端到端的训练以外，我们也正在经历从含参数统计模型转向完全无参数的模型。当数据非常稀缺时，我们需要通过简化对现实的假设来得到实用的模型。当数据充足时，我们就可以用能更好地拟合现实的无参数模型来替代这些含参数模型。这也使我们可以得到更精确的模型，尽管需要牺牲一些可解释性。</p>
+<h2 id="1-2深度学习的资源"><a href="#1-2深度学习的资源" class="headerlink" title="1.2深度学习的资源"></a>1.2深度学习的资源</h2><p>吴恩达的课确实很好，但我更喜欢这种直接上手边看边做的方法，现在跟着花书挺好的，社区也很强大，在这里贴上链接，原书版以及pytorch版的链接。  </p>
+<p><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">pytorch</a><br><a href="https://zh.d2l.ai/index.html">原版</a></p>
+<h1 id="2-必要软件"><a href="#2-必要软件" class="headerlink" title="2.必要软件"></a>2.必要软件</h1><p>原书中说明已经很清楚了，因此在这里我只会放一些我使用中所碰见的问题。首先是anaconda的一些知识以及jupyter book的知识，链接如下：</p>
+<p><a href="https://www.zhihu.com/question/58033789/answer/254673663">anaconda</a><br><a href="https://www.zhihu.com/question/46309360/answer/254638807">jupyter_book</a></p>
+<p>在我根据书中的内容安装miniconda以及jupyter book时，在第四步激活了,找不到命令,论坛里也找了找确实也有这个问题，有回答说不是在安装的文件下安装的anaconda。而我自己是直接在安装目录下 Git bash here的，没法用。我寻思是不是没管理员权限，直接搜索栏 cmd，以管理员身份运行。</p>
+<pre><code>cd C:\d2l-zh #安装镜像的文件夹
+conda activate gluon
+jupyter notebook
+</code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
+<hr>
+]]></content>
+      <categories>
+        <category>DL</category>
+      </categories>
+      <tags>
+        <tag>-deep learning</tag>
       </tags>
   </entry>
   <entry>
