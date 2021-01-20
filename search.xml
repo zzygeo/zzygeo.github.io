@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>PCL-1-11-Visual-Studio-2019-配置</title>
+    <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<font color= ff size=4 face="">
+
+<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
+<p>3.获取PCL源码包</p>
+<p>4.安装Visual studio 2019编译器</p>
+<p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
+<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a></p>
+<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
+<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
+<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
+<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
+<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
+<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
+<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
+<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
+<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<h1 id="6-配置"><a href="#6-配置" class="headerlink" title="6.配置"></a>6.配置</h1><p>打开visual studio，新建一个空项目如图：<br><img src="/blog_img/PCL配置/7.jpg" alt=""></p>
+<p>在release下创建属性表（如果是DEBUG版本请在DEBUG下创建）<br><img src="/blog_img/PCL配置/8.png" alt=""></p>
+<p>切换到解决方案资源管理器，右键-添加-新建项<br><img src="/blog_img/PCL配置/9.png" alt=""></p>
+<p>添加C++文件<br><img src="/blog_img/PCL配置/10.png" alt=""></p>
+<p>接下来配置：<br><img src="/blog_img/PCL配置/11.png" alt=""></p>
+<p>包含目录下添加，建议手点：<br>C:\Program Files\PCL 1.11.0\include\pcl-1.11<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\include\boost-1_73<br>C:\Program Files\PCL 1.11.0\3rdParty\Eigen\eigen3<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\include<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\include<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\include\vtk-8.2<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Include</p>
+<p>库目录添加：<br>C:\Program Files\PCL 1.11.0\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Lib</p>
+<p>接下来配置：<br><img src="/blog_img/PCL配置/12.jpg" alt=""></p>
+<p>在预处理器定义处添加：<br>BOOST_USE_WINDOWS_H<br>NOMINMAX<br>_CRT_SECURE_NO_DEPRECATE</p>
+<p>在项目属性表（Project_one）和release下创建得属性表（test_one）中把所有选项里得SDL检查全改成否，如下图：</p>
+<p><img src="/blog_img/PCL配置/13.jpg" alt=""></p>
+<p><img src="/blog_img/PCL配置/14.jpg" alt=""></p>
+<h1 id="7-附加依赖项"><a href="#7-附加依赖项" class="headerlink" title="7.附加依赖项"></a>7.附加依赖项</h1><p>将PCL 1.11.0\3rdParty\VTK\lib和PCL 1.11.0\lib这两个文件夹下的lib文件的release版本添加到附加依赖项中（DEBUG版本添加DEBUG类型文件）</p>
+<p><img src="/blog_img/PCL配置/15.png" alt=""></p>
+<p>文件名称我已经归类好了</p>
+<p>release版本：</p>
+<p>pcl_common.lib<br>pcl_features.lib<br>pcl_filters.lib<br>pcl_io.lib<br>pcl_io_ply.lib<br>pcl_kdtree.lib<br>pcl_keypoints.lib<br>pcl_ml.lib<br>pcl_octree.lib<br>pcl_outofcore.lib<br>pcl_people.lib<br>pcl_recognition.lib<br>pcl_registration.lib<br>pcl_sample_consensus.lib<br>pcl_search.lib<br>pcl_segmentation.lib<br>pcl_stereo.lib<br>pcl_surface.lib<br>pcl_tracking.lib<br>pcl_visualization.lib<br>vtkChartsCore-8.2.lib<br>vtkCommonColor-8.2.lib<br>vtkCommonComputationalGeometry-8.2.lib<br>vtkCommonCore-8.2.lib<br>vtkCommonDataModel-8.2.lib<br>vtkCommonExecutionModel-8.2.lib<br>vtkCommonMath-8.2.lib<br>vtkCommonMisc-8.2.lib<br>vtkCommonSystem-8.2.lib<br>vtkCommonTransforms-8.2.lib<br>vtkDICOMParser-8.2.lib<br>vtkDomainsChemistry-8.2.lib<br>vtkDomainsChemistryOpenGL2-8.2.lib<br>vtkdoubleconversion-8.2.lib<br>vtkexodusII-8.2.lib<br>vtkexpat-8.2.lib<br>vtkFiltersAMR-8.2.lib<br>vtkFiltersCore-8.2.lib<br>vtkFiltersExtraction-8.2.lib<br>vtkFiltersFlowPaths-8.2.lib<br>vtkFiltersGeneral-8.2.lib<br>vtkFiltersGeneric-8.2.lib<br>vtkFiltersGeometry-8.2.lib<br>vtkFiltersHybrid-8.2.lib<br>vtkFiltersHyperTree-8.2.lib<br>vtkFiltersImaging-8.2.lib<br>vtkFiltersModeling-8.2.lib<br>vtkFiltersParallel-8.2.lib<br>vtkFiltersParallelImaging-8.2.lib<br>vtkFiltersPoints-8.2.lib<br>vtkFiltersProgrammable-8.2.lib<br>vtkFiltersSelection-8.2.lib<br>vtkFiltersSMP-8.2.lib<br>vtkFiltersSources-8.2.lib<br>vtkFiltersStatistics-8.2.lib<br>vtkFiltersTexture-8.2.lib<br>vtkFiltersTopology-8.2.lib<br>vtkFiltersVerdict-8.2.lib<br>vtkfreetype-8.2.lib<br>vtkGeovisCore-8.2.lib<br>vtkgl2ps-8.2.lib<br>vtkglew-8.2.lib<br>vtkGUISupportMFC-8.2.lib<br>vtkhdf5_hl-8.2.lib<br>vtkhdf5-8.2.lib<br>vtkImagingColor-8.2.lib<br>vtkImagingCore-8.2.lib<br>vtkImagingFourier-8.2.lib<br>vtkImagingGeneral-8.2.lib<br>vtkImagingHybrid-8.2.lib<br>vtkImagingMath-8.2.lib<br>vtkImagingMorphological-8.2.lib<br>vtkImagingSources-8.2.lib<br>vtkImagingStatistics-8.2.lib<br>vtkImagingStencil-8.2.lib<br>vtkInfovisCore-8.2.lib<br>vtkInfovisLayout-8.2.lib<br>vtkInteractionImage-8.2.lib<br>vtkInteractionStyle-8.2.lib<br>vtkInteractionWidgets-8.2.lib<br>vtkIOAMR-8.2.lib<br>vtkIOAsynchronous-8.2.lib<br>vtkIOCityGML-8.2.lib<br>vtkIOCore-8.2.lib<br>vtkIOEnSight-8.2.lib<br>vtkIOExodus-8.2.lib<br>vtkIOExport-8.2.lib<br>vtkIOExportOpenGL2-8.2.lib<br>vtkIOExportPDF-8.2.lib<br>vtkIOGeometry-8.2.lib<br>vtkIOImage-8.2.lib<br>vtkIOImport-8.2.lib<br>vtkIOInfovis-8.2.lib<br>vtkIOLegacy-8.2.lib<br>vtkIOLSDyna-8.2.lib<br>vtkIOMINC-8.2.lib<br>vtkIOMovie-8.2.lib<br>vtkIONetCDF-8.2.lib<br>vtkIOParallel-8.2.lib<br>vtkIOParallelXML-8.2.lib<br>vtkIOPLY-8.2.lib<br>vtkIOSegY-8.2.lib<br>vtkIOSQL-8.2.lib<br>vtkIOTecplotTable-8.2.lib<br>vtkIOVeraOut-8.2.lib<br>vtkIOVideo-8.2.lib<br>vtkIOXML-8.2.lib<br>vtkIOXMLParser-8.2.lib<br>vtkjpeg-8.2.lib<br>vtkjsoncpp-8.2.lib<br>vtklibharu-8.2.lib<br>vtklibxml2-8.2.lib<br>vtklz4-8.2.lib<br>vtklzma-8.2.lib<br>vtkmetaio-8.2.lib<br>vtkNetCDF-8.2.lib<br>vtkogg-8.2.lib<br>vtkParallelCore-8.2.lib<br>vtkpng-8.2.lib<br>vtkproj-8.2.lib<br>vtkpugixml-8.2.lib<br>vtkRenderingAnnotation-8.2.lib<br>vtkRenderingContext2D-8.2.lib<br>vtkRenderingContextOpenGL2-8.2.lib<br>vtkRenderingCore-8.2.lib<br>vtkRenderingExternal-8.2.lib<br>vtkRenderingFreeType-8.2.lib<br>vtkRenderingGL2PSOpenGL2-8.2.lib<br>vtkRenderingImage-8.2.lib<br>vtkRenderingLabel-8.2.lib<br>vtkRenderingLOD-8.2.lib<br>vtkRenderingOpenGL2-8.2.lib<br>vtkRenderingVolume-8.2.lib<br>vtkRenderingVolumeOpenGL2-8.2.lib<br>vtksqlite-8.2.lib<br>vtksys-8.2.lib<br>vtktheora-8.2.lib<br>vtktiff-8.2.lib<br>vtkverdict-8.2.lib<br>vtkViewsContext2D-8.2.lib<br>vtkViewsCore-8.2.lib<br>vtkViewsInfovis-8.2.lib<br>vtkzlib-8.2.lib</p>
+<p>DEBUG版本：</p>
+<p>pcl_commond.lib<br>pcl_featuresd.lib<br>pcl_filtersd.lib<br>pcl_io_plyd.lib<br>pcl_iod.lib<br>pcl_kdtreed.lib<br>pcl_keypointsd.lib<br>pcl_mld.lib<br>pcl_octreed.lib<br>pcl_outofcored.lib<br>pcl_peopled.lib<br>pcl_recognitiond.lib<br>pcl_registrationd.lib<br>pcl_sample_consensusd.lib<br>pcl_searchd.lib<br>pcl_segmentationd.lib<br>pcl_stereod.lib<br>pcl_surfaced.lib<br>pcl_trackingd.lib<br>pcl_visualizationd.lib<br>vtkChartsCore-8.2-gd.lib<br>vtkCommonColor-8.2-gd.lib<br>vtkCommonComputationalGeometry-8.2-gd.lib<br>vtkCommonCore-8.2-gd.lib<br>vtkCommonDataModel-8.2-gd.lib<br>vtkCommonExecutionModel-8.2-gd.lib<br>vtkCommonMath-8.2-gd.lib<br>vtkCommonMisc-8.2-gd.lib<br>vtkCommonSystem-8.2-gd.lib<br>vtkCommonTransforms-8.2-gd.lib<br>vtkDICOMParser-8.2-gd.lib<br>vtkDomainsChemistry-8.2-gd.lib<br>vtkDomainsChemistryOpenGL2-8.2-gd.lib<br>vtkdoubleconversion-8.2-gd.lib<br>vtkexodusII-8.2-gd.lib<br>vtkexpat-8.2-gd.lib<br>vtkFiltersAMR-8.2-gd.lib<br>vtkFiltersCore-8.2-gd.lib<br>vtkFiltersExtraction-8.2-gd.lib<br>vtkFiltersFlowPaths-8.2-gd.lib<br>vtkFiltersGeneral-8.2-gd.lib<br>vtkFiltersGeneric-8.2-gd.lib<br>vtkFiltersGeometry-8.2-gd.lib<br>vtkFiltersHybrid-8.2-gd.lib<br>vtkFiltersHyperTree-8.2-gd.lib<br>vtkFiltersImaging-8.2-gd.lib<br>vtkFiltersModeling-8.2-gd.lib<br>vtkFiltersParallel-8.2-gd.lib<br>vtkFiltersParallelImaging-8.2-gd.lib<br>vtkFiltersPoints-8.2-gd.lib<br>vtkFiltersProgrammable-8.2-gd.lib<br>vtkFiltersSelection-8.2-gd.lib<br>vtkFiltersSMP-8.2-gd.lib<br>vtkFiltersSources-8.2-gd.lib<br>vtkFiltersStatistics-8.2-gd.lib<br>vtkFiltersTexture-8.2-gd.lib<br>vtkFiltersTopology-8.2-gd.lib<br>vtkFiltersVerdict-8.2-gd.lib<br>vtkfreetype-8.2-gd.lib<br>vtkGeovisCore-8.2-gd.lib<br>vtkgl2ps-8.2-gd.lib<br>vtkglew-8.2-gd.lib<br>vtkGUISupportMFC-8.2-gd.lib<br>vtkhdf5_hl-8.2-gd.lib<br>vtkhdf5-8.2-gd.lib<br>vtkImagingColor-8.2-gd.lib<br>vtkImagingCore-8.2-gd.lib<br>vtkImagingFourier-8.2-gd.lib<br>vtkImagingGeneral-8.2-gd.lib<br>vtkImagingHybrid-8.2-gd.lib<br>vtkImagingMath-8.2-gd.lib<br>vtkImagingMorphological-8.2-gd.lib<br>vtkImagingSources-8.2-gd.lib<br>vtkImagingStatistics-8.2-gd.lib<br>vtkImagingStencil-8.2-gd.lib<br>vtkInfovisCore-8.2-gd.lib<br>vtkInfovisLayout-8.2-gd.lib<br>vtkInteractionImage-8.2-gd.lib<br>vtkInteractionStyle-8.2-gd.lib<br>vtkInteractionWidgets-8.2-gd.lib<br>vtkIOAMR-8.2-gd.lib<br>vtkIOAsynchronous-8.2-gd.lib<br>vtkIOCityGML-8.2-gd.lib<br>vtkIOCore-8.2-gd.lib<br>vtkIOEnSight-8.2-gd.lib<br>vtkIOExodus-8.2-gd.lib<br>vtkIOExport-8.2-gd.lib<br>vtkIOExportOpenGL2-8.2-gd.lib<br>vtkIOExportPDF-8.2-gd.lib<br>vtkIOGeometry-8.2-gd.lib<br>vtkIOImage-8.2-gd.lib<br>vtkIOImport-8.2-gd.lib<br>vtkIOInfovis-8.2-gd.lib<br>vtkIOLegacy-8.2-gd.lib<br>vtkIOLSDyna-8.2-gd.lib<br>vtkIOMINC-8.2-gd.lib<br>vtkIOMovie-8.2-gd.lib<br>vtkIONetCDF-8.2-gd.lib<br>vtkIOParallel-8.2-gd.lib<br>vtkIOParallelXML-8.2-gd.lib<br>vtkIOPLY-8.2-gd.lib<br>vtkIOSegY-8.2-gd.lib<br>vtkIOSQL-8.2-gd.lib<br>vtkIOTecplotTable-8.2-gd.lib<br>vtkIOVeraOut-8.2-gd.lib<br>vtkIOVideo-8.2-gd.lib<br>vtkIOXML-8.2-gd.lib<br>vtkIOXMLParser-8.2-gd.lib<br>vtkjpeg-8.2-gd.lib<br>vtkjsoncpp-8.2-gd.lib<br>vtklibharu-8.2-gd.lib<br>vtklibxml2-8.2-gd.lib<br>vtklz4-8.2-gd.lib<br>vtklzma-8.2-gd.lib<br>vtkmetaio-8.2-gd.lib<br>vtkNetCDF-8.2-gd.lib<br>vtkogg-8.2-gd.lib<br>vtkParallelCore-8.2-gd.lib<br>vtkpng-8.2-gd.lib<br>vtkproj-8.2-gd.lib<br>vtkpugixml-8.2-gd.lib<br>vtkRenderingAnnotation-8.2-gd.lib<br>vtkRenderingContext2D-8.2-gd.lib<br>vtkRenderingContextOpenGL2-8.2-gd.lib<br>vtkRenderingCore-8.2-gd.lib<br>vtkRenderingExternal-8.2-gd.lib<br>vtkRenderingFreeType-8.2-gd.lib<br>vtkRenderingGL2PSOpenGL2-8.2-gd.lib<br>vtkRenderingImage-8.2-gd.lib<br>vtkRenderingLabel-8.2-gd.lib<br>vtkRenderingLOD-8.2-gd.lib<br>vtkRenderingOpenGL2-8.2-gd.lib<br>vtkRenderingVolume-8.2-gd.lib<br>vtkRenderingVolumeOpenGL2-8.2-gd.lib<br>vtksqlite-8.2-gd.lib<br>vtksys-8.2-gd.lib<br>vtktheora-8.2-gd.lib<br>vtktiff-8.2-gd.lib<br>vtkverdict-8.2-gd.lib<br>vtkViewsContext2D-8.2-gd.lib<br>vtkViewsCore-8.2-gd.lib<br>vtkViewsInfovis-8.2-gd.lib<br>vtkzlib-8.2-gd.lib</p>
+<h1 id="8-程序测试"><a href="#8-程序测试" class="headerlink" title="8.程序测试"></a>8.程序测试</h1><pre><code>#include &lt;pcl/visualization/cloud_viewer.h&gt;  
+#include &lt;iostream&gt;  
+#include &lt;pcl/io/io.h&gt;  
+#include &lt;pcl/io/pcd_io.h&gt;  
+int user_data;
+void viewerOneOff(pcl::visualization::PCLVisualizer&amp; viewer)
+&#123;
+    viewer.setBackgroundColor(1.0, 0.5, 1.0);
+    pcl::PointXYZ o;
+    o.x = 1.0;
+    o.y = 0;
+    o.z = 0;
+    viewer.addSphere(o, 0.25, &quot;sphere&quot;, 0);
+    std::cout &lt;&lt; &quot;i only run once&quot; &lt;&lt; std::endl;
+&#125;
+void viewerPsycho(pcl::visualization::PCLVisualizer&amp; viewer)
+&#123;
+    static unsigned count = 0;
+    std::stringstream ss;
+    ss &lt;&lt; &quot;Once per viewer loop: &quot; &lt;&lt; count++;
+    viewer.removeShape(&quot;text&quot;, 0);
+    viewer.addText(ss.str(), 200, 300, &quot;text&quot;, 0);
+    //FIXME: possible race condition here:  
+    user_data++;
+&#125;
+int main()
+&#123;
+    pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;::Ptr cloud(new pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;);
+    pcl::io::loadPCDFile(&quot;D:\\Microsoft Visual Studio 10.0\\Projects\\pcl\\pcl\\my_point_cloud.pcd&quot;, *cloud);
+    pcl::visualization::CloudViewer viewer(&quot;Cloud Viewer&quot;);
+    //blocks until the cloud is actually rendered  
+    viewer.showCloud(cloud);
+    //use the following functions to get access to the underlying more advanced/powerful  
+    //PCLVisualizer  
+    //This will only get called once  
+    viewer.runOnVisualizationThreadOnce(viewerOneOff);
+    //This will get called once per visualization iteration  
+    viewer.runOnVisualizationThread(viewerPsycho);
+    while (!viewer.wasStopped())
+    &#123;
+        //you can also do cool processing here  
+        //FIXME: Note that this is running in a separate thread from viewerPsycho  
+        //and you should guard against race conditions yourself...  
+        user_data++;
+    &#125;
+    return 0;
+&#125;
+</code></pre><p>测试结果：</p>
+<p><img src="/blog_img/PCL配置/16.png" alt=""></p>
+<hr>
+]]></content>
+      <categories>
+        <category>pcl</category>
+      </categories>
+      <tags>
+        <tag>-pcl -visual studio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++</title>
     <url>/2020/12/19/CPP/</url>
     <content><![CDATA[<p>写一些觉得能用上的C++代码：</p>
@@ -102,104 +200,6 @@ int main()
 </code></pre><p>关键在于swap 和 bubble_sort时，不仅要传值，也要传址，不然只是其值被复制了一份，成为了参数的局部性定义，当运行结束也就从“程序堆栈”里释放掉了，并没有关联起来。</p>
 <hr>
 ]]></content>
-  </entry>
-  <entry>
-    <title>PCL-1-11-Visual-Studio-2019-配置</title>
-    <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<font color= ff size=4 face="">
-
-<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
-<p>3.获取PCL源码包</p>
-<p>4.安装Visual studio 2019编译器</p>
-<p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
-<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a></p>
-<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
-<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
-<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
-<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
-<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
-<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
-<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
-<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
-<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
-<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
-<h1 id="6-配置"><a href="#6-配置" class="headerlink" title="6.配置"></a>6.配置</h1><p>打开visual studio，新建一个空项目如图：<br><img src="/blog_img/PCL配置/7.jpg" alt=""></p>
-<p>在release下创建属性表（如果是DEBUG版本请在DEBUG下创建）<br><img src="/blog_img/PCL配置/8.png" alt=""></p>
-<p>切换到解决方案资源管理器，右键-添加-新建项<br><img src="/blog_img/PCL配置/9.png" alt=""></p>
-<p>添加C++文件<br><img src="/blog_img/PCL配置/10.png" alt=""></p>
-<p>接下来配置：<br><img src="/blog_img/PCL配置/11.png" alt=""></p>
-<p>包含目录下添加，建议手点：<br>C:\Program Files\PCL 1.11.0\include\pcl-1.11<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\include\boost-1_73<br>C:\Program Files\PCL 1.11.0\3rdParty\Eigen\eigen3<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\include<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\include<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\include\vtk-8.2<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Include</p>
-<p>库目录添加：<br>C:\Program Files\PCL 1.11.0\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Lib</p>
-<p>接下来配置：<br><img src="/blog_img/PCL配置/12.jpg" alt=""></p>
-<p>在预处理器定义处添加：<br>BOOST_USE_WINDOWS_H<br>NOMINMAX<br>_CRT_SECURE_NO_DEPRECATE</p>
-<p>在项目属性表（Project_one）和release下创建得属性表（test_one）中把所有选项里得SDL检查全改成否，如下图：</p>
-<p><img src="/blog_img/PCL配置/13.jpg" alt=""></p>
-<p><img src="/blog_img/PCL配置/14.jpg" alt=""></p>
-<h1 id="7-附加依赖项"><a href="#7-附加依赖项" class="headerlink" title="7.附加依赖项"></a>7.附加依赖项</h1><p>将PCL 1.11.0\3rdParty\VTK\lib和PCL 1.11.0\lib这两个文件夹下的lib文件的release版本添加到附加依赖项中（DEBUG版本添加DEBUG类型文件）</p>
-<p><img src="/blog_img/PCL配置/15.png" alt=""></p>
-<p>文件名称我已经归类好了</p>
-<p>release版本：</p>
-<p>pcl_common.lib<br>pcl_features.lib<br>pcl_filters.lib<br>pcl_io.lib<br>pcl_io_ply.lib<br>pcl_kdtree.lib<br>pcl_keypoints.lib<br>pcl_ml.lib<br>pcl_octree.lib<br>pcl_outofcore.lib<br>pcl_people.lib<br>pcl_recognition.lib<br>pcl_registration.lib<br>pcl_sample_consensus.lib<br>pcl_search.lib<br>pcl_segmentation.lib<br>pcl_stereo.lib<br>pcl_surface.lib<br>pcl_tracking.lib<br>pcl_visualization.lib<br>vtkChartsCore-8.2.lib<br>vtkCommonColor-8.2.lib<br>vtkCommonComputationalGeometry-8.2.lib<br>vtkCommonCore-8.2.lib<br>vtkCommonDataModel-8.2.lib<br>vtkCommonExecutionModel-8.2.lib<br>vtkCommonMath-8.2.lib<br>vtkCommonMisc-8.2.lib<br>vtkCommonSystem-8.2.lib<br>vtkCommonTransforms-8.2.lib<br>vtkDICOMParser-8.2.lib<br>vtkDomainsChemistry-8.2.lib<br>vtkDomainsChemistryOpenGL2-8.2.lib<br>vtkdoubleconversion-8.2.lib<br>vtkexodusII-8.2.lib<br>vtkexpat-8.2.lib<br>vtkFiltersAMR-8.2.lib<br>vtkFiltersCore-8.2.lib<br>vtkFiltersExtraction-8.2.lib<br>vtkFiltersFlowPaths-8.2.lib<br>vtkFiltersGeneral-8.2.lib<br>vtkFiltersGeneric-8.2.lib<br>vtkFiltersGeometry-8.2.lib<br>vtkFiltersHybrid-8.2.lib<br>vtkFiltersHyperTree-8.2.lib<br>vtkFiltersImaging-8.2.lib<br>vtkFiltersModeling-8.2.lib<br>vtkFiltersParallel-8.2.lib<br>vtkFiltersParallelImaging-8.2.lib<br>vtkFiltersPoints-8.2.lib<br>vtkFiltersProgrammable-8.2.lib<br>vtkFiltersSelection-8.2.lib<br>vtkFiltersSMP-8.2.lib<br>vtkFiltersSources-8.2.lib<br>vtkFiltersStatistics-8.2.lib<br>vtkFiltersTexture-8.2.lib<br>vtkFiltersTopology-8.2.lib<br>vtkFiltersVerdict-8.2.lib<br>vtkfreetype-8.2.lib<br>vtkGeovisCore-8.2.lib<br>vtkgl2ps-8.2.lib<br>vtkglew-8.2.lib<br>vtkGUISupportMFC-8.2.lib<br>vtkhdf5_hl-8.2.lib<br>vtkhdf5-8.2.lib<br>vtkImagingColor-8.2.lib<br>vtkImagingCore-8.2.lib<br>vtkImagingFourier-8.2.lib<br>vtkImagingGeneral-8.2.lib<br>vtkImagingHybrid-8.2.lib<br>vtkImagingMath-8.2.lib<br>vtkImagingMorphological-8.2.lib<br>vtkImagingSources-8.2.lib<br>vtkImagingStatistics-8.2.lib<br>vtkImagingStencil-8.2.lib<br>vtkInfovisCore-8.2.lib<br>vtkInfovisLayout-8.2.lib<br>vtkInteractionImage-8.2.lib<br>vtkInteractionStyle-8.2.lib<br>vtkInteractionWidgets-8.2.lib<br>vtkIOAMR-8.2.lib<br>vtkIOAsynchronous-8.2.lib<br>vtkIOCityGML-8.2.lib<br>vtkIOCore-8.2.lib<br>vtkIOEnSight-8.2.lib<br>vtkIOExodus-8.2.lib<br>vtkIOExport-8.2.lib<br>vtkIOExportOpenGL2-8.2.lib<br>vtkIOExportPDF-8.2.lib<br>vtkIOGeometry-8.2.lib<br>vtkIOImage-8.2.lib<br>vtkIOImport-8.2.lib<br>vtkIOInfovis-8.2.lib<br>vtkIOLegacy-8.2.lib<br>vtkIOLSDyna-8.2.lib<br>vtkIOMINC-8.2.lib<br>vtkIOMovie-8.2.lib<br>vtkIONetCDF-8.2.lib<br>vtkIOParallel-8.2.lib<br>vtkIOParallelXML-8.2.lib<br>vtkIOPLY-8.2.lib<br>vtkIOSegY-8.2.lib<br>vtkIOSQL-8.2.lib<br>vtkIOTecplotTable-8.2.lib<br>vtkIOVeraOut-8.2.lib<br>vtkIOVideo-8.2.lib<br>vtkIOXML-8.2.lib<br>vtkIOXMLParser-8.2.lib<br>vtkjpeg-8.2.lib<br>vtkjsoncpp-8.2.lib<br>vtklibharu-8.2.lib<br>vtklibxml2-8.2.lib<br>vtklz4-8.2.lib<br>vtklzma-8.2.lib<br>vtkmetaio-8.2.lib<br>vtkNetCDF-8.2.lib<br>vtkogg-8.2.lib<br>vtkParallelCore-8.2.lib<br>vtkpng-8.2.lib<br>vtkproj-8.2.lib<br>vtkpugixml-8.2.lib<br>vtkRenderingAnnotation-8.2.lib<br>vtkRenderingContext2D-8.2.lib<br>vtkRenderingContextOpenGL2-8.2.lib<br>vtkRenderingCore-8.2.lib<br>vtkRenderingExternal-8.2.lib<br>vtkRenderingFreeType-8.2.lib<br>vtkRenderingGL2PSOpenGL2-8.2.lib<br>vtkRenderingImage-8.2.lib<br>vtkRenderingLabel-8.2.lib<br>vtkRenderingLOD-8.2.lib<br>vtkRenderingOpenGL2-8.2.lib<br>vtkRenderingVolume-8.2.lib<br>vtkRenderingVolumeOpenGL2-8.2.lib<br>vtksqlite-8.2.lib<br>vtksys-8.2.lib<br>vtktheora-8.2.lib<br>vtktiff-8.2.lib<br>vtkverdict-8.2.lib<br>vtkViewsContext2D-8.2.lib<br>vtkViewsCore-8.2.lib<br>vtkViewsInfovis-8.2.lib<br>vtkzlib-8.2.lib</p>
-<p>DEBUG版本：</p>
-<p>pcl_commond.lib<br>pcl_featuresd.lib<br>pcl_filtersd.lib<br>pcl_io_plyd.lib<br>pcl_iod.lib<br>pcl_kdtreed.lib<br>pcl_keypointsd.lib<br>pcl_mld.lib<br>pcl_octreed.lib<br>pcl_outofcored.lib<br>pcl_peopled.lib<br>pcl_recognitiond.lib<br>pcl_registrationd.lib<br>pcl_sample_consensusd.lib<br>pcl_searchd.lib<br>pcl_segmentationd.lib<br>pcl_stereod.lib<br>pcl_surfaced.lib<br>pcl_trackingd.lib<br>pcl_visualizationd.lib<br>vtkChartsCore-8.2-gd.lib<br>vtkCommonColor-8.2-gd.lib<br>vtkCommonComputationalGeometry-8.2-gd.lib<br>vtkCommonCore-8.2-gd.lib<br>vtkCommonDataModel-8.2-gd.lib<br>vtkCommonExecutionModel-8.2-gd.lib<br>vtkCommonMath-8.2-gd.lib<br>vtkCommonMisc-8.2-gd.lib<br>vtkCommonSystem-8.2-gd.lib<br>vtkCommonTransforms-8.2-gd.lib<br>vtkDICOMParser-8.2-gd.lib<br>vtkDomainsChemistry-8.2-gd.lib<br>vtkDomainsChemistryOpenGL2-8.2-gd.lib<br>vtkdoubleconversion-8.2-gd.lib<br>vtkexodusII-8.2-gd.lib<br>vtkexpat-8.2-gd.lib<br>vtkFiltersAMR-8.2-gd.lib<br>vtkFiltersCore-8.2-gd.lib<br>vtkFiltersExtraction-8.2-gd.lib<br>vtkFiltersFlowPaths-8.2-gd.lib<br>vtkFiltersGeneral-8.2-gd.lib<br>vtkFiltersGeneric-8.2-gd.lib<br>vtkFiltersGeometry-8.2-gd.lib<br>vtkFiltersHybrid-8.2-gd.lib<br>vtkFiltersHyperTree-8.2-gd.lib<br>vtkFiltersImaging-8.2-gd.lib<br>vtkFiltersModeling-8.2-gd.lib<br>vtkFiltersParallel-8.2-gd.lib<br>vtkFiltersParallelImaging-8.2-gd.lib<br>vtkFiltersPoints-8.2-gd.lib<br>vtkFiltersProgrammable-8.2-gd.lib<br>vtkFiltersSelection-8.2-gd.lib<br>vtkFiltersSMP-8.2-gd.lib<br>vtkFiltersSources-8.2-gd.lib<br>vtkFiltersStatistics-8.2-gd.lib<br>vtkFiltersTexture-8.2-gd.lib<br>vtkFiltersTopology-8.2-gd.lib<br>vtkFiltersVerdict-8.2-gd.lib<br>vtkfreetype-8.2-gd.lib<br>vtkGeovisCore-8.2-gd.lib<br>vtkgl2ps-8.2-gd.lib<br>vtkglew-8.2-gd.lib<br>vtkGUISupportMFC-8.2-gd.lib<br>vtkhdf5_hl-8.2-gd.lib<br>vtkhdf5-8.2-gd.lib<br>vtkImagingColor-8.2-gd.lib<br>vtkImagingCore-8.2-gd.lib<br>vtkImagingFourier-8.2-gd.lib<br>vtkImagingGeneral-8.2-gd.lib<br>vtkImagingHybrid-8.2-gd.lib<br>vtkImagingMath-8.2-gd.lib<br>vtkImagingMorphological-8.2-gd.lib<br>vtkImagingSources-8.2-gd.lib<br>vtkImagingStatistics-8.2-gd.lib<br>vtkImagingStencil-8.2-gd.lib<br>vtkInfovisCore-8.2-gd.lib<br>vtkInfovisLayout-8.2-gd.lib<br>vtkInteractionImage-8.2-gd.lib<br>vtkInteractionStyle-8.2-gd.lib<br>vtkInteractionWidgets-8.2-gd.lib<br>vtkIOAMR-8.2-gd.lib<br>vtkIOAsynchronous-8.2-gd.lib<br>vtkIOCityGML-8.2-gd.lib<br>vtkIOCore-8.2-gd.lib<br>vtkIOEnSight-8.2-gd.lib<br>vtkIOExodus-8.2-gd.lib<br>vtkIOExport-8.2-gd.lib<br>vtkIOExportOpenGL2-8.2-gd.lib<br>vtkIOExportPDF-8.2-gd.lib<br>vtkIOGeometry-8.2-gd.lib<br>vtkIOImage-8.2-gd.lib<br>vtkIOImport-8.2-gd.lib<br>vtkIOInfovis-8.2-gd.lib<br>vtkIOLegacy-8.2-gd.lib<br>vtkIOLSDyna-8.2-gd.lib<br>vtkIOMINC-8.2-gd.lib<br>vtkIOMovie-8.2-gd.lib<br>vtkIONetCDF-8.2-gd.lib<br>vtkIOParallel-8.2-gd.lib<br>vtkIOParallelXML-8.2-gd.lib<br>vtkIOPLY-8.2-gd.lib<br>vtkIOSegY-8.2-gd.lib<br>vtkIOSQL-8.2-gd.lib<br>vtkIOTecplotTable-8.2-gd.lib<br>vtkIOVeraOut-8.2-gd.lib<br>vtkIOVideo-8.2-gd.lib<br>vtkIOXML-8.2-gd.lib<br>vtkIOXMLParser-8.2-gd.lib<br>vtkjpeg-8.2-gd.lib<br>vtkjsoncpp-8.2-gd.lib<br>vtklibharu-8.2-gd.lib<br>vtklibxml2-8.2-gd.lib<br>vtklz4-8.2-gd.lib<br>vtklzma-8.2-gd.lib<br>vtkmetaio-8.2-gd.lib<br>vtkNetCDF-8.2-gd.lib<br>vtkogg-8.2-gd.lib<br>vtkParallelCore-8.2-gd.lib<br>vtkpng-8.2-gd.lib<br>vtkproj-8.2-gd.lib<br>vtkpugixml-8.2-gd.lib<br>vtkRenderingAnnotation-8.2-gd.lib<br>vtkRenderingContext2D-8.2-gd.lib<br>vtkRenderingContextOpenGL2-8.2-gd.lib<br>vtkRenderingCore-8.2-gd.lib<br>vtkRenderingExternal-8.2-gd.lib<br>vtkRenderingFreeType-8.2-gd.lib<br>vtkRenderingGL2PSOpenGL2-8.2-gd.lib<br>vtkRenderingImage-8.2-gd.lib<br>vtkRenderingLabel-8.2-gd.lib<br>vtkRenderingLOD-8.2-gd.lib<br>vtkRenderingOpenGL2-8.2-gd.lib<br>vtkRenderingVolume-8.2-gd.lib<br>vtkRenderingVolumeOpenGL2-8.2-gd.lib<br>vtksqlite-8.2-gd.lib<br>vtksys-8.2-gd.lib<br>vtktheora-8.2-gd.lib<br>vtktiff-8.2-gd.lib<br>vtkverdict-8.2-gd.lib<br>vtkViewsContext2D-8.2-gd.lib<br>vtkViewsCore-8.2-gd.lib<br>vtkViewsInfovis-8.2-gd.lib<br>vtkzlib-8.2-gd.lib</p>
-<h1 id="8-程序测试"><a href="#8-程序测试" class="headerlink" title="8.程序测试"></a>8.程序测试</h1><pre><code>#include &lt;pcl/visualization/cloud_viewer.h&gt;  
-#include &lt;iostream&gt;  
-#include &lt;pcl/io/io.h&gt;  
-#include &lt;pcl/io/pcd_io.h&gt;  
-int user_data;
-void viewerOneOff(pcl::visualization::PCLVisualizer&amp; viewer)
-&#123;
-    viewer.setBackgroundColor(1.0, 0.5, 1.0);
-    pcl::PointXYZ o;
-    o.x = 1.0;
-    o.y = 0;
-    o.z = 0;
-    viewer.addSphere(o, 0.25, &quot;sphere&quot;, 0);
-    std::cout &lt;&lt; &quot;i only run once&quot; &lt;&lt; std::endl;
-&#125;
-void viewerPsycho(pcl::visualization::PCLVisualizer&amp; viewer)
-&#123;
-    static unsigned count = 0;
-    std::stringstream ss;
-    ss &lt;&lt; &quot;Once per viewer loop: &quot; &lt;&lt; count++;
-    viewer.removeShape(&quot;text&quot;, 0);
-    viewer.addText(ss.str(), 200, 300, &quot;text&quot;, 0);
-    //FIXME: possible race condition here:  
-    user_data++;
-&#125;
-int main()
-&#123;
-    pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;::Ptr cloud(new pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;);
-    pcl::io::loadPCDFile(&quot;D:\\Microsoft Visual Studio 10.0\\Projects\\pcl\\pcl\\my_point_cloud.pcd&quot;, *cloud);
-    pcl::visualization::CloudViewer viewer(&quot;Cloud Viewer&quot;);
-    //blocks until the cloud is actually rendered  
-    viewer.showCloud(cloud);
-    //use the following functions to get access to the underlying more advanced/powerful  
-    //PCLVisualizer  
-    //This will only get called once  
-    viewer.runOnVisualizationThreadOnce(viewerOneOff);
-    //This will get called once per visualization iteration  
-    viewer.runOnVisualizationThread(viewerPsycho);
-    while (!viewer.wasStopped())
-    &#123;
-        //you can also do cool processing here  
-        //FIXME: Note that this is running in a separate thread from viewerPsycho  
-        //and you should guard against race conditions yourself...  
-        user_data++;
-    &#125;
-    return 0;
-&#125;
-</code></pre><p>测试结果：</p>
-<p><img src="/blog_img/PCL配置/16.png" alt=""></p>
-<hr>
-]]></content>
-      <categories>
-        <category>pcl</category>
-      </categories>
-      <tags>
-        <tag>-pcl -visual studio</tag>
-      </tags>
   </entry>
   <entry>
     <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
@@ -479,6 +479,36 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>梯子</title>
+    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
+    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
+<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
+<hr>
+]]></content>
+      <categories>
+        <category>VPN</category>
+      </categories>
+      <tags>
+        <tag>-梯子</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2020/11/07/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="bd4eb4c7c10316c055dd1459d425a0a9a7b0b3567aaf7ca2fe07b7b3d3ef3a0a">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af9267b11434284e9e0ec6a37ee35731831f7e98a19e7986f30c83a990956dc6f9439e2794ebd492bde8ab81c8540ba81be0135873667d50676f520135f60d3c9cada75763b8519d31d9d990bb899a37ba90e1550bc4db8139c228c33384918c6dd24bfa0a69af74a44894a264d0fdd1397f6bdb1d0a4d0afbb18847e78da6f977577e976217261cf9e9bf0f0353a5c4aaf3bb96e2247270eb4249d297187ad4efc595a4680a51e1177ab9722e4f030fc69867418488eaa007090adaf2e9ffaae35d1e7ca95277a604c60269a33f6e88c703b29eac4c8da1f3a7c3f57406094ee084082289bd70e1f60b76b91ceb51e51c61b5f36961518713e057d56cf309f13d5a67f516374fcb524ec3d2371c4f85fb01658bb12bea179e17012fc28e0a1db08d9665760b28d51483b8b8c947d8bd0b748919fa988131a76fef435c7fd7cadacc3d53793802cbb791b77fece3415241c06ced8332042477a9ce072953caa73f6b1c135f483810dc6817bed74f28aa0b780819f71f1c95c484f36816fae2f15670ea295e18c6da3cf6a1c2059ebb896797e1b4ba21ae53ff2ec40bf3066aca66970597be31bb4fc97cdbedb487c4b88d233e3170b1da8a0b3de1ecd14e3abfe856085c0bd77ee2163930ce57a45376d025d8796d76ac7d04aed639f222eed1f289f63c5c9602ef7850a82f28e3a71fa58c2e4f1fba97c3a394eb7dd74346f62052dac6a15f9c6eda04cb938f8f7cea7b2a3b01bab2991b88a665a17be797bfc02d9a42f50c7971c6622e3de38b6894423ff1a2bfa437c2884ef8dfaecc59f16a14f23eabca21b8c119dbd629c7285767d1635fe0dfe601b3c375e04df130699a7363ad00eb4c6ce7805333bd3d6f47f0575156f6a0d0b22c592dc74c10360ea8bade054aa1661c9216d4722d5bd337d891e22d9ef20bc1f6045a09bfabf9287c00c09a4b1c96c30b4380a0cf72610957a32e5c9882995c4842807691507bb192af9c61fa02ecadd2c63b947f3634fa48c3cd030a72afddff742af44fa9e35baa2733c2a65cb5d76e051fc503c086569b1cdf3bb7e4e5d51696720fc4ce281d52495c60a7865f6f3731fe1f1d59348858e099fcfbfed83613bcfe5154b690b2ed068aab55c540d5e6f4aef863080d9f408a9a5a4ce83b9e49c328193ca13081e66a885770bb0495f0824b8977c248fd926c67ec60a7b3a8a1006a8c526f259c3e803b1dc7fa8f45333adc4e5e9043dabec03c3a2adf3b4507def2ee59b3e434559c097257b8d9979ff2c4ccf37c599872028dfd8af9eda314830725a287d930bac49d3f7d598e26d8f377f0cd2da4eaebfb5e02c23c54ea10778dfeb1a469959263c763a97d2dbc5bbc6220326ecadd219aef609e818b395a1bfb994906477fe50df50622c36c46c0ff932c761d31f448177688c2393644440eca071025ef9b3fb6bd6cc9b2aa1e371cd76cde7fba7502df6efc197a8d31fd59b5d1698cbfc503cac7f24a11ca0284e618a1b19878e7a9ebe77f92a578af2a21482666d2aa3b8df21a397d1b391d253241609a83e30706a950ce32b735ec1007ae9aaca6d196dd854167c71656644ea6864c7fbf475cdc1f534f104cd24a1f5a2c4f5f430c0db01bdcc4a227a52174f29750ce1c1b997e476792f26bf2e47b59fe3ccf0d463f6fff641ed3cbb50d90ed4e10e633ef4d6046bbbf6fe399cf2104ef99636d9da08144f207e727e3b55319d6b82a25b4466ec596c8bb12ee013b40af869e7a4b055a08eb4093a43ebe10658ac9f44d21ae8893718fcc45672a6dfa6649f05b0c1e5ed7b69ee0eb619b178578c49291ab71392bdd6963e90adc7d58d29a66c4ecc6f6b6e2ce28efcb7b6906a5cfa35978c099344eb5e658e42111a09c216a600b49370ce609b23f23879db9f0a18d87f9ac439f385e2d52815687b2f96f417903db9c6d9cf5a4c9a05a2729a3acf6c2c771fec69b4b5f55a671cf541fce76c3df91c0a4a1b3a6003d95374ea379cd693c51c35f00a1018f85ba14edbbb219e4245d7edc7949aed1b82f7fe20d88ee6ed9c1752c8f473759292f7e36450a68b3fb6ef9c4a1d7e87d1c04199165ea2877c1092aafbd71e4169ed1330ed279abc882a431701f84a973c8b0a973398582832a54869697186b7738876fd2ce3519e45020c825e05fa8551c6a64f5a0e5eac948a0a89a8485061b7c73cdba05479e0e85610e2e4aeaaa685e8d316b8875be481a466844208ec6e6ee4af2dadb6c94d1c67d94b79dc32fe765c31246462c2b036dffe295856017078f9d84a65dcbc5c6124d83f98edb80c3d844dc20f80daa2c72bdba1048f3dd91f8af254c5f63bbe64cbcd829545d9afe06b4b9be28e15fde0122a3af13d03c1caa063fd292de73abebc46646c082ea20665549068a53fbbcf65b8ec4a6bb6bb1d7ee3aa85858df11d5ba67d1546b0e327b3ffa4ee20450ad5cfd65c46084a0a29966051dbf1881b3556386a0485f501b00a19d796dafaf0817ddb9c93877ca0038eb1ba185de24f7fd68ab6d88aecf8e18c5d24397dcb65f3f8ac54d9e28bd1d99f4c5f66a76224faf8cac272ded9f8c5cddc5920298980105a714713f8600eba3b96f652d0d2527486154d9c17150df2fec16566a1aa6f752c906279faa0dacb136d65943de7a9e12f21771745aa7a2e78313e4340a675140bca74bf2349ba9c82f4d0177f2ca74ace8a0187c26266961a323b0c6f7acc23327f99c7892271e294baf195b0b5ba6eeb0fe6d39abb4e1f49877610a0e9220dba0f510ecfbb3f18dbe696bf64d5f6b2e54cfb10dbbb35e833a9d3595f174bc3895c8a356216c29f342ccc023929b1f2995eb530efd8e3184ad9d1127ef7307d6ef1ff3a37c46880e00473d0b46669bee978d6b1a0dbc2bea106b88e978222455f6f3fefc6a2cf51f39a621a0a31fd55f2ff936e127080f114f17f4131e78bec6d2e4c7555ec7903054d7c09f0783c7a3e6be4d47c26c67d9debecf0588a9a6ff022bb5a62079821377f029868486e4ae8704c445948202c885712f54f209f8ecb2d29d7b7d0104a928040c96108344bb1ebdf73074a037be564f594c4aa97b1a3144c3f3a4b1bad226b6772b9584cdd34dbb39c54d903da187165246a576a39d1c72c9f795533928437b66e68bc14c8e20b28d28cf68da6d854b7a8d33c603a88bebaa3bbb287fda7460e209d0ec2061b6be030f1d31a6c8e0d525ebd5d6babc8a0d2928d03e95b3e7639bc38b66918a31a896e22d31f29c327869619138739027f04c3d5aeeabc344f24a1e10f9a52c664b261f3142dda72d9bc75688b22be1b0a99100db083dddddcaf2ae5ea17ef4de345a13ca1c0e78a655a797e3cdc7cdc16dce34892b0191789ba2144b5eab817d8048bebe7d326c903e4c5c780d3e32a966d4ea079d56b10c99f6a3fa175a433b31c6d642fbda3c1503f27a3ff6b7943b60021c13a4dee6a17d985ce73e38dd4c4847d163924bc57ccbc4cb787f0d0a3c603240d9d89fa201982b3fdb9cc52a57fbf88b8fa3455b612c96d4c33fa568648f236003ab8ffa7e66420f28d9844ac864e42e4e34d8604c09be334e40f063b53d14839cb4599d9ef30dc0d70136bc5732ae0e9f4dbcbdc038013707ea555f853267ca5bad6637ffdb6269f66558780f6ab9f30766045d37c79fc5b186c66c066a6c29d5374de2da0cc7650d72cc9306adbd282165f8b62f54070388b14baf76a843812bd5390323a7b98f518d5a7852aa4ea2da3567f244efb49170f9b0eb24f029bfe5a6f90980bdfdbf745faa0231c7867486985c019a1297adfc0ae83673471c30104a5f82b1dfdab4ccaf2242c5298b345d35adc835dfa1622f9c227ddedcfdf294bb1ea79eea1ec0d0048ac3a4f28a9a58d5e61c68295c7e962ae0ab3d4b4e72caae7b91d0126a7952080c89c4fab9cdd7383ea0c0cd71e5a0d414cbfcaa38e73421b31e38e8b9f83f5bb22bf7344dbefe83dacfac3c8b073dfc4038a7f540100e68b2c8ec7e819a68cc027dd0c13642b97bf3177bb5c7b8dca424f1699daff8cae50f1aaf05490ead0c562874fea69ac9f3dc286fb903ce7ea5ad4580a420d6a3294d8bec855c73a9d8553be60292ce91790365000fb4c8d1b292f1818b3f9a7ea51486576925681d4bb2f6c7fd7206f8a1f166ef01c440db9754e6551a6537e93514906a6dd96edb55c52048db9f7265bc1073f7da7012ed965a4b7ac49f42fa53a299b1b8fea18619f78c4b137cf7ceafd96387a024c8868aae4de376e69bad3138c1c55352ed9f5418e05ad86eff8886f8b3b015ba32b8919e1038603d7b41527d6e739f14cebdaf9f10a28188e118fd9b954f0217064d8306fe4e1de4c7f77b5b16ed0259836b8666cd33dd0033a1df86f412755000f428b6a18ec21b6f4b90a0f470e82d9cef0eefe877774afa829cef48c531ac08b9b82d17020d8122b60f11e8296c5eaecea86e89867c9ace7c95a7d0ceffcf14963705d3013d3d4da208e2dda5477d07d1862772cab99476f9e20bac2200242324b715ec821276be49102e10aae710b1abd9e12b51e8a088f334ca793ac90c66e6eeae9fb787f460e065e610c33cdcb9645d24be0737d0ae9b1280e5c46181302c9781f50d2ce75a</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>日记</category>
+      </categories>
+  </entry>
+  <entry>
     <title>浏览器以及插件</title>
     <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
     <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
@@ -541,17 +571,18 @@ jupyter notebook
       </tags>
   </entry>
   <entry>
-    <title>梯子</title>
-    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
-    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
-<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
+    <title>资源</title>
+    <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
+    <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
+<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
+<h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
+<h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
+<p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
+<p><a href="http://www.ai-start.com/dl2017/">吴恩达深度学习笔记</a></p>
 <hr>
 ]]></content>
-      <categories>
-        <category>VPN</category>
-      </categories>
       <tags>
-        <tag>-梯子</tag>
+        <tag>-资源</tag>
       </tags>
   </entry>
   <entry>
@@ -563,22 +594,6 @@ jupyter notebook
       <tags>
         <tag>-编译器</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>日记</title>
-    <url>/2020/11/07/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="bd4eb4c7c10316c055dd1459d425a0a9a7b0b3567aaf7ca2fe07b7b3d3ef3a0a">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af9267b11434284e9e0ec6a37ee35731831f7e98a19e7986f30c83a990956dc6f9439e2794ebd492bde8ab81c8540ba81be0135873667d50676f520135f60d3c9cada75763b8519d31d9d990bb899a37ba90e1550bc4db8139c228c33384918c6dd24bfa0a69af74a44894a264d0fdd1397f6bdb1d0a4d0afbb18847e78da6f977577e976217261cf9e9bf0f0353a5c4aaf3bb96e2247270eb4249d297187ad4efc595a4680a51e1177ab9722e4f030fc69867418488eaa007090adaf2e9ffaae35d1e7ca95277a604c60269a33f6e88c703b29eac4c8da1f3a7c3f57406094ee084082289bd70e1f60b76b91ceb51e51c61b5f36961518713e057d56cf309f13d5a67f516374fcb524ec3d2371c4f85fb01658bb12bea179e17012fc28e0a1db08d9665760b28d51483b8b8c947d8bd0b748919fa988131a76fef435c7fd7cadacc3d53793802cbb791b77fece3415241c06ced8332042477a9ce072953caa73f6b1c135f483810dc6817bed74f28aa0b780819f71f1c95c484f36816fae2f15670ea295e18c6da3cf6a1c2059ebb896797e1b4ba21ae53ff2ec40bf3066aca66970597be31bb4fc97cdbedb487c4b88d233e3170b1da8a0b3de1ecd14e3abfe856085c0bd77ee2163930ce57a45376d025d8796d76ac7d04aed639f222eed1f289f63c5c9602ef7850a82f28e3a71fa58c2e4f1fba97c3a394eb7dd74346f62052dac6a15f9c6eda04cb938f8f7cea7b2a3b01bab2991b88a665a17be797bfc02d9a42f50c7971c6622e3de38b6894423ff1a2bfa437c2884ef8dfaecc59f16a14f23eabca21b8c119dbd629c7285767d1635fe0dfe601b3c375e04df130699a7363ad00eb4c6ce7805333bd3d6f47f0575156f6a0d0b22c592dc74c10360ea8bade054aa1661c9216d4722d5bd337d891e22d9ef20bc1f6045a09bfabf9287c00c09a4b1c96c30b4380a0cf72610957a32e5c9882995c4842807691507bb192af9c61fa02ecadd2c63b947f3634fa48c3cd030a72afddff742af44fa9e35baa2733c2a65cb5d76e051fc503c086569b1cdf3bb7e4e5d51696720fc4ce281d52495c60a7865f6f3731fe1f1d59348858e099fcfbfed83613bcfe5154b690b2ed068aab55c540d5e6f4aef863080d9f408a9a5a4ce83b9e49c328193ca13081e66a885770bb0495f0824b8977c248fd926c67ec60a7b3a8a1006a8c526f259c3e803b1dc7fa8f45333adc4e5e9043dabec03c3a2adf3b4507def2ee59b3e434559c097257b8d9979ff2c4ccf37c599872028dfd8af9eda314830725a287d930bac49d3f7d598e26d8f377f0cd2da4eaebfb5e02c23c54ea10778dfeb1a469959263c763a97d2dbc5bbc6220326ecadd219aef609e818b395a1bfb994906477fe50df50622c36c46c0ff932c761d31f448177688c2393644440eca071025ef9b3fb6bd6cc9b2aa1e371cd76cde7fba7502df6efc197a8d31fd59b5d1698cbfc503cac7f24a11ca0284e618a1b19878e7a9ebe77f92a578af2a21482666d2aa3b8df21a397d1b391d253241609a83e30706a950ce32b735ec1007ae9aaca6d196dd854167c71656644ea6864c7fbf475cdc1f534f104cd24a1f5a2c4f5f430c0db01bdcc4a227a52174f29750ce1c1b997e476792f26bf2e47b59fe3ccf0d463f6fff641ed3cbb50d90ed4e10e633ef4d6046bbbf6fe399cf2104ef99636d9da08144f207e727e3b55319d6b82a25b4466ec596c8bb12ee013b40af869e7a4b055a08eb4093a43ebe10658ac9f44d21ae8893718fcc45672a6dfa6649f05b0c1e5ed7b69ee0eb619b178578c49291ab71392bdd6963e90adc7d58d29a66c4ecc6f6b6e2ce28efcb7b6906a5cfa35978c099344eb5e658e42111a09c216a600b49370ce609b23f23879db9f0a18d87f9ac439f385e2d52815687b2f96f417903db9c6d9cf5a4c9a05a2729a3acf6c2c771fec69b4b5f55a671cf541fce76c3df91c0a4a1b3a6003d95374ea379cd693c51c35f00a1018f85ba14edbbb219e4245d7edc7949aed1b82f7fe20d88ee6ed9c1752c8f473759292f7e36450a68b3fb6ef9c4a1d7e87d1c04199165ea2877c1092aafbd71e4169ed1330ed279abc882a431701f84a973c8b0a973398582832a54869697186b7738876fd2ce3519e45020c825e05fa8551c6a64f5a0e5eac948a0a89a8485061b7c73cdba05479e0e85610e2e4aeaaa685e8d316b8875be481a466844208ec6e6ee4af2dadb6c94d1c67d94b79dc32fe765c31246462c2b036dffe295856017078f9d84a65dcbc5c6124d83f98edb80c3d844dc20f80daa2c72bdba1048f3dd91f8af254c5f63bbe64cbcd829545d9afe06b4b9be28e15fde0122a3af13d03c1caa063fd292de73abebc46646c082ea20665549068a53fbbcf65b8ec4a6bb6bb1d7ee3aa85858df11d5ba67d1546b0e327b3ffa4ee20450ad5cfd65c46084a0a29966051dbf1881b3556386a0485f501b00a19d796dafaf0817ddb9c93877ca0038eb1ba185de24f7fd68ab6d88aecf8e18c5d24397dcb65f3f8ac54d9e28bd1d99f4c5f66a76224faf8cac272ded9f8c5cddc5920298980105a714713f8600eba3b96f652d0d2527486154d9c17150df2fec16566a1aa6f752c906279faa0dacb136d65943de7a9e12f21771745aa7a2e78313e4340a675140bca74bf2349ba9c82f4d0177f2ca74ace8a0187c26266961a323b0c6f7acc23327f99c7892271e294baf195b0b5ba6eeb0fe6d39abb4e1f49877610a0e9220dba0f510ecfbb3f18dbe696bf64d5f6b2e54cfb10dbbb35e833a9d3595f174bc3895c8a356216c29f342ccc023929b1f2995eb530efd8e3184ad9d1127ef7307d6ef1ff3a37c46880e00473d0b46669bee978d6b1a0dbc2bea106b88e978222455f6f3fefc6a2cf51f39a621a0a31fd55f2ff936e127080f114f17f4131e78bec6d2e4c7555ec7903054d7c09f0783c7a3e6be4d47c26c67d9debecf0588a9a6ff022bb5a62079821377f029868486e4ae8704c445948202c885712f54f209f8ecb2d29d7b7d0104a928040c96108344bb1ebdf73074a037be564f594c4aa97b1a3144c3f3a4b1bad226b6772b9584cdd34dbb39c54d903da187165246a576a39d1c72c9f795533928437b66e68bc14c8e20b28d28cf68da6d854b7a8d33c603a88bebaa3bbb287fda7460e209d0ec2061b6be030f1d31a6c8e0d525ebd5d6babc8a0d2928d03e95b3e7639bc38b66918a31a896e22d31f29c327869619138739027f04c3d5aeeabc344f24a1e10f9a52c664b261f3142dda72d9bc75688b22be1b0a99100db083dddddcaf2ae5ea17ef4de345a13ca1c0e78a655a797e3cdc7cdc16dce34892b0191789ba2144b5eab817d8048bebe7d326c903e4c5c780d3e32a966d4ea079d56b10c99f6a3fa175a433b31c6d642fbda3c1503f27a3ff6b7943b60021c13a4dee6a17d985ce73e38dd4c4847d163924bc57ccbc4cb787f0d0a3c603240d9d89fa201982b3fdb9cc52a57fbf88b8fa3455b612c96d4c33fa568648f236003ab8ffa7e66420f28d9844ac864e42e4e34d8604c09be334e40f063b53d14839cb4599d9ef30dc0d70136bc5732ae0e9f4dbcbdc038013707ea555f853267ca5bad6637ffdb6269f66558780f6ab9f30766045d37c79fc5b186c66c066a6c29d5374de2da0cc7650d72cc9306adbd282165f8b62f54070388b14baf76a843812bd5390323a7b98f518d5a7852aa4ea2da3567f244efb49170f9b0eb24f029bfe5a6f90980bdfdbf745faa0231c7867486985c019a1297adfc0ae83673471c30104a5f82b1dfdab4ccaf2242c5298b345d35adc835dfa1622f9c227ddedcfdf294bb1ea79eea1ec0d0048ac3a4f28a9a58d5e61c68295c7e962ae0ab3d4b4e72caae7b91d0126a7952080c89c4fab9cdd7383ea0c0cd71e5a0d414cbfcaa38e73421b31e38e8b9f83f5bb22bf7344dbefe83dacfac3c8b073dfc4038a7f540100e68b2c8ec7e819a68cc027dd0c13642b97bf3177bb5c7b8dca424f1699daff8cae50f1aaf05490ead0c562874fea69ac9f3dc286fb903ce7ea5ad4580a420d6a3294d8bec855c73a9d8553be60292ce91790365000fb4c8d1b292f1818b3f9a7ea51486576925681d4bb2f6c7fd7206f8a1f166ef01c440db9754e6551a6537e93514906a6dd96edb55c52048db9f7265bc1073f7da7012ed965a4b7ac49f42fa53a299b1b8fea18619f78c4b137cf7ceafd96387a024c8868aae4de376e69bad3138c1c55352ed9f5418e05ad86eff8886f8b3b015ba32b8919e1038603d7b41527d6e739f14cebdaf9f10a28188e118fd9b954f0217064d8306fe4e1de4c7f77b5b16ed0259836b8666cd33dd0033a1df86f412755000f428b6a18ec21b6f4b90a0f470e82d9cef0eefe877774afa829cef48c531ac08b9b82d17020d8122b60f11e8296c5eaecea86e89867c9ace7c95a7d0ceffcf14963705d3013d3d4da208e2dda5477d07d1862772cab99476f9e20bac2200242324b715ec821276be49102e10aae710b1abd9e12b51e8a088f334ca793ac90c66e6eeae9fb787f460e065e610c33cdcb9645d24be0737d0ae9b1280e5c46181302c9781f50d2ce75a</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
   </entry>
   <entry>
     <title>训练初稿</title>
@@ -594,21 +609,6 @@ jupyter notebook
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>资源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>资源</title>
-    <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
-    <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
-<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
-<h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
-<h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
-<p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
-<p><a href="http://www.ai-start.com/dl2017/">吴恩达深度学习笔记</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-资源</tag>
       </tags>
   </entry>
 </search>
