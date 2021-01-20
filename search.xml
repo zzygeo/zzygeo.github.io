@@ -1,104 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>PCL-1-11-Visual-Studio-2019-配置</title>
-    <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<font color= ff size=4 face="">
-
-<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
-<p>3.获取PCL源码包</p>
-<p>4.安装Visual studio 2019编译器</p>
-<p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
-<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a></p>
-<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
-<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
-<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
-<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
-<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
-<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
-<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
-<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
-<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
-<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
-<h1 id="6-配置"><a href="#6-配置" class="headerlink" title="6.配置"></a>6.配置</h1><p>打开visual studio，新建一个空项目如图：<br><img src="/blog_img/PCL配置/7.jpg" alt=""></p>
-<p>在release下创建属性表（如果是DEBUG版本请在DEBUG下创建）<br><img src="/blog_img/PCL配置/8.png" alt=""></p>
-<p>切换到解决方案资源管理器，右键-添加-新建项<br><img src="/blog_img/PCL配置/9.png" alt=""></p>
-<p>添加C++文件<br><img src="/blog_img/PCL配置/10.png" alt=""></p>
-<p>接下来配置：<br><img src="/blog_img/PCL配置/11.png" alt=""></p>
-<p>包含目录下添加，建议手点：<br>C:\Program Files\PCL 1.11.0\include\pcl-1.11<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\include\boost-1_73<br>C:\Program Files\PCL 1.11.0\3rdParty\Eigen\eigen3<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\include<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\include<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\include\vtk-8.2<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Include</p>
-<p>库目录添加：<br>C:\Program Files\PCL 1.11.0\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Lib</p>
-<p>接下来配置：<br><img src="/blog_img/PCL配置/12.jpg" alt=""></p>
-<p>在预处理器定义处添加：<br>BOOST_USE_WINDOWS_H<br>NOMINMAX<br>_CRT_SECURE_NO_DEPRECATE</p>
-<p>在项目属性表（Project_one）和release下创建得属性表（test_one）中把所有选项里得SDL检查全改成否，如下图：</p>
-<p><img src="/blog_img/PCL配置/13.jpg" alt=""></p>
-<p><img src="/blog_img/PCL配置/14.jpg" alt=""></p>
-<h1 id="7-附加依赖项"><a href="#7-附加依赖项" class="headerlink" title="7.附加依赖项"></a>7.附加依赖项</h1><p>将PCL 1.11.0\3rdParty\VTK\lib和PCL 1.11.0\lib这两个文件夹下的lib文件的release版本添加到附加依赖项中（DEBUG版本添加DEBUG类型文件）</p>
-<p><img src="/blog_img/PCL配置/15.png" alt=""></p>
-<p>文件名称我已经归类好了</p>
-<p>release版本：</p>
-<p>pcl_common.lib<br>pcl_features.lib<br>pcl_filters.lib<br>pcl_io.lib<br>pcl_io_ply.lib<br>pcl_kdtree.lib<br>pcl_keypoints.lib<br>pcl_ml.lib<br>pcl_octree.lib<br>pcl_outofcore.lib<br>pcl_people.lib<br>pcl_recognition.lib<br>pcl_registration.lib<br>pcl_sample_consensus.lib<br>pcl_search.lib<br>pcl_segmentation.lib<br>pcl_stereo.lib<br>pcl_surface.lib<br>pcl_tracking.lib<br>pcl_visualization.lib<br>vtkChartsCore-8.2.lib<br>vtkCommonColor-8.2.lib<br>vtkCommonComputationalGeometry-8.2.lib<br>vtkCommonCore-8.2.lib<br>vtkCommonDataModel-8.2.lib<br>vtkCommonExecutionModel-8.2.lib<br>vtkCommonMath-8.2.lib<br>vtkCommonMisc-8.2.lib<br>vtkCommonSystem-8.2.lib<br>vtkCommonTransforms-8.2.lib<br>vtkDICOMParser-8.2.lib<br>vtkDomainsChemistry-8.2.lib<br>vtkDomainsChemistryOpenGL2-8.2.lib<br>vtkdoubleconversion-8.2.lib<br>vtkexodusII-8.2.lib<br>vtkexpat-8.2.lib<br>vtkFiltersAMR-8.2.lib<br>vtkFiltersCore-8.2.lib<br>vtkFiltersExtraction-8.2.lib<br>vtkFiltersFlowPaths-8.2.lib<br>vtkFiltersGeneral-8.2.lib<br>vtkFiltersGeneric-8.2.lib<br>vtkFiltersGeometry-8.2.lib<br>vtkFiltersHybrid-8.2.lib<br>vtkFiltersHyperTree-8.2.lib<br>vtkFiltersImaging-8.2.lib<br>vtkFiltersModeling-8.2.lib<br>vtkFiltersParallel-8.2.lib<br>vtkFiltersParallelImaging-8.2.lib<br>vtkFiltersPoints-8.2.lib<br>vtkFiltersProgrammable-8.2.lib<br>vtkFiltersSelection-8.2.lib<br>vtkFiltersSMP-8.2.lib<br>vtkFiltersSources-8.2.lib<br>vtkFiltersStatistics-8.2.lib<br>vtkFiltersTexture-8.2.lib<br>vtkFiltersTopology-8.2.lib<br>vtkFiltersVerdict-8.2.lib<br>vtkfreetype-8.2.lib<br>vtkGeovisCore-8.2.lib<br>vtkgl2ps-8.2.lib<br>vtkglew-8.2.lib<br>vtkGUISupportMFC-8.2.lib<br>vtkhdf5_hl-8.2.lib<br>vtkhdf5-8.2.lib<br>vtkImagingColor-8.2.lib<br>vtkImagingCore-8.2.lib<br>vtkImagingFourier-8.2.lib<br>vtkImagingGeneral-8.2.lib<br>vtkImagingHybrid-8.2.lib<br>vtkImagingMath-8.2.lib<br>vtkImagingMorphological-8.2.lib<br>vtkImagingSources-8.2.lib<br>vtkImagingStatistics-8.2.lib<br>vtkImagingStencil-8.2.lib<br>vtkInfovisCore-8.2.lib<br>vtkInfovisLayout-8.2.lib<br>vtkInteractionImage-8.2.lib<br>vtkInteractionStyle-8.2.lib<br>vtkInteractionWidgets-8.2.lib<br>vtkIOAMR-8.2.lib<br>vtkIOAsynchronous-8.2.lib<br>vtkIOCityGML-8.2.lib<br>vtkIOCore-8.2.lib<br>vtkIOEnSight-8.2.lib<br>vtkIOExodus-8.2.lib<br>vtkIOExport-8.2.lib<br>vtkIOExportOpenGL2-8.2.lib<br>vtkIOExportPDF-8.2.lib<br>vtkIOGeometry-8.2.lib<br>vtkIOImage-8.2.lib<br>vtkIOImport-8.2.lib<br>vtkIOInfovis-8.2.lib<br>vtkIOLegacy-8.2.lib<br>vtkIOLSDyna-8.2.lib<br>vtkIOMINC-8.2.lib<br>vtkIOMovie-8.2.lib<br>vtkIONetCDF-8.2.lib<br>vtkIOParallel-8.2.lib<br>vtkIOParallelXML-8.2.lib<br>vtkIOPLY-8.2.lib<br>vtkIOSegY-8.2.lib<br>vtkIOSQL-8.2.lib<br>vtkIOTecplotTable-8.2.lib<br>vtkIOVeraOut-8.2.lib<br>vtkIOVideo-8.2.lib<br>vtkIOXML-8.2.lib<br>vtkIOXMLParser-8.2.lib<br>vtkjpeg-8.2.lib<br>vtkjsoncpp-8.2.lib<br>vtklibharu-8.2.lib<br>vtklibxml2-8.2.lib<br>vtklz4-8.2.lib<br>vtklzma-8.2.lib<br>vtkmetaio-8.2.lib<br>vtkNetCDF-8.2.lib<br>vtkogg-8.2.lib<br>vtkParallelCore-8.2.lib<br>vtkpng-8.2.lib<br>vtkproj-8.2.lib<br>vtkpugixml-8.2.lib<br>vtkRenderingAnnotation-8.2.lib<br>vtkRenderingContext2D-8.2.lib<br>vtkRenderingContextOpenGL2-8.2.lib<br>vtkRenderingCore-8.2.lib<br>vtkRenderingExternal-8.2.lib<br>vtkRenderingFreeType-8.2.lib<br>vtkRenderingGL2PSOpenGL2-8.2.lib<br>vtkRenderingImage-8.2.lib<br>vtkRenderingLabel-8.2.lib<br>vtkRenderingLOD-8.2.lib<br>vtkRenderingOpenGL2-8.2.lib<br>vtkRenderingVolume-8.2.lib<br>vtkRenderingVolumeOpenGL2-8.2.lib<br>vtksqlite-8.2.lib<br>vtksys-8.2.lib<br>vtktheora-8.2.lib<br>vtktiff-8.2.lib<br>vtkverdict-8.2.lib<br>vtkViewsContext2D-8.2.lib<br>vtkViewsCore-8.2.lib<br>vtkViewsInfovis-8.2.lib<br>vtkzlib-8.2.lib</p>
-<p>DEBUG版本：</p>
-<p>pcl_commond.lib<br>pcl_featuresd.lib<br>pcl_filtersd.lib<br>pcl_io_plyd.lib<br>pcl_iod.lib<br>pcl_kdtreed.lib<br>pcl_keypointsd.lib<br>pcl_mld.lib<br>pcl_octreed.lib<br>pcl_outofcored.lib<br>pcl_peopled.lib<br>pcl_recognitiond.lib<br>pcl_registrationd.lib<br>pcl_sample_consensusd.lib<br>pcl_searchd.lib<br>pcl_segmentationd.lib<br>pcl_stereod.lib<br>pcl_surfaced.lib<br>pcl_trackingd.lib<br>pcl_visualizationd.lib<br>vtkChartsCore-8.2-gd.lib<br>vtkCommonColor-8.2-gd.lib<br>vtkCommonComputationalGeometry-8.2-gd.lib<br>vtkCommonCore-8.2-gd.lib<br>vtkCommonDataModel-8.2-gd.lib<br>vtkCommonExecutionModel-8.2-gd.lib<br>vtkCommonMath-8.2-gd.lib<br>vtkCommonMisc-8.2-gd.lib<br>vtkCommonSystem-8.2-gd.lib<br>vtkCommonTransforms-8.2-gd.lib<br>vtkDICOMParser-8.2-gd.lib<br>vtkDomainsChemistry-8.2-gd.lib<br>vtkDomainsChemistryOpenGL2-8.2-gd.lib<br>vtkdoubleconversion-8.2-gd.lib<br>vtkexodusII-8.2-gd.lib<br>vtkexpat-8.2-gd.lib<br>vtkFiltersAMR-8.2-gd.lib<br>vtkFiltersCore-8.2-gd.lib<br>vtkFiltersExtraction-8.2-gd.lib<br>vtkFiltersFlowPaths-8.2-gd.lib<br>vtkFiltersGeneral-8.2-gd.lib<br>vtkFiltersGeneric-8.2-gd.lib<br>vtkFiltersGeometry-8.2-gd.lib<br>vtkFiltersHybrid-8.2-gd.lib<br>vtkFiltersHyperTree-8.2-gd.lib<br>vtkFiltersImaging-8.2-gd.lib<br>vtkFiltersModeling-8.2-gd.lib<br>vtkFiltersParallel-8.2-gd.lib<br>vtkFiltersParallelImaging-8.2-gd.lib<br>vtkFiltersPoints-8.2-gd.lib<br>vtkFiltersProgrammable-8.2-gd.lib<br>vtkFiltersSelection-8.2-gd.lib<br>vtkFiltersSMP-8.2-gd.lib<br>vtkFiltersSources-8.2-gd.lib<br>vtkFiltersStatistics-8.2-gd.lib<br>vtkFiltersTexture-8.2-gd.lib<br>vtkFiltersTopology-8.2-gd.lib<br>vtkFiltersVerdict-8.2-gd.lib<br>vtkfreetype-8.2-gd.lib<br>vtkGeovisCore-8.2-gd.lib<br>vtkgl2ps-8.2-gd.lib<br>vtkglew-8.2-gd.lib<br>vtkGUISupportMFC-8.2-gd.lib<br>vtkhdf5_hl-8.2-gd.lib<br>vtkhdf5-8.2-gd.lib<br>vtkImagingColor-8.2-gd.lib<br>vtkImagingCore-8.2-gd.lib<br>vtkImagingFourier-8.2-gd.lib<br>vtkImagingGeneral-8.2-gd.lib<br>vtkImagingHybrid-8.2-gd.lib<br>vtkImagingMath-8.2-gd.lib<br>vtkImagingMorphological-8.2-gd.lib<br>vtkImagingSources-8.2-gd.lib<br>vtkImagingStatistics-8.2-gd.lib<br>vtkImagingStencil-8.2-gd.lib<br>vtkInfovisCore-8.2-gd.lib<br>vtkInfovisLayout-8.2-gd.lib<br>vtkInteractionImage-8.2-gd.lib<br>vtkInteractionStyle-8.2-gd.lib<br>vtkInteractionWidgets-8.2-gd.lib<br>vtkIOAMR-8.2-gd.lib<br>vtkIOAsynchronous-8.2-gd.lib<br>vtkIOCityGML-8.2-gd.lib<br>vtkIOCore-8.2-gd.lib<br>vtkIOEnSight-8.2-gd.lib<br>vtkIOExodus-8.2-gd.lib<br>vtkIOExport-8.2-gd.lib<br>vtkIOExportOpenGL2-8.2-gd.lib<br>vtkIOExportPDF-8.2-gd.lib<br>vtkIOGeometry-8.2-gd.lib<br>vtkIOImage-8.2-gd.lib<br>vtkIOImport-8.2-gd.lib<br>vtkIOInfovis-8.2-gd.lib<br>vtkIOLegacy-8.2-gd.lib<br>vtkIOLSDyna-8.2-gd.lib<br>vtkIOMINC-8.2-gd.lib<br>vtkIOMovie-8.2-gd.lib<br>vtkIONetCDF-8.2-gd.lib<br>vtkIOParallel-8.2-gd.lib<br>vtkIOParallelXML-8.2-gd.lib<br>vtkIOPLY-8.2-gd.lib<br>vtkIOSegY-8.2-gd.lib<br>vtkIOSQL-8.2-gd.lib<br>vtkIOTecplotTable-8.2-gd.lib<br>vtkIOVeraOut-8.2-gd.lib<br>vtkIOVideo-8.2-gd.lib<br>vtkIOXML-8.2-gd.lib<br>vtkIOXMLParser-8.2-gd.lib<br>vtkjpeg-8.2-gd.lib<br>vtkjsoncpp-8.2-gd.lib<br>vtklibharu-8.2-gd.lib<br>vtklibxml2-8.2-gd.lib<br>vtklz4-8.2-gd.lib<br>vtklzma-8.2-gd.lib<br>vtkmetaio-8.2-gd.lib<br>vtkNetCDF-8.2-gd.lib<br>vtkogg-8.2-gd.lib<br>vtkParallelCore-8.2-gd.lib<br>vtkpng-8.2-gd.lib<br>vtkproj-8.2-gd.lib<br>vtkpugixml-8.2-gd.lib<br>vtkRenderingAnnotation-8.2-gd.lib<br>vtkRenderingContext2D-8.2-gd.lib<br>vtkRenderingContextOpenGL2-8.2-gd.lib<br>vtkRenderingCore-8.2-gd.lib<br>vtkRenderingExternal-8.2-gd.lib<br>vtkRenderingFreeType-8.2-gd.lib<br>vtkRenderingGL2PSOpenGL2-8.2-gd.lib<br>vtkRenderingImage-8.2-gd.lib<br>vtkRenderingLabel-8.2-gd.lib<br>vtkRenderingLOD-8.2-gd.lib<br>vtkRenderingOpenGL2-8.2-gd.lib<br>vtkRenderingVolume-8.2-gd.lib<br>vtkRenderingVolumeOpenGL2-8.2-gd.lib<br>vtksqlite-8.2-gd.lib<br>vtksys-8.2-gd.lib<br>vtktheora-8.2-gd.lib<br>vtktiff-8.2-gd.lib<br>vtkverdict-8.2-gd.lib<br>vtkViewsContext2D-8.2-gd.lib<br>vtkViewsCore-8.2-gd.lib<br>vtkViewsInfovis-8.2-gd.lib<br>vtkzlib-8.2-gd.lib</p>
-<h1 id="8-程序测试"><a href="#8-程序测试" class="headerlink" title="8.程序测试"></a>8.程序测试</h1><pre><code>#include &lt;pcl/visualization/cloud_viewer.h&gt;  
-#include &lt;iostream&gt;  
-#include &lt;pcl/io/io.h&gt;  
-#include &lt;pcl/io/pcd_io.h&gt;  
-int user_data;
-void viewerOneOff(pcl::visualization::PCLVisualizer&amp; viewer)
-&#123;
-    viewer.setBackgroundColor(1.0, 0.5, 1.0);
-    pcl::PointXYZ o;
-    o.x = 1.0;
-    o.y = 0;
-    o.z = 0;
-    viewer.addSphere(o, 0.25, &quot;sphere&quot;, 0);
-    std::cout &lt;&lt; &quot;i only run once&quot; &lt;&lt; std::endl;
-&#125;
-void viewerPsycho(pcl::visualization::PCLVisualizer&amp; viewer)
-&#123;
-    static unsigned count = 0;
-    std::stringstream ss;
-    ss &lt;&lt; &quot;Once per viewer loop: &quot; &lt;&lt; count++;
-    viewer.removeShape(&quot;text&quot;, 0);
-    viewer.addText(ss.str(), 200, 300, &quot;text&quot;, 0);
-    //FIXME: possible race condition here:  
-    user_data++;
-&#125;
-int main()
-&#123;
-    pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;::Ptr cloud(new pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;);
-    pcl::io::loadPCDFile(&quot;D:\\Microsoft Visual Studio 10.0\\Projects\\pcl\\pcl\\my_point_cloud.pcd&quot;, *cloud);
-    pcl::visualization::CloudViewer viewer(&quot;Cloud Viewer&quot;);
-    //blocks until the cloud is actually rendered  
-    viewer.showCloud(cloud);
-    //use the following functions to get access to the underlying more advanced/powerful  
-    //PCLVisualizer  
-    //This will only get called once  
-    viewer.runOnVisualizationThreadOnce(viewerOneOff);
-    //This will get called once per visualization iteration  
-    viewer.runOnVisualizationThread(viewerPsycho);
-    while (!viewer.wasStopped())
-    &#123;
-        //you can also do cool processing here  
-        //FIXME: Note that this is running in a separate thread from viewerPsycho  
-        //and you should guard against race conditions yourself...  
-        user_data++;
-    &#125;
-    return 0;
-&#125;
-</code></pre><p>测试结果：</p>
-<p><img src="/blog_img/PCL配置/16.png" alt=""></p>
-<hr>
-]]></content>
-      <categories>
-        <category>pcl</category>
-      </categories>
-      <tags>
-        <tag>-pcl -visual studio</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>C++</title>
     <url>/2020/12/19/CPP/</url>
     <content><![CDATA[<p>写一些觉得能用上的C++代码：</p>
@@ -202,6 +104,120 @@ int main()
 ]]></content>
   </entry>
   <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PCL-1-11-Visual-Studio-2019-配置</title>
+    <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<font color= ff size=4 face="">
+
+<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
+<p>3.获取PCL源码包</p>
+<p>4.安装Visual studio 2019编译器</p>
+<p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
+<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a></p>
+<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
+<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
+<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
+<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
+<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
+<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
+<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
+<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
+<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<h1 id="6-配置"><a href="#6-配置" class="headerlink" title="6.配置"></a>6.配置</h1><p>打开visual studio，新建一个空项目如图：<br><img src="/blog_img/PCL配置/7.jpg" alt=""></p>
+<p>在release下创建属性表（如果是DEBUG版本请在DEBUG下创建）<br><img src="/blog_img/PCL配置/8.png" alt=""></p>
+<p>切换到解决方案资源管理器，右键-添加-新建项<br><img src="/blog_img/PCL配置/9.png" alt=""></p>
+<p>添加C++文件<br><img src="/blog_img/PCL配置/10.png" alt=""></p>
+<p>接下来配置：<br><img src="/blog_img/PCL配置/11.png" alt=""></p>
+<p>包含目录下添加，建议手点：<br>C:\Program Files\PCL 1.11.0\include\pcl-1.11<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\include\boost-1_73<br>C:\Program Files\PCL 1.11.0\3rdParty\Eigen\eigen3<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\include<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\include<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\include\vtk-8.2<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Include</p>
+<p>库目录添加：<br>C:\Program Files\PCL 1.11.0\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Lib</p>
+<p>接下来配置：<br><img src="/blog_img/PCL配置/12.jpg" alt=""></p>
+<p>在预处理器定义处添加：<br>BOOST_USE_WINDOWS_H<br>NOMINMAX<br>_CRT_SECURE_NO_DEPRECATE</p>
+<p>在项目属性表（Project_one）和release下创建得属性表（test_one）中把所有选项里得SDL检查全改成否，如下图：</p>
+<p><img src="/blog_img/PCL配置/13.jpg" alt=""></p>
+<p><img src="/blog_img/PCL配置/14.jpg" alt=""></p>
+<h1 id="7-附加依赖项"><a href="#7-附加依赖项" class="headerlink" title="7.附加依赖项"></a>7.附加依赖项</h1><p>将PCL 1.11.0\3rdParty\VTK\lib和PCL 1.11.0\lib这两个文件夹下的lib文件的release版本添加到附加依赖项中（DEBUG版本添加DEBUG类型文件）</p>
+<p><img src="/blog_img/PCL配置/15.png" alt=""></p>
+<p>文件名称我已经归类好了</p>
+<p>release版本：</p>
+<p>pcl_common.lib<br>pcl_features.lib<br>pcl_filters.lib<br>pcl_io.lib<br>pcl_io_ply.lib<br>pcl_kdtree.lib<br>pcl_keypoints.lib<br>pcl_ml.lib<br>pcl_octree.lib<br>pcl_outofcore.lib<br>pcl_people.lib<br>pcl_recognition.lib<br>pcl_registration.lib<br>pcl_sample_consensus.lib<br>pcl_search.lib<br>pcl_segmentation.lib<br>pcl_stereo.lib<br>pcl_surface.lib<br>pcl_tracking.lib<br>pcl_visualization.lib<br>vtkChartsCore-8.2.lib<br>vtkCommonColor-8.2.lib<br>vtkCommonComputationalGeometry-8.2.lib<br>vtkCommonCore-8.2.lib<br>vtkCommonDataModel-8.2.lib<br>vtkCommonExecutionModel-8.2.lib<br>vtkCommonMath-8.2.lib<br>vtkCommonMisc-8.2.lib<br>vtkCommonSystem-8.2.lib<br>vtkCommonTransforms-8.2.lib<br>vtkDICOMParser-8.2.lib<br>vtkDomainsChemistry-8.2.lib<br>vtkDomainsChemistryOpenGL2-8.2.lib<br>vtkdoubleconversion-8.2.lib<br>vtkexodusII-8.2.lib<br>vtkexpat-8.2.lib<br>vtkFiltersAMR-8.2.lib<br>vtkFiltersCore-8.2.lib<br>vtkFiltersExtraction-8.2.lib<br>vtkFiltersFlowPaths-8.2.lib<br>vtkFiltersGeneral-8.2.lib<br>vtkFiltersGeneric-8.2.lib<br>vtkFiltersGeometry-8.2.lib<br>vtkFiltersHybrid-8.2.lib<br>vtkFiltersHyperTree-8.2.lib<br>vtkFiltersImaging-8.2.lib<br>vtkFiltersModeling-8.2.lib<br>vtkFiltersParallel-8.2.lib<br>vtkFiltersParallelImaging-8.2.lib<br>vtkFiltersPoints-8.2.lib<br>vtkFiltersProgrammable-8.2.lib<br>vtkFiltersSelection-8.2.lib<br>vtkFiltersSMP-8.2.lib<br>vtkFiltersSources-8.2.lib<br>vtkFiltersStatistics-8.2.lib<br>vtkFiltersTexture-8.2.lib<br>vtkFiltersTopology-8.2.lib<br>vtkFiltersVerdict-8.2.lib<br>vtkfreetype-8.2.lib<br>vtkGeovisCore-8.2.lib<br>vtkgl2ps-8.2.lib<br>vtkglew-8.2.lib<br>vtkGUISupportMFC-8.2.lib<br>vtkhdf5_hl-8.2.lib<br>vtkhdf5-8.2.lib<br>vtkImagingColor-8.2.lib<br>vtkImagingCore-8.2.lib<br>vtkImagingFourier-8.2.lib<br>vtkImagingGeneral-8.2.lib<br>vtkImagingHybrid-8.2.lib<br>vtkImagingMath-8.2.lib<br>vtkImagingMorphological-8.2.lib<br>vtkImagingSources-8.2.lib<br>vtkImagingStatistics-8.2.lib<br>vtkImagingStencil-8.2.lib<br>vtkInfovisCore-8.2.lib<br>vtkInfovisLayout-8.2.lib<br>vtkInteractionImage-8.2.lib<br>vtkInteractionStyle-8.2.lib<br>vtkInteractionWidgets-8.2.lib<br>vtkIOAMR-8.2.lib<br>vtkIOAsynchronous-8.2.lib<br>vtkIOCityGML-8.2.lib<br>vtkIOCore-8.2.lib<br>vtkIOEnSight-8.2.lib<br>vtkIOExodus-8.2.lib<br>vtkIOExport-8.2.lib<br>vtkIOExportOpenGL2-8.2.lib<br>vtkIOExportPDF-8.2.lib<br>vtkIOGeometry-8.2.lib<br>vtkIOImage-8.2.lib<br>vtkIOImport-8.2.lib<br>vtkIOInfovis-8.2.lib<br>vtkIOLegacy-8.2.lib<br>vtkIOLSDyna-8.2.lib<br>vtkIOMINC-8.2.lib<br>vtkIOMovie-8.2.lib<br>vtkIONetCDF-8.2.lib<br>vtkIOParallel-8.2.lib<br>vtkIOParallelXML-8.2.lib<br>vtkIOPLY-8.2.lib<br>vtkIOSegY-8.2.lib<br>vtkIOSQL-8.2.lib<br>vtkIOTecplotTable-8.2.lib<br>vtkIOVeraOut-8.2.lib<br>vtkIOVideo-8.2.lib<br>vtkIOXML-8.2.lib<br>vtkIOXMLParser-8.2.lib<br>vtkjpeg-8.2.lib<br>vtkjsoncpp-8.2.lib<br>vtklibharu-8.2.lib<br>vtklibxml2-8.2.lib<br>vtklz4-8.2.lib<br>vtklzma-8.2.lib<br>vtkmetaio-8.2.lib<br>vtkNetCDF-8.2.lib<br>vtkogg-8.2.lib<br>vtkParallelCore-8.2.lib<br>vtkpng-8.2.lib<br>vtkproj-8.2.lib<br>vtkpugixml-8.2.lib<br>vtkRenderingAnnotation-8.2.lib<br>vtkRenderingContext2D-8.2.lib<br>vtkRenderingContextOpenGL2-8.2.lib<br>vtkRenderingCore-8.2.lib<br>vtkRenderingExternal-8.2.lib<br>vtkRenderingFreeType-8.2.lib<br>vtkRenderingGL2PSOpenGL2-8.2.lib<br>vtkRenderingImage-8.2.lib<br>vtkRenderingLabel-8.2.lib<br>vtkRenderingLOD-8.2.lib<br>vtkRenderingOpenGL2-8.2.lib<br>vtkRenderingVolume-8.2.lib<br>vtkRenderingVolumeOpenGL2-8.2.lib<br>vtksqlite-8.2.lib<br>vtksys-8.2.lib<br>vtktheora-8.2.lib<br>vtktiff-8.2.lib<br>vtkverdict-8.2.lib<br>vtkViewsContext2D-8.2.lib<br>vtkViewsCore-8.2.lib<br>vtkViewsInfovis-8.2.lib<br>vtkzlib-8.2.lib</p>
+<p>DEBUG版本：</p>
+<p>pcl_commond.lib<br>pcl_featuresd.lib<br>pcl_filtersd.lib<br>pcl_io_plyd.lib<br>pcl_iod.lib<br>pcl_kdtreed.lib<br>pcl_keypointsd.lib<br>pcl_mld.lib<br>pcl_octreed.lib<br>pcl_outofcored.lib<br>pcl_peopled.lib<br>pcl_recognitiond.lib<br>pcl_registrationd.lib<br>pcl_sample_consensusd.lib<br>pcl_searchd.lib<br>pcl_segmentationd.lib<br>pcl_stereod.lib<br>pcl_surfaced.lib<br>pcl_trackingd.lib<br>pcl_visualizationd.lib<br>vtkChartsCore-8.2-gd.lib<br>vtkCommonColor-8.2-gd.lib<br>vtkCommonComputationalGeometry-8.2-gd.lib<br>vtkCommonCore-8.2-gd.lib<br>vtkCommonDataModel-8.2-gd.lib<br>vtkCommonExecutionModel-8.2-gd.lib<br>vtkCommonMath-8.2-gd.lib<br>vtkCommonMisc-8.2-gd.lib<br>vtkCommonSystem-8.2-gd.lib<br>vtkCommonTransforms-8.2-gd.lib<br>vtkDICOMParser-8.2-gd.lib<br>vtkDomainsChemistry-8.2-gd.lib<br>vtkDomainsChemistryOpenGL2-8.2-gd.lib<br>vtkdoubleconversion-8.2-gd.lib<br>vtkexodusII-8.2-gd.lib<br>vtkexpat-8.2-gd.lib<br>vtkFiltersAMR-8.2-gd.lib<br>vtkFiltersCore-8.2-gd.lib<br>vtkFiltersExtraction-8.2-gd.lib<br>vtkFiltersFlowPaths-8.2-gd.lib<br>vtkFiltersGeneral-8.2-gd.lib<br>vtkFiltersGeneric-8.2-gd.lib<br>vtkFiltersGeometry-8.2-gd.lib<br>vtkFiltersHybrid-8.2-gd.lib<br>vtkFiltersHyperTree-8.2-gd.lib<br>vtkFiltersImaging-8.2-gd.lib<br>vtkFiltersModeling-8.2-gd.lib<br>vtkFiltersParallel-8.2-gd.lib<br>vtkFiltersParallelImaging-8.2-gd.lib<br>vtkFiltersPoints-8.2-gd.lib<br>vtkFiltersProgrammable-8.2-gd.lib<br>vtkFiltersSelection-8.2-gd.lib<br>vtkFiltersSMP-8.2-gd.lib<br>vtkFiltersSources-8.2-gd.lib<br>vtkFiltersStatistics-8.2-gd.lib<br>vtkFiltersTexture-8.2-gd.lib<br>vtkFiltersTopology-8.2-gd.lib<br>vtkFiltersVerdict-8.2-gd.lib<br>vtkfreetype-8.2-gd.lib<br>vtkGeovisCore-8.2-gd.lib<br>vtkgl2ps-8.2-gd.lib<br>vtkglew-8.2-gd.lib<br>vtkGUISupportMFC-8.2-gd.lib<br>vtkhdf5_hl-8.2-gd.lib<br>vtkhdf5-8.2-gd.lib<br>vtkImagingColor-8.2-gd.lib<br>vtkImagingCore-8.2-gd.lib<br>vtkImagingFourier-8.2-gd.lib<br>vtkImagingGeneral-8.2-gd.lib<br>vtkImagingHybrid-8.2-gd.lib<br>vtkImagingMath-8.2-gd.lib<br>vtkImagingMorphological-8.2-gd.lib<br>vtkImagingSources-8.2-gd.lib<br>vtkImagingStatistics-8.2-gd.lib<br>vtkImagingStencil-8.2-gd.lib<br>vtkInfovisCore-8.2-gd.lib<br>vtkInfovisLayout-8.2-gd.lib<br>vtkInteractionImage-8.2-gd.lib<br>vtkInteractionStyle-8.2-gd.lib<br>vtkInteractionWidgets-8.2-gd.lib<br>vtkIOAMR-8.2-gd.lib<br>vtkIOAsynchronous-8.2-gd.lib<br>vtkIOCityGML-8.2-gd.lib<br>vtkIOCore-8.2-gd.lib<br>vtkIOEnSight-8.2-gd.lib<br>vtkIOExodus-8.2-gd.lib<br>vtkIOExport-8.2-gd.lib<br>vtkIOExportOpenGL2-8.2-gd.lib<br>vtkIOExportPDF-8.2-gd.lib<br>vtkIOGeometry-8.2-gd.lib<br>vtkIOImage-8.2-gd.lib<br>vtkIOImport-8.2-gd.lib<br>vtkIOInfovis-8.2-gd.lib<br>vtkIOLegacy-8.2-gd.lib<br>vtkIOLSDyna-8.2-gd.lib<br>vtkIOMINC-8.2-gd.lib<br>vtkIOMovie-8.2-gd.lib<br>vtkIONetCDF-8.2-gd.lib<br>vtkIOParallel-8.2-gd.lib<br>vtkIOParallelXML-8.2-gd.lib<br>vtkIOPLY-8.2-gd.lib<br>vtkIOSegY-8.2-gd.lib<br>vtkIOSQL-8.2-gd.lib<br>vtkIOTecplotTable-8.2-gd.lib<br>vtkIOVeraOut-8.2-gd.lib<br>vtkIOVideo-8.2-gd.lib<br>vtkIOXML-8.2-gd.lib<br>vtkIOXMLParser-8.2-gd.lib<br>vtkjpeg-8.2-gd.lib<br>vtkjsoncpp-8.2-gd.lib<br>vtklibharu-8.2-gd.lib<br>vtklibxml2-8.2-gd.lib<br>vtklz4-8.2-gd.lib<br>vtklzma-8.2-gd.lib<br>vtkmetaio-8.2-gd.lib<br>vtkNetCDF-8.2-gd.lib<br>vtkogg-8.2-gd.lib<br>vtkParallelCore-8.2-gd.lib<br>vtkpng-8.2-gd.lib<br>vtkproj-8.2-gd.lib<br>vtkpugixml-8.2-gd.lib<br>vtkRenderingAnnotation-8.2-gd.lib<br>vtkRenderingContext2D-8.2-gd.lib<br>vtkRenderingContextOpenGL2-8.2-gd.lib<br>vtkRenderingCore-8.2-gd.lib<br>vtkRenderingExternal-8.2-gd.lib<br>vtkRenderingFreeType-8.2-gd.lib<br>vtkRenderingGL2PSOpenGL2-8.2-gd.lib<br>vtkRenderingImage-8.2-gd.lib<br>vtkRenderingLabel-8.2-gd.lib<br>vtkRenderingLOD-8.2-gd.lib<br>vtkRenderingOpenGL2-8.2-gd.lib<br>vtkRenderingVolume-8.2-gd.lib<br>vtkRenderingVolumeOpenGL2-8.2-gd.lib<br>vtksqlite-8.2-gd.lib<br>vtksys-8.2-gd.lib<br>vtktheora-8.2-gd.lib<br>vtktiff-8.2-gd.lib<br>vtkverdict-8.2-gd.lib<br>vtkViewsContext2D-8.2-gd.lib<br>vtkViewsCore-8.2-gd.lib<br>vtkViewsInfovis-8.2-gd.lib<br>vtkzlib-8.2-gd.lib</p>
+<h1 id="8-程序测试"><a href="#8-程序测试" class="headerlink" title="8.程序测试"></a>8.程序测试</h1><pre><code>#include &lt;pcl/visualization/cloud_viewer.h&gt;  
+#include &lt;iostream&gt;  
+#include &lt;pcl/io/io.h&gt;  
+#include &lt;pcl/io/pcd_io.h&gt;  
+int user_data;
+void viewerOneOff(pcl::visualization::PCLVisualizer&amp; viewer)
+&#123;
+    viewer.setBackgroundColor(1.0, 0.5, 1.0);
+    pcl::PointXYZ o;
+    o.x = 1.0;
+    o.y = 0;
+    o.z = 0;
+    viewer.addSphere(o, 0.25, &quot;sphere&quot;, 0);
+    std::cout &lt;&lt; &quot;i only run once&quot; &lt;&lt; std::endl;
+&#125;
+void viewerPsycho(pcl::visualization::PCLVisualizer&amp; viewer)
+&#123;
+    static unsigned count = 0;
+    std::stringstream ss;
+    ss &lt;&lt; &quot;Once per viewer loop: &quot; &lt;&lt; count++;
+    viewer.removeShape(&quot;text&quot;, 0);
+    viewer.addText(ss.str(), 200, 300, &quot;text&quot;, 0);
+    //FIXME: possible race condition here:  
+    user_data++;
+&#125;
+int main()
+&#123;
+    pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;::Ptr cloud(new pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;);
+    pcl::io::loadPCDFile(&quot;D:\\Microsoft Visual Studio 10.0\\Projects\\pcl\\pcl\\my_point_cloud.pcd&quot;, *cloud);
+    pcl::visualization::CloudViewer viewer(&quot;Cloud Viewer&quot;);
+    //blocks until the cloud is actually rendered  
+    viewer.showCloud(cloud);
+    //use the following functions to get access to the underlying more advanced/powerful  
+    //PCLVisualizer  
+    //This will only get called once  
+    viewer.runOnVisualizationThreadOnce(viewerOneOff);
+    //This will get called once per visualization iteration  
+    viewer.runOnVisualizationThread(viewerPsycho);
+    while (!viewer.wasStopped())
+    &#123;
+        //you can also do cool processing here  
+        //FIXME: Note that this is running in a separate thread from viewerPsycho  
+        //and you should guard against race conditions yourself...  
+        user_data++;
+    &#125;
+    return 0;
+&#125;
+</code></pre><p>测试结果：</p>
+<p><img src="/blog_img/PCL配置/16.png" alt=""></p>
+<hr>
+]]></content>
+      <categories>
+        <category>pcl</category>
+      </categories>
+      <tags>
+        <tag>-pcl -visual studio</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
     <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
@@ -221,22 +237,6 @@ git config --global --unset https.proxy
 ]]></content>
       <tags>
         <tag>-hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Youbute</category>
-      </categories>
-      <tags>
-        <tag>-Youtube</tag>
       </tags>
   </entry>
   <entry>
@@ -428,22 +428,6 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
-    <title>我的Office激活码</title>
-    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>-office</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>新电脑上部署hexo</title>
     <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
     <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
@@ -479,20 +463,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>梯子</title>
-    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
-    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
-<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
-<hr>
-]]></content>
-      <categories>
-        <category>VPN</category>
-      </categories>
-      <tags>
-        <tag>-梯子</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>日记</title>
     <url>/2020/11/07/%E6%97%A5%E8%AE%B0/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -507,6 +477,36 @@ hexo d
       <categories>
         <category>日记</category>
       </categories>
+  </entry>
+  <entry>
+    <title>梯子</title>
+    <url>/2020/09/26/%E6%A2%AF%E5%AD%90/</url>
+    <content><![CDATA[<p>名称：meilink羊圈<br>下载地址：<br><img src="/blog_img/梯子/1.png" alt="VPN"><br>页面浏览：<br><img src="/blog_img/梯子/2.png" alt="">  </p>
+<p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
+<hr>
+]]></content>
+      <categories>
+        <category>VPN</category>
+      </categories>
+      <tags>
+        <tag>-梯子</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的Office激活码</title>
+    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>-office</tag>
+      </tags>
   </entry>
   <entry>
     <title>浏览器以及插件</title>
@@ -571,6 +571,16 @@ jupyter notebook
       </tags>
   </entry>
   <entry>
+    <title>编译器</title>
+    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
+    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-编译器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>资源</title>
     <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
     <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
@@ -583,16 +593,6 @@ jupyter notebook
 ]]></content>
       <tags>
         <tag>-资源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>编译器</title>
-    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
-    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-编译器</tag>
       </tags>
   </entry>
   <entry>
