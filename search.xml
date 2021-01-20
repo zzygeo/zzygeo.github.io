@@ -222,7 +222,7 @@ int main()
     <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p>
 <h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
-<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在存博客文件的根目录下创一个叫CNAME的文件，里面写入你自己的域名，如图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
+<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
 <p>到此就设置完成了！</p>
 <hr>
 ]]></content>
