@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
+    <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
+    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
+<p>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
+<p>首先我是从这篇<a href="https://blog.csdn.net/weixin_37166398/article/details/101422239?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">博客</a>里查到了我的ip，然后ping了查到的ip，然后在system32\drives\etc\hosts里添加了   </p>
+<pre><code>IP gitee.com
+</code></pre><p>然而这并没有继续运行成功。<br>然后我有尝试<br>1.管理员身份运行cmd<br>2.输入 </p>
+<pre><code>netsh winsock reset
+</code></pre><p>3.重启</p>
+<p>还有尝试命令行输入  </p>
+<pre><code>git config --global --unset http.proxy 
+git config --global --unset https.proxy
+</code></pre><p>最后发现还是不行，结果我把第一步添加的IP gitee.com删了居然好了。</p>
+<p>所以我觉得问题在以下原因，第一个是我没有在打开代理下hexo d,平时确实是没有注意这个问题，但关闭代理下好像有时候也成功过，但这个问题确实出在了代理的问题上。<br>另外就是我的代理导致了无法上传上去，上述的两个操作我也不知道哪个解决了这个问题，毕竟我先添加了IP，然后再试了这两种清楚的。如果下次再出现这个问题，有了结果再继续补充。</p>
+<p>2020/11/17<br>他妈个头的，翻墙今天又部署不上去了，前面的用了也不好使，又试了一下这个更改DNS的方法成功了，<a href="https://blog.csdn.net/weixin_42476786/article/details/82691934?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf">链接</a>在这</p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++</title>
     <url>/2020/12/19/CPP/</url>
     <content><![CDATA[<p>写一些觉得能用上的C++代码：</p>
@@ -104,142 +142,6 @@ int main()
 ]]></content>
   </entry>
   <entry>
-    <title>PCL-1-11-Visual-Studio-2019-配置</title>
-    <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
-    <content><![CDATA[<font color= ff size=4 face="">
-
-<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
-<p>3.获取PCL源码包</p>
-<p>4.安装Visual studio 2019编译器</p>
-<p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
-<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a></p>
-<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
-<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
-<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
-<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
-<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
-<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
-<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
-<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
-<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
-<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
-<h1 id="6-配置"><a href="#6-配置" class="headerlink" title="6.配置"></a>6.配置</h1><p>打开visual studio，新建一个空项目如图：<br><img src="/blog_img/PCL配置/7.jpg" alt=""></p>
-<p>在release下创建属性表（如果是DEBUG版本请在DEBUG下创建）<br><img src="/blog_img/PCL配置/8.png" alt=""></p>
-<p>切换到解决方案资源管理器，右键-添加-新建项<br><img src="/blog_img/PCL配置/9.png" alt=""></p>
-<p>添加C++文件<br><img src="/blog_img/PCL配置/10.png" alt=""></p>
-<p>接下来配置：<br><img src="/blog_img/PCL配置/11.png" alt=""></p>
-<p>包含目录下添加，建议手点：<br>C:\Program Files\PCL 1.11.0\include\pcl-1.11<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\include\boost-1_73<br>C:\Program Files\PCL 1.11.0\3rdParty\Eigen\eigen3<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\include<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\include<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\include\vtk-8.2<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Include</p>
-<p>库目录添加：<br>C:\Program Files\PCL 1.11.0\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Lib</p>
-<p>接下来配置：<br><img src="/blog_img/PCL配置/12.jpg" alt=""></p>
-<p>在预处理器定义处添加：<br>BOOST_USE_WINDOWS_H<br>NOMINMAX<br>_CRT_SECURE_NO_DEPRECATE</p>
-<p>在项目属性表（Project_one）和release下创建得属性表（test_one）中把所有选项里得SDL检查全改成否，如下图：</p>
-<p><img src="/blog_img/PCL配置/13.jpg" alt=""></p>
-<p><img src="/blog_img/PCL配置/14.jpg" alt=""></p>
-<h1 id="7-附加依赖项"><a href="#7-附加依赖项" class="headerlink" title="7.附加依赖项"></a>7.附加依赖项</h1><p>将PCL 1.11.0\3rdParty\VTK\lib和PCL 1.11.0\lib这两个文件夹下的lib文件的release版本添加到附加依赖项中（DEBUG版本添加DEBUG类型文件）</p>
-<p><img src="/blog_img/PCL配置/15.png" alt=""></p>
-<p>文件名称我已经归类好了</p>
-<p>release版本：</p>
-<p>pcl_common.lib<br>pcl_features.lib<br>pcl_filters.lib<br>pcl_io.lib<br>pcl_io_ply.lib<br>pcl_kdtree.lib<br>pcl_keypoints.lib<br>pcl_ml.lib<br>pcl_octree.lib<br>pcl_outofcore.lib<br>pcl_people.lib<br>pcl_recognition.lib<br>pcl_registration.lib<br>pcl_sample_consensus.lib<br>pcl_search.lib<br>pcl_segmentation.lib<br>pcl_stereo.lib<br>pcl_surface.lib<br>pcl_tracking.lib<br>pcl_visualization.lib<br>vtkChartsCore-8.2.lib<br>vtkCommonColor-8.2.lib<br>vtkCommonComputationalGeometry-8.2.lib<br>vtkCommonCore-8.2.lib<br>vtkCommonDataModel-8.2.lib<br>vtkCommonExecutionModel-8.2.lib<br>vtkCommonMath-8.2.lib<br>vtkCommonMisc-8.2.lib<br>vtkCommonSystem-8.2.lib<br>vtkCommonTransforms-8.2.lib<br>vtkDICOMParser-8.2.lib<br>vtkDomainsChemistry-8.2.lib<br>vtkDomainsChemistryOpenGL2-8.2.lib<br>vtkdoubleconversion-8.2.lib<br>vtkexodusII-8.2.lib<br>vtkexpat-8.2.lib<br>vtkFiltersAMR-8.2.lib<br>vtkFiltersCore-8.2.lib<br>vtkFiltersExtraction-8.2.lib<br>vtkFiltersFlowPaths-8.2.lib<br>vtkFiltersGeneral-8.2.lib<br>vtkFiltersGeneric-8.2.lib<br>vtkFiltersGeometry-8.2.lib<br>vtkFiltersHybrid-8.2.lib<br>vtkFiltersHyperTree-8.2.lib<br>vtkFiltersImaging-8.2.lib<br>vtkFiltersModeling-8.2.lib<br>vtkFiltersParallel-8.2.lib<br>vtkFiltersParallelImaging-8.2.lib<br>vtkFiltersPoints-8.2.lib<br>vtkFiltersProgrammable-8.2.lib<br>vtkFiltersSelection-8.2.lib<br>vtkFiltersSMP-8.2.lib<br>vtkFiltersSources-8.2.lib<br>vtkFiltersStatistics-8.2.lib<br>vtkFiltersTexture-8.2.lib<br>vtkFiltersTopology-8.2.lib<br>vtkFiltersVerdict-8.2.lib<br>vtkfreetype-8.2.lib<br>vtkGeovisCore-8.2.lib<br>vtkgl2ps-8.2.lib<br>vtkglew-8.2.lib<br>vtkGUISupportMFC-8.2.lib<br>vtkhdf5_hl-8.2.lib<br>vtkhdf5-8.2.lib<br>vtkImagingColor-8.2.lib<br>vtkImagingCore-8.2.lib<br>vtkImagingFourier-8.2.lib<br>vtkImagingGeneral-8.2.lib<br>vtkImagingHybrid-8.2.lib<br>vtkImagingMath-8.2.lib<br>vtkImagingMorphological-8.2.lib<br>vtkImagingSources-8.2.lib<br>vtkImagingStatistics-8.2.lib<br>vtkImagingStencil-8.2.lib<br>vtkInfovisCore-8.2.lib<br>vtkInfovisLayout-8.2.lib<br>vtkInteractionImage-8.2.lib<br>vtkInteractionStyle-8.2.lib<br>vtkInteractionWidgets-8.2.lib<br>vtkIOAMR-8.2.lib<br>vtkIOAsynchronous-8.2.lib<br>vtkIOCityGML-8.2.lib<br>vtkIOCore-8.2.lib<br>vtkIOEnSight-8.2.lib<br>vtkIOExodus-8.2.lib<br>vtkIOExport-8.2.lib<br>vtkIOExportOpenGL2-8.2.lib<br>vtkIOExportPDF-8.2.lib<br>vtkIOGeometry-8.2.lib<br>vtkIOImage-8.2.lib<br>vtkIOImport-8.2.lib<br>vtkIOInfovis-8.2.lib<br>vtkIOLegacy-8.2.lib<br>vtkIOLSDyna-8.2.lib<br>vtkIOMINC-8.2.lib<br>vtkIOMovie-8.2.lib<br>vtkIONetCDF-8.2.lib<br>vtkIOParallel-8.2.lib<br>vtkIOParallelXML-8.2.lib<br>vtkIOPLY-8.2.lib<br>vtkIOSegY-8.2.lib<br>vtkIOSQL-8.2.lib<br>vtkIOTecplotTable-8.2.lib<br>vtkIOVeraOut-8.2.lib<br>vtkIOVideo-8.2.lib<br>vtkIOXML-8.2.lib<br>vtkIOXMLParser-8.2.lib<br>vtkjpeg-8.2.lib<br>vtkjsoncpp-8.2.lib<br>vtklibharu-8.2.lib<br>vtklibxml2-8.2.lib<br>vtklz4-8.2.lib<br>vtklzma-8.2.lib<br>vtkmetaio-8.2.lib<br>vtkNetCDF-8.2.lib<br>vtkogg-8.2.lib<br>vtkParallelCore-8.2.lib<br>vtkpng-8.2.lib<br>vtkproj-8.2.lib<br>vtkpugixml-8.2.lib<br>vtkRenderingAnnotation-8.2.lib<br>vtkRenderingContext2D-8.2.lib<br>vtkRenderingContextOpenGL2-8.2.lib<br>vtkRenderingCore-8.2.lib<br>vtkRenderingExternal-8.2.lib<br>vtkRenderingFreeType-8.2.lib<br>vtkRenderingGL2PSOpenGL2-8.2.lib<br>vtkRenderingImage-8.2.lib<br>vtkRenderingLabel-8.2.lib<br>vtkRenderingLOD-8.2.lib<br>vtkRenderingOpenGL2-8.2.lib<br>vtkRenderingVolume-8.2.lib<br>vtkRenderingVolumeOpenGL2-8.2.lib<br>vtksqlite-8.2.lib<br>vtksys-8.2.lib<br>vtktheora-8.2.lib<br>vtktiff-8.2.lib<br>vtkverdict-8.2.lib<br>vtkViewsContext2D-8.2.lib<br>vtkViewsCore-8.2.lib<br>vtkViewsInfovis-8.2.lib<br>vtkzlib-8.2.lib</p>
-<p>DEBUG版本：</p>
-<p>pcl_commond.lib<br>pcl_featuresd.lib<br>pcl_filtersd.lib<br>pcl_io_plyd.lib<br>pcl_iod.lib<br>pcl_kdtreed.lib<br>pcl_keypointsd.lib<br>pcl_mld.lib<br>pcl_octreed.lib<br>pcl_outofcored.lib<br>pcl_peopled.lib<br>pcl_recognitiond.lib<br>pcl_registrationd.lib<br>pcl_sample_consensusd.lib<br>pcl_searchd.lib<br>pcl_segmentationd.lib<br>pcl_stereod.lib<br>pcl_surfaced.lib<br>pcl_trackingd.lib<br>pcl_visualizationd.lib<br>vtkChartsCore-8.2-gd.lib<br>vtkCommonColor-8.2-gd.lib<br>vtkCommonComputationalGeometry-8.2-gd.lib<br>vtkCommonCore-8.2-gd.lib<br>vtkCommonDataModel-8.2-gd.lib<br>vtkCommonExecutionModel-8.2-gd.lib<br>vtkCommonMath-8.2-gd.lib<br>vtkCommonMisc-8.2-gd.lib<br>vtkCommonSystem-8.2-gd.lib<br>vtkCommonTransforms-8.2-gd.lib<br>vtkDICOMParser-8.2-gd.lib<br>vtkDomainsChemistry-8.2-gd.lib<br>vtkDomainsChemistryOpenGL2-8.2-gd.lib<br>vtkdoubleconversion-8.2-gd.lib<br>vtkexodusII-8.2-gd.lib<br>vtkexpat-8.2-gd.lib<br>vtkFiltersAMR-8.2-gd.lib<br>vtkFiltersCore-8.2-gd.lib<br>vtkFiltersExtraction-8.2-gd.lib<br>vtkFiltersFlowPaths-8.2-gd.lib<br>vtkFiltersGeneral-8.2-gd.lib<br>vtkFiltersGeneric-8.2-gd.lib<br>vtkFiltersGeometry-8.2-gd.lib<br>vtkFiltersHybrid-8.2-gd.lib<br>vtkFiltersHyperTree-8.2-gd.lib<br>vtkFiltersImaging-8.2-gd.lib<br>vtkFiltersModeling-8.2-gd.lib<br>vtkFiltersParallel-8.2-gd.lib<br>vtkFiltersParallelImaging-8.2-gd.lib<br>vtkFiltersPoints-8.2-gd.lib<br>vtkFiltersProgrammable-8.2-gd.lib<br>vtkFiltersSelection-8.2-gd.lib<br>vtkFiltersSMP-8.2-gd.lib<br>vtkFiltersSources-8.2-gd.lib<br>vtkFiltersStatistics-8.2-gd.lib<br>vtkFiltersTexture-8.2-gd.lib<br>vtkFiltersTopology-8.2-gd.lib<br>vtkFiltersVerdict-8.2-gd.lib<br>vtkfreetype-8.2-gd.lib<br>vtkGeovisCore-8.2-gd.lib<br>vtkgl2ps-8.2-gd.lib<br>vtkglew-8.2-gd.lib<br>vtkGUISupportMFC-8.2-gd.lib<br>vtkhdf5_hl-8.2-gd.lib<br>vtkhdf5-8.2-gd.lib<br>vtkImagingColor-8.2-gd.lib<br>vtkImagingCore-8.2-gd.lib<br>vtkImagingFourier-8.2-gd.lib<br>vtkImagingGeneral-8.2-gd.lib<br>vtkImagingHybrid-8.2-gd.lib<br>vtkImagingMath-8.2-gd.lib<br>vtkImagingMorphological-8.2-gd.lib<br>vtkImagingSources-8.2-gd.lib<br>vtkImagingStatistics-8.2-gd.lib<br>vtkImagingStencil-8.2-gd.lib<br>vtkInfovisCore-8.2-gd.lib<br>vtkInfovisLayout-8.2-gd.lib<br>vtkInteractionImage-8.2-gd.lib<br>vtkInteractionStyle-8.2-gd.lib<br>vtkInteractionWidgets-8.2-gd.lib<br>vtkIOAMR-8.2-gd.lib<br>vtkIOAsynchronous-8.2-gd.lib<br>vtkIOCityGML-8.2-gd.lib<br>vtkIOCore-8.2-gd.lib<br>vtkIOEnSight-8.2-gd.lib<br>vtkIOExodus-8.2-gd.lib<br>vtkIOExport-8.2-gd.lib<br>vtkIOExportOpenGL2-8.2-gd.lib<br>vtkIOExportPDF-8.2-gd.lib<br>vtkIOGeometry-8.2-gd.lib<br>vtkIOImage-8.2-gd.lib<br>vtkIOImport-8.2-gd.lib<br>vtkIOInfovis-8.2-gd.lib<br>vtkIOLegacy-8.2-gd.lib<br>vtkIOLSDyna-8.2-gd.lib<br>vtkIOMINC-8.2-gd.lib<br>vtkIOMovie-8.2-gd.lib<br>vtkIONetCDF-8.2-gd.lib<br>vtkIOParallel-8.2-gd.lib<br>vtkIOParallelXML-8.2-gd.lib<br>vtkIOPLY-8.2-gd.lib<br>vtkIOSegY-8.2-gd.lib<br>vtkIOSQL-8.2-gd.lib<br>vtkIOTecplotTable-8.2-gd.lib<br>vtkIOVeraOut-8.2-gd.lib<br>vtkIOVideo-8.2-gd.lib<br>vtkIOXML-8.2-gd.lib<br>vtkIOXMLParser-8.2-gd.lib<br>vtkjpeg-8.2-gd.lib<br>vtkjsoncpp-8.2-gd.lib<br>vtklibharu-8.2-gd.lib<br>vtklibxml2-8.2-gd.lib<br>vtklz4-8.2-gd.lib<br>vtklzma-8.2-gd.lib<br>vtkmetaio-8.2-gd.lib<br>vtkNetCDF-8.2-gd.lib<br>vtkogg-8.2-gd.lib<br>vtkParallelCore-8.2-gd.lib<br>vtkpng-8.2-gd.lib<br>vtkproj-8.2-gd.lib<br>vtkpugixml-8.2-gd.lib<br>vtkRenderingAnnotation-8.2-gd.lib<br>vtkRenderingContext2D-8.2-gd.lib<br>vtkRenderingContextOpenGL2-8.2-gd.lib<br>vtkRenderingCore-8.2-gd.lib<br>vtkRenderingExternal-8.2-gd.lib<br>vtkRenderingFreeType-8.2-gd.lib<br>vtkRenderingGL2PSOpenGL2-8.2-gd.lib<br>vtkRenderingImage-8.2-gd.lib<br>vtkRenderingLabel-8.2-gd.lib<br>vtkRenderingLOD-8.2-gd.lib<br>vtkRenderingOpenGL2-8.2-gd.lib<br>vtkRenderingVolume-8.2-gd.lib<br>vtkRenderingVolumeOpenGL2-8.2-gd.lib<br>vtksqlite-8.2-gd.lib<br>vtksys-8.2-gd.lib<br>vtktheora-8.2-gd.lib<br>vtktiff-8.2-gd.lib<br>vtkverdict-8.2-gd.lib<br>vtkViewsContext2D-8.2-gd.lib<br>vtkViewsCore-8.2-gd.lib<br>vtkViewsInfovis-8.2-gd.lib<br>vtkzlib-8.2-gd.lib</p>
-<h1 id="8-程序测试"><a href="#8-程序测试" class="headerlink" title="8.程序测试"></a>8.程序测试</h1><pre><code>#include &lt;pcl/visualization/cloud_viewer.h&gt;  
-#include &lt;iostream&gt;  
-#include &lt;pcl/io/io.h&gt;  
-#include &lt;pcl/io/pcd_io.h&gt;  
-int user_data;
-void viewerOneOff(pcl::visualization::PCLVisualizer&amp; viewer)
-&#123;
-    viewer.setBackgroundColor(1.0, 0.5, 1.0);
-    pcl::PointXYZ o;
-    o.x = 1.0;
-    o.y = 0;
-    o.z = 0;
-    viewer.addSphere(o, 0.25, &quot;sphere&quot;, 0);
-    std::cout &lt;&lt; &quot;i only run once&quot; &lt;&lt; std::endl;
-&#125;
-void viewerPsycho(pcl::visualization::PCLVisualizer&amp; viewer)
-&#123;
-    static unsigned count = 0;
-    std::stringstream ss;
-    ss &lt;&lt; &quot;Once per viewer loop: &quot; &lt;&lt; count++;
-    viewer.removeShape(&quot;text&quot;, 0);
-    viewer.addText(ss.str(), 200, 300, &quot;text&quot;, 0);
-    //FIXME: possible race condition here:  
-    user_data++;
-&#125;
-int main()
-&#123;
-    pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;::Ptr cloud(new pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;);
-    pcl::io::loadPCDFile(&quot;D:\\Microsoft Visual Studio 10.0\\Projects\\pcl\\pcl\\my_point_cloud.pcd&quot;, *cloud);
-    pcl::visualization::CloudViewer viewer(&quot;Cloud Viewer&quot;);
-    //blocks until the cloud is actually rendered  
-    viewer.showCloud(cloud);
-    //use the following functions to get access to the underlying more advanced/powerful  
-    //PCLVisualizer  
-    //This will only get called once  
-    viewer.runOnVisualizationThreadOnce(viewerOneOff);
-    //This will get called once per visualization iteration  
-    viewer.runOnVisualizationThread(viewerPsycho);
-    while (!viewer.wasStopped())
-    &#123;
-        //you can also do cool processing here  
-        //FIXME: Note that this is running in a separate thread from viewerPsycho  
-        //and you should guard against race conditions yourself...  
-        user_data++;
-    &#125;
-    return 0;
-&#125;
-</code></pre><p>测试结果：</p>
-<p><img src="/blog_img/PCL配置/16.png" alt=""></p>
-<hr>
-]]></content>
-      <categories>
-        <category>pcl</category>
-      </categories>
-      <tags>
-        <tag>-pcl -visual studio</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
-    <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
-<p>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
-<p>首先我是从这篇<a href="https://blog.csdn.net/weixin_37166398/article/details/101422239?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">博客</a>里查到了我的ip，然后ping了查到的ip，然后在system32\drives\etc\hosts里添加了   </p>
-<pre><code>IP gitee.com
-</code></pre><p>然而这并没有继续运行成功。<br>然后我有尝试<br>1.管理员身份运行cmd<br>2.输入 </p>
-<pre><code>netsh winsock reset
-</code></pre><p>3.重启</p>
-<p>还有尝试命令行输入  </p>
-<pre><code>git config --global --unset http.proxy 
-git config --global --unset https.proxy
-</code></pre><p>最后发现还是不行，结果我把第一步添加的IP gitee.com删了居然好了。</p>
-<p>所以我觉得问题在以下原因，第一个是我没有在打开代理下hexo d,平时确实是没有注意这个问题，但关闭代理下好像有时候也成功过，但这个问题确实出在了代理的问题上。<br>另外就是我的代理导致了无法上传上去，上述的两个操作我也不知道哪个解决了这个问题，毕竟我先添加了IP，然后再试了这两种清楚的。如果下次再出现这个问题，有了结果再继续补充。</p>
-<p>2020/11/17<br>他妈个头的，翻墙今天又部署不上去了，前面的用了也不好使，又试了一下这个更改DNS的方法成功了，<a href="https://blog.csdn.net/weixin_42476786/article/details/82691934?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.add_param_isCf">链接</a>在这</p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60">下载地址</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Youbute</category>
-      </categories>
-      <tags>
-        <tag>-Youtube</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo d 出现错误的用户名和密码的解决办法</title>
     <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
@@ -249,6 +151,49 @@ git config --global --unset https.proxy
       <categories>
         <category>hexo</category>
       </categories>
+  </entry>
+  <entry>
+    <title>pcl+vs+cmake编译</title>
+    <url>/2020/12/27/pcl-vs-cmake%E7%BC%96%E8%AF%91/</url>
+    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。</p>
+<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
+<p>3.安装Visual studio 2019编译器</p>
+<p>4.cmake<br><img src="/blog_img/PCL配置/17.png" alt="示意图"><br><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
+<p>其实源码包用不上，懒得改了，最复杂的方式就是源代码加第三方库进行配置，等我配置好了也会再一篇关于源码方式的配置。</p>
+<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a><br><a href="https://cmake.org/download/">cmake下载地址</a></p>
+<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
+<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
+<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
+<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
+<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
+<p>cmake 安装请选择添加到系统路径，没选的话也可以自己手动添加，添加的方式为cmake目录下bin文件  比如C:\APP\Cmake\bin这样的形式。</p>
+<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
+<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
+<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
+<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<h1 id="6-cmake编译"><a href="#6-cmake编译" class="headerlink" title="6.cmake编译"></a>6.cmake编译</h1><p>以管理员身份运行cmake-gui<br>在你想要的文件下创建一个名为example的文件夹，然后在此目录下创建一个source和cmake_bin文件，比如我的：</p>
+<p><img src="/blog_img/PCL配置/18.png" alt=""></p>
+<p>在source里面创建一个cpp文件和CMakeLists.txt文件。<br>CmakeLists.txt里写入以下内容：</p>
+<p>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)<br>project(test)<br>find_package(PCL 1.4 REQUIRED)<br>include_directories(${PCL_INCLUDE_DIRS})<br>link_directories(${PCL_LIBRARY_DIRS})<br>add_definitions(${PCL_DEFINITIONS})<br>add_executable (test test.cpp)<br>target_link_libraries (test ${PCL_LIBRARIES})</p>
+<p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
+<p>测试代码请网上去找，我用的是上一篇文件里的（里面有个D盘文件的读取可能会报错，但只要能出彩色的那个图就算配置成功了）。</p>
+<p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""></p>
+<p>点击Configure，选x64<br><img src="/blog_img/PCL配置/21.jpg" alt=""></p>
+<p>再点击一次configure<br><img src="/blog_img/PCL配置/22.jpg" alt=""></p>
+<p>点击Generate,出现Generating done.<br><img src="/blog_img/PCL配置/23.png" alt=""></p>
+<p>找到cmake_bin底下的test_sln 打开。<br><img src="/blog_img/PCL配置/24.jpg" alt=""></p>
+<p>将test设置为启动项，并调试。<br><img src="/blog_img/PCL配置/25.png" alt=""></p>
+<p><img src="/blog_img/PCL配置/26.jpg" alt=""></p>
+<hr>
+]]></content>
+      <categories>
+        <category>pcl</category>
+      </categories>
+      <tags>
+        <tag>-pcl -visual studio</tag>
+      </tags>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -356,38 +301,101 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
-    <title>新电脑上部署hexo</title>
-    <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
-    <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
-<h1 id="2-拷贝源文件"><a href="#2-拷贝源文件" class="headerlink" title="2. 拷贝源文件"></a>2. 拷贝源文件</h1><p>将初始电脑上个人博客文件夹下这几个文件夹拷到当前新电脑的准备设置的博客路径下。</p>
-<pre><code>_config.yml
-package.json
-scaffolds/
-source/
-themes/
-</code></pre><h1 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h1><p>在 cmd 下输入下面指令安装 hexo:</p>
-<pre><code>npm install -g hexo
-</code></pre><h1 id="4-在新博客路径下，安装三方依赖库"><a href="#4-在新博客路径下，安装三方依赖库" class="headerlink" title="4. 在新博客路径下，安装三方依赖库"></a>4. 在新博客路径下，安装三方依赖库</h1><pre><code>npm install
-npm install hexo-deployer-git --save //文章部署到 git 的模块
-npm install 主题需要的插件
-</code></pre><p><strong>千万别hxeo init</strong>，不然你就拉在裤子里了！！！</p>
-<h1 id="5-GITHUB-gitee-添加-SSH-KEYS"><a href="#5-GITHUB-gitee-添加-SSH-KEYS" class="headerlink" title="5. GITHUB/gitee 添加 SSH KEYS"></a>5. GITHUB/gitee 添加 SSH KEYS</h1><p>在GitHub/gitee的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>首先在本地创建 SSH Keys:</p>
-<pre><code>ssh-keygen -t rsa -C “xxxx@xxxx.com“
-</code></pre><p>后面的邮箱即为 github/gitee注册邮箱，也是你登录Github的邮箱（其实无关紧要，只是为了辨识生成的用户名），之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：</p>
-<pre><code>ssh -T git@gitee.com 
-</code></pre><p>会弹出确认命令，输入yes,会弹出你的名字等等，会出现：</p>
-<pre><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-</code></pre><p>然后：</p>
-<pre><code>hexo g
-hexo s
-hexo d
-</code></pre><hr>
+    <title>PCL-1-11-Visual-Studio-2019-配置</title>
+    <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
+    <content><![CDATA[<font color= ff size=4 face="">
+
+<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
+<p>3.获取PCL源码包</p>
+<p>4.安装Visual studio 2019编译器</p>
+<p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
+<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a></p>
+<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
+<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
+<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
+<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
+<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
+<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
+<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
+<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
+<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<h1 id="6-配置"><a href="#6-配置" class="headerlink" title="6.配置"></a>6.配置</h1><p>打开visual studio，新建一个空项目如图：<br><img src="/blog_img/PCL配置/7.jpg" alt=""></p>
+<p>在release下创建属性表（如果是DEBUG版本请在DEBUG下创建）<br><img src="/blog_img/PCL配置/8.png" alt=""></p>
+<p>切换到解决方案资源管理器，右键-添加-新建项<br><img src="/blog_img/PCL配置/9.png" alt=""></p>
+<p>添加C++文件<br><img src="/blog_img/PCL配置/10.png" alt=""></p>
+<p>接下来配置：<br><img src="/blog_img/PCL配置/11.png" alt=""></p>
+<p>包含目录下添加，建议手点：<br>C:\Program Files\PCL 1.11.0\include\pcl-1.11<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\include\boost-1_73<br>C:\Program Files\PCL 1.11.0\3rdParty\Eigen\eigen3<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\include<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\include<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\include\vtk-8.2<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Include</p>
+<p>库目录添加：<br>C:\Program Files\PCL 1.11.0\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Boost\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\lib<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Lib</p>
+<p>接下来配置：<br><img src="/blog_img/PCL配置/12.jpg" alt=""></p>
+<p>在预处理器定义处添加：<br>BOOST_USE_WINDOWS_H<br>NOMINMAX<br>_CRT_SECURE_NO_DEPRECATE</p>
+<p>在项目属性表（Project_one）和release下创建得属性表（test_one）中把所有选项里得SDL检查全改成否，如下图：</p>
+<p><img src="/blog_img/PCL配置/13.jpg" alt=""></p>
+<p><img src="/blog_img/PCL配置/14.jpg" alt=""></p>
+<h1 id="7-附加依赖项"><a href="#7-附加依赖项" class="headerlink" title="7.附加依赖项"></a>7.附加依赖项</h1><p>将PCL 1.11.0\3rdParty\VTK\lib和PCL 1.11.0\lib这两个文件夹下的lib文件的release版本添加到附加依赖项中（DEBUG版本添加DEBUG类型文件）</p>
+<p><img src="/blog_img/PCL配置/15.png" alt=""></p>
+<p>文件名称我已经归类好了</p>
+<p>release版本：</p>
+<p>pcl_common.lib<br>pcl_features.lib<br>pcl_filters.lib<br>pcl_io.lib<br>pcl_io_ply.lib<br>pcl_kdtree.lib<br>pcl_keypoints.lib<br>pcl_ml.lib<br>pcl_octree.lib<br>pcl_outofcore.lib<br>pcl_people.lib<br>pcl_recognition.lib<br>pcl_registration.lib<br>pcl_sample_consensus.lib<br>pcl_search.lib<br>pcl_segmentation.lib<br>pcl_stereo.lib<br>pcl_surface.lib<br>pcl_tracking.lib<br>pcl_visualization.lib<br>vtkChartsCore-8.2.lib<br>vtkCommonColor-8.2.lib<br>vtkCommonComputationalGeometry-8.2.lib<br>vtkCommonCore-8.2.lib<br>vtkCommonDataModel-8.2.lib<br>vtkCommonExecutionModel-8.2.lib<br>vtkCommonMath-8.2.lib<br>vtkCommonMisc-8.2.lib<br>vtkCommonSystem-8.2.lib<br>vtkCommonTransforms-8.2.lib<br>vtkDICOMParser-8.2.lib<br>vtkDomainsChemistry-8.2.lib<br>vtkDomainsChemistryOpenGL2-8.2.lib<br>vtkdoubleconversion-8.2.lib<br>vtkexodusII-8.2.lib<br>vtkexpat-8.2.lib<br>vtkFiltersAMR-8.2.lib<br>vtkFiltersCore-8.2.lib<br>vtkFiltersExtraction-8.2.lib<br>vtkFiltersFlowPaths-8.2.lib<br>vtkFiltersGeneral-8.2.lib<br>vtkFiltersGeneric-8.2.lib<br>vtkFiltersGeometry-8.2.lib<br>vtkFiltersHybrid-8.2.lib<br>vtkFiltersHyperTree-8.2.lib<br>vtkFiltersImaging-8.2.lib<br>vtkFiltersModeling-8.2.lib<br>vtkFiltersParallel-8.2.lib<br>vtkFiltersParallelImaging-8.2.lib<br>vtkFiltersPoints-8.2.lib<br>vtkFiltersProgrammable-8.2.lib<br>vtkFiltersSelection-8.2.lib<br>vtkFiltersSMP-8.2.lib<br>vtkFiltersSources-8.2.lib<br>vtkFiltersStatistics-8.2.lib<br>vtkFiltersTexture-8.2.lib<br>vtkFiltersTopology-8.2.lib<br>vtkFiltersVerdict-8.2.lib<br>vtkfreetype-8.2.lib<br>vtkGeovisCore-8.2.lib<br>vtkgl2ps-8.2.lib<br>vtkglew-8.2.lib<br>vtkGUISupportMFC-8.2.lib<br>vtkhdf5_hl-8.2.lib<br>vtkhdf5-8.2.lib<br>vtkImagingColor-8.2.lib<br>vtkImagingCore-8.2.lib<br>vtkImagingFourier-8.2.lib<br>vtkImagingGeneral-8.2.lib<br>vtkImagingHybrid-8.2.lib<br>vtkImagingMath-8.2.lib<br>vtkImagingMorphological-8.2.lib<br>vtkImagingSources-8.2.lib<br>vtkImagingStatistics-8.2.lib<br>vtkImagingStencil-8.2.lib<br>vtkInfovisCore-8.2.lib<br>vtkInfovisLayout-8.2.lib<br>vtkInteractionImage-8.2.lib<br>vtkInteractionStyle-8.2.lib<br>vtkInteractionWidgets-8.2.lib<br>vtkIOAMR-8.2.lib<br>vtkIOAsynchronous-8.2.lib<br>vtkIOCityGML-8.2.lib<br>vtkIOCore-8.2.lib<br>vtkIOEnSight-8.2.lib<br>vtkIOExodus-8.2.lib<br>vtkIOExport-8.2.lib<br>vtkIOExportOpenGL2-8.2.lib<br>vtkIOExportPDF-8.2.lib<br>vtkIOGeometry-8.2.lib<br>vtkIOImage-8.2.lib<br>vtkIOImport-8.2.lib<br>vtkIOInfovis-8.2.lib<br>vtkIOLegacy-8.2.lib<br>vtkIOLSDyna-8.2.lib<br>vtkIOMINC-8.2.lib<br>vtkIOMovie-8.2.lib<br>vtkIONetCDF-8.2.lib<br>vtkIOParallel-8.2.lib<br>vtkIOParallelXML-8.2.lib<br>vtkIOPLY-8.2.lib<br>vtkIOSegY-8.2.lib<br>vtkIOSQL-8.2.lib<br>vtkIOTecplotTable-8.2.lib<br>vtkIOVeraOut-8.2.lib<br>vtkIOVideo-8.2.lib<br>vtkIOXML-8.2.lib<br>vtkIOXMLParser-8.2.lib<br>vtkjpeg-8.2.lib<br>vtkjsoncpp-8.2.lib<br>vtklibharu-8.2.lib<br>vtklibxml2-8.2.lib<br>vtklz4-8.2.lib<br>vtklzma-8.2.lib<br>vtkmetaio-8.2.lib<br>vtkNetCDF-8.2.lib<br>vtkogg-8.2.lib<br>vtkParallelCore-8.2.lib<br>vtkpng-8.2.lib<br>vtkproj-8.2.lib<br>vtkpugixml-8.2.lib<br>vtkRenderingAnnotation-8.2.lib<br>vtkRenderingContext2D-8.2.lib<br>vtkRenderingContextOpenGL2-8.2.lib<br>vtkRenderingCore-8.2.lib<br>vtkRenderingExternal-8.2.lib<br>vtkRenderingFreeType-8.2.lib<br>vtkRenderingGL2PSOpenGL2-8.2.lib<br>vtkRenderingImage-8.2.lib<br>vtkRenderingLabel-8.2.lib<br>vtkRenderingLOD-8.2.lib<br>vtkRenderingOpenGL2-8.2.lib<br>vtkRenderingVolume-8.2.lib<br>vtkRenderingVolumeOpenGL2-8.2.lib<br>vtksqlite-8.2.lib<br>vtksys-8.2.lib<br>vtktheora-8.2.lib<br>vtktiff-8.2.lib<br>vtkverdict-8.2.lib<br>vtkViewsContext2D-8.2.lib<br>vtkViewsCore-8.2.lib<br>vtkViewsInfovis-8.2.lib<br>vtkzlib-8.2.lib</p>
+<p>DEBUG版本：</p>
+<p>pcl_commond.lib<br>pcl_featuresd.lib<br>pcl_filtersd.lib<br>pcl_io_plyd.lib<br>pcl_iod.lib<br>pcl_kdtreed.lib<br>pcl_keypointsd.lib<br>pcl_mld.lib<br>pcl_octreed.lib<br>pcl_outofcored.lib<br>pcl_peopled.lib<br>pcl_recognitiond.lib<br>pcl_registrationd.lib<br>pcl_sample_consensusd.lib<br>pcl_searchd.lib<br>pcl_segmentationd.lib<br>pcl_stereod.lib<br>pcl_surfaced.lib<br>pcl_trackingd.lib<br>pcl_visualizationd.lib<br>vtkChartsCore-8.2-gd.lib<br>vtkCommonColor-8.2-gd.lib<br>vtkCommonComputationalGeometry-8.2-gd.lib<br>vtkCommonCore-8.2-gd.lib<br>vtkCommonDataModel-8.2-gd.lib<br>vtkCommonExecutionModel-8.2-gd.lib<br>vtkCommonMath-8.2-gd.lib<br>vtkCommonMisc-8.2-gd.lib<br>vtkCommonSystem-8.2-gd.lib<br>vtkCommonTransforms-8.2-gd.lib<br>vtkDICOMParser-8.2-gd.lib<br>vtkDomainsChemistry-8.2-gd.lib<br>vtkDomainsChemistryOpenGL2-8.2-gd.lib<br>vtkdoubleconversion-8.2-gd.lib<br>vtkexodusII-8.2-gd.lib<br>vtkexpat-8.2-gd.lib<br>vtkFiltersAMR-8.2-gd.lib<br>vtkFiltersCore-8.2-gd.lib<br>vtkFiltersExtraction-8.2-gd.lib<br>vtkFiltersFlowPaths-8.2-gd.lib<br>vtkFiltersGeneral-8.2-gd.lib<br>vtkFiltersGeneric-8.2-gd.lib<br>vtkFiltersGeometry-8.2-gd.lib<br>vtkFiltersHybrid-8.2-gd.lib<br>vtkFiltersHyperTree-8.2-gd.lib<br>vtkFiltersImaging-8.2-gd.lib<br>vtkFiltersModeling-8.2-gd.lib<br>vtkFiltersParallel-8.2-gd.lib<br>vtkFiltersParallelImaging-8.2-gd.lib<br>vtkFiltersPoints-8.2-gd.lib<br>vtkFiltersProgrammable-8.2-gd.lib<br>vtkFiltersSelection-8.2-gd.lib<br>vtkFiltersSMP-8.2-gd.lib<br>vtkFiltersSources-8.2-gd.lib<br>vtkFiltersStatistics-8.2-gd.lib<br>vtkFiltersTexture-8.2-gd.lib<br>vtkFiltersTopology-8.2-gd.lib<br>vtkFiltersVerdict-8.2-gd.lib<br>vtkfreetype-8.2-gd.lib<br>vtkGeovisCore-8.2-gd.lib<br>vtkgl2ps-8.2-gd.lib<br>vtkglew-8.2-gd.lib<br>vtkGUISupportMFC-8.2-gd.lib<br>vtkhdf5_hl-8.2-gd.lib<br>vtkhdf5-8.2-gd.lib<br>vtkImagingColor-8.2-gd.lib<br>vtkImagingCore-8.2-gd.lib<br>vtkImagingFourier-8.2-gd.lib<br>vtkImagingGeneral-8.2-gd.lib<br>vtkImagingHybrid-8.2-gd.lib<br>vtkImagingMath-8.2-gd.lib<br>vtkImagingMorphological-8.2-gd.lib<br>vtkImagingSources-8.2-gd.lib<br>vtkImagingStatistics-8.2-gd.lib<br>vtkImagingStencil-8.2-gd.lib<br>vtkInfovisCore-8.2-gd.lib<br>vtkInfovisLayout-8.2-gd.lib<br>vtkInteractionImage-8.2-gd.lib<br>vtkInteractionStyle-8.2-gd.lib<br>vtkInteractionWidgets-8.2-gd.lib<br>vtkIOAMR-8.2-gd.lib<br>vtkIOAsynchronous-8.2-gd.lib<br>vtkIOCityGML-8.2-gd.lib<br>vtkIOCore-8.2-gd.lib<br>vtkIOEnSight-8.2-gd.lib<br>vtkIOExodus-8.2-gd.lib<br>vtkIOExport-8.2-gd.lib<br>vtkIOExportOpenGL2-8.2-gd.lib<br>vtkIOExportPDF-8.2-gd.lib<br>vtkIOGeometry-8.2-gd.lib<br>vtkIOImage-8.2-gd.lib<br>vtkIOImport-8.2-gd.lib<br>vtkIOInfovis-8.2-gd.lib<br>vtkIOLegacy-8.2-gd.lib<br>vtkIOLSDyna-8.2-gd.lib<br>vtkIOMINC-8.2-gd.lib<br>vtkIOMovie-8.2-gd.lib<br>vtkIONetCDF-8.2-gd.lib<br>vtkIOParallel-8.2-gd.lib<br>vtkIOParallelXML-8.2-gd.lib<br>vtkIOPLY-8.2-gd.lib<br>vtkIOSegY-8.2-gd.lib<br>vtkIOSQL-8.2-gd.lib<br>vtkIOTecplotTable-8.2-gd.lib<br>vtkIOVeraOut-8.2-gd.lib<br>vtkIOVideo-8.2-gd.lib<br>vtkIOXML-8.2-gd.lib<br>vtkIOXMLParser-8.2-gd.lib<br>vtkjpeg-8.2-gd.lib<br>vtkjsoncpp-8.2-gd.lib<br>vtklibharu-8.2-gd.lib<br>vtklibxml2-8.2-gd.lib<br>vtklz4-8.2-gd.lib<br>vtklzma-8.2-gd.lib<br>vtkmetaio-8.2-gd.lib<br>vtkNetCDF-8.2-gd.lib<br>vtkogg-8.2-gd.lib<br>vtkParallelCore-8.2-gd.lib<br>vtkpng-8.2-gd.lib<br>vtkproj-8.2-gd.lib<br>vtkpugixml-8.2-gd.lib<br>vtkRenderingAnnotation-8.2-gd.lib<br>vtkRenderingContext2D-8.2-gd.lib<br>vtkRenderingContextOpenGL2-8.2-gd.lib<br>vtkRenderingCore-8.2-gd.lib<br>vtkRenderingExternal-8.2-gd.lib<br>vtkRenderingFreeType-8.2-gd.lib<br>vtkRenderingGL2PSOpenGL2-8.2-gd.lib<br>vtkRenderingImage-8.2-gd.lib<br>vtkRenderingLabel-8.2-gd.lib<br>vtkRenderingLOD-8.2-gd.lib<br>vtkRenderingOpenGL2-8.2-gd.lib<br>vtkRenderingVolume-8.2-gd.lib<br>vtkRenderingVolumeOpenGL2-8.2-gd.lib<br>vtksqlite-8.2-gd.lib<br>vtksys-8.2-gd.lib<br>vtktheora-8.2-gd.lib<br>vtktiff-8.2-gd.lib<br>vtkverdict-8.2-gd.lib<br>vtkViewsContext2D-8.2-gd.lib<br>vtkViewsCore-8.2-gd.lib<br>vtkViewsInfovis-8.2-gd.lib<br>vtkzlib-8.2-gd.lib</p>
+<h1 id="8-程序测试"><a href="#8-程序测试" class="headerlink" title="8.程序测试"></a>8.程序测试</h1><pre><code>#include &lt;pcl/visualization/cloud_viewer.h&gt;  
+#include &lt;iostream&gt;  
+#include &lt;pcl/io/io.h&gt;  
+#include &lt;pcl/io/pcd_io.h&gt;  
+int user_data;
+void viewerOneOff(pcl::visualization::PCLVisualizer&amp; viewer)
+&#123;
+    viewer.setBackgroundColor(1.0, 0.5, 1.0);
+    pcl::PointXYZ o;
+    o.x = 1.0;
+    o.y = 0;
+    o.z = 0;
+    viewer.addSphere(o, 0.25, &quot;sphere&quot;, 0);
+    std::cout &lt;&lt; &quot;i only run once&quot; &lt;&lt; std::endl;
+&#125;
+void viewerPsycho(pcl::visualization::PCLVisualizer&amp; viewer)
+&#123;
+    static unsigned count = 0;
+    std::stringstream ss;
+    ss &lt;&lt; &quot;Once per viewer loop: &quot; &lt;&lt; count++;
+    viewer.removeShape(&quot;text&quot;, 0);
+    viewer.addText(ss.str(), 200, 300, &quot;text&quot;, 0);
+    //FIXME: possible race condition here:  
+    user_data++;
+&#125;
+int main()
+&#123;
+    pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;::Ptr cloud(new pcl::PointCloud&lt;pcl::PointXYZRGBA&gt;);
+    pcl::io::loadPCDFile(&quot;D:\\Microsoft Visual Studio 10.0\\Projects\\pcl\\pcl\\my_point_cloud.pcd&quot;, *cloud);
+    pcl::visualization::CloudViewer viewer(&quot;Cloud Viewer&quot;);
+    //blocks until the cloud is actually rendered  
+    viewer.showCloud(cloud);
+    //use the following functions to get access to the underlying more advanced/powerful  
+    //PCLVisualizer  
+    //This will only get called once  
+    viewer.runOnVisualizationThreadOnce(viewerOneOff);
+    //This will get called once per visualization iteration  
+    viewer.runOnVisualizationThread(viewerPsycho);
+    while (!viewer.wasStopped())
+    &#123;
+        //you can also do cool processing here  
+        //FIXME: Note that this is running in a separate thread from viewerPsycho  
+        //and you should guard against race conditions yourself...  
+        user_data++;
+    &#125;
+    return 0;
+&#125;
+</code></pre><p>测试结果：</p>
+<p><img src="/blog_img/PCL配置/16.png" alt=""></p>
+<hr>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>pcl</category>
       </categories>
       <tags>
-        <tag>-hexo迁移</tag>
+        <tag>-pcl -visual studio</tag>
       </tags>
   </entry>
   <entry>
@@ -420,6 +428,13 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>123</title>
+    <url>/2021/01/20/%E5%95%8A%E5%93%88%E5%93%88/</url>
+    <content><![CDATA[<p>会当凌绝顶，一览众山小。</p>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>我的Office激活码</title>
     <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -436,46 +451,38 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>pcl+vs+cmake编译</title>
-    <url>/2020/12/27/pcl-vs-cmake%E7%BC%96%E8%AF%91/</url>
-    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。</p>
-<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
-<p>3.安装Visual studio 2019编译器</p>
-<p>4.cmake<br><img src="/blog_img/PCL配置/17.png" alt="示意图"><br><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
-<p>其实源码包用不上，懒得改了，最复杂的方式就是源代码加第三方库进行配置，等我配置好了也会再一篇关于源码方式的配置。</p>
-<h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a><br><a href="https://cmake.org/download/">cmake下载地址</a></p>
-<h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
-<p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
-<p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
-<p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
-<p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
-<p>cmake 安装请选择添加到系统路径，没选的话也可以自己手动添加，添加的方式为cmake目录下bin文件  比如C:\APP\Cmake\bin这样的形式。</p>
-<h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
-<p><img src="/blog_img/PCL配置/5.png" alt=""></p>
-<h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
-<p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
-<p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
-<h1 id="6-cmake编译"><a href="#6-cmake编译" class="headerlink" title="6.cmake编译"></a>6.cmake编译</h1><p>以管理员身份运行cmake-gui<br>在你想要的文件下创建一个名为example的文件夹，然后在此目录下创建一个source和cmake_bin文件，比如我的：</p>
-<p><img src="/blog_img/PCL配置/18.png" alt=""></p>
-<p>在source里面创建一个cpp文件和CMakeLists.txt文件。<br>CmakeLists.txt里写入以下内容：</p>
-<p>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)<br>project(test)<br>find_package(PCL 1.4 REQUIRED)<br>include_directories(${PCL_INCLUDE_DIRS})<br>link_directories(${PCL_LIBRARY_DIRS})<br>add_definitions(${PCL_DEFINITIONS})<br>add_executable (test test.cpp)<br>target_link_libraries (test ${PCL_LIBRARIES})</p>
-<p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
-<p>测试代码请网上去找，我用的是上一篇文件里的（里面有个D盘文件的读取可能会报错，但只要能出彩色的那个图就算配置成功了）。</p>
-<p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""></p>
-<p>点击Configure，选x64<br><img src="/blog_img/PCL配置/21.jpg" alt=""></p>
-<p>再点击一次configure<br><img src="/blog_img/PCL配置/22.jpg" alt=""></p>
-<p>点击Generate,出现Generating done.<br><img src="/blog_img/PCL配置/23.png" alt=""></p>
-<p>找到cmake_bin底下的test_sln 打开。<br><img src="/blog_img/PCL配置/24.jpg" alt=""></p>
-<p>将test设置为启动项，并调试。<br><img src="/blog_img/PCL配置/25.png" alt=""></p>
-<p><img src="/blog_img/PCL配置/26.jpg" alt=""></p>
-<hr>
+    <title>新电脑上部署hexo</title>
+    <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
+    <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
+<h1 id="2-拷贝源文件"><a href="#2-拷贝源文件" class="headerlink" title="2. 拷贝源文件"></a>2. 拷贝源文件</h1><p>将初始电脑上个人博客文件夹下这几个文件夹拷到当前新电脑的准备设置的博客路径下。</p>
+<pre><code>_config.yml
+package.json
+scaffolds/
+source/
+themes/
+</code></pre><h1 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h1><p>在 cmd 下输入下面指令安装 hexo:</p>
+<pre><code>npm install -g hexo
+</code></pre><h1 id="4-在新博客路径下，安装三方依赖库"><a href="#4-在新博客路径下，安装三方依赖库" class="headerlink" title="4. 在新博客路径下，安装三方依赖库"></a>4. 在新博客路径下，安装三方依赖库</h1><pre><code>npm install
+npm install hexo-deployer-git --save //文章部署到 git 的模块
+npm install 主题需要的插件
+</code></pre><p><strong>千万别hxeo init</strong>，不然你就拉在裤子里了！！！</p>
+<h1 id="5-GITHUB-gitee-添加-SSH-KEYS"><a href="#5-GITHUB-gitee-添加-SSH-KEYS" class="headerlink" title="5. GITHUB/gitee 添加 SSH KEYS"></a>5. GITHUB/gitee 添加 SSH KEYS</h1><p>在GitHub/gitee的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>首先在本地创建 SSH Keys:</p>
+<pre><code>ssh-keygen -t rsa -C “xxxx@xxxx.com“
+</code></pre><p>后面的邮箱即为 github/gitee注册邮箱，也是你登录Github的邮箱（其实无关紧要，只是为了辨识生成的用户名），之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：</p>
+<pre><code>ssh -T git@gitee.com 
+</code></pre><p>会弹出确认命令，输入yes,会弹出你的名字等等，会出现：</p>
+<pre><code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p>然后：</p>
+<pre><code>hexo g
+hexo s
+hexo d
+</code></pre><hr>
 ]]></content>
       <categories>
-        <category>pcl</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>-pcl -visual studio</tag>
+        <tag>-hexo迁移</tag>
       </tags>
   </entry>
   <entry>
@@ -547,16 +554,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>编译器</title>
-    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
-    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-编译器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深度学习篇</title>
     <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
     <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
@@ -578,6 +575,16 @@ jupyter notebook
       </categories>
       <tags>
         <tag>-deep learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编译器</title>
+    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
+    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-编译器</tag>
       </tags>
   </entry>
   <entry>
@@ -610,12 +617,5 @@ jupyter notebook
       <tags>
         <tag>-资源</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>123</title>
-    <url>/2021/01/20/123/</url>
-    <content><![CDATA[<p>头秃</p>
-<hr>
-]]></content>
   </entry>
 </search>
