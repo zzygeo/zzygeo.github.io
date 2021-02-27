@@ -224,16 +224,6 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
-    <title>github设置自己的域名</title>
-    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。<br><a id="more"></a>)</p>
-<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
-<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
-<p>到此就设置完成了！</p>
-<hr>
-]]></content>
-  </entry>
-  <entry>
     <title>Youtube视频下载</title>
     <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
@@ -252,6 +242,16 @@ git config --global --unset https.proxy
       <tags>
         <tag>-Youtube</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>github设置自己的域名</title>
+    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。<br><a id="more"></a>)</p>
+<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
+<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
+<p>到此就设置完成了！</p>
+<hr>
+]]></content>
   </entry>
   <entry>
     <title>hexo d 出现错误的用户名和密码的解决办法</title>
@@ -436,22 +436,6 @@ target_link_libraries (test $&#123;PCL_LIBRARIES&#125;)
       </tags>
   </entry>
   <entry>
-    <title>我的Office激活码</title>
-    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>-office</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于入门博客的一些事</title>
     <url>/2020/09/24/%E5%85%B3%E4%BA%8E%E5%85%A5%E9%97%A8%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
     <content><![CDATA[<p>这算是我的第二个博客了，第一部署在Github上，都是基于hexo来搭建的，不过部署在在Github上有这样的问题：<a id="more"></a>  </p>
@@ -477,6 +461,38 @@ target_link_libraries (test $&#123;PCL_LIBRARIES&#125;)
 ]]></content>
       <tags>
         <tag>-情感</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的Office激活码</title>
+    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>-office</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>日记</title>
+    <url>/2020/11/07/%E6%97%A5%E8%AE%B0/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="6c41105859e5f71a9d93c0146fa1f6ad48ff3d5365abbae105ef49759452974f">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af926707dcb3208de68be598dee4ec8475f6902f2c747bc2548031bf4317b7a50abdaba46fdb31ebb36740088aa88f01d3d6bd221b0bfddf506264975f9c63fb0fe41f2ce5e1ed1167472b9ae054615b4f4a37d15917b0fc86a9a4739dc7473d79699070789c9d3deaafbd54353d84e8945615fdad0773a76bc888df19ef3aa8f6a10a909105086127059c85ab690c58357dcfb5ddc853dc3f7c59b1285449d992c06add5233f9367a7ded8e8972107d3026e5ed158f9e3837d3a5cc31f269079d378865a8e5d4ded7ec278ee1087c5e77b7a26e46f070bfd0bc7463b235b470e8a366140856d0c52590a53daa2bcb4d7237e1c583c78175944e8dba999f973e90b174c2c323c3227640842c4c5793225371d32d76b6164c4c7554be74444be92f307762e38aa7e17f8aa72e8d2950376908102ccd8b63fbefb03ed309a01efa657f4d20ce505775892f6355d302a7cd9d8f83ca76b6bd3c8d10fb8f2dc8f67dcc007d629b0efab86525f36b88ce9ba2a5b7af99f6f9c5e70350c5c4a7218d701708e948dad9d8306d29a55289ae640af121f635fe7fb81ade83ac9ccda2aaf4993523b47d111776c6ff3774a5080ec0c3e8aa6544ce9a40dd96a513857b876f86d76f6d445ddd982ecb0658fb0d6f102029f9348ef24b1d9807798ea1cbb76e1e13d177eb363f1d4217bc721ae0fa980672b9b054794189603770a4549be4229d0fc84111f7dccc4f1ba8b354f0be6cc94901719bbea14ec7f70376c3c16a7e5a322ad103603fd29baf351a337d397e4462b22887b047d71f66c22f4838a7129645be72331f139e99a8bbe85400667daebe8cf03713ac6cd1b4a19ca95fd6b424ab36cd47153af97c4c469893ad3acce3bf8c1fd9e5bbca38fc8aab80f6141b1fe071f458a93d6d178b7e9421aa5e07a6cadfde4e0b0c9ee66f014a3218524f79f1c1547df14ec752270cae06b444af322c0a4d3e31215c16954ee6f3ca15d827faa647d2d199af56c98962a5b11363ed9e2ffd1ce4dee9394906ab9a9084a1f2ce493992e9394cf63b1cef3aef6478dc267869c9feae32beb92f7c7e3f647b8076bf74631b56ec8eef79fd50acda7b8c4932770b0e736c23b59316b40fbfd264e535a03127443c8d62f239b6ac5ef09738e5ba202402441f66965f361fe35bd61925d4a0b3a9e977c7ee95fa10568249c25767445376a20ba3fff77e03da209ef945da68758305aefbf0f12ee2c3b83f814299d8ae1ce502715f80960ff1e78a03aa0cc6a3e3d2812fb632cbbb95e846062db7ad14050d74fda3beb736d3ad8351383932512b5bd49602a49ffaad0d89603cbbbc0d123f5c14d9fde9b959a5c625cd9a76d964b252796aaf6099a5e37336cee805b96e2d054838e7a1240213391647e30653565154d8e8fa98ac367c43af9e8d9f9082a1db4d30db6c4d6172e7a8b59a6aeced38baed1ea1b5a4bec3824d7043c259783c162639f715c72f9cce10788cbf6cfcc7ffb80f48484a7040398592c7fbccc3a65728ac8dc55bf9679c3a1a0a084441e4b4b521ee18033be43deebb2a3bdba663f6dd23c0b6a5bbb6db646c06b3967ce380d2853d433dfa6bbc32cef0c5b5aed081e72a875883511a3fafc68721ec81649301cf7cc5b259d439b6ee7f73f08e9d1eb0b0a8fc3ce1e6f019d5150be346f2758a02bb48520b222790240a3bd0be37c4a0b0d56ac40f4c02430fb6c0f57c9760367c0ab247ef8232b43a1cddc39c127637e6a7e137574371430c6233249c7be8c16ef7d1b55384387ae01acac0bb8b1dd1b64e71556dc5239502a533a8a694e5d5e8724f6893fd4e3e6c464d15002745c7addcebadb41d21bce9116e99c6da2449143e649b5ab8ca6c728e64d5fff29631fca14d369f06e6b2ffb5d7f3c66246b443c8f31666743000a6860ce495c8638782d69e6b934fa9924ac8e675a6cb053a5bb8a53b8ba5e2375701ea4d0e3c9289efb22c7d274166656d3921321cde7c9aee09be26b0565467df90bb744f92352295ff3745e22ffafb3049e2772b7f2132e4c086e5a79f4bd6d98551ffea0becb0d93f9e484218ec5eef8229ccfcf36690e079686e474ddd1cff497a3b5302629512b9879f4d1724a52085f003bd3e9cfd47d9e8e23802772eb6665bac87dc71e793f314de29e8fa299535fe27605921c3e6cddbac72e7b67962694936f68ff029ab5ba87a8555bf1a77c459c7a63872af3a1b2599983d072afa833e1659da02fab2461d44c66f0215dfa5f4afdee1ebdfb2375f4c375b29d6706e6100031e75462e90dc85b6084dcb302719c1457421975d322dc2acead63a6c17efa6378f12400fc0e82c506bbb988dd28c59b7aac1b4d34015e27b6547b54b52d1ba0be8ef64ccca1e3bd76f84a4c5afacabcfc71607c4cb5d2bd0ad3c276a7eeb113d304add838dd369603d81137ef4eda0ca3ae7e557f1653fd3455d56568eb4d6d1c3098f6ae5bfd1e3c1d60374051dfd7ee96d3e530316a9fe39aff8e74b9f7a1cd638faf56f669ca5a00f83c30b0a4f98352207fb5413d293eecfd8a7d4f8c0c1847045f87d449227696707c1d67ee3333a5aad31de0bba6f5749ffbb25a2ebe52967853d4da700d5ec14f07694c267e1ae26d62720933c1873c306581b07844da5117e6b9c927360a0ebb9a23d10f9ec8d9062cd11b56ca5acf3dce7d25ccfdf8de83663d8800c3a9a272cff45f673ae28011aa9664fb5c4cb722e017104dd4f1cdb7f6c2ccd26c710cb6d9f38f9a7a79a8adb459f56837cace5ae795f0134fd984be4c82ce9e042050f935f5a495589f2e8a6a7c8e509175badae0ce503621f65148c4fa756efdef9ddd31eeae0badb1df94e844621e4b38ba3ea2f3990e51cbbd0d4efb090eabd88bc9c51886d3ad8c20e57e476612d6033f9c390c5bd9b100fba26cc22b6c0de2115cd3adc980c8da050924c565c84413ca1c0cbb3e501fd15f23b17e8ada7db73be30cd1ac0dafe21168f63da582b33913eb01daccc4d0331626cac25dfc63bf9c1da9447a040bf16935fbbba0f68d46d8e7cfc27d2dcf68c482593ec224ee5ed21ea158b145a94adc927628d4c590e52b2d6203df4643198605dbb9aa7c69cb1979ce8440d1deb56b2687118de6b4b1664ad6ea9cf77cc36bef8e681040be8951cfef3f1938743bde9842a956afb5bff09314a337e4e6f38592a8689b4fc52916c8d6d60a0df4e3a75a29fce8b4b0d28e7a126d6d191200783d9b8a0b31495f8b91e5425c36279d97c0c7500535027d4539dc035321dca881434ca534d79e9e047bea6a438289e61cc5effd4c1184675a381512a80e8af9a129f63c5dd27ea2d078b7f6063e095d1e8ed0484b452cffde1085b008c342c92c3cd887fe6b57c2d92588562c888c3de2170c2b90b4c64a7aa04f581b8b7f81e3921efcd4b7f7b3538b11dae88736133117f102269c2bb8b865d5dd1b20266991ffc0a746b9ec39f25d9f7b90c1bc61fba211d7739f9eed5c3fe39ce6573886245308d15199723f023f194842db70b4cf3cf5a7ce535aaff7e20f20720f6d9d22f4ba03fa66a6a9f0ce992e78d75e3a0d5e7732e217ab7e257c7af6f72935d8b9c58a982ae3c16518eaff1924c294b731777dcb12517f5ce44c03b32c07985ff3ac7496444879ef7cfcb6c7eee011124a0943b963383caace6395db6d2eede8784ed52429db5b73429ad4530472d076111cb49afe940b412c53b0e40c9b7b639f074b835729d475294431696412562aab6f13dce8ab4976bcb9f72dd940823a775468956c5b01781b8274f360c7dfd6b552d00bcffdf0f1351397951510b9bb0e37dd2a40571d90a47987a80b444d3880aa67b5cdb5dca807e1f8d10d5beb7f5686a011b40d8251b1f6eaad02126367c53934e09b275ff91e37e36222100ae61d9cd06f88ccaea54ec1bf8a76a8c775ce35fc879a170bcd07b40367da65934ca7fc7818fd49182d446f7db7311eee814eb6214ab1fa947c2cdf9cd407cd9e42d2b82117be7cf73e49c87769a815e66ecf8a64faf4a72af9c8310ffd155edf151c4529a219e7250058e5d822fb3dc1b4e889959c68ab687d4b3a8f238ae7db8c7287c6eaf7e67466f2e7555c50824921611ba1dfba3ac143c7e8317705e46c3e89eba4679c8205c8aac36a9f8062e3bf788d1ed0644116b9f5c6d0e8cc9569a9a6d572d0130589101c82be2d3aa28d525b6e2a22be20966568d06ef9b251cbdbc0d8f26e110d0f1d59e8eb61ddb2fa1ad1a5c8e98f8ecd966e95c07c05d2b623b0f3da6ae425c86562788bf71b87d7332f7b20cd85addd9f51792ec7336b2aae5f57ecf6a2b418e5c84e54f873bba54c90f7a851f639e042b134c10b21cec828229e39c2b2f6d10bfa26e4d644d6ea5bdc91a8c5851efc23454ec417a39ec5aab1d0efb3fce9cf0061ca3a1112b0b766f2eaa062d472fd8430541938393243bc58db95dbfd226c1f39054eb21460f8331163e4cbefc591703b3c1d40e2e27692bc81a36b13b267ac94320c400601d9a785752a80f67a5421b641dd1d1a8e081594494dc215a567c3eca3b30573b6afc0fc9db2b9c4db2b6e866c765b5ebf1d53374661c7156c3884363d614ee693c53cdd4d7607b2f0c62c5dfab734c8fc81b36a358e01819c5d7acf53f054b6291a6e9ec4969b1947df498dc36dbd9925620862f54c97dd3f5e3317738589f40638573e45a859a6fb206f8271d2cbdc8cb6f3d404f503e8c3e6b947f759bb5db3eec04a677cfc1199a4e66d55aa8</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>-日记</tag>
       </tags>
   </entry>
   <entry>
@@ -514,22 +530,6 @@ hexo d
 ]]></content>
       <tags>
         <tag>-hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>日记</title>
-    <url>/2020/11/07/%E6%97%A5%E8%AE%B0/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="6c41105859e5f71a9d93c0146fa1f6ad48ff3d5365abbae105ef49759452974f">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af926707dcb3208de68be598dee4ec8475f6902f2c747bc2548031bf4317b7a50abdaba46fdb31ebb36740088aa88f01d3d6bd221b0bfddf506264975f9c63fb0fe41f2ce5e1ed1167472b9ae054615b4f4a37d15917b0fc86a9a4739dc7473d79699070789c9d3deaafbd54353d84e8945615fdad0773a76bc888df19ef3aa8f6a10a909105086127059c85ab690c58357dcfb5ddc853dc3f7c59b1285449d992c06add5233f9367a7ded8e8972107d3026e5ed158f9e3837d3a5cc31f269079d378865a8e5d4ded7ec278ee1087c5e77b7a26e46f070bfd0bc7463b235b470e8a366140856d0c52590a53daa2bcb4d7237e1c583c78175944e8dba999f973e90b174c2c323c3227640842c4c5793225371d32d76b6164c4c7554be74444be92f307762e38aa7e17f8aa72e8d2950376908102ccd8b63fbefb03ed309a01efa657f4d20ce505775892f6355d302a7cd9d8f83ca76b6bd3c8d10fb8f2dc8f67dcc007d629b0efab86525f36b88ce9ba2a5b7af99f6f9c5e70350c5c4a7218d701708e948dad9d8306d29a55289ae640af121f635fe7fb81ade83ac9ccda2aaf4993523b47d111776c6ff3774a5080ec0c3e8aa6544ce9a40dd96a513857b876f86d76f6d445ddd982ecb0658fb0d6f102029f9348ef24b1d9807798ea1cbb76e1e13d177eb363f1d4217bc721ae0fa980672b9b054794189603770a4549be4229d0fc84111f7dccc4f1ba8b354f0be6cc94901719bbea14ec7f70376c3c16a7e5a322ad103603fd29baf351a337d397e4462b22887b047d71f66c22f4838a7129645be72331f139e99a8bbe85400667daebe8cf03713ac6cd1b4a19ca95fd6b424ab36cd47153af97c4c469893ad3acce3bf8c1fd9e5bbca38fc8aab80f6141b1fe071f458a93d6d178b7e9421aa5e07a6cadfde4e0b0c9ee66f014a3218524f79f1c1547df14ec752270cae06b444af322c0a4d3e31215c16954ee6f3ca15d827faa647d2d199af56c98962a5b11363ed9e2ffd1ce4dee9394906ab9a9084a1f2ce493992e9394cf63b1cef3aef6478dc267869c9feae32beb92f7c7e3f647b8076bf74631b56ec8eef79fd50acda7b8c4932770b0e736c23b59316b40fbfd264e535a03127443c8d62f239b6ac5ef09738e5ba202402441f66965f361fe35bd61925d4a0b3a9e977c7ee95fa10568249c25767445376a20ba3fff77e03da209ef945da68758305aefbf0f12ee2c3b83f814299d8ae1ce502715f80960ff1e78a03aa0cc6a3e3d2812fb632cbbb95e846062db7ad14050d74fda3beb736d3ad8351383932512b5bd49602a49ffaad0d89603cbbbc0d123f5c14d9fde9b959a5c625cd9a76d964b252796aaf6099a5e37336cee805b96e2d054838e7a1240213391647e30653565154d8e8fa98ac367c43af9e8d9f9082a1db4d30db6c4d6172e7a8b59a6aeced38baed1ea1b5a4bec3824d7043c259783c162639f715c72f9cce10788cbf6cfcc7ffb80f48484a7040398592c7fbccc3a65728ac8dc55bf9679c3a1a0a084441e4b4b521ee18033be43deebb2a3bdba663f6dd23c0b6a5bbb6db646c06b3967ce380d2853d433dfa6bbc32cef0c5b5aed081e72a875883511a3fafc68721ec81649301cf7cc5b259d439b6ee7f73f08e9d1eb0b0a8fc3ce1e6f019d5150be346f2758a02bb48520b222790240a3bd0be37c4a0b0d56ac40f4c02430fb6c0f57c9760367c0ab247ef8232b43a1cddc39c127637e6a7e137574371430c6233249c7be8c16ef7d1b55384387ae01acac0bb8b1dd1b64e71556dc5239502a533a8a694e5d5e8724f6893fd4e3e6c464d15002745c7addcebadb41d21bce9116e99c6da2449143e649b5ab8ca6c728e64d5fff29631fca14d369f06e6b2ffb5d7f3c66246b443c8f31666743000a6860ce495c8638782d69e6b934fa9924ac8e675a6cb053a5bb8a53b8ba5e2375701ea4d0e3c9289efb22c7d274166656d3921321cde7c9aee09be26b0565467df90bb744f92352295ff3745e22ffafb3049e2772b7f2132e4c086e5a79f4bd6d98551ffea0becb0d93f9e484218ec5eef8229ccfcf36690e079686e474ddd1cff497a3b5302629512b9879f4d1724a52085f003bd3e9cfd47d9e8e23802772eb6665bac87dc71e793f314de29e8fa299535fe27605921c3e6cddbac72e7b67962694936f68ff029ab5ba87a8555bf1a77c459c7a63872af3a1b2599983d072afa833e1659da02fab2461d44c66f0215dfa5f4afdee1ebdfb2375f4c375b29d6706e6100031e75462e90dc85b6084dcb302719c1457421975d322dc2acead63a6c17efa6378f12400fc0e82c506bbb988dd28c59b7aac1b4d34015e27b6547b54b52d1ba0be8ef64ccca1e3bd76f84a4c5afacabcfc71607c4cb5d2bd0ad3c276a7eeb113d304add838dd369603d81137ef4eda0ca3ae7e557f1653fd3455d56568eb4d6d1c3098f6ae5bfd1e3c1d60374051dfd7ee96d3e530316a9fe39aff8e74b9f7a1cd638faf56f669ca5a00f83c30b0a4f98352207fb5413d293eecfd8a7d4f8c0c1847045f87d449227696707c1d67ee3333a5aad31de0bba6f5749ffbb25a2ebe52967853d4da700d5ec14f07694c267e1ae26d62720933c1873c306581b07844da5117e6b9c927360a0ebb9a23d10f9ec8d9062cd11b56ca5acf3dce7d25ccfdf8de83663d8800c3a9a272cff45f673ae28011aa9664fb5c4cb722e017104dd4f1cdb7f6c2ccd26c710cb6d9f38f9a7a79a8adb459f56837cace5ae795f0134fd984be4c82ce9e042050f935f5a495589f2e8a6a7c8e509175badae0ce503621f65148c4fa756efdef9ddd31eeae0badb1df94e844621e4b38ba3ea2f3990e51cbbd0d4efb090eabd88bc9c51886d3ad8c20e57e476612d6033f9c390c5bd9b100fba26cc22b6c0de2115cd3adc980c8da050924c565c84413ca1c0cbb3e501fd15f23b17e8ada7db73be30cd1ac0dafe21168f63da582b33913eb01daccc4d0331626cac25dfc63bf9c1da9447a040bf16935fbbba0f68d46d8e7cfc27d2dcf68c482593ec224ee5ed21ea158b145a94adc927628d4c590e52b2d6203df4643198605dbb9aa7c69cb1979ce8440d1deb56b2687118de6b4b1664ad6ea9cf77cc36bef8e681040be8951cfef3f1938743bde9842a956afb5bff09314a337e4e6f38592a8689b4fc52916c8d6d60a0df4e3a75a29fce8b4b0d28e7a126d6d191200783d9b8a0b31495f8b91e5425c36279d97c0c7500535027d4539dc035321dca881434ca534d79e9e047bea6a438289e61cc5effd4c1184675a381512a80e8af9a129f63c5dd27ea2d078b7f6063e095d1e8ed0484b452cffde1085b008c342c92c3cd887fe6b57c2d92588562c888c3de2170c2b90b4c64a7aa04f581b8b7f81e3921efcd4b7f7b3538b11dae88736133117f102269c2bb8b865d5dd1b20266991ffc0a746b9ec39f25d9f7b90c1bc61fba211d7739f9eed5c3fe39ce6573886245308d15199723f023f194842db70b4cf3cf5a7ce535aaff7e20f20720f6d9d22f4ba03fa66a6a9f0ce992e78d75e3a0d5e7732e217ab7e257c7af6f72935d8b9c58a982ae3c16518eaff1924c294b731777dcb12517f5ce44c03b32c07985ff3ac7496444879ef7cfcb6c7eee011124a0943b963383caace6395db6d2eede8784ed52429db5b73429ad4530472d076111cb49afe940b412c53b0e40c9b7b639f074b835729d475294431696412562aab6f13dce8ab4976bcb9f72dd940823a775468956c5b01781b8274f360c7dfd6b552d00bcffdf0f1351397951510b9bb0e37dd2a40571d90a47987a80b444d3880aa67b5cdb5dca807e1f8d10d5beb7f5686a011b40d8251b1f6eaad02126367c53934e09b275ff91e37e36222100ae61d9cd06f88ccaea54ec1bf8a76a8c775ce35fc879a170bcd07b40367da65934ca7fc7818fd49182d446f7db7311eee814eb6214ab1fa947c2cdf9cd407cd9e42d2b82117be7cf73e49c87769a815e66ecf8a64faf4a72af9c8310ffd155edf151c4529a219e7250058e5d822fb3dc1b4e889959c68ab687d4b3a8f238ae7db8c7287c6eaf7e67466f2e7555c50824921611ba1dfba3ac143c7e8317705e46c3e89eba4679c8205c8aac36a9f8062e3bf788d1ed0644116b9f5c6d0e8cc9569a9a6d572d0130589101c82be2d3aa28d525b6e2a22be20966568d06ef9b251cbdbc0d8f26e110d0f1d59e8eb61ddb2fa1ad1a5c8e98f8ecd966e95c07c05d2b623b0f3da6ae425c86562788bf71b87d7332f7b20cd85addd9f51792ec7336b2aae5f57ecf6a2b418e5c84e54f873bba54c90f7a851f639e042b134c10b21cec828229e39c2b2f6d10bfa26e4d644d6ea5bdc91a8c5851efc23454ec417a39ec5aab1d0efb3fce9cf0061ca3a1112b0b766f2eaa062d472fd8430541938393243bc58db95dbfd226c1f39054eb21460f8331163e4cbefc591703b3c1d40e2e27692bc81a36b13b267ac94320c400601d9a785752a80f67a5421b641dd1d1a8e081594494dc215a567c3eca3b30573b6afc0fc9db2b9c4db2b6e866c765b5ebf1d53374661c7156c3884363d614ee693c53cdd4d7607b2f0c62c5dfab734c8fc81b36a358e01819c5d7acf53f054b6291a6e9ec4969b1947df498dc36dbd9925620862f54c97dd3f5e3317738589f40638573e45a859a6fb206f8271d2cbdc8cb6f3d404f503e8c3e6b947f759bb5db3eec04a677cfc1199a4e66d55aa8</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>-日记</tag>
       </tags>
   </entry>
   <entry>
@@ -615,16 +615,6 @@ jupyter notebook
       </tags>
   </entry>
   <entry>
-    <title>编译器</title>
-    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
-    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：  <a id="more"></a>)<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-编译器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>训练初稿</title>
     <url>/2020/09/24/%E8%AE%AD%E7%BB%83%E5%88%9D%E7%A8%BF/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -638,6 +628,16 @@ jupyter notebook
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编译器</title>
+    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
+    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：  <a id="more"></a>)<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-编译器</tag>
       </tags>
   </entry>
   <entry>
