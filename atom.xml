@@ -6,7 +6,7 @@
   <link href="https://zzygeo.cn/atom.xml" rel="self"/>
   
   <link href="https://zzygeo.cn/"/>
-  <updated>2021-02-27T06:35:19.211Z</updated>
+  <updated>2021-02-27T10:14:48.957Z</updated>
   <id>https://zzygeo.cn/</id>
   
   <author>
@@ -21,16 +21,12 @@
     <link href="https://zzygeo.cn/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
     <id>https://zzygeo.cn/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</id>
     <published>2021-01-20T08:30:55.000Z</published>
-    <updated>2021-02-27T06:35:19.211Z</updated>
+    <updated>2021-02-27T10:14:48.957Z</updated>
     
-    <content type="html"><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p><h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p><h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p><p>到此就设置完成了！</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。<br><a id="more"></a>)</p><h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p><h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p><p>到此就设置完成了！</p><hr>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。&lt;/p&gt;
-&lt;h1 id=&quot;1-购买域名&quot;&gt;&lt;a href=&quot;#1-购买域名&quot; class=&quot;headerlink&quot; title=&quot;1.购买域名&quot;&gt;&lt;/a&gt;1.购</summary>
-      
+    <summary type="html">&lt;p&gt;哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。&lt;br&gt;</summary>
     
     
     
@@ -63,21 +59,12 @@
     <link href="https://zzygeo.cn/2020/12/19/CPP/"/>
     <id>https://zzygeo.cn/2020/12/19/CPP/</id>
     <published>2020-12-19T10:01:10.000Z</published>
-    <updated>2021-02-27T06:35:19.211Z</updated>
+    <updated>2021-02-27T10:14:09.357Z</updated>
     
-    <content type="html"><![CDATA[<p>写一些觉得能用上的C++代码：</p><p>将文本的数字读成数组：  </p><pre><code>#include&lt;iostream&gt;#include&lt;fstream&gt;using namespace std;int main()&#123;    const int txtRow = 201;    const int txtColumn = 8;    float txtData[txtRow][txtColumn];    ifstream infile;    infile.open(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;);    for (int i = 0; i &lt; txtRow; i++)    &#123;        for (int j = 0; j &lt; txtColumn; j++)        &#123;            infile &gt;&gt; txtData[i][j];        &#125;    &#125;    infile.close();return 0;&#125;    </code></pre><p>将文本的数字读成矩阵，需要第三方库Eigen。  </p><pre><code>#include&lt;iostream&gt;#include&lt;Eigen/Dense&gt;#include&lt;fstream&gt;#include&lt;cmath&gt;using namespace std;using namespace Eigen;MatrixXd ReadData(istream&amp; data, int a, int b)&#123;    MatrixXd m_matrix(a, b);    for (int i = 0; i &lt; a; i++)    &#123;        for (int j = 0; j &lt; b; j++)        &#123;            data &gt;&gt; m_matrix(i,j);        &#125;    &#125;    return m_matrix;&#125;int main()&#123;    const int row = 201;    const int column = 8;    ifstream infile(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;, ios::in);    if (!infile)    &#123;        return 0;    &#125;    MatrixXd m_matrix = ReadData(infile, row, column);return 0;&#125;</code></pre><p>冒泡排序：</p><pre><code>#include&lt;iostream&gt;#include&lt;vector&gt;using namespace std;void display(vector&lt;int&gt; vec)&#123;    for (int i = 0; i &lt; vec.size(); ++i)        cout &lt;&lt; vec[i] &lt;&lt; &#39; &#39;;    cout &lt;&lt; endl;&#125;void swap(int&amp; val1, int&amp; val2)&#123;    int temp = val1;    val1 = val2;    val2 = temp;&#125;void bubble_sort(vector&lt;int&gt;&amp; vec)&#123;    for (int ix = 0; ix &lt; vec.size(); ++ix)        for (int jx = ix + 1; jx &lt; vec.size(); ++jx)            if (vec[ix] &gt; vec[jx])                swap(vec[ix], vec[jx]);&#125;int main()&#123;    int al[8] = &#123; 2,56,4,5,13,7,1,24 &#125;;    vector&lt;int&gt; vec(al, al + 8);    cout &lt;&lt; &quot;before sort:  &quot;;    display(vec);    bubble_sort(vec);    cout &lt;&lt; &quot;after sort: &quot;;    display(vec);    return 0;&#125;</code></pre><p>关键在于swap 和 bubble_sort时，不仅要传值，也要传址，不然只是其值被复制了一份，成为了参数的局部性定义，当运行结束也就从“程序堆栈”里释放掉了，并没有关联起来。</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>写一些觉得能用上的C++代码：<br><a id="more"></a>)<br>将文本的数字读成数组：  </p><pre><code>#include&lt;iostream&gt;#include&lt;fstream&gt;using namespace std;int main()&#123;    const int txtRow = 201;    const int txtColumn = 8;    float txtData[txtRow][txtColumn];    ifstream infile;    infile.open(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;);    for (int i = 0; i &lt; txtRow; i++)    &#123;        for (int j = 0; j &lt; txtColumn; j++)        &#123;            infile &gt;&gt; txtData[i][j];        &#125;    &#125;    infile.close();return 0;&#125;    </code></pre><p>将文本的数字读成矩阵，需要第三方库Eigen。  </p><pre><code>#include&lt;iostream&gt;#include&lt;Eigen/Dense&gt;#include&lt;fstream&gt;#include&lt;cmath&gt;using namespace std;using namespace Eigen;MatrixXd ReadData(istream&amp; data, int a, int b)&#123;    MatrixXd m_matrix(a, b);    for (int i = 0; i &lt; a; i++)    &#123;        for (int j = 0; j &lt; b; j++)        &#123;            data &gt;&gt; m_matrix(i,j);        &#125;    &#125;    return m_matrix;&#125;int main()&#123;    const int row = 201;    const int column = 8;    ifstream infile(&quot;C:\\APP\\C\\Project2\\测试数据.txt&quot;, ios::in);    if (!infile)    &#123;        return 0;    &#125;    MatrixXd m_matrix = ReadData(infile, row, column);return 0;&#125;</code></pre><p>冒泡排序：</p><pre><code>#include&lt;iostream&gt;#include&lt;vector&gt;using namespace std;void display(vector&lt;int&gt; vec)&#123;    for (int i = 0; i &lt; vec.size(); ++i)        cout &lt;&lt; vec[i] &lt;&lt; &#39; &#39;;    cout &lt;&lt; endl;&#125;void swap(int&amp; val1, int&amp; val2)&#123;    int temp = val1;    val1 = val2;    val2 = temp;&#125;void bubble_sort(vector&lt;int&gt;&amp; vec)&#123;    for (int ix = 0; ix &lt; vec.size(); ++ix)        for (int jx = ix + 1; jx &lt; vec.size(); ++jx)            if (vec[ix] &gt; vec[jx])                swap(vec[ix], vec[jx]);&#125;int main()&#123;    int al[8] = &#123; 2,56,4,5,13,7,1,24 &#125;;    vector&lt;int&gt; vec(al, al + 8);    cout &lt;&lt; &quot;before sort:  &quot;;    display(vec);    bubble_sort(vec);    cout &lt;&lt; &quot;after sort: &quot;;    display(vec);    return 0;&#125;</code></pre><p>关键在于swap 和 bubble_sort时，不仅要传值，也要传址，不然只是其值被复制了一份，成为了参数的局部性定义，当运行结束也就从“程序堆栈”里释放掉了，并没有关联起来。</p><hr>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;写一些觉得能用上的C++代码：&lt;/p&gt;
-&lt;p&gt;将文本的数字读成数组：  &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#include&amp;lt;iostream&amp;gt;
-#include&amp;lt;fstream&amp;gt;
-using namespace std;
-int main()
-&amp;#12</summary>
-      
+    <summary type="html">&lt;p&gt;写一些觉得能用上的C++代码：&lt;br&gt;</summary>
     
     
     
@@ -209,15 +196,12 @@ int main()
     <link href="https://zzygeo.cn/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
     <id>https://zzygeo.cn/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</id>
     <published>2020-10-02T05:27:01.000Z</published>
-    <updated>2021-02-27T06:35:19.211Z</updated>
+    <updated>2021-02-27T10:15:12.482Z</updated>
     
-    <content type="html"><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p><p>点进去就可以更改用户名和密码了</p><hr>]]></content>
+    <content type="html"><![CDATA[<p>在windows搜索栏输入：控制面板<a id="more"></a>)<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p><p>点进去就可以更改用户名和密码了</p><hr>]]></content>
     
     
-      
-      
-    <summary type="html">&lt;p&gt;在windows搜索栏输入：控制面板&lt;br&gt;&lt;img src=&quot;/blog_img/hexo d时错误用户名和密码解决办法/1.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;然后点击：&lt;br&gt;&lt;img src=&quot;/blog_img/hexo d时错误用户名和密码解决办法/2.png&quot; a</summary>
-      
+    <summary type="html">&lt;p&gt;在windows搜索栏输入：控制面板</summary>
     
     
     
