@@ -109,21 +109,25 @@ int main()
     <content><![CDATA[<font color= ff size=4 face="">
 
 <h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
-<p>3.获取PCL源码包</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。<br><a id="more"></a><br>3.获取PCL源码包</p>
 <p>4.安装Visual studio 2019编译器</p>
 <p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
+<hr>
 <h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a></p>
+<hr>
 <h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
 <p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
 <p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
 <p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
 <p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
+<hr>
 <h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
 <p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<hr>
 <h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
 <p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
 <p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<hr>
 <h1 id="6-配置"><a href="#6-配置" class="headerlink" title="6.配置"></a>6.配置</h1><p>打开visual studio，新建一个空项目如图：<br><img src="/blog_img/PCL配置/7.jpg" alt=""></p>
 <p>在release下创建属性表（如果是DEBUG版本请在DEBUG下创建）<br><img src="/blog_img/PCL配置/8.png" alt=""></p>
 <p>切换到解决方案资源管理器，右键-添加-新建项<br><img src="/blog_img/PCL配置/9.png" alt=""></p>
@@ -136,6 +140,7 @@ int main()
 <p>在项目属性表（Project_one）和release下创建得属性表（test_one）中把所有选项里得SDL检查全改成否，如下图：</p>
 <p><img src="/blog_img/PCL配置/13.jpg" alt=""></p>
 <p><img src="/blog_img/PCL配置/14.jpg" alt=""></p>
+<hr>
 <h1 id="7-附加依赖项"><a href="#7-附加依赖项" class="headerlink" title="7.附加依赖项"></a>7.附加依赖项</h1><p>将PCL 1.11.0\3rdParty\VTK\lib和PCL 1.11.0\lib这两个文件夹下的lib文件的release版本添加到附加依赖项中（DEBUG版本添加DEBUG类型文件）</p>
 <p><img src="/blog_img/PCL配置/15.png" alt=""></p>
 <p>文件名称我已经归类好了</p>
@@ -202,10 +207,32 @@ int main()
       </tags>
   </entry>
   <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<hr>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60/">下载地址</a></p>
+<hr>
+<h1 id="4-视频字幕下载"><a href="#4-视频字幕下载" class="headerlink" title="4.视频字幕下载"></a>4.视频字幕下载</h1><p><a href="https://www.findyoutube.net/">下载地址</a><br>版权限制，目前下载为VTT格式，需要在Subtitle Edit里将VTT转为SRT格式。</p>
+<hr>
+<h1 id="5-Subtitle-Edit-vvt-srt"><a href="#5-Subtitle-Edit-vvt-srt" class="headerlink" title="5.Subtitle Edit(vvt-srt)"></a>5.Subtitle Edit(vvt-srt)</h1><p><a href="https://www.nikse.dk/subtitleedit/">下载地址</a><br>可以VTT2SRT SRT2VTT,有强大的字幕编辑功能。</p>
+<hr>
+<h1 id="6-Arctime-制作内嵌字幕视频"><a href="#6-Arctime-制作内嵌字幕视频" class="headerlink" title="6.Arctime(制作内嵌字幕视频)"></a>6.Arctime(制作内嵌字幕视频)</h1><p><a href="https://arctime.org/">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
     <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。  </p>
-<p>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
+    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。<br><a id="more"></a><br>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
 <p>首先我是从这篇<a href="https://blog.csdn.net/weixin_37166398/article/details/101422239?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">博客</a>里查到了我的ip，然后ping了查到的ip，然后在system32\drives\etc\hosts里添加了   </p>
 <pre><code>IP gitee.com
 </code></pre><p>然而这并没有继续运行成功。<br>然后我有尝试<br>1.管理员身份运行cmd<br>2.输入 </p>
@@ -224,35 +251,6 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
-    <title>github设置自己的域名</title>
-    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p>
-<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
-<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
-<p>到此就设置完成了！</p>
-<hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60/">下载地址</a></p>
-<h1 id="4-视频字幕下载"><a href="#4-视频字幕下载" class="headerlink" title="4.视频字幕下载"></a>4.视频字幕下载</h1><p><a href="https://www.findyoutube.net/">下载地址</a><br>版权限制，目前下载为VTT格式，需要在Subtitle Edit里将VTT转为SRT格式。</p>
-<h1 id="5-Subtitle-Edit-vvt-srt"><a href="#5-Subtitle-Edit-vvt-srt" class="headerlink" title="5.Subtitle Edit(vvt-srt)"></a>5.Subtitle Edit(vvt-srt)</h1><p><a href="https://www.nikse.dk/subtitleedit/">下载地址</a><br>可以VTT2SRT SRT2VTT,有强大的字幕编辑功能。</p>
-<h1 id="6-Arctime-制作内嵌字幕视频"><a href="#6-Arctime-制作内嵌字幕视频" class="headerlink" title="6.Arctime(制作内嵌字幕视频)"></a>6.Arctime(制作内嵌字幕视频)</h1><p><a href="https://arctime.org/">下载地址</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Youbute</category>
-      </categories>
-      <tags>
-        <tag>-Youtube</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo d 出现错误的用户名和密码的解决办法</title>
     <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
@@ -264,6 +262,16 @@ git config --global --unset https.proxy
       </categories>
   </entry>
   <entry>
+    <title>github设置自己的域名</title>
+    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p>
+<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
+<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
+<p>到此就设置完成了！</p>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>markdown语法</title>
     <url>/2020/09/24/markdown%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h1 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h1><pre><code># 一级标题
@@ -273,11 +281,13 @@ git config --global --unset https.proxy
 ##### 五级标题
 ###### 六级标题 
 </code></pre><p>注：# 和「标题文字」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。</p>
+<hr>
 <h1 id="2-粗体、斜体、删除线"><a href="#2-粗体、斜体、删除线" class="headerlink" title="2. 粗体、斜体、删除线"></a>2. 粗体、斜体、删除线</h1><pre><code>*我是斜体*
 **我是粗体**
 ***我是粗斜体***
 ~~我是删除线~~
 </code></pre><p>显示效果：<br><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是粗斜体</em></strong><br><del>我是删除线</del><br><a id="more"></a></p>
+<hr>
 <h1 id="3-表格"><a href="#3-表格" class="headerlink" title="3. 表格"></a>3. 表格</h1><pre><code>| 学号 | 姓名 | 分数|
 | :- | -: | :-: |
 | 小明 | 男 | 75 |
@@ -312,6 +322,7 @@ git config --global --unset https.proxy
 </tbody>
 </table>
 </div>
+<hr>
 <h1 id="4-有序列表"><a href="#4-有序列表" class="headerlink" title="4. 有序列表"></a>4. 有序列表</h1><pre><code>1. 文本1
 2. 文本2
 3. 文本3
@@ -321,6 +332,7 @@ git config --global --unset https.proxy
 <li>文本2</li>
 <li>文本3</li>
 </ol>
+<hr>
 <h1 id="5-无序列表"><a href="#5-无序列表" class="headerlink" title="5. 无序列表"></a>5. 无序列表</h1><pre><code>- 文本1
 - 文本2
 - 文本3
@@ -330,13 +342,18 @@ git config --global --unset https.proxy
 <li>文本2</li>
 <li>文本3</li>
 </ul>
+<hr>
 <h1 id="6-行内代码块"><a href="#6-行内代码块" class="headerlink" title="6. 行内代码块"></a>6. 行内代码块</h1><pre><code>C语言里的函数 `scanf()` 怎么使用？
 </code></pre><p>显示效果：<br>C语言里的函数 <code>scanf()</code> 怎么使用？</p>
+<hr>
 <h1 id="7-分割线"><a href="#7-分割线" class="headerlink" title="7. 分割线"></a>7. 分割线</h1><h2 id="可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。"><a href="#可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。" class="headerlink" title="可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。  "></a>可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。  </h2><pre><code>___
 </code></pre><h2 id="显示效果："><a href="#显示效果：" class="headerlink" title="显示效果："></a>显示效果：</h2><hr>
+<hr>
 <h1 id="8-超链接"><a href="#8-超链接" class="headerlink" title="8. 超链接"></a>8. 超链接</h1><p>语法格式为<a href="链接地址" title="链接标题">链接文字</a>，[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性为可选。title属性的效果是鼠标悬停在链接上会出现指定的title文字。链接地址与链接标题前有一个空格。<br>    欢迎来到<a href="http://blog.csdn.net/china_jeffery" title="zzygeo">多加香菜的博客</a></p>
 <p>显示效果：<br>欢迎来到<a href="http://blog.csdn.net/china_jeffery" title="zzygeo">多加香菜的博客</a></p>
+<hr>
 <h1 id="9-图片"><a href="#9-图片" class="headerlink" title="9. 图片"></a>9. 图片</h1><p>语法格式为<img src="图片地址" alt="图片Alt" title="图片Title">，图片Alt的意思是如果图片因为某些原因不能显示，就用定义的图片Alt文字来代替图片。 图片Title则和超链接中的链接标题一样，表示鼠标悬停与图片上时出现的文字。 图片Alt 和 图片Titlee 都是可选的。</p>
+<hr>
 <h1 id="10-引用"><a href="#10-引用" class="headerlink" title="10. 引用"></a>10. 引用</h1><pre><code>&gt; 一级引用
 &gt;&gt; 二级引用
 &gt;&gt;&gt; 三级引用
@@ -354,14 +371,16 @@ git config --global --unset https.proxy
 </blockquote>
 </blockquote>
 </blockquote>
+<hr>
 <h1 id="11-空格"><a href="#11-空格" class="headerlink" title="11. 空格"></a>11. 空格</h1><pre><code>你好&amp;nbsp;&amp;nbsp;&amp;nbsp;jeffery
 </code></pre><p>显示效果<br>你好&nbsp;&nbsp;&nbsp;zzy</p>
+<hr>
 <h1 id="12-字体、字号、颜色"><a href="#12-字体、字号、颜色" class="headerlink" title="12. 字体、字号、颜色"></a>12. 字体、字号、颜色</h1><pre><code>&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;
 &lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;/font&gt;
 &lt;font color=#0099ff size=23 face=&quot;黑体&quot;&gt;我是黑体，颜色#0099ff 字号23&lt;/font&gt;
 </code></pre><p><font face="黑体">我是黑体字</font>  </p>
 <p><font face="微软雅黑">我是微软雅黑</font>  </p>
-<p><font color=#0099ff size=23 face="黑体">我是黑体，颜色#0099ff 字号23</font>&lt;/p&gt;</p>
+<p><font color=#00 size=23 face="黑体">我是黑体，颜色#0099ff 字号23</font>&lt;/p&gt;</p>
 <hr>
 ]]></content>
       <tags>
@@ -371,29 +390,41 @@ git config --global --unset https.proxy
   <entry>
     <title>pcl+vs+cmake编译</title>
     <url>/2020/12/27/pcl-vs-cmake%E7%BC%96%E8%AF%91/</url>
-    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。</p>
+    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。<br><a id="more"></a></p>
 <h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
 <p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
 <p>3.安装Visual studio 2019编译器</p>
 <p>4.cmake<br><img src="/blog_img/PCL配置/17.png" alt="示意图"><br><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
 <p>其实源码包用不上，懒得改了，最复杂的方式就是源代码加第三方库进行配置，等我配置好了也会再一篇关于源码方式的配置。</p>
+<hr>
 <h1 id="2-链接"><a href="#2-链接" class="headerlink" title="2.链接"></a>2.链接</h1><p><a href="https://github.com/PointCloudLibrary/pcl/releases">pcl下载地址</a><br><a href="https://visualstudio.microsoft.com/zh-hans/downloads/">visual studio下载地址</a><br><a href="https://cmake.org/download/">cmake下载地址</a></p>
+<hr>
 <h1 id="3-安装事项"><a href="#3-安装事项" class="headerlink" title="3.安装事项"></a>3.安装事项</h1><p>为了方便配置，pcl安装目录尽量默认，不默认后续添加目录需要选择对应的位置。</p>
 <p>pcl安装请一定选择创建系统路径，visual studio和cmake安装位置随意，其他选项默认即可。</p>
 <p>pcl安装完成后，请把下载的pcd文件解压，如下图：<br><img src="/blog_img/PCL配置/2.jpg" alt=""></p>
 <p>将所有文件复制，安装到pcl下的BIN文件下<br><img src="/blog_img/PCL配置/3.jpg" alt=""></p>
 <p>检查pcl安装目录下的 3rdParty-OpenNI2是否只有一个安装包（我的是这样），这可能是事先安装过SDK的原因，请卸载了重新安装在OpenNI2下，安装完成如下图：<br><img src="/blog_img/PCL配置/4.jpg" alt=""></p>
 <p>cmake 安装请选择添加到系统路径，没选的话也可以自己手动添加，添加的方式为cmake目录下bin文件  比如C:\APP\Cmake\bin这样的形式。</p>
+<hr>
 <h1 id="4-关于Visual-studio安装项目"><a href="#4-关于Visual-studio安装项目" class="headerlink" title="4.关于Visual studio安装项目"></a>4.关于Visual studio安装项目</h1><p>我安装了这些负载</p>
 <p><img src="/blog_img/PCL配置/5.png" alt=""></p>
+<hr>
 <h1 id="5-环境配置"><a href="#5-环境配置" class="headerlink" title="5.环境配置"></a>5.环境配置</h1><p>右键我的电脑——高级系统设置-环境变量，在path选项下新建如下几项，根据你pcl安装的位置来：<br><img src="/blog_img/PCL配置/6.jpg" alt=""></p>
 <p>比如我的：<br>C:\Program Files\PCL 1.11.0\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Redist</p>
 <p>在系统变量下，配置如下图：<br><img src="/blog_img/PCL配置/6.png" alt=""><br>比如我的：<br>C:\Program Files\PCL 1.11.0\3rdParty\FLANN\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\OpenNI2\Tools<br>C:\Program Files\PCL 1.11.0\3rdParty\Qhull\bin<br>C:\Program Files\PCL 1.11.0\3rdParty\VTK\bin<br>C:\Program Files\PCL 1.11.0\bin</p>
+<hr>
 <h1 id="6-cmake编译"><a href="#6-cmake编译" class="headerlink" title="6.cmake编译"></a>6.cmake编译</h1><p>以管理员身份运行cmake-gui<br>在你想要的文件下创建一个名为example的文件夹，然后在此目录下创建一个source和cmake_bin文件，比如我的：</p>
 <p><img src="/blog_img/PCL配置/18.png" alt=""></p>
 <p>在source里面创建一个cpp文件和CMakeLists.txt文件。<br>CmakeLists.txt里写入以下内容：</p>
-<p>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)<br>project(test)<br>find_package(PCL 1.4 REQUIRED)<br>include_directories(${PCL_INCLUDE_DIRS})<br>link_directories(${PCL_LIBRARY_DIRS})<br>add_definitions(${PCL_DEFINITIONS})<br>add_executable (test test.cpp)<br>target_link_libraries (test ${PCL_LIBRARIES})</p>
-<p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
+<pre><code>cmake_minimum_required(VERSION 2.6 FATAL_ERROR)
+project(test)
+find_package(PCL 1.4 REQUIRED)
+include_directories($&#123;PCL_INCLUDE_DIRS&#125;)
+link_directories($&#123;PCL_LIBRARY_DIRS&#125;)  
+add_definitions($&#123;PCL_DEFINITIONS&#125;)
+add_executable (test test.cpp)
+target_link_libraries (test $&#123;PCL_LIBRARIES&#125;)
+</code></pre><p>其中这个test就是你创建的测试代码的名字，请保持一致，如果你换别的名字，请把txt文件的名字也一起改了。我的如下：<br><img src="/blog_img/PCL配置/19.png" alt=""></p>
 <p>测试代码请网上去找，我用的是上一篇文件里的（里面有个D盘文件的读取可能会报错，但只要能出彩色的那个图就算配置成功了）。</p>
 <p>跟着步骤添加<br><img src="/blog_img/PCL配置/20.png" alt=""></p>
 <p>点击Configure，选x64<br><img src="/blog_img/PCL配置/21.jpg" alt=""></p>
@@ -414,13 +445,13 @@ git config --global --unset https.proxy
   <entry>
     <title>关于入门博客的一些事</title>
     <url>/2020/09/24/%E5%85%B3%E4%BA%8E%E5%85%A5%E9%97%A8%E5%8D%9A%E5%AE%A2%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B/</url>
-    <content><![CDATA[<p>这算是我的第二个博客了，第一部署在Github上，都是基于hexo来搭建的，不过部署在在Github上有这样的问题：  </p>
+    <content><![CDATA[<p>这算是我的第二个博客了，第一部署在Github上，都是基于hexo来搭建的，不过部署在在Github上有这样的问题：<a id="more"></a>  </p>
 <ol>
 <li>上传到GitHub上很慢，毕竟是国外的服务器。  </li>
 <li>有时候Github会抽风，很多时候国内没法访问，必须得上梯子才能上去，还是很不方便的。  </li>
 </ol>
 <p>所以在用魔改butterfly主题后，直接给我hexo整崩了（主要还是太菜，看不懂大佬写的东西），在此非常感谢那些<strong>无名英雄</strong>，我们只是走在了别人走好的路上。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><!--more--></h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
 <hr>
 <p>这次选择的是比较简洁的yilia主题，开发者已经不再提供更新了，后续有基于yilia的plus版本以及各种进阶，在csdn直接就可以搜到。</p>
 <hr>
@@ -460,18 +491,23 @@ git config --global --unset https.proxy
     <title>新电脑上部署hexo</title>
     <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
     <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
+<a id="more"></a>
+<hr>
 <h1 id="2-拷贝源文件"><a href="#2-拷贝源文件" class="headerlink" title="2. 拷贝源文件"></a>2. 拷贝源文件</h1><p>将初始电脑上个人博客文件夹下这几个文件夹拷到当前新电脑的准备设置的博客路径下。</p>
 <pre><code>_config.yml
 package.json
 scaffolds/
 source/
 themes/
-</code></pre><h1 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h1><p>在 cmd 下输入下面指令安装 hexo:</p>
+</code></pre><hr>
+<h1 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3. 安装hexo"></a>3. 安装hexo</h1><p>在 cmd 下输入下面指令安装 hexo:</p>
 <pre><code>npm install -g hexo
-</code></pre><h1 id="4-在新博客路径下，安装三方依赖库"><a href="#4-在新博客路径下，安装三方依赖库" class="headerlink" title="4. 在新博客路径下，安装三方依赖库"></a>4. 在新博客路径下，安装三方依赖库</h1><pre><code>npm install
+</code></pre><hr>
+<h1 id="4-在新博客路径下，安装三方依赖库"><a href="#4-在新博客路径下，安装三方依赖库" class="headerlink" title="4. 在新博客路径下，安装三方依赖库"></a>4. 在新博客路径下，安装三方依赖库</h1><pre><code>npm install
 npm install hexo-deployer-git --save //文章部署到 git 的模块
 npm install 主题需要的插件
 </code></pre><p><strong>千万别hxeo init</strong>，不然你就拉在裤子里了！！！</p>
+<hr>
 <h1 id="5-GITHUB-gitee-添加-SSH-KEYS"><a href="#5-GITHUB-gitee-添加-SSH-KEYS" class="headerlink" title="5. GITHUB/gitee 添加 SSH KEYS"></a>5. GITHUB/gitee 添加 SSH KEYS</h1><p>在GitHub/gitee的ssh keys那里再添加一个当前电脑的环境生成的key，但是可别把原来的电脑删掉了啊。<br>首先在本地创建 SSH Keys:</p>
 <pre><code>ssh-keygen -t rsa -C “xxxx@xxxx.com“
 </code></pre><p>后面的邮箱即为 github/gitee注册邮箱，也是你登录Github的邮箱（其实无关紧要，只是为了辨识生成的用户名），之后会要求确认路径和输入密码，一路回车就行。<br>成功的话会在git bash页面下看到生成的 .ssh文件夹路径，进去，打开 id_rsa.pub，复制里面的key（全选）即可。然后拷贝到 Github/gitee 的 SSH Keys(这里要添加一个新的)<br>然后在终端中，我们再次测试下公钥有没有添加成功：</p>
@@ -500,50 +536,12 @@ hexo d
     <label for="hbePass">Enter password to read.</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="e3c18675ba6fa4f0913362d1a4daed1f30f54d3fe6cf5b437fa263ae09bd84a3">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af9267b11434284e9e0ec6a37ee35731831f7e98a19e7986f30c83a990956dc6f9439e2794ebd492bde8ab81c8540ba81be0135873667d50676f520135f60d3c9cada75763b8519d31d9d990bb899a37ba90e1550bc4db8139c228c33384918c6dd24bfa0a69af74a44894a264d0fdd1397f6bdb1d0a4d0afbb18847e78da6f977577e976217261cf9e9bf0f0353a5c4aaf3bb96e2247270eb4249d297187ad4efc595a4680a51e1177ab9722e4f030fc69867418488eaa007090adaf2e9ffaae35d1e7ca95277a604c60269a33f6e88c703b29eac4c8da1f3a7c3f57406094ee084082289bd70e1f60b76b91ceb51e51c61b5f36961518713e057d56cf309f13d5a67f516374fcb524ec3d2371c4f85fb01658bb12bea179e17012fc28e0a1db08d9665760b28d51483b8b8c947d8bd0b748919fa988131a76fef435c7fd7cadacc3d53793802cbb791b77fece3415241c06ced8332042477a9ce072953caa73f6b1c135f483810dc6817bed74f28aa0b780819f71f1c95c484f36816fae2f15670ea295e18c6da3cf6a1c2059ebb896797e1b4ba21ae53ff2ec40bf3066aca66970597be31bb4fc97cdbedb487c4b88d233e3170b1da8a0b3de1ecd14e3abfe856085c0bd77ee2163930ce57a45376d025d8796d76ac7d04aed639f222eed1f289f63c5c9602ef7850a82f28e3a71fa58c2e4f1fba97c3a394eb7dd74346f62052dac6a15f9c6eda04cb938f8f7cea7b2a3b01bab2991b88a665a17be797bfc02d9a42f50c7971c6622e3de38b6894423ff1a2bfa437c2884ef8dfaecc59f16a14f23eabca21b8c119dbd629c7285767d1635fe0dfe601b3c375e04df130699a7363ad00eb4c6ce7805333bd3d6f47f0575156f6a0d0b22c592dc74c10360ea8bade054aa1661c9216d4722d5bd337d891e22d9ef20bc1f6045a09bfabf9287c00c09a4b1c96c30b4380a0cf72610957a32e5c9882995c4842807691507bb192af9c61fa02ecadd2c63b947f3634fa48c3cd030a72afddff742af44fa9e35baa2733c2a65cb5d76e051fc503c086569b1cdf3bb7e4e5d51696720fc4ce281d52495c60a7865f6f3731fe1f1d59348858e099fcfbfed83613bcfe5154b690b2ed068aab55c540d5e6f4aef863080d9f408a9a5a4ce83b9e49c328193ca13081e66a885770bb0495f0824b8977c248fd926c67ec60a7b3a8a1006a8c526f259c3e803b1dc7fa8f45333adc4e5e9043dabec03c3a2adf3b4507def2ee59b3e434559c097257b8d9979ff2c4ccf37c599872028dfd8af9eda314830725a287d930bac49d3f7d598e26d8f377f0cd2da4eaebfb5e02c23c54ea10778dfeb1a469959263c763a97d2dbc5bbc6220326ecadd219aef609e818b395a1bfb994906477fe50df50622c36c46c0ff932c761d31f448177688c2393644440eca071025ef9b3fb6bd6cc9b2aa1e371cd76cde7fba7502df6efc197a8d31fd59b5d1698cbfc503cac7f24a11ca0284e618a1b19878e7a9ebe77f92a578af2a21482666d2aa3b8df21a397d1b391d253241609a83e30706a950ce32b735ec1007ae9aaca6d196dd854167c71656644ea6864c7fbf475cdc1f534f104cd24a1f5a2c4f5f430c0db01bdcc4a227a52174f29750ce1c1b997e476792f26bf2e47b59fe3ccf0d463f6fff641ed3cbb50d90ed4e10e633ef4d6046bbbf6fe399cf2104ef99636d9da08144f207e727e3b55319d6b82a25b4466ec596c8bb12ee013b40af869e7a4b055a08eb4093a43ebe10658ac9f44d21ae8893718fcc45672a6dfa6649f05b0c1e5ed7b69ee0eb619b178578c49291ab71392bdd6963e90adc7d58d29a66c4ecc6f6b6e2ce28efcb7b6906a5cfa35978c099344eb5e658e42111a09c216a600b49370ce609b23f23879db9f0a18d87f9ac439f385e2d52815687b2f96f417903db9c6d9cf5a4c9a05a2729a3acf6c2c771fec69b4b5f55a671cf541fce76c3df91c0a4a1b3a6003d95374ea379cd693c51c35f00a1018f85ba14edbbb219e4245d7edc7949aed1b82f7fe20d88ee6ed9c1752c8f473759292f7e36450a68b3fb6ef9c4a1d7e87d1c04199165ea2877c1092aafbd71e4169ed1330ed279abc882a431701f84a973c8b0a973398582832a54869697186b7738876fd2ce3519e45020c825e05fa8551c6a64f5a0e5eac948a0a89a8485061b7c73cdba05479e0e85610e2e4aeaaa685e8d316b8875be481a466844208ec6e6ee4af2dadb6c94d1c67d94b79dc32fe765c31246462c2b036dffe295856017078f9d84a65dcbc5c6124d83f98edb80c3d844dc20f80daa2c72bdba1048f3dd91f8af254c5f63bbe64cbcd829545d9afe06b4b9be28e15fde0122a3af13d03c1caa063fd292de73abebc46646c082ea20665549068a53fbbcf65b8ec4a6bb6bb1d7ee3aa85858df11d5ba67d1546b0e327b3ffa4ee20450ad5cfd65c46084a0a29966051dbf1881b3556386a0485f501b00a19d796dafaf0817ddb9c93877ca0038eb1ba185de24f7fd68ab6d88aecf8e18c5d24397dcb65f3f8ac54d9e28bd1d99f4c5f66a76224faf8cac272ded9f8c5cddc5920298980105a714713f8600eba3b96f652d0d2527486154d9c17150df2fec16566a1aa6f752c906279faa0dacb136d65943de7a9e12f21771745aa7a2e78313e4340a675140bca74bf2349ba9c82f4d0177f2ca74ace8a0187c26266961a323b0c6f7acc23327f99c7892271e294baf195b0b5ba6eeb0fe6d39abb4e1f49877610a0e9220dba0f510ecfbb3f18dbe696bf64d5f6b2e54cfb10dbbb35e833a9d3595f174bc3895c8a356216c29f342ccc023929b1f2995eb530efd8e3184ad9d1127ef7307d6ef1ff3a37c46880e00473d0b46669bee978d6b1a0dbc2bea106b88e978222455f6f3fefc6a2cf51f39a621a0a31fd55f2ff936e127080f114f17f4131e78bec6d2e4c7555ec7903054d7c09f0783c7a3e6be4d47c26c67d9debecf0588a9a6ff022bb5a62079821377f029868486e4ae8704c445948202c885712f54f209f8ecb2d29d7b7d0104a928040c96108344bb1ebdf73074a037be564f594c4aa97b1a3144c3f3a4b1bad226b6772b9584cdd34dbb39c54d903da187165246a576a39d1c72c9f795533928437b66e68bc14c8e20b28d28cf68da6d854b7a8d33c603a88bebaa3bbb287fda7460e209d0ec2061b6be030f1d31a6c8e0d525ebd5d6babc8a0d2928d03e95b3e7639bc38b66918a31a896e22d31f29c327869619138739027f04c3d5aeeabc344f24a1e10f9a52c664b261f3142dda72d9bc75688b22be1b0a99100db083dddddcaf2ae5ea17ef4de345a13ca1c0e78a655a797e3cdc7cdc16dce34892b0191789ba2144b5eab817d8048bebe7d326c903e4c5c780d3e32a966d4ea079d56b10c99f6a3fa175a433b31c6d642fbda3c1503f27a3ff6b7943b60021c13a4dee6a17d985ce73e38dd4c4847d163924bc57ccbc4cb787f0d0a3c603240d9d89fa201982b3fdb9cc52a57fbf88b8fa3455b612c96d4c33fa568648f236003ab8ffa7e66420f28d9844ac864e42e4e34d8604c09be334e40f063b53d14839cb4599d9ef30dc0d70136bc5732ae0e9f4dbcbdc038013707ea555f853267ca5bad6637ffdb6269f66558780f6ab9f30766045d37c79fc5b186c66c066a6c29d5374de2da0cc7650d72cc9306adbd282165f8b62f54070388b14baf76a843812bd5390323a7b98f518d5a7852aa4ea2da3567f244efb49170f9b0eb24f029bfe5a6f90980bdfdbf745faa0231c7867486985c019a1297adfc0ae83673471c30104a5f82b1dfdab4ccaf2242c5298b345d35adc835dfa1622f9c227ddedcfdf294bb1ea79eea1ec0d0048ac3a4f28a9a58d5e61c68295c7e962ae0ab3d4b4e72eb8146e2ddd4f2502cfb77d3a0e3ccfdf0704f8ca10e56b1abe34eb4e3c8d5f98e0139c030a4d7880370bf00fd2cdf48650c6dd2a2241526e205af6735bb2299e6bb01f826b2966b8341c6dd26079843989996d56201f020460d32fc8bca8215b4698b5d4e1ff2b5b1d95a73408936a3985fad1f8e12c8f11cb007b3417120381aae8d1b97cc5c5a309c5d9b7d07ad1a3e500029ae1d21b6e53b28e124c6424d8bb4ab9abfa6df52154c534da79ab684313cca15f11b27854d7be84a55a6e8b33afa77f3808e0b60aa4606052c2c6b81582989237230c1ae01f9ca9423860fd098b8aa52985729c29e3a84397debbdabea2672dc9cf9cace9f1d67a7bd27558b5e57e955bd7b3038c7efa9d070debb9d2863dc788424dc775224de71293eab14d27855cf37270bfd682f2b9934389382e2d37af00b0873cc7b2d875ecdd30946f116df1208346bcfa68f02a41f3f9a4d8cd3ffb33e29bc8baf41ed440f04cc594183779c143621145c0032c0edb9ae0d576c2984fc0fe4cde81fa53bb62c9669defec151f89e605718df9a41de94a3a260bfc632d1ff23577f92b35ddf58dbdbc29f268bb70ffa450b0f3e9384449e6cd6e6341eb93d3d334d1c430bb57302bdc0f1faf74fa0919e4c01e2ca3cc9ab445c608a2d36e42a326bc10a46c1baa84e2f9bd9909e65fd3f27b9fffde41e5737c79e9acf3ca7a13d8c4bee74b84900681f35acf9ee2e85d751497af6cd95d49094451941e271eff2d96c37953165716a221fa1c676a33dcc976dfdd981b96f0fa06f7f332dcda390dbebc5ee598c137efe6863e6851b128a210e155f54a79445</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="db76f283ff122df97fb6ef1ee2df8a643db1522ba2b0db8cb5c9b7a2a74c1c56">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af926707dcb3208de68be598dee4ec8475f6902f2c747bc2548031bf4317b7a50abdab1cd99629bbe28bfad723046245417d4150bf2d70b2a7d88559c78924c56e0451885688278628e91da0e75cd8ded55342c601ef2ca54a0b3875fc8402e8bf4f295c8112acac8755f68cd4bfdf3698d603a564a533c1077ae967df2c6707ace6014b3db54e4d7a09ec075bc9e2fe42af3015022536d95e9f13fcef269950b4439062d4e10549d8514db90b5523a1ff32deb670ec96e8bcea0f01108bbe6c1f5a6848449cb29e37c311becb07c9213d7f2cd824c4c580b8ae12ecdb4a062e1af2f7743fdeff2feffa86a9cd5d725dbc363b900df36c9e63929c0cf6eba6f6adb747d77642bb9ce4257445b37d764e2d78d0162afa694f3bc52af2894a0adb2a0ce6bcb55c5a7dff408444049169296df7f7d436c7491c1fae7ac43d5a193b9f7f33fe04284e8246193e13ebc0132840f77546f5329c18059bb5184045a95f49ad48885c2f2700e464232f39eabad04718c6af55a1ce268627477da89f02fcbc03642e23430f67f191a94d772ac751ebe2f68869089d1a57d8431e141483f21827a6178f84b5054665df3e981909e8c1b5211c696fd215ea7c3bbc720cd1135b4443b4badcf2d8963f3003e3077c09ccad8f66927e03c16ded35e29f016004baf081935840fc67c9d863f4489e0c714dea527654e54a62a4e18bf1720590dbdf21fe591c3a623e64bd65a8869e8a04ee8e54880bfa9e19e720d983465a2d4a2cbee0a68406e77ad616a418b59a4f15d3680959f27b083d18a9d9295fd4e48442a3e00d26a04c2bd69762e7a47b0312776702457ca3cd7545297739a15c58ff8a7fbf0800e1b5afcc9da110de0980f0cdfc594819f3861e344eea77af2068a43ee4cce5cfa7f6f6b4dcfea5bec20f8361578325112d1abcfad04c1389e387b8e870b6697e80decc289f263c439cbbd2a464bbc366462035e88642f186b5e0e79133ed4d3be221d31759c8e87879b22dee3c1eebf78d9f46c3a5b1c5fd23ee24744a97a5a2250d683d2220992a9857aee38f731424d23d372302f15fa2ef8662cac5f09d07a4ec1153c67d15b56efe64a24a523f015f97afabc4eed5b427f8a0236728148a259f1de238070f4241bb52c57521544a37fe467c66f24fc2780b3026966f7f9bcb12c20c78dffeb11c00142c2b1c2b10f21a61cd3fb30f7623e7b96199bf0a0d6ce93c60bb3c5a6c77f3f38d85f36eb5fcde14d99811b4f2b57aad8424ad8e844edcebce8c81c31bc54b455c0b2b2562cd8aac7e93e5c59baa8d56efed8e8a1eb36658373ab7a9f3e6cd4a3ea55ffd25dda3e8ecb98e6661a4efdf9c7acb89171899debc20c2cc04f59e54f6553e41fb88821cb1adae0e1255c8f21718a37b5646e5903bc1378ccdaca6d520b0bc390289a36eb61183537e6883c7ef423bc14ab4033fd34eaad23609398e98d75586fb5af4b768c1d9ab3054343491ac5a5750d20668b1e60d5fa01951da37299dbf4155a4ce167d5a5eb1f6f3c56654528c29aeea89fa3d4e5f0886e3fdb2180ec4655331eaa82f5974363dc54475d37bb45bac4a1fc8d0dbf7df47f884698bc6b73225f2efc9d3cd56b31dcd0a649d8ae2a5e055f089bb54b8fe2ce88dacfbfe9fdab61bcb1955f4289fb135f06e03710d1dc0b43698c218bb36f6d7a242383e16832b2f474fac918e77147a85b896adfb58215055d68d5df564aea04eef072b607c47620478f9cc3c1b2b7fa12b8e70937a61d0ade55d7c4fa944cc31dbda7d7c6545b672675c0098d00595c6a8069645216814484dc79f4f1b60de3562b8a625bf4070acaf8267a9c1868eb090ad34df6e1878483855ebe5ac2841b592690598732be3c4db1ec30008804d6798096abc02a369b346ab4ba5fa648422ea8c782ce89a755245e3b4974c9954e3e34c351c8630f3f94cc5454a793f6bf8dfb65deeb732f4b815f99b3f405630afbf957fcadae90106d72ce29813127f9be3cf3521836b80c6f06ceb4c52fd1bed2dfb4dd2f6b1d06be40dee79f2f270fd0e3f6970bdce562291678b49d604ab9df9a71a6ce337a0acd48a603ad9143b6c224c80bf4c847b6c54f4d815e2d8d52d4441cfc180fe0e9db946d5cea0cd1017d7441d4fc896d027825cea51d68694721b3ee161adddb41f650efd622ac26cd225297b37643ffac5cdb16ebfcc07c1c51aed620b1b20cefe98930b1a75447fbc3cae8cbbaeb1aa788dad826028077e818a44552fe9527478ca16cdcda7a6fe5acec6250395a486a492571bff8fed5e71f62e602e697d3d543d7380fb366c14c87b020299fab905fdcb2befcb2eabbf46f0bbbb327ddb8f61ae56e6e73362ab3fa0a8c8c0901e0724b6bd2e7d900d104a6172030118c66681c439548fdc0d95eb4955857271104c7de434ccccad5d2fa29baf0efe9925359b803b7b1cff769be9bceef148a6872aa471fce99486890be3fff6a81782d835d2303d7159046ec7d120cb935f6be65d67918f26507bfe5adbe0ecb1dc26153d631f9a97f2d615f29dc10730ebe6b7e4f7c2579f4687f2d43d1cc6fe6c6350fcd6fc511254462d81379786e56ddc3dafb400cbf67f8f6629748f9f885abe8111f292953fba870a8ce194c44f6627feebe590437d284f2f359c14a94842f267b3083bf0d8da29ec1c709719b5b57d52bc90dca0c9d3d75c08cf4c2762e62781f157e6052ad3e3e0254bd3c5e5de7ab74bf00cdaa5f9588ad2d8d504ba4bc6fe1ae54ced023ffb35c097cd45b2e38faead10821e4af3001b10fc9623468c375aee5cc5246dc797f3934f87815f0adbc0a4d3c6a099a3a77bdf974d47fd69072ae5a11a7205d001c1f06a2edd7e3db3dee51affd98ce2355b5681ee209ed0d3be379f12d3aa097659f6812358f64886c701d81667d92ef67571efe32ca3afb839907fe2acae51872e86bd2a71817116a45cd20b9bbe4f9c6f76ea5727f9728ea4a91b5c83b0c0140ce5981b3de7501a1378fd9e042154c5454735ad02e6f09ebf8ab039d2ecce96698f1536a4aeca5ab28bfc8ffc0369893468e2eba69d36af106486de5b9bb2285fee99334868ecf4ee7432d728f3d680d422d89418d144a1e09cfe9e38f865526e4fc0f8622a672a54558550409935404eee2438480c95ea5d63824b998c690d231447f772efa2424d0b6320581b3545d37d3ea0ec9992088eec17c7b8e5733f3323b8cdb7ade3cb0f77d40129b163dc507f7222f2ac32b27957366a56b5737a744a60652fccdd1fc6cde870dd3f6b4774b8e00485358cfb24d605863dfa497fdfd687f2598a8640af5bde1ada50f02c53b68242009bf7ed98e850c8d82c3132a968b458424553e5edc8c2eb67fafd02c65e3f7aa77e33dfebc6e1dfc560fba24157a41ae2e37f6f16b2889a244785e08bfc834ebd9076db1f12f0f5f7b115425bdb5bbe4af54267ab190db02848f9181145af4e356df52136c695b5fbc52db2b22e6aa86f4f7484016d34e3d1610dd8a3302cd28f1c1075dd76e88436e5ae1b19c43b3a10a9752abf23748acc1baf2d2a2092dcbc0b7f02b86638c399074c63df4b5f13cc164c31fc387d54e31af2b253cfc23683d56663d99bd5a0e3e25bee2c21119175bdcedffe5ef607461e114a3d6ae00ad8f3d2bb297f4e89dab87be7576d57111933597c54f2f14aeb86b5f00b47e584453f6065ad5b515b7586d2fcaf51a576a9a4b10cae3e495dba40387db19e003af5ca95db3187f11f6c83aa2c9465e06bd3de3e73e0c2df337bdb91ab9c61ca96d4cb3081b7b329a5760e47b715d965c1078c0deaef200cf13a13c5c555aca96acbc96b33be37afc90c13957ad548fd8d98b26d54921aa1e050a8d136a5f995cf94e6a3b2cfd58e805148f1db9f2303c5c1fcf9e205900f93a41c2193d2e48795e6e84cc2462ffad5de1645e959a29499b2c63e054f1be579202f2e1cce68426cb27c3b05b143318a10f763d1aefe3fefd5a8c7d769a79fffcb9f1773c95b1ad2dd8fc3fb4c5e25d531ed2f3e76ff0cd6068c1abbc582eb99889ada6f712a2f338f718e1626db2723e3265dbceed66d2324fd6f43340fd382a3255f95e1d9bb84e4e0c4c7c81cc5c0550289b9b283c8d79b8a2eae9bc2d4eb58d65791e455aa2132a4a73f3548719b7adfd0b8da7c8897aefebb47d90b80707c541a0c793d08e85a61c6a6d5fdfcad0bd950826dc7c75313f018df58c97868722d5d7ba052403f6c259c943c52ac49f6baa1306cb8cbc165ba5bd40c5df7d674403827118d89a67973efc2134adfefef2e1030294a990529a37e017846cd82151bd4ff93e59d070b7c3ff48c07829b1979078e84d1d980e4be347487087bf23f9ff74a093fcd24f0ea30c69b0901e5701391a6986024dcc5149d68f7ca387c6a4d94c68082fe7e52123056c2eac232d59dee63a99a1043afd7d6ebf3836fdf800b7ccbd343793dad922849ca5b16971b53340c6785622fff98a7a6a1e621dc86efae79861a22e7b63bfb375ea9128ef275ad8617f4be9c0a2bd9186c35661b12de5b66901fbbb5662c31dfb832373850244b1c560c69b322352f9a64e273abac33220801a99df9204ee3e45a8aa163b7b84f3d43a8b73de319a26a741dbc8242759300ec76534e3de4238d5e7dcff8cebab2bf86cbf3659ba3023969b71877c7adee0e24266474610f7f6505147168e45aeda12d6e1a6d489bd7466f4e33080623c592b1d09cf0e1286e859129a0105cdc818acf2488a8e44b</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
         <category>日记</category>
       </categories>
-  </entry>
-  <entry>
-    <title>浏览器以及插件</title>
-    <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙</p>
-<p><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
-<ol>
-<li>更改搜索引擎，默认的是google的，这里需要我们改成百度的，不然你每次就只能先翻墙才能搜索。在设置里找到搜素引擎，默认设置为百度。<br><img src="/blog_img/浏览器以及插件/19.png" alt=""></li>
-<li>在翻墙以后，浏览器将会打开代理模式，如下图：<br><img src="/blog_img/浏览器以及插件/20.png" alt=""><br><img src="/blog_img/浏览器以及插件/21.png" alt=""><br>但是在你不翻墙的时候，他也是这样设置，这就会导致你使用浏览器的时候，搜东西出现连接不上服务器的问题。这时候你需要设置成这样：<br><img src="/blog_img/浏览器以及插件/22.png" alt=""></li>
-</ol>
-<h1 id="2-google浏览器的一些好用插件"><a href="#2-google浏览器的一些好用插件" class="headerlink" title="2.google浏览器的一些好用插件"></a>2.google浏览器的一些好用插件</h1><p><strong>注意：在你下载插件的时候，必须先翻墙，不然你无法打开拓展程序商店</strong><br>不多BB直接整活<br>先找到插件搜索地方，如下图：<br><img src="/blog_img/浏览器以及插件/1.png" alt=""><br><img src="/blog_img/浏览器以及插件/2.png" alt=""></p>
-<h2 id="1-Adblock-Plus"><a href="#1-Adblock-Plus" class="headerlink" title="1.Adblock Plus"></a>1.Adblock Plus</h2><p><img src="/blog_img/浏览器以及插件/3.png" alt=""></p>
-<p>有效去除浏览器广告</p>
-<h2 id="2-Awesome-Screenshot"><a href="#2-Awesome-Screenshot" class="headerlink" title="2.Awesome Screenshot"></a>2.Awesome Screenshot</h2><p><img src="/blog_img/浏览器以及插件/4.png" alt=""></p>
-<p>可以录频，包括桌面的，浏览器页面的等等，需要先注册账号，录频后的视频会放在你的账户里，可以自行下载。</p>
-<h2 id="3-Free-Download-manager"><a href="#3-Free-Download-manager" class="headerlink" title="3.Free Download manager"></a>3.Free Download manager</h2><p>这是一款强大的下载器，速度快而且方便，速度比迅雷更快，更关键的是在你翻墙以后，迅雷的扩展程序有些国外的资源他是不支持下载的，但是这个可以。<br>下载器官网如下：<br><img src="/blog_img/浏览器以及插件/16.png" alt=""></p>
-<p>在安装完成后，打开<strong>设置</strong>选项，可以关联扩展，如图：<br><img src="/blog_img/浏览器以及插件/17.png" alt=""></p>
-<p>当然你也可以直接到应用商店下载：<br><img src="/blog_img/浏览器以及插件/5.png" alt=""></p>
-<p><strong>建议先下载下载器再去下载google扩展程序，这样就可以自动关联了，正好我想下一个腾讯视频，效果如图：</strong><br><img src="/blog_img/浏览器以及插件/18.png" alt=""><br>每次下载你可以自行选择下载地址，很方便管理你的应用。</p>
-<h2 id="4-Google翻译"><a href="#4-Google翻译" class="headerlink" title="4.Google翻译"></a>4.Google翻译</h2><p><img src="/blog_img/浏览器以及插件/6.png" alt=""><br>不多介绍了</p>
-<h2 id="5-Imagus"><a href="#5-Imagus" class="headerlink" title="5.Imagus"></a>5.Imagus</h2><p><img src="/blog_img/浏览器以及插件/7.png" alt=""></p>
-<p>imagus主要就是在你鼠标停留在图片上时，自动放大图片，比如在你购物时：<br><img src="/blog_img/浏览器以及插件/23.png" alt=""></p>
-<h2 id="6-Infinity-新标签页"><a href="#6-Infinity-新标签页" class="headerlink" title="6.Infinity 新标签页"></a>6.Infinity 新标签页</h2><p><img src="/blog_img/浏览器以及插件/8.png" alt=""></p>
-<p>它可以更换你的浏览器壁纸，可以添加常用网站，看起来很简洁很舒服。效果如下：<br><img src="/blog_img/浏览器以及插件/9.png" alt=""></p>
-<h2 id="7-one-Tab"><a href="#7-one-Tab" class="headerlink" title="7.one Tab"></a>7.one Tab</h2><p><img src="/blog_img/浏览器以及插件/10.png" alt=""></p>
-<p>当你在打开数十个网页时，图片变小看不清网页信息，如何切换到你想要的页面的，one tab就可以实现，效果如下：<br><img src="/blog_img/浏览器以及插件/24.png" alt=""></p>
-<h2 id="8-tampermonkey"><a href="#8-tampermonkey" class="headerlink" title="8.tampermonkey"></a>8.tampermonkey</h2><p><img src="/blog_img/浏览器以及插件/11.png" alt=""><br>油猴是一个强大的工具，其中内置了很多的功能，甚至油猴有插件可以直接拦截百度网盘，将百度网盘的资源以free download 下载。（想到百度网盘原来几K让冲超级会员的嘴脸就想骂他，虽然在上半年提供可以勾选通道，但是也只有100-200k，属实垃圾）。<br>这次我就以一个YOUTUBE视频下载插件为例介绍一下。</p>
-<p>打开油猴页面，搜素插件如图，安装插件：<br><img src="/blog_img/浏览器以及插件/13.png" alt=""><br>之后在我打开一个YOUTUBE视频，可以看到出现了下载链接：<br><img src="/blog_img/浏览器以及插件/15.png" alt=""></p>
-<h2 id="9-关灯看视频"><a href="#9-关灯看视频" class="headerlink" title="9.关灯看视频"></a>9.关灯看视频</h2><p>在你晚上看B站，看YOUTUBE视频时，可以选择，效果如图：<br><img src="/blog_img/浏览器以及插件/14.png" alt=""></p>
-<h2 id="10-fatkun图片下载"><a href="#10-fatkun图片下载" class="headerlink" title="10.fatkun图片下载"></a>10.fatkun图片下载</h2><p>可以一键下载多张图片<br><img src="/blog_img/浏览器以及插件/25.png" alt=""><br><img src="/blog_img/浏览器以及插件/26.png" alt=""></p>
-<hr>
-]]></content>
-      <categories>
-        <category>浏览器</category>
-      </categories>
-      <tags>
-        <tag>-浏览器推荐 -浏览器插件</tag>
-      </tags>
   </entry>
   <entry>
     <title>梯子</title>
@@ -560,13 +558,76 @@ hexo d
       </tags>
   </entry>
   <entry>
+    <title>浏览器以及插件</title>
+    <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙<br><a id="more"></a><br><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
+<ol>
+<li>更改搜索引擎，默认的是google的，这里需要我们改成百度的，不然你每次就只能先翻墙才能搜索。在设置里找到搜素引擎，默认设置为百度。<br><img src="/blog_img/浏览器以及插件/19.png" alt=""></li>
+<li>在翻墙以后，浏览器将会打开代理模式，如下图：<br><img src="/blog_img/浏览器以及插件/20.png" alt=""><br><img src="/blog_img/浏览器以及插件/21.png" alt=""><br>但是在你不翻墙的时候，他也是这样设置，这就会导致你使用浏览器的时候，搜东西出现连接不上服务器的问题。这时候你需要设置成这样：<br><img src="/blog_img/浏览器以及插件/22.png" alt=""></li>
+</ol>
+<hr>
+<h1 id="2-google浏览器的一些好用插件"><a href="#2-google浏览器的一些好用插件" class="headerlink" title="2.google浏览器的一些好用插件"></a>2.google浏览器的一些好用插件</h1><p><strong>注意：在你下载插件的时候，必须先翻墙，不然你无法打开拓展程序商店</strong><br>不多BB直接整活<br>先找到插件搜索地方，如下图：<br><img src="/blog_img/浏览器以及插件/1.png" alt=""><br><img src="/blog_img/浏览器以及插件/2.png" alt=""></p>
+<hr>
+<h2 id="1-Adblock-Plus"><a href="#1-Adblock-Plus" class="headerlink" title="1.Adblock Plus"></a>1.Adblock Plus</h2><p><img src="/blog_img/浏览器以及插件/3.png" alt=""></p>
+<p>有效去除浏览器广告</p>
+<hr>
+<h2 id="2-Awesome-Screenshot"><a href="#2-Awesome-Screenshot" class="headerlink" title="2.Awesome Screenshot"></a>2.Awesome Screenshot</h2><p><img src="/blog_img/浏览器以及插件/4.png" alt=""></p>
+<p>可以录频，包括桌面的，浏览器页面的等等，需要先注册账号，录频后的视频会放在你的账户里，可以自行下载。</p>
+<hr>
+<h2 id="3-Free-Download-manager"><a href="#3-Free-Download-manager" class="headerlink" title="3.Free Download manager"></a>3.Free Download manager</h2><p>这是一款强大的下载器，速度快而且方便，速度比迅雷更快，更关键的是在你翻墙以后，迅雷的扩展程序有些国外的资源他是不支持下载的，但是这个可以。<br>下载器官网如下：<br><img src="/blog_img/浏览器以及插件/16.png" alt=""></p>
+<p>在安装完成后，打开<strong>设置</strong>选项，可以关联扩展，如图：<br><img src="/blog_img/浏览器以及插件/17.png" alt=""></p>
+<p>当然你也可以直接到应用商店下载：<br><img src="/blog_img/浏览器以及插件/5.png" alt=""></p>
+<p><strong>建议先下载下载器再去下载google扩展程序，这样就可以自动关联了，正好我想下一个腾讯视频，效果如图：</strong><br><img src="/blog_img/浏览器以及插件/18.png" alt=""><br>每次下载你可以自行选择下载地址，很方便管理你的应用。</p>
+<hr>
+<h2 id="4-Google翻译"><a href="#4-Google翻译" class="headerlink" title="4.Google翻译"></a>4.Google翻译</h2><p><img src="/blog_img/浏览器以及插件/6.png" alt=""><br>不多介绍了</p>
+<hr>
+<h2 id="5-Imagus"><a href="#5-Imagus" class="headerlink" title="5.Imagus"></a>5.Imagus</h2><p><img src="/blog_img/浏览器以及插件/7.png" alt=""></p>
+<p>imagus主要就是在你鼠标停留在图片上时，自动放大图片，比如在你购物时：<br><img src="/blog_img/浏览器以及插件/23.png" alt=""></p>
+<hr>
+<h2 id="6-Infinity-新标签页"><a href="#6-Infinity-新标签页" class="headerlink" title="6.Infinity 新标签页"></a>6.Infinity 新标签页</h2><p><img src="/blog_img/浏览器以及插件/8.png" alt=""></p>
+<p>它可以更换你的浏览器壁纸，可以添加常用网站，看起来很简洁很舒服。效果如下：<br><img src="/blog_img/浏览器以及插件/9.png" alt=""></p>
+<hr>
+<h2 id="7-one-Tab"><a href="#7-one-Tab" class="headerlink" title="7.one Tab"></a>7.one Tab</h2><p><img src="/blog_img/浏览器以及插件/10.png" alt=""></p>
+<p>当你在打开数十个网页时，图片变小看不清网页信息，如何切换到你想要的页面的，one tab就可以实现，效果如下：<br><img src="/blog_img/浏览器以及插件/24.png" alt=""></p>
+<hr>
+<h2 id="8-tampermonkey"><a href="#8-tampermonkey" class="headerlink" title="8.tampermonkey"></a>8.tampermonkey</h2><p><img src="/blog_img/浏览器以及插件/11.png" alt=""><br>油猴是一个强大的工具，其中内置了很多的功能，甚至油猴有插件可以直接拦截百度网盘，将百度网盘的资源以free download 下载。（想到百度网盘原来几K让冲超级会员的嘴脸就想骂他，虽然在上半年提供可以勾选通道，但是也只有100-200k，属实垃圾）。<br>这次我就以一个YOUTUBE视频下载插件为例介绍一下。</p>
+<p>打开油猴页面，搜素插件如图，安装插件：<br><img src="/blog_img/浏览器以及插件/13.png" alt=""><br>之后在我打开一个YOUTUBE视频，可以看到出现了下载链接：<br><img src="/blog_img/浏览器以及插件/15.png" alt=""></p>
+<hr>
+<h2 id="9-关灯看视频"><a href="#9-关灯看视频" class="headerlink" title="9.关灯看视频"></a>9.关灯看视频</h2><p>在你晚上看B站，看YOUTUBE视频时，可以选择，效果如图：<br><img src="/blog_img/浏览器以及插件/14.png" alt=""></p>
+<hr>
+<h2 id="10-fatkun图片下载"><a href="#10-fatkun图片下载" class="headerlink" title="10.fatkun图片下载"></a>10.fatkun图片下载</h2><p>可以一键下载多张图片<br><img src="/blog_img/浏览器以及插件/25.png" alt=""><br><img src="/blog_img/浏览器以及插件/26.png" alt=""></p>
+<hr>
+]]></content>
+      <categories>
+        <category>浏览器</category>
+      </categories>
+      <tags>
+        <tag>-浏览器推荐 -浏览器插件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>编译器</title>
+    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
+    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：  <a id="more"></a><br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-编译器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>深度学习篇</title>
     <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
     <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
+<a id="more"></a>
+<hr>
 <h1 id="1-深度学习简介"><a href="#1-深度学习简介" class="headerlink" title="1.深度学习简介"></a>1.深度学习简介</h1><p>与其枯坐在房间里思考怎么设计一个识别猫的程序，不如利用人类肉眼在图像中识别猫的能力。我们可以收集一些已知包含猫与不包含猫的真实图像，然后我们的目标就转化成如何从这些图像入手得到一个可以推断出图像中是否有猫的函数。<br>通俗来说，机器学习是一门讨论各式各样的适用于不同问题的函数形式，以及如何使用数据来有效地获取函数参数具体值的学科。深度学习是指机器学习中的一类函数，它们的形式通常为多层神经网络。近年来，仰仗着大数据集和强大的硬件，深度学习已逐渐成为处理图像、文本语料和声音信号等复杂高维度数据的主要方法，算力以及数据集的增长使得机器学习死灰复燃。</p>
+<hr>
 <h2 id="1-1机器学习与深度学习的关系"><a href="#1-1机器学习与深度学习的关系" class="headerlink" title="1.1机器学习与深度学习的关系"></a>1.1机器学习与深度学习的关系</h2><p>机器学习研究如何使计算机系统利用经验改善性能。它是人工智能领域的分支，也是实现人工智能的一种手段。在机器学习的众多研究方向中，表征学习关注如何自动找出表示数据的合适方式，以便更好地将输入变换为正确的输出。<br>深度学习是具有多级表示的表征学习方法。在每一级（从原始数据开始），深度学习通过简单的函数将该级的表示变换为更高级的表示。因此，深度学习模型也可以看作是由许多简单函数复合而成的函数。当这些复合的函数足够多时，深度学习模型就可以表达非常复杂的变换。深度学习可以逐级表示越来越抽象的概念或模式。以图像为例，它的输入是一堆原始像素值。深度学习模型中，图像可以逐级表示为特定位置和角度的边缘、由边缘组合得出的花纹、由多种花纹进一步汇合得到的特定部位的模式等。最终，模型能够较容易根据更高级的表示完成给定的任务，如识别图像中的物体。值得一提的是，作为表征学习的一种，深度学习将自动找出每一级表示数据的合适方式。<br>因此，深度学习的一个外在特点是端到端的训练。也就是说，并不是将单独调试的部分拼凑起来组成一个系统，而是将整个系统组建好之后一起训练。比如说，计算机视觉科学家之前曾一度将特征抽取与机器学习模型的构建分开处理，像是Canny边缘探测和SIFT特征提取 曾占据统治性地位达10年以上，但这也就是人类能找到的最好方法了。当深度学习进入这个领域后，这些特征提取方法就被性能更强的自动优化的逐级过滤器替代了。<br>除端到端的训练以外，我们也正在经历从含参数统计模型转向完全无参数的模型。当数据非常稀缺时，我们需要通过简化对现实的假设来得到实用的模型。当数据充足时，我们就可以用能更好地拟合现实的无参数模型来替代这些含参数模型。这也使我们可以得到更精确的模型，尽管需要牺牲一些可解释性。</p>
+<hr>
 <h2 id="1-2深度学习的资源"><a href="#1-2深度学习的资源" class="headerlink" title="1.2深度学习的资源"></a>1.2深度学习的资源</h2><p>吴恩达的课确实很好，但我更喜欢这种直接上手边看边做的方法，现在跟着花书挺好的，社区也很强大，在这里贴上链接，原书版以及pytorch版的链接。  </p>
 <p><a href="https://github.com/ShusenTang/Dive-into-DL-PyTorch">pytorch</a><br><a href="https://zh.d2l.ai/index.html">原版</a></p>
+<hr>
 <h1 id="2-必要软件"><a href="#2-必要软件" class="headerlink" title="2.必要软件"></a>2.必要软件</h1><p>原书中说明已经很清楚了，因此在这里我只会放一些我使用中所碰见的问题。首先是anaconda的一些知识以及jupyter book的知识，链接如下：</p>
 <p><a href="https://www.zhihu.com/question/58033789/answer/254673663">anaconda</a><br><a href="https://www.zhihu.com/question/46309360/answer/254638807">jupyter_book</a></p>
 <p>在我根据书中的内容安装miniconda以及jupyter book时，在第四步激活了,找不到命令,论坛里也找了找确实也有这个问题，有回答说不是在安装的文件下安装的anaconda。而我自己是直接在安装目录下 Git bash here的，没法用。我寻思是不是没管理员权限，直接搜索栏 cmd，以管理员身份运行。</p>
@@ -584,32 +645,6 @@ jupyter notebook
       </tags>
   </entry>
   <entry>
-    <title>编译器</title>
-    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
-    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-编译器</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>资源</title>
-    <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
-    <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
-<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
-<h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
-<h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
-<p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
-<p><a href="http://www.ai-start.com/dl2017/">吴恩达深度学习笔记</a></p>
-<h1 id="4-壁纸"><a href="#4-壁纸" class="headerlink" title="4.壁纸"></a>4.壁纸</h1><p><a href="https://wallhaven.cc/">地址</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-资源</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>训练初稿</title>
     <url>/2020/09/24/%E8%AE%AD%E7%BB%83%E5%88%9D%E7%A8%BF/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -618,11 +653,29 @@ jupyter notebook
     <label for="hbePass">Enter password to read.</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="03c7bd9b3ae4a12991fd78a142effc0c90ab45a5a5355a1cd11f5e2bedc58d94">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f19045e42c065d4265108128caa952ba8087e8513bb11f23a571c8764522173c9f24556ad590f65a2e07a71fb0dcf73c89da3c3c8a2bcf69e4eda830d205962acdaafb241201709a02f0f9479b109fddc73bc39614f2616f7f0be66a61ac77cc8b7a64068660f2cbbed00d757de4aadb0a0a66b8f22e6614dea4529ef823e5b9e63598e959dc058ecf1852a07b12317dcc250ecc65a0476dca1571004572ad9b8513e12c871743ff7636c242d74cb43d512afe20d001027ebbef6c25e3519789ad4cd2dcc966d107bc41b1cc7ba8e4bec62d12c0b0744118d7a82c8d0726b9786e2cfb926932e5c1ca4914a49f339fb8d8729e95e483f750306025241b2bce65512a0efa1ae87e8046a6650a34a335165f733fce65e95ff1c4172d4859931a29e8a5d5b52ef8bbe6e95588cac3f835d4f9de3b53f5ce1cf49b55bf6e00dbf732a1f2b7afaf4619484b6da36d06b9f2e6ef9610189edac7e264b347ce8426c8ff9eeb6af73a910cf83d10e16a3d7e77d944fcf9a2881b14a44dc886dcd66f5a0380d18b9c12823b7ae2ecce68f3f8f21626b52642dd3ea95f7b4407494c3040eca1dc335de425c444e4f1aa91ff55ba6ad871d59af686b1492d09e491aa8d2dbeb9c1d4cd8ff2b2559ab1fcfbe4c09b357f7267a0572847adf4a250e75c5db5d3dffd3a47cc052000e29c915d5dd3190fe69e6c8653c64f8a357b8775f1b816ce945f79dae3219cb72e6fda07b724c5cda4ea94d49c83778d780d639892c56befc78c753880747b72c98c5c7df17b832eb6549efaa9606bee6cb13e54f9de57e922f89616ea723ce8fd46f0a42cd0756614da32e4151b7470635cb5ebd1ab5c0fc3afcc057016f649675f2aaeb900b346a058b16e26b0f9be04b735c915a26ba23e20bc7b662c1dea18f003bb892ff49a73683f04e570f09281dcd6c813d17d4002da6abeb584bcc055e6969993b1aaae0122a2d35e81d6a0467d09f9ef7776f55641f533d796e21429648b7a1557c91cdf3605cbbd0c007c4b1a5a3c8068eb0e8abc6501b76865314112f62eb052d3b35da6bf474516e9019ce05034d2c03c0d76fdb6a17029857598e493f733553daf013f535df4cd93605af0a968c38cb96d67ae2069abaa202ec21ed4bde1b0650bfa7730d97a54b9452cc4e35c598a025ea162b8a9e7c31622637094b4946ef78ef217125b97dcfee2198e569d2e0d3602cd5824416e5fe5471d3c46adc672606c3a211adf5b78807b557c0ca6f85d7b9c62e2151e92226b9b0a4f4101f69c0ddf7ce4525b2dd9e5bc14c563c5179b408dea9771eb46cdbcdfce065caaa9350c1074f45b61713c92f83db1eed1ab039691c4d1ac096f54cab12ee225181a5bff0ac84ce6a0c701a0171f054835245be7d7b4d009cb1a3f99e574c3a70cb7799e9c72dd8458b12530b9ba2bec8fd426127abfad19cc3b5502e379b3e5d3b1058d56d3f39f9854426219711db705c221fb2f9d345174d1cb444d26778454f1b034445795065a1fe3151d2426ca623427018eeb77a09f618e771c8a1781f16b6d76dcd46851ce986d024c67bb89f3f9910b16b5c79d9fd55e3f13bf38d134aab62ca25dcf7bfb8a6b553af0e3bf22da13f61d999fa1b78dff27cfd666a93a425949799939e2e18dbb3f4a3a9fe87ae1f1da7ec851ed5d11da383892669992a27d30ca9efa33e0ec9cacb6571ebd863895d9153e42c04549500584b85f3c26a276342d04cf32cfe0c0d8e76e6b4c823c59c1273836000eba7ae7bed21022f392e67eb1d59994381ae01252b9d0b5b52d94d90a5bbc9fb90516564050f087e74e2736592565fdd3bef6a8d6b07ff3ad972645d1c1a8b37027f62da645507011931976d2c5273aad0ac75c9d7d936de26fdedec6573b49ab6fabd9dbf47c3d3b318bd3215ddb37f172a94b9643e294f39b495bde282af21c91716e9d592e24d763af40ec1cf160d6070f8ed497a5c565a8f507ffc9ba390b0079cfa22543178c40b9b3d272d1487466bad366f51690ef85f0296762e3d9ba7fb00857d49d108d6e4ba00f6fca822d3a441223f13cdb6fe70ceea916f066f0ddfd366340520c7f582f67032ca9a7a3d99f62b3c829b7e468baa68e5dfa2af4268fb766c11fbdad6ca71ff8258d8c6466f9b5f14b42739aba3671dff2b9112ef4c5313162778fbb3b0ddbbede2b1bcdab05a47a9cdd0274bdbc99ee5116d8812a49490d5d39559fbd195021aff07242b2a961470c7c5a09fe2576e38d15c6f6c6a5c36bfce9caf7a7e63b095abce581ba572707ad33c5fdccd70c1ea748d</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="b54e64794ce5241a31926600338f52c22ef38a45b2288b047c7ce87292f5094a">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f1904c5075c1f48484e987ff173482c2731d3c95998e705089fa59c5946366be304b434bbed2378cd914e52d0f5bac83889422ba92c06b2ffb16a6fca5d47c104baba9843349b2abb467411dbae911a2f230a0e5043dd6f26d207428207be0462ca99ab6989b0686a71081e83946581c708c1ff43bf5bd7ef369e7a8e748e3104d501597bb22e1db06d5bca6af9462f6e46d7e761f54ad325543c533e89d3bd6294a5f5a8368750dd59213d4f09c54de7a98621583a05dc9bb564f0f1aab86926b12cc2fcaa082c6849e4f1a11975fb2a1abf1d589bac6fccdc58750c6faaeb15d7978de8fb4d00e7636b7c39a56f21807dc1676d279119fd1aea49d716e068da61b478209412da1b4353b80f6b0cfc72884490dfbb81199b76c4f4e2aaa863a20b5857300d5327d405552a8afe0636e8d2176866f3bc4d556624b1b8918c0cd7daf3959e730c22ccefe39b19c5a90cc25f72ddbd53cc5b7742d51c7660e8a433e666357271ec5cbf2537b6acddc42437276353a2b9fddab1e2072aae1b038bc8858905485245e61f6aa964170dcc7a9a31f8d5b5481bbb6b873cf111f3f8a8514c7a2913c0ffbf7bfd53161d04ac41fd79f1f11de303d80f92a283989dded15b25fbb137306b186f76f8cc08af4f3a15da4fbedb069f03e1f0a1bd66809921cd8c80dd88a00fbc6c13e52f8495fc1e2d1f13c1e316e757343973d0f117570a470ba492117f7b308db40fd05abeab735ec22aa1d666a8bb4a736753a9673a824131e57ff8417e539b7793b851f7ba65c16141f7155cc273684e589fa791a42d47dbbe34aca2487f610f63239004310eb1e434b1a844da789875e040f115393cc970e1c876cdd9c4cd0010e78f963008c1c46e9bd459884b674d444d2cbd3700f31910c402c0ca04251218af1527596d98730141775c6973b2278aaf5417d860617328cbc3ada2b91f8f135a2125bdcfb0cac2b689fdf000dc974bfcdaa43c6f82f94da5998fc8e976b0a69cabfe14dd6e4000a56270117588235b06fcfb688784a4eb70471e0ea176a013e5c176bc5307310d8f7ce2b6f2d613902a29fef66d9f2ad9447c264ace56705ee86b58beb318dc26f54ea314326f9ed01703f755694aaa6fe26f949a9c7e8bef0fcaf4d0b29116ef6402c9ac634dadb4d3c129b2e8ab42a5fdb2d16b2756cb3a88e72fefabd334bf6917025260bbe2249934cfb6d5c883ba3a770fa9dd879bafd6309df862d32ed47fd7806a34127514baf1b2976831026752e569e7248c8e53a274b59e9a220495b8f42378e1dba53364ab6eda39cf0bffcc6a416b6390832e8c41099aa3a8b0596473a7ee65a71f8fb535d928e0211235df60acfb0b92ed1d314e63f1534a9408c0c823e23b50eec338cc80082d31f37f5c2d911e9fa00c1053c91e3ea7cfbb423c765a1488806e1aa1cf4cb67e7a50d83e8c61611b59776c6583bff8fb94016e1a0ad89a75b66de9b99f800ee74f47ecef575b3389356e7e44c804eda87009b85c0c1a95b94d0673538b68f603b4d5e0e8c285ba1f6049da65e9c469535bedaca32e5e04071be8168251f13946db778032ff30b096b95e8c17b907578249236f46f6973a1901c6176196700632b4c7766775b667663d6f2a29de7c04d6a5fc712b6612acc5b1f7480582b5569c5fdffb8f0385945fd4c5871251579e4cbd4659a71a0be783ae0b0cf17d7bbacc0416bf374fedad3cb82204e020e5d78b4c5709ebe8ea0e251d72d42e629f695ae3e51bc33e235eafe33ae840f0cb3609dec34acc85c3e3f59d2259cea97f1c06fa65d4b0389017a3e77f1b8e007fc5af53e25590df99c0ba2a8d4a5d9e020eeb46652be1ef412edf2c02dbd2af1a317c576c950927e8c8ea5227ed02ba78e8664b869cc8e1a6b31fc06fe62645632af2ed7b19b3cac14bd2034851ece2947ad19c927d105e8685fc52b5a51a8532d314a05a590dc43296a60d90a430c4984c7cf02333baac1e7145aab4efaa284a2384523e5fa7139b7897716ad35d0b7b4ef701e772c99efb3525c1f85be3b69a56b948f2eed4a761959c444ec140966743d8e3a2a116a944f107efea1383d367c8ca04bac630009ae12dfce0017c7fcc9666fdda3858fb813f4f8e600d453db2a7dd239b3b3ae22ddcbaf4245cca6a18483d8d63ff1361679535c351e9014e888c3da57e690b33ccd5fdf6a80d02de547abefb67c0792b3a0f445579ca300c7556d8d41a416ea00dbf3460f963bb090419b917a334b8912ae95250528a623b28f2987893416dd315d8d5d7ea1d24ee37094d095e007694c142ee09bfdae5146fb4215b71c8</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
         <tag>资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>资源</title>
+    <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
+    <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
+<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
+<hr>
+<h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
+<p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
+<p><a href="http://www.ai-start.com/dl2017/">吴恩达深度学习笔记</a></p>
+<hr>
+<h1 id="4-壁纸"><a href="#4-壁纸" class="headerlink" title="4.壁纸"></a>4.壁纸</h1><p><a href="https://wallhaven.cc/">地址</a></p>
+<hr>
+]]></content>
+      <tags>
+        <tag>-资源</tag>
       </tags>
   </entry>
 </search>
