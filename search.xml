@@ -104,6 +104,29 @@ int main()
 ]]></content>
   </entry>
   <entry>
+    <title>Youtube视频下载</title>
+    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
+    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
+<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<hr>
+<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60/">下载地址</a></p>
+<hr>
+<h1 id="4-视频字幕下载"><a href="#4-视频字幕下载" class="headerlink" title="4.视频字幕下载"></a>4.视频字幕下载</h1><p><a href="https://www.findyoutube.net/">下载地址</a><br>版权限制，目前下载为VTT格式，需要在Subtitle Edit里将VTT转为SRT格式。</p>
+<hr>
+<h1 id="5-Subtitle-Edit-vvt-srt"><a href="#5-Subtitle-Edit-vvt-srt" class="headerlink" title="5.Subtitle Edit(vvt-srt)"></a>5.Subtitle Edit(vvt-srt)</h1><p><a href="https://www.nikse.dk/subtitleedit/">下载地址</a><br>可以VTT2SRT SRT2VTT,有强大的字幕编辑功能。</p>
+<hr>
+<h1 id="6-Arctime-制作内嵌字幕视频"><a href="#6-Arctime-制作内嵌字幕视频" class="headerlink" title="6.Arctime(制作内嵌字幕视频)"></a>6.Arctime(制作内嵌字幕视频)</h1><p><a href="https://arctime.org/">下载地址</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>Youbute</category>
+      </categories>
+      <tags>
+        <tag>-Youtube</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PCL-1-11-Visual-Studio-2019-配置</title>
     <url>/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/</url>
     <content><![CDATA[<font color= ff size=4 face="">
@@ -207,29 +230,6 @@ int main()
       </tags>
   </entry>
   <entry>
-    <title>Youtube视频下载</title>
-    <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
-    <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
-<h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
-<hr>
-<h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60/">下载地址</a></p>
-<hr>
-<h1 id="4-视频字幕下载"><a href="#4-视频字幕下载" class="headerlink" title="4.视频字幕下载"></a>4.视频字幕下载</h1><p><a href="https://www.findyoutube.net/">下载地址</a><br>版权限制，目前下载为VTT格式，需要在Subtitle Edit里将VTT转为SRT格式。</p>
-<hr>
-<h1 id="5-Subtitle-Edit-vvt-srt"><a href="#5-Subtitle-Edit-vvt-srt" class="headerlink" title="5.Subtitle Edit(vvt-srt)"></a>5.Subtitle Edit(vvt-srt)</h1><p><a href="https://www.nikse.dk/subtitleedit/">下载地址</a><br>可以VTT2SRT SRT2VTT,有强大的字幕编辑功能。</p>
-<hr>
-<h1 id="6-Arctime-制作内嵌字幕视频"><a href="#6-Arctime-制作内嵌字幕视频" class="headerlink" title="6.Arctime(制作内嵌字幕视频)"></a>6.Arctime(制作内嵌字幕视频)</h1><p><a href="https://arctime.org/">下载地址</a></p>
-<hr>
-]]></content>
-      <categories>
-        <category>Youbute</category>
-      </categories>
-      <tags>
-        <tag>-Youtube</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
     <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
     <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。<br><a id="more"></a><br>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
@@ -251,6 +251,16 @@ git config --global --unset https.proxy
       </tags>
   </entry>
   <entry>
+    <title>github设置自己的域名</title>
+    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p>
+<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
+<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
+<p>到此就设置完成了！</p>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>hexo d 出现错误的用户名和密码的解决办法</title>
     <url>/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     <content><![CDATA[<p>在windows搜索栏输入：控制面板<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/1.png" alt=""><br>然后点击：<br><img src="/blog_img/hexo d时错误用户名和密码解决办法/2.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/3.png" alt=""><br><img src="/blog_img/hexo d时错误用户名和密码解决办法/4.png" alt=""></p>
@@ -260,16 +270,6 @@ git config --global --unset https.proxy
       <categories>
         <category>hexo</category>
       </categories>
-  </entry>
-  <entry>
-    <title>github设置自己的域名</title>
-    <url>/2021/01/20/github%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%B7%B1%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<p>哈哈，上次整了一晚上的没整明白，今天两下就整好了，看来真的进步不错哈哈，至少看东西，解决问题更有耐心也更能看懂了。</p>
-<h1 id="1-购买域名"><a href="#1-购买域名" class="headerlink" title="1.购买域名"></a>1.购买域名</h1><p>我是买的阿里云的域名，如下图：<br><img src="/blog_img/github设置自己的域名/1.jpg" alt="域名"><br>域名解析如下：<br><img src="/blog_img/github设置自己的域名/2.jpg" alt="域名解析"></p>
-<h1 id="2-github仓库设置域名地址"><a href="#2-github仓库设置域名地址" class="headerlink" title="2.github仓库设置域名地址"></a>2.github仓库设置域名地址</h1><p>在blog目录下的source文件下，创一个叫CNAME的无后缀文件，里面填入你的域名，比如我的   zzygeo.cn    如下图：<br><img src="/blog_img/github设置自己的域名/4.jpg" alt=""><br>如下图，主要是要设置博客上传分支的目录，以及更改你自己的域名（创建CNAME后自动生成），采用https加密。<br><img src="/blog_img/github设置自己的域名/3.jpg" alt=""></p>
-<p>到此就设置完成了！</p>
-<hr>
-]]></content>
   </entry>
   <entry>
     <title>markdown语法</title>
@@ -472,22 +472,6 @@ target_link_libraries (test $&#123;PCL_LIBRARIES&#125;)
       </tags>
   </entry>
   <entry>
-    <title>我的Office激活码</title>
-    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <tags>
-        <tag>-office</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>新电脑上部署hexo</title>
     <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
     <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
@@ -525,6 +509,22 @@ hexo d
       </categories>
       <tags>
         <tag>-hexo迁移</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>我的Office激活码</title>
+    <url>/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="bf6efb1b84774a2219f9812618a959ba3db53f385988578e06fe6ce89eff9fb2">02d8f3e4749f5d3e7d8e79594d95ed2c83a0c853318081784b8675dcb0ac497684af15a8eba28634192f45576b5d8fa72f2e5a82d72b45810a41ae2b2f54b26ce8192bdd743e7da220f0eab5b5e90968e9a39d2a27335c5e1017379ea0154b1c4effc1192bc47fe07bd180802949793b45e14a3a57a6400a16b04678ee15a7d4d9bc5004f7f32c767cf8e772f23e0a91fd7905908a60bb2454e70b0a00d16f754b1aa8b3ead233ceea89c399a99940f140594b49d1c9666704cbcdfcc1e4832c232a5e1d8dda05a462be7996134efb532c678acdbed8a251de5591fc8114e387356b4ee40ab94ef7a4a6424760ec693befe457f71837b06bd1d602fce903564692c4ec2173d085e4f47e35d5978364d4a8f2bd5eeac4539503123d5118a0a1877997994f02b20888042a953e457b8fc2179ee6d7d6e6744f641db7c44a89545b</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>-office</tag>
       </tags>
   </entry>
   <entry>
@@ -606,16 +606,6 @@ hexo d
       </tags>
   </entry>
   <entry>
-    <title>编译器</title>
-    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
-    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：  <a id="more"></a><br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
-<hr>
-]]></content>
-      <tags>
-        <tag>-编译器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>深度学习篇</title>
     <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
     <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
@@ -645,19 +635,13 @@ jupyter notebook
       </tags>
   </entry>
   <entry>
-    <title>训练初稿</title>
-    <url>/2020/09/24/%E8%AE%AD%E7%BB%83%E5%88%9D%E7%A8%BF/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Enter password to read.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="b54e64794ce5241a31926600338f52c22ef38a45b2288b047c7ce87292f5094a">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f1904c5075c1f48484e987ff173482c2731d3c95998e705089fa59c5946366be304b434bbed2378cd914e52d0f5bac83889422ba92c06b2ffb16a6fca5d47c104baba9843349b2abb467411dbae911a2f230a0e5043dd6f26d207428207be0462ca99ab6989b0686a71081e83946581c708c1ff43bf5bd7ef369e7a8e748e3104d501597bb22e1db06d5bca6af9462f6e46d7e761f54ad325543c533e89d3bd6294a5f5a8368750dd59213d4f09c54de7a98621583a05dc9bb564f0f1aab86926b12cc2fcaa082c6849e4f1a11975fb2a1abf1d589bac6fccdc58750c6faaeb15d7978de8fb4d00e7636b7c39a56f21807dc1676d279119fd1aea49d716e068da61b478209412da1b4353b80f6b0cfc72884490dfbb81199b76c4f4e2aaa863a20b5857300d5327d405552a8afe0636e8d2176866f3bc4d556624b1b8918c0cd7daf3959e730c22ccefe39b19c5a90cc25f72ddbd53cc5b7742d51c7660e8a433e666357271ec5cbf2537b6acddc42437276353a2b9fddab1e2072aae1b038bc8858905485245e61f6aa964170dcc7a9a31f8d5b5481bbb6b873cf111f3f8a8514c7a2913c0ffbf7bfd53161d04ac41fd79f1f11de303d80f92a283989dded15b25fbb137306b186f76f8cc08af4f3a15da4fbedb069f03e1f0a1bd66809921cd8c80dd88a00fbc6c13e52f8495fc1e2d1f13c1e316e757343973d0f117570a470ba492117f7b308db40fd05abeab735ec22aa1d666a8bb4a736753a9673a824131e57ff8417e539b7793b851f7ba65c16141f7155cc273684e589fa791a42d47dbbe34aca2487f610f63239004310eb1e434b1a844da789875e040f115393cc970e1c876cdd9c4cd0010e78f963008c1c46e9bd459884b674d444d2cbd3700f31910c402c0ca04251218af1527596d98730141775c6973b2278aaf5417d860617328cbc3ada2b91f8f135a2125bdcfb0cac2b689fdf000dc974bfcdaa43c6f82f94da5998fc8e976b0a69cabfe14dd6e4000a56270117588235b06fcfb688784a4eb70471e0ea176a013e5c176bc5307310d8f7ce2b6f2d613902a29fef66d9f2ad9447c264ace56705ee86b58beb318dc26f54ea314326f9ed01703f755694aaa6fe26f949a9c7e8bef0fcaf4d0b29116ef6402c9ac634dadb4d3c129b2e8ab42a5fdb2d16b2756cb3a88e72fefabd334bf6917025260bbe2249934cfb6d5c883ba3a770fa9dd879bafd6309df862d32ed47fd7806a34127514baf1b2976831026752e569e7248c8e53a274b59e9a220495b8f42378e1dba53364ab6eda39cf0bffcc6a416b6390832e8c41099aa3a8b0596473a7ee65a71f8fb535d928e0211235df60acfb0b92ed1d314e63f1534a9408c0c823e23b50eec338cc80082d31f37f5c2d911e9fa00c1053c91e3ea7cfbb423c765a1488806e1aa1cf4cb67e7a50d83e8c61611b59776c6583bff8fb94016e1a0ad89a75b66de9b99f800ee74f47ecef575b3389356e7e44c804eda87009b85c0c1a95b94d0673538b68f603b4d5e0e8c285ba1f6049da65e9c469535bedaca32e5e04071be8168251f13946db778032ff30b096b95e8c17b907578249236f46f6973a1901c6176196700632b4c7766775b667663d6f2a29de7c04d6a5fc712b6612acc5b1f7480582b5569c5fdffb8f0385945fd4c5871251579e4cbd4659a71a0be783ae0b0cf17d7bbacc0416bf374fedad3cb82204e020e5d78b4c5709ebe8ea0e251d72d42e629f695ae3e51bc33e235eafe33ae840f0cb3609dec34acc85c3e3f59d2259cea97f1c06fa65d4b0389017a3e77f1b8e007fc5af53e25590df99c0ba2a8d4a5d9e020eeb46652be1ef412edf2c02dbd2af1a317c576c950927e8c8ea5227ed02ba78e8664b869cc8e1a6b31fc06fe62645632af2ed7b19b3cac14bd2034851ece2947ad19c927d105e8685fc52b5a51a8532d314a05a590dc43296a60d90a430c4984c7cf02333baac1e7145aab4efaa284a2384523e5fa7139b7897716ad35d0b7b4ef701e772c99efb3525c1f85be3b69a56b948f2eed4a761959c444ec140966743d8e3a2a116a944f107efea1383d367c8ca04bac630009ae12dfce0017c7fcc9666fdda3858fb813f4f8e600d453db2a7dd239b3b3ae22ddcbaf4245cca6a18483d8d63ff1361679535c351e9014e888c3da57e690b33ccd5fdf6a80d02de547abefb67c0792b3a0f445579ca300c7556d8d41a416ea00dbf3460f963bb090419b917a334b8912ae95250528a623b28f2987893416dd315d8d5d7ea1d24ee37094d095e007694c142ee09bfdae5146fb4215b71c8</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <title>编译器</title>
+    <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
+    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：  <a id="more"></a><br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
+<hr>
+]]></content>
       <tags>
-        <tag>资源</tag>
+        <tag>-编译器</tag>
       </tags>
   </entry>
   <entry>
@@ -676,6 +660,22 @@ jupyter notebook
 ]]></content>
       <tags>
         <tag>-资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>训练初稿</title>
+    <url>/2020/09/24/%E8%AE%AD%E7%BB%83%E5%88%9D%E7%A8%BF/</url>
+    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="" />
+    <label for="hbePass">Enter password to read.</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="b54e64794ce5241a31926600338f52c22ef38a45b2288b047c7ce87292f5094a">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f1904c5075c1f48484e987ff173482c2731d3c95998e705089fa59c5946366be304b434bbed2378cd914e52d0f5bac83889422ba92c06b2ffb16a6fca5d47c104baba9843349b2abb467411dbae911a2f230a0e5043dd6f26d207428207be0462ca99ab6989b0686a71081e83946581c708c1ff43bf5bd7ef369e7a8e748e3104d501597bb22e1db06d5bca6af9462f6e46d7e761f54ad325543c533e89d3bd6294a5f5a8368750dd59213d4f09c54de7a98621583a05dc9bb564f0f1aab86926b12cc2fcaa082c6849e4f1a11975fb2a1abf1d589bac6fccdc58750c6faaeb15d7978de8fb4d00e7636b7c39a56f21807dc1676d279119fd1aea49d716e068da61b478209412da1b4353b80f6b0cfc72884490dfbb81199b76c4f4e2aaa863a20b5857300d5327d405552a8afe0636e8d2176866f3bc4d556624b1b8918c0cd7daf3959e730c22ccefe39b19c5a90cc25f72ddbd53cc5b7742d51c7660e8a433e666357271ec5cbf2537b6acddc42437276353a2b9fddab1e2072aae1b038bc8858905485245e61f6aa964170dcc7a9a31f8d5b5481bbb6b873cf111f3f8a8514c7a2913c0ffbf7bfd53161d04ac41fd79f1f11de303d80f92a283989dded15b25fbb137306b186f76f8cc08af4f3a15da4fbedb069f03e1f0a1bd66809921cd8c80dd88a00fbc6c13e52f8495fc1e2d1f13c1e316e757343973d0f117570a470ba492117f7b308db40fd05abeab735ec22aa1d666a8bb4a736753a9673a824131e57ff8417e539b7793b851f7ba65c16141f7155cc273684e589fa791a42d47dbbe34aca2487f610f63239004310eb1e434b1a844da789875e040f115393cc970e1c876cdd9c4cd0010e78f963008c1c46e9bd459884b674d444d2cbd3700f31910c402c0ca04251218af1527596d98730141775c6973b2278aaf5417d860617328cbc3ada2b91f8f135a2125bdcfb0cac2b689fdf000dc974bfcdaa43c6f82f94da5998fc8e976b0a69cabfe14dd6e4000a56270117588235b06fcfb688784a4eb70471e0ea176a013e5c176bc5307310d8f7ce2b6f2d613902a29fef66d9f2ad9447c264ace56705ee86b58beb318dc26f54ea314326f9ed01703f755694aaa6fe26f949a9c7e8bef0fcaf4d0b29116ef6402c9ac634dadb4d3c129b2e8ab42a5fdb2d16b2756cb3a88e72fefabd334bf6917025260bbe2249934cfb6d5c883ba3a770fa9dd879bafd6309df862d32ed47fd7806a34127514baf1b2976831026752e569e7248c8e53a274b59e9a220495b8f42378e1dba53364ab6eda39cf0bffcc6a416b6390832e8c41099aa3a8b0596473a7ee65a71f8fb535d928e0211235df60acfb0b92ed1d314e63f1534a9408c0c823e23b50eec338cc80082d31f37f5c2d911e9fa00c1053c91e3ea7cfbb423c765a1488806e1aa1cf4cb67e7a50d83e8c61611b59776c6583bff8fb94016e1a0ad89a75b66de9b99f800ee74f47ecef575b3389356e7e44c804eda87009b85c0c1a95b94d0673538b68f603b4d5e0e8c285ba1f6049da65e9c469535bedaca32e5e04071be8168251f13946db778032ff30b096b95e8c17b907578249236f46f6973a1901c6176196700632b4c7766775b667663d6f2a29de7c04d6a5fc712b6612acc5b1f7480582b5569c5fdffb8f0385945fd4c5871251579e4cbd4659a71a0be783ae0b0cf17d7bbacc0416bf374fedad3cb82204e020e5d78b4c5709ebe8ea0e251d72d42e629f695ae3e51bc33e235eafe33ae840f0cb3609dec34acc85c3e3f59d2259cea97f1c06fa65d4b0389017a3e77f1b8e007fc5af53e25590df99c0ba2a8d4a5d9e020eeb46652be1ef412edf2c02dbd2af1a317c576c950927e8c8ea5227ed02ba78e8664b869cc8e1a6b31fc06fe62645632af2ed7b19b3cac14bd2034851ece2947ad19c927d105e8685fc52b5a51a8532d314a05a590dc43296a60d90a430c4984c7cf02333baac1e7145aab4efaa284a2384523e5fa7139b7897716ad35d0b7b4ef701e772c99efb3525c1f85be3b69a56b948f2eed4a761959c444ec140966743d8e3a2a116a944f107efea1383d367c8ca04bac630009ae12dfce0017c7fcc9666fdda3858fb813f4f8e600d453db2a7dd239b3b3ae22ddcbaf4245cca6a18483d8d63ff1361679535c351e9014e888c3da57e690b33ccd5fdf6a80d02de547abefb67c0792b3a0f445579ca300c7556d8d41a416ea00dbf3460f963bb090419b917a334b8912ae95250528a623b28f2987893416dd315d8d5d7ea1d24ee37094d095e007694c142ee09bfdae5146fb4215b71c8</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      <tags>
+        <tag>资源</tag>
       </tags>
   </entry>
 </search>
