@@ -108,7 +108,7 @@ int main()
     <url>/2020/09/26/Youbute%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</url>
     <content><![CDATA[<p><font color=# ff size=23 face="黑体">Youtube视频下载</font>&lt;/p&gt;</p>
 <h1 id="1-4K视频下载"><a href="#1-4K视频下载" class="headerlink" title="1.4K视频下载"></a>1.4K视频下载</h1><p><a href="https://distillvideo.com/">下载地址</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
+<h2 id=""><a href="#" class="headerlink" title=")"></a><a id="more"></a>)</h2><h1 id="2-油猴插件脚本"><a href="#2-油猴插件脚本" class="headerlink" title="2.油猴插件脚本"></a>2.油猴插件脚本</h1><p>参考我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/">博客</a>油猴插件</p>
 <hr>
 <h1 id="3-1080p下载"><a href="#3-1080p下载" class="headerlink" title="3.1080p下载"></a>3.1080p下载</h1><p><a href="https://www.y2mate.com/en60/">下载地址</a></p>
 <hr>
@@ -119,9 +119,6 @@ int main()
 <h1 id="6-Arctime-制作内嵌字幕视频"><a href="#6-Arctime-制作内嵌字幕视频" class="headerlink" title="6.Arctime(制作内嵌字幕视频)"></a>6.Arctime(制作内嵌字幕视频)</h1><p><a href="https://arctime.org/">下载地址</a></p>
 <hr>
 ]]></content>
-      <categories>
-        <category>Youbute</category>
-      </categories>
       <tags>
         <tag>-Youtube</tag>
       </tags>
@@ -132,7 +129,7 @@ int main()
     <content><![CDATA[<font color= ff size=4 face="">
 
 <h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。<br><a id="more"></a><br>3.获取PCL源码包</p>
+<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。<br><a id="more"></a>)<br>3.获取PCL源码包</p>
 <p>4.安装Visual studio 2019编译器</p>
 <p><img src="/blog_img/PCL配置/1.jpg" alt="示意图"></p>
 <hr>
@@ -222,17 +219,14 @@ int main()
 <p><img src="/blog_img/PCL配置/16.png" alt=""></p>
 <hr>
 ]]></content>
-      <categories>
-        <category>pcl</category>
-      </categories>
       <tags>
-        <tag>-pcl -visual studio</tag>
+        <tag>-pcl</tag>
       </tags>
   </entry>
   <entry>
     <title>Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</title>
     <url>/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/</url>
-    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。<br><a id="more"></a><br>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
+    <content><![CDATA[<p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。<br><a id="more"></a>)<br>原因是由于爬梯子代理网络的问题，其实折腾了下。具体哪个步骤解决了这个问题，我也不是很清楚，这次做好记录方便以后继续更新把。</p>
 <p>首先我是从这篇<a href="https://blog.csdn.net/weixin_37166398/article/details/101422239?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-2.channel_param">博客</a>里查到了我的ip，然后ping了查到的ip，然后在system32\drives\etc\hosts里添加了   </p>
 <pre><code>IP gitee.com
 </code></pre><p>然而这并没有继续运行成功。<br>然后我有尝试<br>1.管理员身份运行cmd<br>2.输入 </p>
@@ -286,7 +280,7 @@ git config --global --unset https.proxy
 **我是粗体**
 ***我是粗斜体***
 ~~我是删除线~~
-</code></pre><p>显示效果：<br><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是粗斜体</em></strong><br><del>我是删除线</del><br><a id="more"></a></p>
+</code></pre><p>显示效果：<br><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是粗斜体</em></strong><br><del>我是删除线</del><br><a id="more"></a>)</p>
 <hr>
 <h1 id="3-表格"><a href="#3-表格" class="headerlink" title="3. 表格"></a>3. 表格</h1><pre><code>| 学号 | 姓名 | 分数|
 | :- | -: | :-: |
@@ -390,7 +384,7 @@ git config --global --unset https.proxy
   <entry>
     <title>pcl+vs+cmake编译</title>
     <url>/2020/12/27/pcl-vs-cmake%E7%BC%96%E8%AF%91/</url>
-    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。<br><a id="more"></a></p>
+    <content><![CDATA[<p>上一篇写的配置可能是最基础的，也是很麻烦，其实可以用cmake来偷个懒，这样就不用附加依赖性已经加入库目录和包含目录了。<br><a id="more"></a>)</p>
 <h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
 <p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。</p>
 <p>3.安装Visual studio 2019编译器</p>
@@ -439,7 +433,7 @@ target_link_libraries (test $&#123;PCL_LIBRARIES&#125;)
         <category>pcl</category>
       </categories>
       <tags>
-        <tag>-pcl -visual studio</tag>
+        <tag>-pcl</tag>
       </tags>
   </entry>
   <entry>
@@ -451,7 +445,7 @@ target_link_libraries (test $&#123;PCL_LIBRARIES&#125;)
 <li>有时候Github会抽风，很多时候国内没法访问，必须得上梯子才能上去，还是很不方便的。  </li>
 </ol>
 <p>所以在用魔改butterfly主题后，直接给我hexo整崩了（主要还是太菜，看不懂大佬写的东西），在此非常感谢那些<strong>无名英雄</strong>，我们只是走在了别人走好的路上。</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><!--more--></h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
+<h2 id=""><a href="#" class="headerlink" title=")"></a><!--more-->)</h2><p>这次部署在gitee（码云）上，还是很方便的，一个是访问速度确实快，但是需要手动去gitee pages服务更新。第二个是gitee现在的用户也很多了，也见到一些写了几年博客的大佬从github转到了gitee。<br>我是在8月初入坑hexo的，当时什么都不懂，对着B站看视频，别人干啥我跟着干。现在还算有了一些进步吧，好歹能看懂一些config文件了，毕竟在我搞崩hexo后，直接重装了系统重头再来，为此我熬了2天的夜。</p>
 <hr>
 <p>这次选择的是比较简洁的yilia主题，开发者已经不再提供更新了，后续有基于yilia的plus版本以及各种进阶，在csdn直接就可以搜到。</p>
 <hr>
@@ -467,15 +461,14 @@ target_link_libraries (test $&#123;PCL_LIBRARIES&#125;)
 <hr>
 ]]></content>
       <tags>
-        <tag>感想</tag>
-        <tag>心得</tag>
+        <tag>-情感</tag>
       </tags>
   </entry>
   <entry>
     <title>新电脑上部署hexo</title>
     <url>/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/</url>
     <content><![CDATA[<h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
-<a id="more"></a>
+<p><a id="more"></a>)</p>
 <hr>
 <h1 id="2-拷贝源文件"><a href="#2-拷贝源文件" class="headerlink" title="2. 拷贝源文件"></a>2. 拷贝源文件</h1><p>将初始电脑上个人博客文件夹下这几个文件夹拷到当前新电脑的准备设置的博客路径下。</p>
 <pre><code>_config.yml
@@ -504,11 +497,8 @@ hexo s
 hexo d
 </code></pre><hr>
 ]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
       <tags>
-        <tag>-hexo迁移</tag>
+        <tag>-hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -536,12 +526,12 @@ hexo d
     <label for="hbePass">Enter password to read.</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="db76f283ff122df97fb6ef1ee2df8a643db1522ba2b0db8cb5c9b7a2a74c1c56">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af926707dcb3208de68be598dee4ec8475f6902f2c747bc2548031bf4317b7a50abdab1cd99629bbe28bfad723046245417d4150bf2d70b2a7d88559c78924c56e0451885688278628e91da0e75cd8ded55342c601ef2ca54a0b3875fc8402e8bf4f295c8112acac8755f68cd4bfdf3698d603a564a533c1077ae967df2c6707ace6014b3db54e4d7a09ec075bc9e2fe42af3015022536d95e9f13fcef269950b4439062d4e10549d8514db90b5523a1ff32deb670ec96e8bcea0f01108bbe6c1f5a6848449cb29e37c311becb07c9213d7f2cd824c4c580b8ae12ecdb4a062e1af2f7743fdeff2feffa86a9cd5d725dbc363b900df36c9e63929c0cf6eba6f6adb747d77642bb9ce4257445b37d764e2d78d0162afa694f3bc52af2894a0adb2a0ce6bcb55c5a7dff408444049169296df7f7d436c7491c1fae7ac43d5a193b9f7f33fe04284e8246193e13ebc0132840f77546f5329c18059bb5184045a95f49ad48885c2f2700e464232f39eabad04718c6af55a1ce268627477da89f02fcbc03642e23430f67f191a94d772ac751ebe2f68869089d1a57d8431e141483f21827a6178f84b5054665df3e981909e8c1b5211c696fd215ea7c3bbc720cd1135b4443b4badcf2d8963f3003e3077c09ccad8f66927e03c16ded35e29f016004baf081935840fc67c9d863f4489e0c714dea527654e54a62a4e18bf1720590dbdf21fe591c3a623e64bd65a8869e8a04ee8e54880bfa9e19e720d983465a2d4a2cbee0a68406e77ad616a418b59a4f15d3680959f27b083d18a9d9295fd4e48442a3e00d26a04c2bd69762e7a47b0312776702457ca3cd7545297739a15c58ff8a7fbf0800e1b5afcc9da110de0980f0cdfc594819f3861e344eea77af2068a43ee4cce5cfa7f6f6b4dcfea5bec20f8361578325112d1abcfad04c1389e387b8e870b6697e80decc289f263c439cbbd2a464bbc366462035e88642f186b5e0e79133ed4d3be221d31759c8e87879b22dee3c1eebf78d9f46c3a5b1c5fd23ee24744a97a5a2250d683d2220992a9857aee38f731424d23d372302f15fa2ef8662cac5f09d07a4ec1153c67d15b56efe64a24a523f015f97afabc4eed5b427f8a0236728148a259f1de238070f4241bb52c57521544a37fe467c66f24fc2780b3026966f7f9bcb12c20c78dffeb11c00142c2b1c2b10f21a61cd3fb30f7623e7b96199bf0a0d6ce93c60bb3c5a6c77f3f38d85f36eb5fcde14d99811b4f2b57aad8424ad8e844edcebce8c81c31bc54b455c0b2b2562cd8aac7e93e5c59baa8d56efed8e8a1eb36658373ab7a9f3e6cd4a3ea55ffd25dda3e8ecb98e6661a4efdf9c7acb89171899debc20c2cc04f59e54f6553e41fb88821cb1adae0e1255c8f21718a37b5646e5903bc1378ccdaca6d520b0bc390289a36eb61183537e6883c7ef423bc14ab4033fd34eaad23609398e98d75586fb5af4b768c1d9ab3054343491ac5a5750d20668b1e60d5fa01951da37299dbf4155a4ce167d5a5eb1f6f3c56654528c29aeea89fa3d4e5f0886e3fdb2180ec4655331eaa82f5974363dc54475d37bb45bac4a1fc8d0dbf7df47f884698bc6b73225f2efc9d3cd56b31dcd0a649d8ae2a5e055f089bb54b8fe2ce88dacfbfe9fdab61bcb1955f4289fb135f06e03710d1dc0b43698c218bb36f6d7a242383e16832b2f474fac918e77147a85b896adfb58215055d68d5df564aea04eef072b607c47620478f9cc3c1b2b7fa12b8e70937a61d0ade55d7c4fa944cc31dbda7d7c6545b672675c0098d00595c6a8069645216814484dc79f4f1b60de3562b8a625bf4070acaf8267a9c1868eb090ad34df6e1878483855ebe5ac2841b592690598732be3c4db1ec30008804d6798096abc02a369b346ab4ba5fa648422ea8c782ce89a755245e3b4974c9954e3e34c351c8630f3f94cc5454a793f6bf8dfb65deeb732f4b815f99b3f405630afbf957fcadae90106d72ce29813127f9be3cf3521836b80c6f06ceb4c52fd1bed2dfb4dd2f6b1d06be40dee79f2f270fd0e3f6970bdce562291678b49d604ab9df9a71a6ce337a0acd48a603ad9143b6c224c80bf4c847b6c54f4d815e2d8d52d4441cfc180fe0e9db946d5cea0cd1017d7441d4fc896d027825cea51d68694721b3ee161adddb41f650efd622ac26cd225297b37643ffac5cdb16ebfcc07c1c51aed620b1b20cefe98930b1a75447fbc3cae8cbbaeb1aa788dad826028077e818a44552fe9527478ca16cdcda7a6fe5acec6250395a486a492571bff8fed5e71f62e602e697d3d543d7380fb366c14c87b020299fab905fdcb2befcb2eabbf46f0bbbb327ddb8f61ae56e6e73362ab3fa0a8c8c0901e0724b6bd2e7d900d104a6172030118c66681c439548fdc0d95eb4955857271104c7de434ccccad5d2fa29baf0efe9925359b803b7b1cff769be9bceef148a6872aa471fce99486890be3fff6a81782d835d2303d7159046ec7d120cb935f6be65d67918f26507bfe5adbe0ecb1dc26153d631f9a97f2d615f29dc10730ebe6b7e4f7c2579f4687f2d43d1cc6fe6c6350fcd6fc511254462d81379786e56ddc3dafb400cbf67f8f6629748f9f885abe8111f292953fba870a8ce194c44f6627feebe590437d284f2f359c14a94842f267b3083bf0d8da29ec1c709719b5b57d52bc90dca0c9d3d75c08cf4c2762e62781f157e6052ad3e3e0254bd3c5e5de7ab74bf00cdaa5f9588ad2d8d504ba4bc6fe1ae54ced023ffb35c097cd45b2e38faead10821e4af3001b10fc9623468c375aee5cc5246dc797f3934f87815f0adbc0a4d3c6a099a3a77bdf974d47fd69072ae5a11a7205d001c1f06a2edd7e3db3dee51affd98ce2355b5681ee209ed0d3be379f12d3aa097659f6812358f64886c701d81667d92ef67571efe32ca3afb839907fe2acae51872e86bd2a71817116a45cd20b9bbe4f9c6f76ea5727f9728ea4a91b5c83b0c0140ce5981b3de7501a1378fd9e042154c5454735ad02e6f09ebf8ab039d2ecce96698f1536a4aeca5ab28bfc8ffc0369893468e2eba69d36af106486de5b9bb2285fee99334868ecf4ee7432d728f3d680d422d89418d144a1e09cfe9e38f865526e4fc0f8622a672a54558550409935404eee2438480c95ea5d63824b998c690d231447f772efa2424d0b6320581b3545d37d3ea0ec9992088eec17c7b8e5733f3323b8cdb7ade3cb0f77d40129b163dc507f7222f2ac32b27957366a56b5737a744a60652fccdd1fc6cde870dd3f6b4774b8e00485358cfb24d605863dfa497fdfd687f2598a8640af5bde1ada50f02c53b68242009bf7ed98e850c8d82c3132a968b458424553e5edc8c2eb67fafd02c65e3f7aa77e33dfebc6e1dfc560fba24157a41ae2e37f6f16b2889a244785e08bfc834ebd9076db1f12f0f5f7b115425bdb5bbe4af54267ab190db02848f9181145af4e356df52136c695b5fbc52db2b22e6aa86f4f7484016d34e3d1610dd8a3302cd28f1c1075dd76e88436e5ae1b19c43b3a10a9752abf23748acc1baf2d2a2092dcbc0b7f02b86638c399074c63df4b5f13cc164c31fc387d54e31af2b253cfc23683d56663d99bd5a0e3e25bee2c21119175bdcedffe5ef607461e114a3d6ae00ad8f3d2bb297f4e89dab87be7576d57111933597c54f2f14aeb86b5f00b47e584453f6065ad5b515b7586d2fcaf51a576a9a4b10cae3e495dba40387db19e003af5ca95db3187f11f6c83aa2c9465e06bd3de3e73e0c2df337bdb91ab9c61ca96d4cb3081b7b329a5760e47b715d965c1078c0deaef200cf13a13c5c555aca96acbc96b33be37afc90c13957ad548fd8d98b26d54921aa1e050a8d136a5f995cf94e6a3b2cfd58e805148f1db9f2303c5c1fcf9e205900f93a41c2193d2e48795e6e84cc2462ffad5de1645e959a29499b2c63e054f1be579202f2e1cce68426cb27c3b05b143318a10f763d1aefe3fefd5a8c7d769a79fffcb9f1773c95b1ad2dd8fc3fb4c5e25d531ed2f3e76ff0cd6068c1abbc582eb99889ada6f712a2f338f718e1626db2723e3265dbceed66d2324fd6f43340fd382a3255f95e1d9bb84e4e0c4c7c81cc5c0550289b9b283c8d79b8a2eae9bc2d4eb58d65791e455aa2132a4a73f3548719b7adfd0b8da7c8897aefebb47d90b80707c541a0c793d08e85a61c6a6d5fdfcad0bd950826dc7c75313f018df58c97868722d5d7ba052403f6c259c943c52ac49f6baa1306cb8cbc165ba5bd40c5df7d674403827118d89a67973efc2134adfefef2e1030294a990529a37e017846cd82151bd4ff93e59d070b7c3ff48c07829b1979078e84d1d980e4be347487087bf23f9ff74a093fcd24f0ea30c69b0901e5701391a6986024dcc5149d68f7ca387c6a4d94c68082fe7e52123056c2eac232d59dee63a99a1043afd7d6ebf3836fdf800b7ccbd343793dad922849ca5b16971b53340c6785622fff98a7a6a1e621dc86efae79861a22e7b63bfb375ea9128ef275ad8617f4be9c0a2bd9186c35661b12de5b66901fbbb5662c31dfb832373850244b1c560c69b322352f9a64e273abac33220801a99df9204ee3e45a8aa163b7b84f3d43a8b73de319a26a741dbc8242759300ec76534e3de4238d5e7dcff8cebab2bf86cbf3659ba3023969b71877c7adee0e24266474610f7f6505147168e45aeda12d6e1a6d489bd7466f4e33080623c592b1d09cf0e1286e859129a0105cdc818acf2488a8e44b</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="6c41105859e5f71a9d93c0146fa1f6ad48ff3d5365abbae105ef49759452974f">eb33a0b69cca7e8745846fe553a26ba9dec307384f9df6ccbd294ea4b62301ad656fa46132335b057e0f49330bdeff1e0c56094970c855ef3a96d2ceac32178f95e5751acc5b181aa27dac97ffbb50e786f6fa68660405f46b64f363d201815f2a657b835c425957429c42c3924eb18b2db698a25421c4673e4a645524f2e0b727fe21d123e126ed72d1ff1bc41569baff3384fcdea72920b8eed2983a0c2f726a4b0e391c97cdcb9a681668d78e937758421a95e8d70b17236df78a91585e593fd56b71e0111d7e5208e95ade423e1b355626c5ec06e0b736b6b02030d660bdba099f85e571acf323531c77497f8c5ffaf71d9bac1c65c751855e18c2af926707dcb3208de68be598dee4ec8475f6902f2c747bc2548031bf4317b7a50abdaba46fdb31ebb36740088aa88f01d3d6bd221b0bfddf506264975f9c63fb0fe41f2ce5e1ed1167472b9ae054615b4f4a37d15917b0fc86a9a4739dc7473d79699070789c9d3deaafbd54353d84e8945615fdad0773a76bc888df19ef3aa8f6a10a909105086127059c85ab690c58357dcfb5ddc853dc3f7c59b1285449d992c06add5233f9367a7ded8e8972107d3026e5ed158f9e3837d3a5cc31f269079d378865a8e5d4ded7ec278ee1087c5e77b7a26e46f070bfd0bc7463b235b470e8a366140856d0c52590a53daa2bcb4d7237e1c583c78175944e8dba999f973e90b174c2c323c3227640842c4c5793225371d32d76b6164c4c7554be74444be92f307762e38aa7e17f8aa72e8d2950376908102ccd8b63fbefb03ed309a01efa657f4d20ce505775892f6355d302a7cd9d8f83ca76b6bd3c8d10fb8f2dc8f67dcc007d629b0efab86525f36b88ce9ba2a5b7af99f6f9c5e70350c5c4a7218d701708e948dad9d8306d29a55289ae640af121f635fe7fb81ade83ac9ccda2aaf4993523b47d111776c6ff3774a5080ec0c3e8aa6544ce9a40dd96a513857b876f86d76f6d445ddd982ecb0658fb0d6f102029f9348ef24b1d9807798ea1cbb76e1e13d177eb363f1d4217bc721ae0fa980672b9b054794189603770a4549be4229d0fc84111f7dccc4f1ba8b354f0be6cc94901719bbea14ec7f70376c3c16a7e5a322ad103603fd29baf351a337d397e4462b22887b047d71f66c22f4838a7129645be72331f139e99a8bbe85400667daebe8cf03713ac6cd1b4a19ca95fd6b424ab36cd47153af97c4c469893ad3acce3bf8c1fd9e5bbca38fc8aab80f6141b1fe071f458a93d6d178b7e9421aa5e07a6cadfde4e0b0c9ee66f014a3218524f79f1c1547df14ec752270cae06b444af322c0a4d3e31215c16954ee6f3ca15d827faa647d2d199af56c98962a5b11363ed9e2ffd1ce4dee9394906ab9a9084a1f2ce493992e9394cf63b1cef3aef6478dc267869c9feae32beb92f7c7e3f647b8076bf74631b56ec8eef79fd50acda7b8c4932770b0e736c23b59316b40fbfd264e535a03127443c8d62f239b6ac5ef09738e5ba202402441f66965f361fe35bd61925d4a0b3a9e977c7ee95fa10568249c25767445376a20ba3fff77e03da209ef945da68758305aefbf0f12ee2c3b83f814299d8ae1ce502715f80960ff1e78a03aa0cc6a3e3d2812fb632cbbb95e846062db7ad14050d74fda3beb736d3ad8351383932512b5bd49602a49ffaad0d89603cbbbc0d123f5c14d9fde9b959a5c625cd9a76d964b252796aaf6099a5e37336cee805b96e2d054838e7a1240213391647e30653565154d8e8fa98ac367c43af9e8d9f9082a1db4d30db6c4d6172e7a8b59a6aeced38baed1ea1b5a4bec3824d7043c259783c162639f715c72f9cce10788cbf6cfcc7ffb80f48484a7040398592c7fbccc3a65728ac8dc55bf9679c3a1a0a084441e4b4b521ee18033be43deebb2a3bdba663f6dd23c0b6a5bbb6db646c06b3967ce380d2853d433dfa6bbc32cef0c5b5aed081e72a875883511a3fafc68721ec81649301cf7cc5b259d439b6ee7f73f08e9d1eb0b0a8fc3ce1e6f019d5150be346f2758a02bb48520b222790240a3bd0be37c4a0b0d56ac40f4c02430fb6c0f57c9760367c0ab247ef8232b43a1cddc39c127637e6a7e137574371430c6233249c7be8c16ef7d1b55384387ae01acac0bb8b1dd1b64e71556dc5239502a533a8a694e5d5e8724f6893fd4e3e6c464d15002745c7addcebadb41d21bce9116e99c6da2449143e649b5ab8ca6c728e64d5fff29631fca14d369f06e6b2ffb5d7f3c66246b443c8f31666743000a6860ce495c8638782d69e6b934fa9924ac8e675a6cb053a5bb8a53b8ba5e2375701ea4d0e3c9289efb22c7d274166656d3921321cde7c9aee09be26b0565467df90bb744f92352295ff3745e22ffafb3049e2772b7f2132e4c086e5a79f4bd6d98551ffea0becb0d93f9e484218ec5eef8229ccfcf36690e079686e474ddd1cff497a3b5302629512b9879f4d1724a52085f003bd3e9cfd47d9e8e23802772eb6665bac87dc71e793f314de29e8fa299535fe27605921c3e6cddbac72e7b67962694936f68ff029ab5ba87a8555bf1a77c459c7a63872af3a1b2599983d072afa833e1659da02fab2461d44c66f0215dfa5f4afdee1ebdfb2375f4c375b29d6706e6100031e75462e90dc85b6084dcb302719c1457421975d322dc2acead63a6c17efa6378f12400fc0e82c506bbb988dd28c59b7aac1b4d34015e27b6547b54b52d1ba0be8ef64ccca1e3bd76f84a4c5afacabcfc71607c4cb5d2bd0ad3c276a7eeb113d304add838dd369603d81137ef4eda0ca3ae7e557f1653fd3455d56568eb4d6d1c3098f6ae5bfd1e3c1d60374051dfd7ee96d3e530316a9fe39aff8e74b9f7a1cd638faf56f669ca5a00f83c30b0a4f98352207fb5413d293eecfd8a7d4f8c0c1847045f87d449227696707c1d67ee3333a5aad31de0bba6f5749ffbb25a2ebe52967853d4da700d5ec14f07694c267e1ae26d62720933c1873c306581b07844da5117e6b9c927360a0ebb9a23d10f9ec8d9062cd11b56ca5acf3dce7d25ccfdf8de83663d8800c3a9a272cff45f673ae28011aa9664fb5c4cb722e017104dd4f1cdb7f6c2ccd26c710cb6d9f38f9a7a79a8adb459f56837cace5ae795f0134fd984be4c82ce9e042050f935f5a495589f2e8a6a7c8e509175badae0ce503621f65148c4fa756efdef9ddd31eeae0badb1df94e844621e4b38ba3ea2f3990e51cbbd0d4efb090eabd88bc9c51886d3ad8c20e57e476612d6033f9c390c5bd9b100fba26cc22b6c0de2115cd3adc980c8da050924c565c84413ca1c0cbb3e501fd15f23b17e8ada7db73be30cd1ac0dafe21168f63da582b33913eb01daccc4d0331626cac25dfc63bf9c1da9447a040bf16935fbbba0f68d46d8e7cfc27d2dcf68c482593ec224ee5ed21ea158b145a94adc927628d4c590e52b2d6203df4643198605dbb9aa7c69cb1979ce8440d1deb56b2687118de6b4b1664ad6ea9cf77cc36bef8e681040be8951cfef3f1938743bde9842a956afb5bff09314a337e4e6f38592a8689b4fc52916c8d6d60a0df4e3a75a29fce8b4b0d28e7a126d6d191200783d9b8a0b31495f8b91e5425c36279d97c0c7500535027d4539dc035321dca881434ca534d79e9e047bea6a438289e61cc5effd4c1184675a381512a80e8af9a129f63c5dd27ea2d078b7f6063e095d1e8ed0484b452cffde1085b008c342c92c3cd887fe6b57c2d92588562c888c3de2170c2b90b4c64a7aa04f581b8b7f81e3921efcd4b7f7b3538b11dae88736133117f102269c2bb8b865d5dd1b20266991ffc0a746b9ec39f25d9f7b90c1bc61fba211d7739f9eed5c3fe39ce6573886245308d15199723f023f194842db70b4cf3cf5a7ce535aaff7e20f20720f6d9d22f4ba03fa66a6a9f0ce992e78d75e3a0d5e7732e217ab7e257c7af6f72935d8b9c58a982ae3c16518eaff1924c294b731777dcb12517f5ce44c03b32c07985ff3ac7496444879ef7cfcb6c7eee011124a0943b963383caace6395db6d2eede8784ed52429db5b73429ad4530472d076111cb49afe940b412c53b0e40c9b7b639f074b835729d475294431696412562aab6f13dce8ab4976bcb9f72dd940823a775468956c5b01781b8274f360c7dfd6b552d00bcffdf0f1351397951510b9bb0e37dd2a40571d90a47987a80b444d3880aa67b5cdb5dca807e1f8d10d5beb7f5686a011b40d8251b1f6eaad02126367c53934e09b275ff91e37e36222100ae61d9cd06f88ccaea54ec1bf8a76a8c775ce35fc879a170bcd07b40367da65934ca7fc7818fd49182d446f7db7311eee814eb6214ab1fa947c2cdf9cd407cd9e42d2b82117be7cf73e49c87769a815e66ecf8a64faf4a72af9c8310ffd155edf151c4529a219e7250058e5d822fb3dc1b4e889959c68ab687d4b3a8f238ae7db8c7287c6eaf7e67466f2e7555c50824921611ba1dfba3ac143c7e8317705e46c3e89eba4679c8205c8aac36a9f8062e3bf788d1ed0644116b9f5c6d0e8cc9569a9a6d572d0130589101c82be2d3aa28d525b6e2a22be20966568d06ef9b251cbdbc0d8f26e110d0f1d59e8eb61ddb2fa1ad1a5c8e98f8ecd966e95c07c05d2b623b0f3da6ae425c86562788bf71b87d7332f7b20cd85addd9f51792ec7336b2aae5f57ecf6a2b418e5c84e54f873bba54c90f7a851f639e042b134c10b21cec828229e39c2b2f6d10bfa26e4d644d6ea5bdc91a8c5851efc23454ec417a39ec5aab1d0efb3fce9cf0061ca3a1112b0b766f2eaa062d472fd8430541938393243bc58db95dbfd226c1f39054eb21460f8331163e4cbefc591703b3c1d40e2e27692bc81a36b13b267ac94320c400601d9a785752a80f67a5421b641dd1d1a8e081594494dc215a567c3eca3b30573b6afc0fc9db2b9c4db2b6e866c765b5ebf1d53374661c7156c3884363d614ee693c53cdd4d7607b2f0c62c5dfab734c8fc81b36a358e01819c5d7acf53f054b6291a6e9ec4969b1947df498dc36dbd9925620862f54c97dd3f5e3317738589f40638573e45a859a6fb206f8271d2cbdc8cb6f3d404f503e8c3e6b947f759bb5db3eec04a677cfc1199a4e66d55aa8</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
-      <categories>
-        <category>日记</category>
-      </categories>
+      <tags>
+        <tag>-日记</tag>
+      </tags>
   </entry>
   <entry>
     <title>梯子</title>
@@ -550,17 +540,14 @@ hexo d
 <p><strong>自己根据需求去购买相应的套餐，一般来说最便宜的一档已经够用了</strong></p>
 <hr>
 ]]></content>
-      <categories>
-        <category>VPN</category>
-      </categories>
       <tags>
-        <tag>-梯子</tag>
+        <tag>-VPN</tag>
       </tags>
   </entry>
   <entry>
     <title>浏览器以及插件</title>
     <url>/2020/09/26/%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A5%E5%8F%8A%E6%8F%92%E4%BB%B6/</url>
-    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙<br><a id="more"></a><br><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
+    <content><![CDATA[<h1 id="1-浏览器：Google-chrome"><a href="#1-浏览器：Google-chrome" class="headerlink" title="1.浏览器：Google chrome"></a>1.浏览器：Google chrome</h1><p>请大家百度自行下载，想去官网下载请看我的这篇<a href="https://zzygeo.gitee.io/2020/09/26/%E6%A2%AF%E5%AD%90/">博客</a>去翻墙<br><a id="more"></a>)<br><strong>主要想介绍的是一些需要更改的选项</strong>    </p>
 <ol>
 <li>更改搜索引擎，默认的是google的，这里需要我们改成百度的，不然你每次就只能先翻墙才能搜索。在设置里找到搜素引擎，默认设置为百度。<br><img src="/blog_img/浏览器以及插件/19.png" alt=""></li>
 <li>在翻墙以后，浏览器将会打开代理模式，如下图：<br><img src="/blog_img/浏览器以及插件/20.png" alt=""><br><img src="/blog_img/浏览器以及插件/21.png" alt=""><br>但是在你不翻墙的时候，他也是这样设置，这就会导致你使用浏览器的时候，搜东西出现连接不上服务器的问题。这时候你需要设置成这样：<br><img src="/blog_img/浏览器以及插件/22.png" alt=""></li>
@@ -598,18 +585,15 @@ hexo d
 <h2 id="10-fatkun图片下载"><a href="#10-fatkun图片下载" class="headerlink" title="10.fatkun图片下载"></a>10.fatkun图片下载</h2><p>可以一键下载多张图片<br><img src="/blog_img/浏览器以及插件/25.png" alt=""><br><img src="/blog_img/浏览器以及插件/26.png" alt=""></p>
 <hr>
 ]]></content>
-      <categories>
-        <category>浏览器</category>
-      </categories>
       <tags>
-        <tag>-浏览器推荐 -浏览器插件</tag>
+        <tag>-浏览器插件</tag>
       </tags>
   </entry>
   <entry>
     <title>深度学习篇</title>
     <url>/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/</url>
     <content><![CDATA[<p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
-<a id="more"></a>
+<p><a id="more"></a>)</p>
 <hr>
 <h1 id="1-深度学习简介"><a href="#1-深度学习简介" class="headerlink" title="1.深度学习简介"></a>1.深度学习简介</h1><p>与其枯坐在房间里思考怎么设计一个识别猫的程序，不如利用人类肉眼在图像中识别猫的能力。我们可以收集一些已知包含猫与不包含猫的真实图像，然后我们的目标就转化成如何从这些图像入手得到一个可以推断出图像中是否有猫的函数。<br>通俗来说，机器学习是一门讨论各式各样的适用于不同问题的函数形式，以及如何使用数据来有效地获取函数参数具体值的学科。深度学习是指机器学习中的一类函数，它们的形式通常为多层神经网络。近年来，仰仗着大数据集和强大的硬件，深度学习已逐渐成为处理图像、文本语料和声音信号等复杂高维度数据的主要方法，算力以及数据集的增长使得机器学习死灰复燃。</p>
 <hr>
@@ -627,9 +611,6 @@ jupyter notebook
 </code></pre><p>然后会让你输入一个密钥，在命令行中复制就行。到此这两个安装就算完成了。更多关于anaconda以及jupyter book的使用请看以上两个链接。</p>
 <hr>
 ]]></content>
-      <categories>
-        <category>DL</category>
-      </categories>
       <tags>
         <tag>-deep learning</tag>
       </tags>
@@ -637,7 +618,7 @@ jupyter notebook
   <entry>
     <title>编译器</title>
     <url>/2020/11/26/%E7%BC%96%E8%AF%91%E5%99%A8/</url>
-    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：  <a id="more"></a><br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
+    <content><![CDATA[<p>鉴于在编译器的配置上花费了一些时间，在两台电脑上都进行了配置，想单独写一篇博客来介绍编译器。持续更新，现在用的是vscode 进行c以及python的使用，具体的链接如下：  <a id="more"></a>)<br><a href="https://blog.csdn.net/m0_45161766/article/details/105729025">vscode配置anaconda环境</a><br>使用python强烈建议直接装一个anaconda全家桶，里面的库很多也很方便管理。<br>2020/11/26更新，vscode for python读取文本总找不到，搜了很多博客也没解决，可能我太菜了，这个VSCODE真不太适合新手。。。   python还是直接pycharm或者jupyter吧，pycharm那点内存对我们搞机的不是简简单单嘛！！！<br><a href="https://www.jb51.net/article/171027.htm">vscode配置C语言环境</a></p>
 <hr>
 ]]></content>
       <tags>
@@ -649,7 +630,7 @@ jupyter notebook
     <url>/2020/10/04/%E8%B5%84%E6%BA%90/</url>
     <content><![CDATA[<p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
 <h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
+<h2 id=""><a href="#" class="headerlink" title=")"></a><a id="more"></a>)</h2><h1 id="2-cloud-compare中文版使用手册"><a href="#2-cloud-compare中文版使用手册" class="headerlink" title="2.cloud compare中文版使用手册"></a>2.cloud compare中文版使用手册</h1><p><a href="https://wws.lanzous.com/imyXlh3nide">链接</a></p>
 <hr>
 <h1 id="3-深度学习"><a href="#3-深度学习" class="headerlink" title="3.深度学习"></a>3.深度学习</h1><p><a href="https://www.bilibili.com/video/BV164411m79z?from=search&amp;seid=8194466955642792600">吴恩达深度学习课程</a></p>
 <p><a href="https://www.kesci.com/home/project/5e20243e2823a10036b542da">吴恩达课程配套科目</a></p>
@@ -671,7 +652,7 @@ jupyter notebook
     <label for="hbePass">Enter password to read.</label>
     <div class="bottom-line"></div>
   </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="b54e64794ce5241a31926600338f52c22ef38a45b2288b047c7ce87292f5094a">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f1904c5075c1f48484e987ff173482c2731d3c95998e705089fa59c5946366be304b434bbed2378cd914e52d0f5bac83889422ba92c06b2ffb16a6fca5d47c104baba9843349b2abb467411dbae911a2f230a0e5043dd6f26d207428207be0462ca99ab6989b0686a71081e83946581c708c1ff43bf5bd7ef369e7a8e748e3104d501597bb22e1db06d5bca6af9462f6e46d7e761f54ad325543c533e89d3bd6294a5f5a8368750dd59213d4f09c54de7a98621583a05dc9bb564f0f1aab86926b12cc2fcaa082c6849e4f1a11975fb2a1abf1d589bac6fccdc58750c6faaeb15d7978de8fb4d00e7636b7c39a56f21807dc1676d279119fd1aea49d716e068da61b478209412da1b4353b80f6b0cfc72884490dfbb81199b76c4f4e2aaa863a20b5857300d5327d405552a8afe0636e8d2176866f3bc4d556624b1b8918c0cd7daf3959e730c22ccefe39b19c5a90cc25f72ddbd53cc5b7742d51c7660e8a433e666357271ec5cbf2537b6acddc42437276353a2b9fddab1e2072aae1b038bc8858905485245e61f6aa964170dcc7a9a31f8d5b5481bbb6b873cf111f3f8a8514c7a2913c0ffbf7bfd53161d04ac41fd79f1f11de303d80f92a283989dded15b25fbb137306b186f76f8cc08af4f3a15da4fbedb069f03e1f0a1bd66809921cd8c80dd88a00fbc6c13e52f8495fc1e2d1f13c1e316e757343973d0f117570a470ba492117f7b308db40fd05abeab735ec22aa1d666a8bb4a736753a9673a824131e57ff8417e539b7793b851f7ba65c16141f7155cc273684e589fa791a42d47dbbe34aca2487f610f63239004310eb1e434b1a844da789875e040f115393cc970e1c876cdd9c4cd0010e78f963008c1c46e9bd459884b674d444d2cbd3700f31910c402c0ca04251218af1527596d98730141775c6973b2278aaf5417d860617328cbc3ada2b91f8f135a2125bdcfb0cac2b689fdf000dc974bfcdaa43c6f82f94da5998fc8e976b0a69cabfe14dd6e4000a56270117588235b06fcfb688784a4eb70471e0ea176a013e5c176bc5307310d8f7ce2b6f2d613902a29fef66d9f2ad9447c264ace56705ee86b58beb318dc26f54ea314326f9ed01703f755694aaa6fe26f949a9c7e8bef0fcaf4d0b29116ef6402c9ac634dadb4d3c129b2e8ab42a5fdb2d16b2756cb3a88e72fefabd334bf6917025260bbe2249934cfb6d5c883ba3a770fa9dd879bafd6309df862d32ed47fd7806a34127514baf1b2976831026752e569e7248c8e53a274b59e9a220495b8f42378e1dba53364ab6eda39cf0bffcc6a416b6390832e8c41099aa3a8b0596473a7ee65a71f8fb535d928e0211235df60acfb0b92ed1d314e63f1534a9408c0c823e23b50eec338cc80082d31f37f5c2d911e9fa00c1053c91e3ea7cfbb423c765a1488806e1aa1cf4cb67e7a50d83e8c61611b59776c6583bff8fb94016e1a0ad89a75b66de9b99f800ee74f47ecef575b3389356e7e44c804eda87009b85c0c1a95b94d0673538b68f603b4d5e0e8c285ba1f6049da65e9c469535bedaca32e5e04071be8168251f13946db778032ff30b096b95e8c17b907578249236f46f6973a1901c6176196700632b4c7766775b667663d6f2a29de7c04d6a5fc712b6612acc5b1f7480582b5569c5fdffb8f0385945fd4c5871251579e4cbd4659a71a0be783ae0b0cf17d7bbacc0416bf374fedad3cb82204e020e5d78b4c5709ebe8ea0e251d72d42e629f695ae3e51bc33e235eafe33ae840f0cb3609dec34acc85c3e3f59d2259cea97f1c06fa65d4b0389017a3e77f1b8e007fc5af53e25590df99c0ba2a8d4a5d9e020eeb46652be1ef412edf2c02dbd2af1a317c576c950927e8c8ea5227ed02ba78e8664b869cc8e1a6b31fc06fe62645632af2ed7b19b3cac14bd2034851ece2947ad19c927d105e8685fc52b5a51a8532d314a05a590dc43296a60d90a430c4984c7cf02333baac1e7145aab4efaa284a2384523e5fa7139b7897716ad35d0b7b4ef701e772c99efb3525c1f85be3b69a56b948f2eed4a761959c444ec140966743d8e3a2a116a944f107efea1383d367c8ca04bac630009ae12dfce0017c7fcc9666fdda3858fb813f4f8e600d453db2a7dd239b3b3ae22ddcbaf4245cca6a18483d8d63ff1361679535c351e9014e888c3da57e690b33ccd5fdf6a80d02de547abefb67c0792b3a0f445579ca300c7556d8d41a416ea00dbf3460f963bb090419b917a334b8912ae95250528a623b28f2987893416dd315d8d5d7ea1d24ee37094d095e007694c142ee09bfdae5146fb4215b71c8</script>
+  <script id="hbeData" type="hbeData" data-hmacdigest="b7555c430a6fc62c71aee2834646e8c0971d8274f02bec37753f5d554ebf7ae8">5f427f63ff781a89ad250abb38a6394452605257467438edf479877ebf3f1904e8769fbf96885616c52dae25b52427133385b227756eabaf811c9e035ed69c4231f46a7ff05976fd4cb1612e802c5f07341b1abc161e9dc91a6b89fdc52cc5c51e138c93136cb40beeb8872377e87988c818ef5e2df45c2c89576686aa917ad96a5fcde44ae1237f2f960fefb76a4d2ce548e86abc74ede2e2d5896f79b4262910d399fe0eff689f7d0b36a55f92195048096d4c7ecc095b3a9ff24003c6abdb291782836a1252002dacf825f66f1a72fa5186454a00a8c8fa12880c28045ec36a92f6f2d51d4bb42ffaf9bf089629cb3345441b3307c13c1d215836fbbc5e29af58c9a1cad45f0ae873575f5f7e30afee7be88a075a3a7e35c7848cfa03373157ecb0f81c97c60961fddb579ca3fa84f4706dd641c0f00b4ee84f34a72f07f14d23cd22edaf30b0dc0923488e58dd06b84e502b7208e85238e46af71f0c0085dddd4933b200683dfebb9a960853dc2c04302c0963203f72cc36a4e917f7492a18151243c8d2cd37bb47c18f65312a3bb083d0d9f75e610556cbdfb8156a0ca8a55a05449b7ffcec8b805de70405b493d875b0c7a155a5fc328c66aa398172bfd6c58f30307cb750a4c31656d135548d9b2b6927c40c9e7b1ad369fc846256621f3fc3813c0be8a13b8dabaa84232ecb4342a30152df91b428e2d544e5a40cb37b5f0d54a7be26ff982b173e2fb86d52249eb18d994ebb7ae783808f98e8ddeeb4be46dec25fb702f34dd58fe49a74397a5042e618a2806b049042f05e760026a79e03de57cccddef4b324b310e4bb6164421ce86d72804792b1629ebdff393cf25cb2865ecdd1ee6344e3ac6f3ff9f6162062110aeaff245d5c35bdb959485e370fb25fafb582ed7c7289159f16e70470ba07e6f0bd6f139173b1e6931b803770d3e8eed767936ced533a4d4a0b7b0c91bc5ad4dfeedd91abc1f8687aaf6b61c2066a9ce19384fe573f7c444e7015085d93e5b7c39650d6f43b53b7b47ba9fc7e65ddd965b18fa0ed151c7c9caf5af83151903b7941f4c2cbc31a2d40e10a890ddc16586646da6948b745b0aa81ee7e4f26a2a21776816f5ab890ad984a15af147f5205813cd426014fbb1b80db0efa4443b3bb03c5efd8ec36f2308c05ba9a4ffba8712f3505ed7319a0252bd8cf13b5b4e1cc9484e9c3c2138019bdffbb1d9319c22a1ef24641dfb5092965f608eed79407726a646c2d322f3e3c85069e7b6c9574a946112a766148916038f6f876d5987f8317abcd2001188bd11f515577b8d7148eef14e408cae751876385a047de26972ce75ef64a398cb2bbd51f0ba6ce9287729de47236be5f8f50f185a666f080e7dcb75646e0351e88f6eca3d759d8ffbd8f6d663271f02c909461c877fa46915b93f3d063e44382ad9b5d55f0e214d257cd7242a6af70365a6db4eee470f6ebb2befa6c36e2931ae57143daef9915921f2788982c2c68adeca85557ee431d39e87dc46b4a4986d2fcc4ed2e96f5e5fe98731834cc201ad5c63189286e748eb698aca9714558c33bf10cee89aa47ef90f1a1e8989d9adfeb05a6fff8ba9adeeaac16383b5c01aec2b86551a47600613f574072a52b7aeacbbbea8d0cad620d4d087e7762c5f395f0dc48771332cc471175fe9c3fb96cda55c1632ace26b2f4838629a59950ec17f475f4a98823924abeb15daefd4f3d3073ccc7841f57e881fcacc22fb73b5e23ca44a6bab3430110f7753232cdacb721f5ffaf4e7d6f7f7632769560a710a90b1a4bd079e5e177abae3c9153adc8844ad2d89f3d1847ffc3064314c3896ca63367cdd56b1157fbfaf09be1a72c3eab6c43ad962ca2507ca6e9c05914fa99cb6f03cfd50bf7e6e6ac029cafbf658084ecf5b34e45461511e27d23f793723761f527839d5b95fcf03ffcf7d57d360dc1683e1103e16ffd15e053b36eb96d1f9167dd3dbb05fa965e98e190f1dcc75cdd9f07f2993b333349eb9a45c60fd6fb262ba1718c366d72698ab46ec596fc99558fe71b7108851e860873d10871674c37e9655de8fe247939346ac243b18c45583553836dc8ad8993e8cd8be034bfc95092f3721c6e404baa31f8e1532d6657b1e8abc04f18d7634d4c450165bf0d48056b73a1e6fae1cf4fbd0caaeab2bbe567f4830bb5073071c557d75cbda80767d7d19a3a7bf3e0967b3fc2263f53191254ce96e53d66a2c82a67734e7b9c604c59d0ece06d758686fc69547e1083b211e71ddc93826e371ca6f3aa9eec0ba33a2757a01d1672c0eb1b655376c5e3c99d528915791fa7168a4a52e12bda8ed316585b8afd6c8d1a76f42026b6a35495dfb94036159d1c87bda6</script>
 </div>
 <script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
       <tags>
