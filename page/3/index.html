@@ -138,7 +138,7 @@
 			
 			
 			<div>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=37202358&auto=1&height=66"></iframe>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=202373&auto=1&height=66"></iframe>
 			</div>
 			
 				
@@ -259,10 +259,116 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>
-    
-    <a class="article-more-a" href="/2020/09/24/markdown%E8%AF%AD%E6%B3%95/#more">more >></a>
-    
+    <a id="more"></a>
+<h1 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h1><pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题 
+</code></pre><p>注：# 和「标题文字」之间建议保留一个字符的空格，这是最标准的 Markdown 写法。</p>
+<hr>
+<h1 id="2-粗体、斜体、删除线"><a href="#2-粗体、斜体、删除线" class="headerlink" title="2. 粗体、斜体、删除线"></a>2. 粗体、斜体、删除线</h1><pre><code>*我是斜体*
+**我是粗体**
+***我是粗斜体***
+~~我是删除线~~
+</code></pre><p>显示效果：<br><em>我是斜体</em><br><strong>我是粗体</strong><br><strong><em>我是粗斜体</em></strong><br><del>我是删除线</del></p>
+<hr>
+<h1 id="3-表格"><a href="#3-表格" class="headerlink" title="3. 表格"></a>3. 表格</h1><pre><code>| 学号 | 姓名 | 分数|
+| :- | -: | :-: |
+| 小明 | 男 | 75 |
+| 小红 | 女 | 79 |
+| 小陆 | 男 | 92 |
+</code></pre><p>显示效果：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">学号</th>
+<th style="text-align:right">姓名</th>
+<th style="text-align:center">分数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">小明</td>
+<td style="text-align:right">男</td>
+<td style="text-align:center">75</td>
+</tr>
+<tr>
+<td style="text-align:left">小红</td>
+<td style="text-align:right">女</td>
+<td style="text-align:center">79</td>
+</tr>
+<tr>
+<td style="text-align:left">小陆</td>
+<td style="text-align:right">男</td>
+<td style="text-align:center">92</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h1 id="4-有序列表"><a href="#4-有序列表" class="headerlink" title="4. 有序列表"></a>4. 有序列表</h1><pre><code>1. 文本1
+2. 文本2
+3. 文本3
+</code></pre><p>显示效果：  </p>
+<ol>
+<li>文本1</li>
+<li>文本2</li>
+<li>文本3</li>
+</ol>
+<hr>
+<h1 id="5-无序列表"><a href="#5-无序列表" class="headerlink" title="5. 无序列表"></a>5. 无序列表</h1><pre><code>- 文本1
+- 文本2
+- 文本3
+</code></pre><p>显示效果：  </p>
+<ul>
+<li>文本1</li>
+<li>文本2</li>
+<li>文本3</li>
+</ul>
+<hr>
+<h1 id="6-行内代码块"><a href="#6-行内代码块" class="headerlink" title="6. 行内代码块"></a>6. 行内代码块</h1><pre><code>C语言里的函数 `scanf()` 怎么使用？
+</code></pre><p>显示效果：<br>C语言里的函数 <code>scanf()</code> 怎么使用？</p>
+<hr>
+<h1 id="7-分割线"><a href="#7-分割线" class="headerlink" title="7. 分割线"></a>7. 分割线</h1><h2 id="可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。"><a href="#可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。" class="headerlink" title="可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。  "></a>可以在一行中用三个以上的减号、底线来建立一个分隔线，行内不能有其他内容。  </h2><pre><code>___
+</code></pre><h2 id="显示效果："><a href="#显示效果：" class="headerlink" title="显示效果："></a>显示效果：</h2><hr>
+<hr>
+<h1 id="8-超链接"><a href="#8-超链接" class="headerlink" title="8. 超链接"></a>8. 超链接</h1><p>语法格式为<a href="链接地址" title="链接标题">链接文字</a>，[]里写链接文字，()里写链接地址, ()中的”“中可以为链接指定title属性，title属性为可选。title属性的效果是鼠标悬停在链接上会出现指定的title文字。链接地址与链接标题前有一个空格。<br>    欢迎来到<a target="_blank" rel="noopener" href="http://blog.csdn.net/china_jeffery" title="zzygeo">多加香菜的博客</a></p>
+<p>显示效果：<br>欢迎来到<a target="_blank" rel="noopener" href="http://blog.csdn.net/china_jeffery" title="zzygeo">多加香菜的博客</a></p>
+<hr>
+<h1 id="9-图片"><a href="#9-图片" class="headerlink" title="9. 图片"></a>9. 图片</h1><p>语法格式为<img src="图片地址" alt="图片Alt" title="图片Title">，图片Alt的意思是如果图片因为某些原因不能显示，就用定义的图片Alt文字来代替图片。 图片Title则和超链接中的链接标题一样，表示鼠标悬停与图片上时出现的文字。 图片Alt 和 图片Titlee 都是可选的。</p>
+<hr>
+<h1 id="10-引用"><a href="#10-引用" class="headerlink" title="10. 引用"></a>10. 引用</h1><pre><code>&gt; 一级引用
+&gt;&gt; 二级引用
+&gt;&gt;&gt; 三级引用
+&gt;&gt;&gt;&gt; 四级引用
+</code></pre><p>显示效果：</p>
+<blockquote>
+<p>一级引用</p>
+<blockquote>
+<p>二级引用</p>
+<blockquote>
+<p>三级引用</p>
+<blockquote>
+<p>四级引用</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="11-空格"><a href="#11-空格" class="headerlink" title="11. 空格"></a>11. 空格</h1><pre><code>你好&amp;nbsp;&amp;nbsp;&amp;nbsp;jeffery
+</code></pre><p>显示效果<br>你好&nbsp;&nbsp;&nbsp;zzy</p>
+<hr>
+<h1 id="12-字体、字号、颜色"><a href="#12-字体、字号、颜色" class="headerlink" title="12. 字体、字号、颜色"></a>12. 字体、字号、颜色</h1><pre><code>&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;
+&lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;/font&gt;
+&lt;font color=#0099ff size=23 face=&quot;黑体&quot;&gt;我是黑体，颜色#0099ff 字号23&lt;/font&gt;
+</code></pre><p><font face="黑体">我是黑体字</font>  </p>
+<p><font face="微软雅黑">我是微软雅黑</font>  </p>
+<p><font color=#00 size=23 face="黑体">我是黑体，颜色#0099ff 字号23</font>&lt;/p&gt;</p>
+<hr>
+
     
 
     
@@ -568,6 +674,14 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">-Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">-ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-Youtube</a>
               </li>
              
@@ -600,23 +714,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">-编译器</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-资源</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">-Ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">-ubuntu</a>
               </li>
             
             <div class="clearfix"></div>
