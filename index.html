@@ -230,6 +230,795 @@
             
 
   
+    <article id="post-dpkg被中断的解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/dpkg%E8%A2%AB%E4%B8%AD%E6%96%AD%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" target="_blank">dpkg被中断的解决办法</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/dpkg%E8%A2%AB%E4%B8%AD%E6%96%AD%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
+        <time datetime="2021-03-13T17:40:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>linux系统安装软件是有时会碰到“dpkg 被中断,您必须手工运行 sudo dpkg –configure -a解决此问题”，然而按照提示运行却并没能很好的解决问题。其实导致这个问题的主要原因是因为/var/lib/dpkg/updates文件下的文件有问题，可能是其他软件安装过程或是其他原因导致的，这里删除掉然后重建即可。</p>
+<pre><code>sudo rm /var/lib/dpkg/updates/*
+sudo apt-get update
+sudo apt-get upgrade
+</code></pre><p>解释：[<em>]sudo apt-get update指令会重新建立这些资料，所以不必担心删除后会出问题；<br>[</em>]sudo apt-get upgrade会更新你的电脑里面已安装的软件的明细，根据软件的明细更新软件到最新版。<br>PS：“dpkg ”是“Debian Packager ”的简写。为 “Debian” 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自“Debian”的“Linux ”发行版都使用 “dpkg”</p>
+<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/coolcooljob/article/details/79964812">博客</a></p>
+<hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/dpkg%E8%A2%AB%E4%B8%AD%E6%96%AD%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-安装snap" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/%E5%AE%89%E8%A3%85snap/" target="_blank">安装snap以及常用命令</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/%E5%AE%89%E8%A3%85snap/" class="archive-article-date">
+        <time datetime="2021-03-13T17:35:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="1-安装snap"><a href="#1-安装snap" class="headerlink" title="1.安装snap"></a>1.安装snap</h1><pre><code>sudo apt-get install snapd
+sudo apt-get install snapcraft
+</code></pre><h1 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2.常用命令"></a>2.常用命令</h1><pre><code>//列出已经安装的snap包
+sudo snap list
+
+//搜索要安装的snap包
+sudo snap find &lt;text to search&gt;
+
+//安装一个snap包
+sudo snap install &lt;snap name&gt;
+
+//更新一个snap包，如果你后面不加包的名字的话那就是更新所有的snap包
+sudo snap refresh &lt;snap name&gt;
+
+//把一个包还原到以前安装的版本
+sudo snap revert &lt;snap name&gt;
+
+//删除一个snap包
+sudo snap remove &lt;snap name&gt;
+</code></pre><hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/%E5%AE%89%E8%A3%85snap/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu配置C-C-开发环境" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/ubuntu%E9%85%8D%E7%BD%AEC-C-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" target="_blank">ubuntu配置C/C++开发环境</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/ubuntu%E9%85%8D%E7%BD%AEC-C-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" class="archive-article-date">
+        <time datetime="2021-03-13T17:31:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="1-在代码文件夹下建立两个文件"><a href="#1-在代码文件夹下建立两个文件" class="headerlink" title="1.在代码文件夹下建立两个文件"></a>1.在代码文件夹下建立两个文件</h1><p>launch.json 以及 tasks.json</p>
+<h1 id="2-给这个两个文件配置文件"><a href="#2-给这个两个文件配置文件" class="headerlink" title="2.给这个两个文件配置文件"></a>2.给这个两个文件配置文件</h1><p>launch.json:</p>
+<pre><code>&#123;    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        &#123;
+            &quot;name&quot;: &quot;(gdb) Launch&quot;,
+            &quot;type&quot;: &quot;cppdbg&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;program&quot;: &quot;$&#123;workspaceFolder&#125;/$&#123;fileBasenameNoExtension&#125;.out&quot;,
+            &quot;args&quot;: [],
+            &quot;stopAtEntry&quot;: false,
+            &quot;cwd&quot;: &quot;$&#123;workspaceFolder&#125;&quot;,
+            &quot;environment&quot;: [],
+            &quot;externalConsole&quot;: true,    //如果不要窗口弹出，在ide中显示，就设置成 false
+            &quot;MIMode&quot;: &quot;gdb&quot;,
+            &quot;preLaunchTask&quot;: &quot;build&quot;,   //表示预先生成一个中间文件，用于g++运行
+            &quot;setupCommands&quot;: [
+                &#123;
+                    &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
+                    &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
+                    &quot;ignoreFailures&quot;: true
+                &#125;
+            ]
+        &#125;
+    ]
+&#125;
+</code></pre><p>tasks.json:</p>
+<pre><code>&#123;
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [
+        &#123;
+            &quot;label&quot;: &quot;build&quot;,
+            &quot;type&quot;: &quot;shell&quot;,
+            &quot;command&quot;: &quot;g++&quot;,
+            &quot;args&quot;: [&quot;-g&quot;, &quot;$&#123;file&#125;&quot;, &quot;-std=c++11&quot;, &quot;-o&quot;, &quot;$&#123;fileBasenameNoExtension&#125;.out&quot;]    //相当于 g++ -g main.cpp -std=c++11 -o main.out
+        &#125;
+    ]
+&#125;
+</code></pre><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/suiyueruge1314/article/details/106125949">博客</a></p>
+<hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/ubuntu%E9%85%8D%E7%BD%AEC-C-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu安装gcc依赖关系报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85gcc%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/" target="_blank">ubuntu安装gcc依赖关系报错</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85gcc%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/" class="archive-article-date">
+        <time datetime="2021-03-13T17:26:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>使用aptitude包依赖管理工具替代apt处理，看其他的博客说这个得慎用，不过用来安装gcc倒是没啥问题。</p>
+<pre><code>sudo apt-get install aptitude
+sido aptitude install gcc g++
+</code></pre><p>解决方案里选择no,yes,yes.<br>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/CLZHIT/article/details/104508894">博客</a></p>
+<hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85gcc%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu安装vim依赖关系报错" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85vim%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/" target="_blank">ubuntu安装vim依赖关系报错</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85vim%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/" class="archive-article-date">
+        <time datetime="2021-03-13T17:22:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>按如下步骤进行就可：</p>
+<pre><code>sudo apt-get purge vim-common
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install vim
+</code></pre><hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85vim%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu下的firefox无法播放视频解决方案" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/ubuntu%E4%B8%8B%E7%9A%84firefox%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" target="_blank">ubuntu下的firefox无法播放视频解决方案</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/ubuntu%E4%B8%8B%E7%9A%84firefox%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" class="archive-article-date">
+        <time datetime="2021-03-13T17:09:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="1-下载flash的tar-gz文件"><a href="#1-下载flash的tar-gz文件" class="headerlink" title="1.下载flash的tar.gz文件"></a>1.下载flash的tar.gz文件</h1><p>直接去<a target="_blank" rel="noopener" href="https://www.flash.cn/">官网链接</a>下载</p>
+<h1 id="2-解压tar-gz文件"><a href="#2-解压tar-gz文件" class="headerlink" title="2.解压tar.gz文件"></a>2.解压tar.gz文件</h1><pre><code>tar -zxvf filename.tar.gz
+</code></pre><p>注意filename.tar.gz就是你下载的文件的名字，可以直接复制下载包名字。</p>
+<h1 id="3-移动解压文件夹"><a href="#3-移动解压文件夹" class="headerlink" title="3.移动解压文件夹"></a>3.移动解压文件夹</h1><p>先进入安装包目录下,然后<br>    sudo cp libflashplayer.so /usr/lib/mozilla/plugins</p>
+<h1 id="4-进入插件目录并附加权限"><a href="#4-进入插件目录并附加权限" class="headerlink" title="4.进入插件目录并附加权限"></a>4.进入插件目录并附加权限</h1><pre><code>cd usr/lib/mozilla/plugins
+sudo chmod 755 libflashplayer.so
+</code></pre><h1 id="5-缺少依赖报错解决"><a href="#5-缺少依赖报错解决" class="headerlink" title="5.缺少依赖报错解决"></a>5.缺少依赖报错解决</h1><pre><code>sudo apt-get install ffmpeg  //ffmpeg支持H.264解码
+</code></pre><hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/ubuntu%E4%B8%8B%E7%9A%84firefox%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-ubuntu下解决wps2019缺少字体问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/ubuntu%E4%B8%8B%E8%A7%A3%E5%86%B3wps2019%E7%BC%BA%E5%B0%91%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/" target="_blank">ubuntu下解决wps2019缺少字体问题</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/ubuntu%E4%B8%8B%E8%A7%A3%E5%86%B3wps2019%E7%BC%BA%E5%B0%91%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/" class="archive-article-date">
+        <time datetime="2021-03-13T16:56:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>主要参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/sunmengke1101/article/details/103436997">博客</a></p>
+<h1 id="1-准备字体包"><a href="#1-准备字体包" class="headerlink" title="1.准备字体包"></a>1.准备字体包</h1><p><a target="_blank" rel="noopener" href="https://wws.lanzous.com/iBIiqmwnvve">下载链接</a></p>
+<h1 id="2-解压到指定目录下"><a href="#2-解压到指定目录下" class="headerlink" title="2.解压到指定目录下"></a>2.解压到指定目录下</h1><pre><code>sudo unzip wps_symbol_fonts.zip -d /home/&lt;user&gt;/usr/share/fonts
+</code></pre><h1 id="3-到解压的根目录下安装"><a href="#3-到解压的根目录下安装" class="headerlink" title="3.到解压的根目录下安装"></a>3.到解压的根目录下安装</h1><p>依次打开每个文件并点击安装即可</p>
+<hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/ubuntu%E4%B8%8B%E8%A7%A3%E5%86%B3wps2019%E7%BC%BA%E5%B0%91%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Ubuntu更换源教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/03/14/Ubuntu%E6%9B%B4%E6%8D%A2%E6%BA%90%E6%95%99%E7%A8%8B/" target="_blank">Ubuntu更换源教程</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/03/14/Ubuntu%E6%9B%B4%E6%8D%A2%E6%BA%90%E6%95%99%E7%A8%8B/" class="archive-article-date">
+        <time datetime="2021-03-13T16:34:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43876206/article/details/100924378">博客</a></p>
+<h1 id="1-备份源列表"><a href="#1-备份源列表" class="headerlink" title="1.备份源列表"></a>1.备份源列表</h1><pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+</code></pre><h1 id="2-打开sources-list文件"><a href="#2-打开sources-list文件" class="headerlink" title="2.打开sources.list文件"></a>2.打开sources.list文件</h1><pre><code>sudo gedit /etc/apt/sources.list
+</code></pre><h1 id="3-修改sources-list文件"><a href="#3-修改sources-list文件" class="headerlink" title="3.修改sources.list文件"></a>3.修改sources.list文件</h1><pre><code>#  阿里镜像源
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
+
+deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
+</code></pre><h1 id="4-更新并升级"><a href="#4-更新并升级" class="headerlink" title="4.更新并升级"></a>4.更新并升级</h1><pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade
+</code></pre><h1 id="5-恢复源列表"><a href="#5-恢复源列表" class="headerlink" title="5.恢复源列表"></a>5.恢复源列表</h1><pre><code>sudo cp /etc/apt/sources.list.bak /etc/apt/sources.list
+</code></pre><hr>
+<p>其他的源请自己搜索，这里只放了阿里云的。</p>
+<hr>
+
+    
+
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-Ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/03/14/Ubuntu%E6%9B%B4%E6%8D%A2%E6%BA%90%E6%95%99%E7%A8%8B/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-github设置自己的域名" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -571,720 +1360,9 @@
 
 
   
-    <article id="post-深度学习篇" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/" target="_blank">深度学习篇</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/" class="archive-article-date">
-        <time datetime="2020-11-10T16:41:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-11</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>这两天其实做了不少事，时间确实很短，今天和华为的hr小姐姐聊了一会，校招她说3月多就开始了，着实吓到我了，然后还给了我一些鼓励，另外值得高兴的是咨询羊哥的一些问题，他当天就回复了我，这我是没想到的。在这里希望明年的这个时候可以拿到一个不错的offer。</p>
-<p>
-    
-    <a class="article-more-a" href="/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-deep learning</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/11/11/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%AF%87/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-日记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/11/07/%E6%97%A5%E8%AE%B0/" target="_blank">日记</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/11/07/%E6%97%A5%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2020-11-07T10:53:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-07</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    Welcome to my blog, enter password to read.
-    
-    <a class="article-more-a" href="/2020/11/07/%E6%97%A5%E8%AE%B0/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-日记</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/11/07/%E6%97%A5%E8%AE%B0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Unable-to-access-https-gitee-com-自己的项目-Could-not-resolve-host-gitee-com问题的解决" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/" target="_blank">Unable to access &#39;https://gitee.com/自己的项目/&#39;: Could not resolve host: gitee.com问题的解决</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/" class="archive-article-date">
-        <time datetime="2020-10-22T17:28:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-23</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>果然玩hexo报错是在所难免，就好像我已经长大，读研以后乃至以后得日子，可能总是繁琐常伴。今天在hexo d推到GITEE上时，报了错。<br>
-    
-    <a class="article-more-a" href="/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/23/Unable-to-access-https-gitee-com-%E8%87%AA%E5%B7%B1%E7%9A%84%E9%A1%B9%E7%9B%AE-Could-not-resolve-host-gitee-com%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-资源" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/04/%E8%B5%84%E6%BA%90/" target="_blank">资源</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/10/04/%E8%B5%84%E6%BA%90/" class="archive-article-date">
-        <time datetime="2020-10-04T06:53:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>准备把一些资源都放在这个博客下，持续更新，有需要得自取。</p>
-<h1 id="1-Linux学习笔记"><a href="#1-Linux学习笔记" class="headerlink" title="1.Linux学习笔记"></a>1.Linux学习笔记</h1><p><a target="_blank" rel="noopener" href="https://wws.lanzous.com/iKIZfh7eeuh">链接</a></p>
-<h2 id=""><a href="#" class="headerlink" title=")"></a>
-    
-    <a class="article-more-a" href="/2020/10/04/%E8%B5%84%E6%BA%90/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-资源</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/04/%E8%B5%84%E6%BA%90/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-PCL-1-11-Visual-Studio-2019-配置" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/" target="_blank">PCL-1-11-Visual-Studio-2019-配置</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-        <time datetime="2020-10-04T04:22:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-04</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <font color= ff size=4 face="">
-
-<h1 id="1-软件准备"><a href="#1-软件准备" class="headerlink" title="1.软件准备"></a>1.软件准备</h1><p>1.All in one 安装包。</p>
-<p>2.获取All in one 包对应得PDB文件包，用于后期单步调试。<br>
-    
-    <a class="article-more-a" href="/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-pcl</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/04/PCL-1-11-Visual-Studio-2019-%E9%85%8D%E7%BD%AE/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hexo-d-出现错误的用户名和密码的解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" target="_blank">hexo d 出现错误的用户名和密码的解决办法</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
-        <time datetime="2020-10-02T05:27:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p>在windows搜索栏输入：控制面板
-    
-    <a class="article-more-a" href="/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/hexo//" class="article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/02/hexo-d-%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D%E5%92%8C%E5%AF%86%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-新电脑上部署hexo" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/" target="_blank">新电脑上部署hexo</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/" class="archive-article-date">
-        <time datetime="2020-10-02T05:07:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-02</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="1-安装必要软件"><a href="#1-安装必要软件" class="headerlink" title="1. 安装必要软件"></a>1. 安装必要软件</h1><p>安装 Git 客户端<br>安装 node JS</p>
-<p>
-    
-    <a class="article-more-a" href="/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">-hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/10/02/%E6%96%B0%E7%94%B5%E8%84%91%E4%B8%8A%E9%83%A8%E7%BD%B2hexo/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的Office激活码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/" target="_blank">我的Office激活码</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/" class="archive-article-date">
-        <time datetime="2020-09-26T05:05:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-26</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    Welcome to my blog, enter password to read.
-    
-    <a class="article-more-a" href="/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">-office</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/09/26/%E6%88%91%E7%9A%84Office%E6%BF%80%E6%B4%BB%E7%A0%81/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1485,6 +1563,14 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">-资源</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">-Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">-ubuntu</a>
               </li>
             
             <div class="clearfix"></div>
