@@ -259,15 +259,10 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<p>linux系统安装软件是有时会碰到“dpkg 被中断,您必须手工运行 sudo dpkg –configure -a解决此问题”，然而按照提示运行却并没能很好的解决问题。其实导致这个问题的主要原因是因为/var/lib/dpkg/updates文件下的文件有问题，可能是其他软件安装过程或是其他原因导致的，这里删除掉然后重建即可。</p>
-<pre><code>sudo rm /var/lib/dpkg/updates/*
-sudo apt-get update
-sudo apt-get upgrade
-</code></pre><p>解释：[<em>]sudo apt-get update指令会重新建立这些资料，所以不必担心删除后会出问题；<br>[</em>]sudo apt-get upgrade会更新你的电脑里面已安装的软件的明细，根据软件的明细更新软件到最新版。<br>PS：“dpkg ”是“Debian Packager ”的简写。为 “Debian” 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自“Debian”的“Linux ”发行版都使用 “dpkg”</p>
-<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/coolcooljob/article/details/79964812">博客</a></p>
-<hr>
-
+    <p>linux系统安装软件是有时会碰到“dpkg 被中断,您必须手工运行 sudo dpkg –configure -a解决此问题”，然而按照提示运行却并没能很好的解决问题。其实导致这个问题的主要原因是因为/var/lib/dpkg/updates文件下的文件有问题，可能是其他软件安装过程或是其他原因导致的，这里删除掉然后重建即可。<br>
+    
+    <a class="article-more-a" href="/2021/03/14/dpkg%E8%A2%AB%E4%B8%AD%E6%96%AD%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/#more">more >></a>
+    
     
 
     
@@ -458,53 +453,10 @@ sudo snap remove &lt;snap name&gt;
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<h1 id="1-在代码文件夹下建立两个文件"><a href="#1-在代码文件夹下建立两个文件" class="headerlink" title="1.在代码文件夹下建立两个文件"></a>1.在代码文件夹下建立两个文件</h1><p>launch.json 以及 tasks.json</p>
-<h1 id="2-给这个两个文件配置文件"><a href="#2-给这个两个文件配置文件" class="headerlink" title="2.给这个两个文件配置文件"></a>2.给这个两个文件配置文件</h1><p>launch.json:</p>
-<pre><code>&#123;    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    &quot;version&quot;: &quot;0.2.0&quot;,
-    &quot;configurations&quot;: [
-        &#123;
-            &quot;name&quot;: &quot;(gdb) Launch&quot;,
-            &quot;type&quot;: &quot;cppdbg&quot;,
-            &quot;request&quot;: &quot;launch&quot;,
-            &quot;program&quot;: &quot;$&#123;workspaceFolder&#125;/$&#123;fileBasenameNoExtension&#125;.out&quot;,
-            &quot;args&quot;: [],
-            &quot;stopAtEntry&quot;: false,
-            &quot;cwd&quot;: &quot;$&#123;workspaceFolder&#125;&quot;,
-            &quot;environment&quot;: [],
-            &quot;externalConsole&quot;: true,    //如果不要窗口弹出，在ide中显示，就设置成 false
-            &quot;MIMode&quot;: &quot;gdb&quot;,
-            &quot;preLaunchTask&quot;: &quot;build&quot;,   //表示预先生成一个中间文件，用于g++运行
-            &quot;setupCommands&quot;: [
-                &#123;
-                    &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
-                    &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
-                    &quot;ignoreFailures&quot;: true
-                &#125;
-            ]
-        &#125;
-    ]
-&#125;
-</code></pre><p>tasks.json:</p>
-<pre><code>&#123;
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
-    &quot;version&quot;: &quot;2.0.0&quot;,
-    &quot;tasks&quot;: [
-        &#123;
-            &quot;label&quot;: &quot;build&quot;,
-            &quot;type&quot;: &quot;shell&quot;,
-            &quot;command&quot;: &quot;g++&quot;,
-            &quot;args&quot;: [&quot;-g&quot;, &quot;$&#123;file&#125;&quot;, &quot;-std=c++11&quot;, &quot;-o&quot;, &quot;$&#123;fileBasenameNoExtension&#125;.out&quot;]    //相当于 g++ -g main.cpp -std=c++11 -o main.out
-        &#125;
-    ]
-&#125;
-</code></pre><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/suiyueruge1314/article/details/106125949">博客</a></p>
-<hr>
-
+    <h1 id="1-在代码文件夹下建立两个文件"><a href="#1-在代码文件夹下建立两个文件" class="headerlink" title="1.在代码文件夹下建立两个文件"></a>1.在代码文件夹下建立两个文件</h1><p>launch.json 以及 tasks.json<br>
+    
+    <a class="article-more-a" href="/2021/03/14/ubuntu%E9%85%8D%E7%BD%AEC-C-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/#more">more >></a>
+    
     
 
     
@@ -578,13 +530,10 @@ sudo snap remove &lt;snap name&gt;
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<p>使用aptitude包依赖管理工具替代apt处理，看其他的博客说这个得慎用，不过用来安装gcc倒是没啥问题。</p>
-<pre><code>sudo apt-get install aptitude
-sido aptitude install gcc g++
-</code></pre><p>解决方案里选择no,yes,yes.<br>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/CLZHIT/article/details/104508894">博客</a></p>
-<hr>
-
+    <p>使用aptitude包依赖管理工具替代apt处理，看其他的博客说这个得慎用，不过用来安装gcc倒是没啥问题。<br>
+    
+    <a class="article-more-a" href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85gcc%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/#more">more >></a>
+    
     
 
     
@@ -669,14 +618,10 @@ sido aptitude install gcc g++
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<p>按如下步骤进行就可：</p>
-<pre><code>sudo apt-get purge vim-common
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install vim
-</code></pre><hr>
-
+    <p>按如下步骤进行就可：<br>
+    
+    <a class="article-more-a" href="/2021/03/14/ubuntu%E5%AE%89%E8%A3%85vim%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB%E6%8A%A5%E9%94%99/#more">more >></a>
+    
     
 
     
@@ -761,16 +706,10 @@ sudo apt-get install vim
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<h1 id="1-下载flash的tar-gz文件"><a href="#1-下载flash的tar-gz文件" class="headerlink" title="1.下载flash的tar.gz文件"></a>1.下载flash的tar.gz文件</h1><p>直接去<a target="_blank" rel="noopener" href="https://www.flash.cn/">官网链接</a>下载</p>
-<h1 id="2-解压tar-gz文件"><a href="#2-解压tar-gz文件" class="headerlink" title="2.解压tar.gz文件"></a>2.解压tar.gz文件</h1><pre><code>tar -zxvf filename.tar.gz
-</code></pre><p>注意filename.tar.gz就是你下载的文件的名字，可以直接复制下载包名字。</p>
-<h1 id="3-移动解压文件夹"><a href="#3-移动解压文件夹" class="headerlink" title="3.移动解压文件夹"></a>3.移动解压文件夹</h1><p>先进入安装包目录下,然后<br>    sudo cp libflashplayer.so /usr/lib/mozilla/plugins</p>
-<h1 id="4-进入插件目录并附加权限"><a href="#4-进入插件目录并附加权限" class="headerlink" title="4.进入插件目录并附加权限"></a>4.进入插件目录并附加权限</h1><pre><code>cd usr/lib/mozilla/plugins
-sudo chmod 755 libflashplayer.so
-</code></pre><h1 id="5-缺少依赖报错解决"><a href="#5-缺少依赖报错解决" class="headerlink" title="5.缺少依赖报错解决"></a>5.缺少依赖报错解决</h1><pre><code>sudo apt-get install ffmpeg  //ffmpeg支持H.264解码
-</code></pre><hr>
-
+    <h1 id="1-下载flash的tar-gz文件"><a href="#1-下载flash的tar-gz文件" class="headerlink" title="1.下载flash的tar.gz文件"></a>1.下载flash的tar.gz文件</h1><p>直接去<a target="_blank" rel="noopener" href="https://www.flash.cn/">官网链接</a>下载<br>
+    
+    <a class="article-more-a" href="/2021/03/14/ubuntu%E4%B8%8B%E7%9A%84firefox%E6%97%A0%E6%B3%95%E6%92%AD%E6%94%BE%E8%A7%86%E9%A2%91%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/#more">more >></a>
+    
     
 
     
@@ -855,13 +794,10 @@ sudo chmod 755 libflashplayer.so
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<p>主要参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/sunmengke1101/article/details/103436997">博客</a></p>
-<h1 id="1-准备字体包"><a href="#1-准备字体包" class="headerlink" title="1.准备字体包"></a>1.准备字体包</h1><p><a target="_blank" rel="noopener" href="https://wws.lanzous.com/iBIiqmwnvve">下载链接</a></p>
-<h1 id="2-解压到指定目录下"><a href="#2-解压到指定目录下" class="headerlink" title="2.解压到指定目录下"></a>2.解压到指定目录下</h1><pre><code>sudo unzip wps_symbol_fonts.zip -d /home/&lt;user&gt;/usr/share/fonts
-</code></pre><h1 id="3-到解压的根目录下安装"><a href="#3-到解压的根目录下安装" class="headerlink" title="3.到解压的根目录下安装"></a>3.到解压的根目录下安装</h1><p>依次打开每个文件并点击安装即可</p>
-<hr>
-
+    <p>主要参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/sunmengke1101/article/details/103436997">博客</a><br>
+    
+    <a class="article-more-a" href="/2021/03/14/ubuntu%E4%B8%8B%E8%A7%A3%E5%86%B3wps2019%E7%BC%BA%E5%B0%91%E5%AD%97%E4%BD%93%E9%97%AE%E9%A2%98/#more">more >></a>
+    
     
 
     
@@ -946,32 +882,10 @@ sudo chmod 755 libflashplayer.so
   
   <div class="article-entry" itemprop="articleBody">
     
-    <a id="more"></a>
-<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43876206/article/details/100924378">博客</a></p>
-<h1 id="1-备份源列表"><a href="#1-备份源列表" class="headerlink" title="1.备份源列表"></a>1.备份源列表</h1><pre><code>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-</code></pre><h1 id="2-打开sources-list文件"><a href="#2-打开sources-list文件" class="headerlink" title="2.打开sources.list文件"></a>2.打开sources.list文件</h1><pre><code>sudo gedit /etc/apt/sources.list
-</code></pre><h1 id="3-修改sources-list文件"><a href="#3-修改sources-list文件" class="headerlink" title="3.修改sources.list文件"></a>3.修改sources.list文件</h1><pre><code>#  阿里镜像源
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse
-
-deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
-</code></pre><h1 id="4-更新并升级"><a href="#4-更新并升级" class="headerlink" title="4.更新并升级"></a>4.更新并升级</h1><pre><code>sudo apt-get update &amp;&amp; sudo apt-get upgrade
-</code></pre><h1 id="5-恢复源列表"><a href="#5-恢复源列表" class="headerlink" title="5.恢复源列表"></a>5.恢复源列表</h1><pre><code>sudo cp /etc/apt/sources.list.bak /etc/apt/sources.list
-</code></pre><hr>
-<p>其他的源请自己搜索，这里只放了阿里云的。</p>
-<hr>
-
+    <p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43876206/article/details/100924378">博客</a><br>
+    
+    <a class="article-more-a" href="/2021/03/14/Ubuntu%E6%9B%B4%E6%8D%A2%E6%BA%90%E6%95%99%E7%A8%8B/#more">more >></a>
+    
     
 
     
